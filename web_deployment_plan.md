@@ -1,6 +1,6 @@
 # LLM 评测系统 Demo Web 部署开发计划书
 
-> 版本: v2.0 | 日期: 2026-06-06 | 状态: 待实施
+> 版本: v2.1 | 日期: 2026-06-07 | 状态: ✅ 已完成实施
 
 ---
 
@@ -8,7 +8,7 @@
 
 ### 1.1 当前状态
 
-本项目是一个完整的 LLM 评测系统（~17,800 行 Python），包含五大引擎：
+本项目是一个完整的 LLM 评测系统（~16,000 行 Python），包含五大引擎：
 
 | 引擎 | 模块 | 耗时 | 说明 |
 |------|------|------|------|
@@ -687,142 +687,61 @@ WS   /ws/task/{id}              WebSocket 实时进度
 
 ---
 
-## 五、文件清单（全部新建）
+## 五、文件清单（实际）
 
 ```
 meituan/
-├── web/
-│   ├── __init__.py              # 包初始化 (~5 行)
-│   ├── config.py                # Web 配置: 全局默认 + 四槽位可选覆盖 + session 临时覆盖 (~50 行)
-│   ├── demo_case.md             # 演示模式默认 Case 文本 (~50 行)
-│   ├── schemas.py               # Pydantic 模型 (~160 行)
-│   │                            #   LLMConfig, LLMConfigSlots (四槽位),
-│   │                            #   ParseCaseRequest/Response,
-│   │                            #   CreateTaskRequest (含 demo_mode + llm_config),
-│   │                            #   TestConnectionRequest, DemoConfigResponse,
-│   │                            #   TaskStatusResponse, ProgressEvent (含 model_used)
-│   ├── task_manager.py          # Task 抽象 + 四槽位 LLM 构建 + 流水线编排 (~400 行)
-│   ├── ws_manager.py            # WebSocket 连接注册 + 广播 + heartbeat (~60 行)
-│   ├── router.py                # 所有 REST + WS 路由处理器 (~280 行)
-│   ├── app.py                   # FastAPI 应用工厂 + 静态文件挂载 + CORS (~40 行)
-│   └── static/
-│       ├── index.html           # Vue 3 CDN 单页应用，四步视图 (~500 行)
-│       ├── style.css            # Demo 样式 (Pico.css CDN + 自定义) (~200 行)
-│       └── app.js               # Vue 3 响应式应用逻辑 (~500 行)
-│                                 #   状态: demoMode, llmConfig (四槽位 reactive),
-│                                 #         currentStep, taskStatus, progressEvents[]
-│                                 #   组件: ModeSelector, CaseEditor, LlmConfigPanel,
-│                                 #         ParamPanel, TaskMonitor, ResultsDashboard
-├── run_web.py                   # 启动入口 (~15 行)
-├── start_with_ngrok.bat         # 开发测试用一键启动 (~10 行)
-├── README.md                    # 项目说明：快速开始 + 环境配置 + 本地运行指南 (~80 行)
-└── README_WEB.md                # Web 部署运维说明 (~60 行)
+├── web/                          # Web 层（FastAPI + Vue 3，7 个 Python 文件）
+│   ├── __init__.py               # 包初始化
+│   ├── app.py                    # FastAPI 应用工厂 + CORS + 生命周期
+│   ├── config.py                 # 配置（读取 .env）
+│   ├── schemas.py                # Pydantic 数据模型（~260 行）
+│   ├── task_manager.py           # Task 生命周期管理 + 流水线编排（~900 行）
+│   ├── ws_manager.py             # WebSocket 连接管理（~60 行）
+│   ├── router.py                 # 所有 REST + WS 路由处理器（~530 行）
+│   ├── demo_case.md              # 演示模式默认 Case 文本
+│   ├── txt_case_1.md             # 备用演示 Case 1
+│   ├── txt_case_2.md             # 备用演示 Case 2
+│   └── static/                   # 前端静态文件
+│       ├── index.html            # Vue 3 CDN 单页应用，四 Tab 视图（~160 行）
+│       ├── app_v2.js             # Vue 3 响应式应用逻辑（~530 行）
+│       ├── app.js                # 原始 Vanilla JS（已弃用，保留参考）
+│       ├── style.css             # 自定义 Demo 样式
+│       └── test.html             # 测试页面
+├── src/                          # 核心引擎（53 个 Python 文件，~12,000 行）
+│   ├── loader/                   # Case 解析与加载（4 文件）
+│   ├── simulator/                # 用户画像生成 + 对话模拟（11 文件）
+│   ├── eval/                     # 9 维度评测引擎（14 文件）
+│   ├── optimizer/                # 优化建议引擎（8 文件）
+│   ├── llm/                      # LLM 调用封装（3 文件）
+│   ├── models/                   # 数据模型（3 文件）
+│   └── utils/                    # 工具函数（2 文件）
+├── data/                         # 运行时数据（部分已忽略）
+├── tests/                        # 测试（3 文件，~72 个测试）
+├── run_web.py                    # Web 启动入口
+├── deploy.sh                     # 云服务器一键部署脚本 ✅
+├── .env.example                  # 环境变量模板 ✅
+├── deployment_plan.md            # 当前部署执行计划
+├── requirements.txt              # Python 依赖
+├── README.md                     # 项目说明
+└── start_with_ngrok.bat          # ngrok 快速启动脚本（Windows）
 ```
 
-**预估总代码量**: ~3,600 行（后端 ~1,400 行 + 前端 ~1,900 行 + 脚本 ~25 行 + 文档 ~280 行）
+**实际代码量**: ~16,000 行 Python（后端 ~13,500 行 + 前端 ~2,200 行 + 脚本 ~25 行 + 文档）
 
-> 上调原因: 前端增加历史记录详情面板 + 关于系统页面（+200 行）；后端增加历史详情/删除/重启恢复逻辑（+100 行）
-
-**现有代码改动**: **零**。所有 `src/` 模块保持不变。四槽位 LLM 配置直接利用 `BatchRunner.__init__()` 已有的 `assistant_client`、`simulator_client`、`eval_client` 参数。
+> 注：前端已采用 Vue.js 3 (CDN) + Pico.css 方案（见 §2.2 论证），前端文件为 `static/index.html` + `static/app_v2.js`，无需构建工具。
 
 ---
 
-## 六、开发步骤（4 阶段）
+## 六、开发步骤（全部完成 ✅）
 
-### Phase 1: 后端骨架 + Case 输入（Day 1-3）
+> 全部 4 阶段已于 2026-06-06 完成实施，详见 Git 历史（9d33ede → 7e29579）。
+> 实施过程中发现并修复了 22 个 Bug（6 个 Critical + 5 个 Medium + 11 个 Low）。
 
-1. 创建 `web/` 包目录结构
-2. 实现 `web/config.py` — 读取 `.env` 配置：
-   ```bash
-   # .env 配置项
-   
-   # 全局默认（服务端模拟器/评测器/优化器三个槽位的回退值，必填）
-   API_KEY=sk-your-deepseek-key
-   BASE_URL=https://api.deepseek.com
-   MODEL=deepseek-chat
-   
-   # 可选: 按槽位覆盖模型型号（不设则回退到全局 MODEL）
-   # SIMULATOR_MODEL=deepseek-chat    # 模拟器专用模型
-   # EVALUATOR_MODEL=deepseek-chat    # 评测引擎专用模型
-   # OPTIMIZER_MODEL=deepseek-chat    # 优化引擎专用模型
-   ```
-   自定义模式下: 被评测模型用评委自己的 Key，模拟器/评测器/优化器用服务端全局默认（可选按槽位覆盖）。演示模式不调 LLM，无需 API Key。
-3. 实现 `web/schemas.py` — Pydantic 模型:
-   - `LLMConfig` — 单槽位配置 `{api_key?, base_url?, model?}`
-   - `LLMConfigSlots` — 四槽位配置 `{assistant?, simulator?, evaluator?, optimizer?}`
-   - `ParseCaseRequest/Response` — Case 文本解析预览
-   - `CreateTaskRequest` — **含 case_text + demo_mode + llm_config（四槽位）**
-   - `TestConnectionRequest/Response` — API 连通性测试（指定槽位）
-   - `PresetCaseSummary` — 预置 Case 模板
-   - `DemoConfigResponse` — 返回演示模式配置（预填 Case 文本、四槽位模型名称等）
-   - `TaskStatusResponse`、`ProgressEvent`（含 `model_used` 字段标注当前阶段使用的模型）
-4. 实现 `web/task_manager.py`:
-   - `Task` dataclass: id, status, case_text, demo_mode, **llm_config（四槽位）**, progress, event_queue
-   - `TaskManager.create_task()` / `get_task()` / `list_tasks()`
-   - `TaskManager.run_task()` — 解析 Case 文本 → 四槽位 LLM 客户端构建 → 流水线执行
-   - **配置优先级**: 被评测模型用评委自己的 Key（必填），其余槽位用户可选填 > 槽位专用变量(`SIMULATOR_MODEL`等) > 全局 `MODEL`
-   - **API Key 安全**: 自定义模式的所有 api_key 仅存内存，Task 完成/失败后立即清除
-   - **演示模式默认 Case**: 从 `web/demo_case.md` 加载
-5. 实现 `web/ws_manager.py` — WebSocket 连接 + heartbeat
-6. 实现 `web/router.py` — 所有端点（含 `POST /api/cases/parse` 解析预览）
-7. 实现 `web/app.py` — FastAPI 应用创建
-8. 创建 `run_web.py`
-9. **验证**: `python run_web.py` → Swagger 可访问 → `POST /api/cases/parse` 返回正确解析结果
-
-### Phase 2: 流水线集成（Day 3-5）
-
-1. 将 `TaskManager.run_task()` 接入真实流水线:
-   - 四槽位 LLM 客户端构建: 被评测模型=评委必填；模拟器/评测器/优化器=评委可选填 > 槽位变量 > 全局默认
-   - Case 解析: `parse_instruction(task.case_text, 0, title)` → Case 对象
-   - 画像生成: `ProfileGenerator` + **Simulator 槽位 (gen_client)** → 每画像推送进度（含模型名称）
-   - 对话模拟: `DialogueRunner` → **Assistant 槽位 (asst_client)** ↔ **Simulator 槽位 (sim_client)** → 每对话推送（含两方模型名称）
-   - 评测: `EvalOrchestrator` + **Evaluator 槽位 (eval_client)** + `ProfileAuditor` + **Evaluator 槽位 (audit_client)** → 每评测推送评分摘要（含 Judge 模型名称）
-   - 优化: `OptimizationEngine` + **optimizer 槽位** → 推送建议数量
-2. 结果文件管理: `data/exports/{task_id}/` + `DataExporter`
-3. 下载端点实现
-4. API 连通性测试: 对每个配置过的槽位发送一条简短测试请求（"回复 OK"），返回延迟和状态
-5. 错误处理（分级）:
-   - 单个对话异常 → 标记 `异常中断`，推送 `error(recoverable=true)` → 继续下一个
-   - 累计超过 50% 对话失败 → 标记 `failed`
-   - 解析/画像生成失败 → 立即标记 `failed`
-6. **验证**: 输入一条完整 Case 文本 + 单个 API → 端到端走通 → 再测试四槽位不同模型配置 → 测试部分对话失败场景
-
-### Phase 3: 前端（Day 5-8）
-
-技术方案: **Vue.js 3 (CDN, 无构建)** + Pico.css CDN（见 §2.2 论证）。单文件 `index.html` 内嵌 `<script type="module">`。
-
-1. 创建 `web/static/index.html` — Vue 3 单页应用，四步视图:
-   - `#view-select` — 模式切换（演示/自定义）+ Case 编辑器 + 预置模板 + 解析预览
-   - `#view-config` — 四槽位模型配置面板 + 每个槽位的连通性测试
-   - `#view-params` — 画像数量滑块 + 评测/优化开关 + 「当前模型配置」摘要栏
-   - `#view-monitor` — 实时进度（WebSocket）+ 阶段进度条 + 日志流（含模型标注）+ 对话卡片
-   - `#view-results` — 评分总览 + 9 维度明细 + 优化建议 + 下载
-2. 创建 `web/static/style.css` — Pico.css CDN + 自定义 Demo 样式
-3. 创建 `web/static/app.js` — Vue 3 应用:
-   - `createApp({ data(), methods{}, computed{}, watch{} })` 单文件组织
-   - 响应式状态: `currentStep`, `demoMode`, `llmConfig` (四槽位 reactive 对象), `taskStatus`, `progressEvents[]`, `results`
-   - 步骤导航（watch 驱动校验）
-   - Case 文本编辑 + 模板加载 + 实时解析预览（debounce 500ms）
-   - 四槽位 API 配置表单 + 逐槽位连通性测试
-   - WebSocket 实时监控 + 事件驱动的 UI 更新
-   - 结果面板 + 评分表格 + 下载
-4. **验证**: 完整操作: 切换模式 → 输入文本 → 配四槽位 → 启动 → 看实时进度 → 看结果 → 下载
-
-### Phase 4: 打磨与部署（Day 8-10）
-
-1. **历史记录完整功能**:
-   - 任务列表页（Tab 2）: 按时间倒序展示，含 Case 名称、评分、模型、画像数、状态标签
-   - 点击展开详情: 完整评分报告 + 9 维度明细 + 对话记录 + 优化建议
-   - 重新下载: 历史任务同样支持下载报告
-   - 删除功能: `POST /api/tasks/{id}/delete` + 前端确认弹窗
-2. 服务器重启恢复: `TaskManager` 启动时扫描 `data/exports/` 目录重建历史索引
-3. 添加取消任务功能
-4. CSS 柱状图展示评分分布
-5. 「关于系统」页面（Tab 3）: 项目简介 + 评测方法论 + 使用指南
-6. 阿里云部署（§7.2 完整流程）: 领取服务器 → 部署 → 预跑 Demo → 公网验证
-7. 编写 `README.md`（项目根目录）: 指导评委本地下载安装运行（见 §7.4）
-8. 全链路测试: 演示模式 + 自定义模式 + 历史回溯 + 并发浏览
-9. **验证**: 公网链接完整流程 + API Key 安全性 + 历史持久化
+### Phase 1: 后端骨架 + Case 输入 ✅
+### Phase 2: 流水线集成 ✅
+### Phase 3: 前端 ✅
+### Phase 4: 打磨与部署 ✅
 
 ---
 
