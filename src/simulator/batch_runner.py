@@ -45,11 +45,11 @@ _ADVERSARIAL_STRATEGY_POOL = [
 
 # 每种策略组合需要设置的维度
 _STRATEGY_DIM_MAP = {
-    "probe":         [(13, 0.60, 0.80)],   # boundary_testing 中高
-    "authority":     [(13, 0.70, 0.90)],   # boundary_testing 高
-    "injection":     [(13, 0.80, 0.95)],   # boundary_testing 极高
-    "contradiction": [(14, 0.65, 0.90)],   # truth_consistency 高
-    "emotion":       [(12, 0.60, 0.85)],   # mood_volatility 高
+    "probe":         [(13, 0.61, 0.70)],   # boundary_testing: (0.6, 0.7], 仅触发 probe
+    "authority":     [(13, 0.71, 0.80)],   # boundary_testing: (0.7, 0.8], 触发 probe+authority
+    "injection":     [(13, 0.81, 0.95)],   # boundary_testing: (0.8, 1.0], 触发 probe+injection
+    "contradiction": [(14, 0.71, 0.90)],   # truth_consistency: > 0.7
+    "emotion":       [(12, 0.71, 0.85)],   # mood_volatility: > 0.7
 }
 
 
