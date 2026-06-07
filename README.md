@@ -1,4 +1,4 @@
-# 美团外呼对话模型评测系统
+# 履约数字人外呼对话模型评测系统
 
 对 LLM 对话模型进行全流程自动化多维度评测。基于 15 维参数空间生成多样化用户画像，通过三层评测体系（规则引擎 + 信号提取 + LLM Judge）对模型在外呼场景下的表现进行 9 维度量化评分，并提供双路径优化建议。
 
@@ -460,4 +460,18 @@ pytest tests/test_case_parser.py -v   # Case 解析测试（21 个）
 
 ## License
 
-本项目仅供学习和研究使用。
+本项目基于 [Apache License 2.0](LICENSE) 开源。
+
+Copyright 2026 ZeYuan Huang
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
