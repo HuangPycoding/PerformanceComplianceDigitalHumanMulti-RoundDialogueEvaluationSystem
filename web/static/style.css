@@ -1,0 +1,104 @@
+/* 美团 Demo 自定义样式 (基于 Pico.css) */
+
+/* 顶部导航 */
+.tab-nav { margin-bottom: 1rem; }
+.tab-nav button { min-width: 100px; }
+
+/* Task 卡片 */
+.task-card { margin-bottom: 0.5rem; }
+
+/* 分数大字 */
+.score { font-size: 2.5rem; font-weight: 700; color: var(--pico-primary); }
+.score-big { font-size: 3.5rem; font-weight: 700; color: var(--pico-primary); text-align: center; margin: 1rem 0; }
+.score-big small { font-size: 1.5rem; }
+.rating-big { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
+.profile-text { max-height: 500px; overflow-y: auto; padding: 0.8rem; background: var(--pico-card-sectioning-background-color); border-radius: 6px; font-size: 0.85rem; line-height: 1.5; margin: 0.5rem 0; }
+.profile-table, .md-table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+.profile-table th, .profile-table td, .md-table th, .md-table td { padding: 0.2rem 0.4rem; border-bottom: 1px solid var(--pico-muted-border-color); text-align: left; }
+.profile-table th, .md-table th { background: var(--pico-card-sectioning-background-color); }
+
+/* Rendered report */
+.rendered-report { margin-top:1rem; padding:1rem; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:6px; max-height:600px; overflow:auto; font-size:0.9rem; line-height:1.6; }
+.rendered-report h3 { font-size: 1.3rem; margin: 1rem 0 0.5rem; }
+.rendered-report h4 { font-size: 1.1rem; margin: 0.8rem 0 0.4rem; border-bottom: 1px solid var(--pico-muted-border-color); padding-bottom: 0.3rem; }
+.rendered-report h5 { font-size: 1rem; margin: 0.6rem 0 0.3rem; }
+.rendered-report p { margin: 0.3rem 0; }
+.rendered-report ul, .rendered-report ol { padding-left: 1.5rem; margin: 0.3rem 0; }
+.rendered-report li { margin: 0.15rem 0; }
+.rendered-report hr { margin: 1rem 0; border: none; border-top: 1px solid var(--pico-muted-border-color); }
+.rendered-report pre { background: var(--pico-code-background-color); padding: 0.5rem; border-radius: 4px; font-size: 0.8rem; overflow-x: auto; }
+.rendered-report code { background: var(--pico-code-background-color); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
+
+/* 槽位配置网格 */
+.slot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.slot-card { padding: 0.8rem; border: 1px solid var(--pico-muted-border-color); border-radius: 6px; }
+.slot-card h5 { margin-bottom: 0.3rem; }
+.slot-card input { margin-bottom: 0.4rem; }
+.slot-role { font-size: 0.8rem; color: var(--pico-muted-color); margin-bottom: 0.5rem; }
+
+/* 维度网格 */
+.dim-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; }
+
+/* 详情面板 */
+.detail-panel { margin-top: 1rem; padding: 1rem; border: 1px solid var(--pico-muted-border-color); border-radius: 6px; background: var(--pico-card-background-color); }
+
+/* 实时监控 */
+.monitor { margin-top: 1.5rem; }
+.log-stream { max-height: 250px; overflow-y: auto; font-family: monospace; font-size: 0.85rem; background: var(--pico-code-background-color); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; }
+.log-info { color: var(--pico-color); }
+.log-warn { color: orange; }
+.log-error { color: red; }
+
+/* 对话卡片 */
+.dialogue-cards { margin-top: 1rem; }
+.card-small { padding: 0.5rem 1rem; margin-bottom: 0.3rem; }
+
+/* 结果区 */
+.result { margin-top: 1.5rem; }
+
+/* 提示 */
+.notice { padding: 0.8rem; background: var(--pico-card-sectioning-background-color); border-left: 4px solid var(--pico-primary); margin: 1rem 0; border-radius: 4px; }
+
+/* 连通性状态 */
+.ok { color: green; font-weight: 600; }
+.fail { color: red; font-weight: 600; }
+
+/* 解析预览 */
+.parse-preview { padding: 0.8rem; background: var(--pico-card-sectioning-background-color); border-radius: 6px; margin: 0.5rem 0; }
+
+/* 加载中 */
+.loading { text-align: center; padding: 2rem; color: var(--pico-muted-color); }
+
+/* 模型摘要表格 */
+.model-summary { padding: 0.8rem; margin-top: 1rem; }
+.model-summary table td { padding: 0.3rem 0.8rem; }
+
+/* 对话展示 */
+.conv-turns { max-height: 400px; overflow-y: auto; margin: 0.5rem 0; }
+.conv-turn { display: flex; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid var(--pico-muted-border-color); align-items: flex-start; }
+.turn-speaker { min-width: 40px; font-weight: 700; font-size: 0.8rem; padding: 0.15rem 0.4rem; border-radius: 4px; text-align: center; }
+.turn-speaker.asst { background: #d4edda; color: #155724; }
+.turn-speaker.user { background: #cce5ff; color: #004085; }
+.turn-text { font-size: 0.9rem; line-height: 1.4; flex: 1; }
+
+/* 小按钮 */
+.small { font-size: 0.8rem; padding: 0.3rem 0.7rem; }
+
+/* 核查清单 */
+.checklist-table { font-size: 0.85rem; }
+.checklist-table td { vertical-align: top; padding: 0.3rem 0.5rem; }
+.check-status { font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 3px; font-weight: 600; }
+.status-yes { background: #d4edda; color: #155724; }
+.status-mostly-yes { background: #d4edda; color: #155724; }
+.status-mostly_yes { background: #d4edda; color: #155724; }
+.status-partial { background: #fff3cd; color: #856404; }
+.status-mostly-no { background: #f8d7da; color: #721c24; }
+.status-mostly_no { background: #f8d7da; color: #721c24; }
+.status-no { background: #f8d7da; color: #721c24; }
+.status-na { background: #e2e3e5; color: #383d41; }
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .slot-grid { grid-template-columns: 1fr; }
+  .dim-grid { grid-template-columns: 1fr 1fr; }
+}

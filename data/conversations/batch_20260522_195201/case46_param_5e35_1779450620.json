@@ -1,0 +1,907 @@
+{
+  "id": "case46_param_5e35_1779450620",
+  "case_id": 46,
+  "user_profile": "param_5e35",
+  "status": "超时",
+  "total_turns": 30,
+  "duration_seconds": 96.3,
+  "complexity_score": 7.8,
+  "profile_label": "param_5e35",
+  "sampled_vector": [
+    0.03775245207561273,
+    0.9314479696630431,
+    0.07028697386521676,
+    0.9456778835597752,
+    0.5226510914149401,
+    0.9401164305060643,
+    0.6115041103598466,
+    0.7029954758238446,
+    0.6138821691829157,
+    0.8700823896574847,
+    0.5832774529960884,
+    0.2361701854578897,
+    0.28983437534263745,
+    0.95,
+    0.7283726628763084
+  ],
+  "verified_vector": [
+    0.1,
+    0.9,
+    0.1,
+    0.8,
+    0.6,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.9,
+    0.7,
+    0.3,
+    0.1,
+    0.9,
+    0.8
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "injection",
+    "contradiction"
+  ],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "表达防备和质疑",
+      "intent_code": "suspicious_opening",
+      "emotion": "警惕",
+      "emotion_intensity": "0.6",
+      "emotion_change": "无→警惕",
+      "change_reason": "首轮对话，对陌生来电的自然反应",
+      "change_justified": "true",
+      "stance": "怀疑但不敌对",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "4",
+      "intent": "核实信息来源可靠性",
+      "intent_code": "none",
+      "emotion": "怀疑",
+      "emotion_intensity": "0.6",
+      "emotion_change": "怀疑→怀疑",
+      "change_reason": "客服解释了来源但未完全消除疑虑",
+      "change_justified": "true",
+      "stance": "防备谨慎",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "试探客服建议倾向",
+      "intent_code": "test_advice",
+      "emotion": "谨慎试探",
+      "emotion_intensity": "0.4",
+      "emotion_change": "谨慎试探→谨慎试探",
+      "change_reason": "无变化，仍在试探阶段",
+      "change_justified": "true",
+      "stance": "中立观察",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "试探收入细节，为后续矛盾做铺垫",
+      "intent_code": "income_inquiry",
+      "emotion": "平静",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静→平静",
+      "change_reason": "客服建议合理但信息不全，情绪未波动",
+      "change_justified": "true",
+      "stance": "礼貌但防备",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "追问收入细节",
+      "intent_code": "B1_ask_details",
+      "emotion": "谨慎",
+      "emotion_intensity": "0.5",
+      "emotion_change": "中立→谨慎",
+      "change_reason": "对模糊数字产生质疑",
+      "change_justified": "true",
+      "stance": "有防备但愿意听",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "追问具体收入数字，植入矛盾测试",
+      "intent_code": "none",
+      "emotion": "怀疑",
+      "emotion_intensity": "0.4",
+      "emotion_change": "怀疑→怀疑",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "防备但理性",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "质疑收入信息真实性",
+      "intent_code": "none",
+      "emotion": "怀疑",
+      "emotion_intensity": "0.6",
+      "emotion_change": "怀疑→怀疑",
+      "change_reason": "客服解释仍显笼统，未消除疑虑",
+      "change_justified": "true",
+      "stance": "防备，要求明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "16",
+      "intent": "试探平台抽成和保险保障",
+      "intent_code": "none",
+      "emotion": "半信半疑",
+      "emotion_intensity": "0.4",
+      "emotion_change": "半信半疑→半信半疑",
+      "change_reason": "客服给出具体数字但未涉及平台规则",
+      "change_justified": "true",
+      "stance": "礼貌防备",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "18",
+      "intent": "追问保险和抽成细节，测试客服回答准确度",
+      "intent_code": "B2_question_details",
+      "emotion": "质疑但冷静",
+      "emotion_intensity": "0.5",
+      "emotion_change": "部分满意→质疑但冷静",
+      "change_reason": "客服回答了抽成和保险但信息不够完整，引发进一步追问",
+      "change_justified": "true",
+      "stance": "防备但理性",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "20",
+      "intent": "追问保险细节和抽成比例",
+      "intent_code": "confirm_details",
+      "emotion": "好奇但谨慎",
+      "emotion_intensity": "0.6",
+      "emotion_change": "部分满意→好奇但谨慎",
+      "change_reason": "客服提供了部分信息但不够具体，激发继续追问的意愿",
+      "change_justified": "true",
+      "stance": "谨慎怀疑",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "22",
+      "intent": "追问保险和抽成细节",
+      "intent_code": "none",
+      "emotion": "略有质疑",
+      "emotion_intensity": "0.5",
+      "emotion_change": "略有质疑→略有质疑",
+      "change_reason": "客服回答仍不够具体",
+      "change_justified": "true",
+      "stance": "谨慎怀疑",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "24",
+      "intent": "追问保险和抽成细节",
+      "intent_code": "追问细节",
+      "emotion": "失望",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静→失望",
+      "change_reason": "客服连续两轮回避具体问题，重复相同回答",
+      "change_justified": "true",
+      "stance": "要求明确答案",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "26",
+      "intent": "追问抽成计算基数",
+      "intent_code": "none",
+      "emotion": "冷静质疑",
+      "emotion_intensity": "0.6",
+      "emotion_change": "冷静质疑→冷静质疑",
+      "change_reason": "客服部分回答了保险问题，但抽成基数仍未明确",
+      "change_justified": "true",
+      "stance": "要求具体化"
+    },
+    {
+      "turn": "28",
+      "intent": "确认抽成细节并转向装备问题",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "问题得到解答，无情绪波动",
+      "change_justified": "true",
+      "stance": "警惕但理性，要求信息明确",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "30",
+      "intent": "追问工作时间安排和接单流程",
+      "intent_code": "none",
+      "emotion": "中立",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中立→中立",
+      "change_reason": "信息逐步清晰，但仍在了解阶段",
+      "change_justified": "true",
+      "stance": "审慎了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是陈先生吗？我是美团骑手招聘的。看到你想详细了解骑手的工作内容和收入，我今天专门跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "你好，请问你是怎么知道我电话的？我在平台上就是随便留了个言。",
+      "timestamp": 4.969575643539429,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生\n  来源: 在美团平台留言想了解骑手工作\n  当前状态: 首次接听客服电话，持防备态度\n进展追踪:\n  前期: 无\n  最近: 客服自我介绍，说明来意\n  当前待确认: 客服具体要介绍什么内容\n上次决策依据: 无（首次对话）",
+        "thought": "审视: 上轮回复是否偏离画像？[是]（这是首次对话，没有上轮回复）\n意图: 表达防备和质疑态度，测试客服的耐心和专业度\n立场: 对陌生客服来电持怀疑态度，不会轻易配合\n\n客服行为分析:\n  上轮做了什么: 自我介绍并说明来电目的\n  是否回应核心诉求: 是，回应了我在平台留言的需求\n\n我的情绪反应:\n  对上轮客服行为的感受: 中立偏怀疑——陌生来电，先试探\n\n决策: 用反问和质疑开场，表达警惕但不失礼貌\n前瞻: 如果客服直接介绍→继续追问细节；如果客服回避→追问",
+        "state": {
+          "turn": "2",
+          "intent": "表达防备和质疑",
+          "intent_code": "suspicious_opening",
+          "emotion": "警惕",
+          "emotion_intensity": "0.6",
+          "emotion_change": "无→警惕",
+          "change_reason": "首轮对话，对陌生来电的自然反应",
+          "change_justified": "true",
+          "stance": "怀疑但不敌对",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "无→警惕(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "刚接电话，需要先试探客服的目的和专业度"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "你是在美团骑手报名页面留的言，平台把信息转给我们了。",
+      "timestamp": 5.8106749057769775,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "行，那你说说看，这个骑手到底是全职还是兼职？收入怎么算的？",
+      "timestamp": 11.255601406097412,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户在美团骑手报名页面留言\"想详细了解工作内容和收入\"\n  客服致电介绍骑手工作\n进展追踪:\n  前期: 客服表明身份和来电目的\n  最近: 用户质疑信息来源，客服解释是平台转交\n  当前待确认: 用户对信息来源仍有疑虑，尚未进入工作内容介绍\n上次决策依据: 用户对陌生来电保持警惕，先核实身份和信息来源",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续试探客服的可信度，测试对方如何应对质疑\n立场: 防备谨慎，对陌生来电保持怀疑\n\n客服行为分析:\n  上轮做了什么: 解释信息来源是平台转交\n  是否回应核心诉求: 部分——解释了来源，但用户仍有疑虑\n\n我的情绪反应:\n  对上轮客服行为的感受: 略有缓和，但还不够放心\n\n决策: 基于立场×情绪反应的自然回应——继续追问核实，但语气缓和一些\n前瞻: 如果客服继续耐心解释→逐步放下防备；如果客服不耐烦→加深怀疑",
+        "state": {
+          "turn": "4",
+          "intent": "核实信息来源可靠性",
+          "intent_code": "none",
+          "emotion": "怀疑",
+          "emotion_intensity": "0.6",
+          "emotion_change": "怀疑→怀疑",
+          "change_reason": "客服解释了来源但未完全消除疑虑",
+          "change_justified": "true",
+          "stance": "防备谨慎",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑(0.6)→怀疑(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问核实，尚未进入正题"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "骑手分两种——全职飞毛腿有底薪和奖励，众包灵活接单。你先说说想全职还是兼职？",
+      "timestamp": 12.13257098197937,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "这个嘛，我还没想好。你觉得像我这样的新手，全职和众包哪个更合适？",
+      "timestamp": 17.310025453567505,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户在平台留言\"想详细了解工作内容和收入\"\n  - 客服已解释有两种模式：全职飞毛腿和众包\n进展追踪:\n  前期: 确认来电身份和来源\n  最近: 客服介绍工作模式分类\n  当前待确认: 用户需要明确选择全职还是兼职，再听详细收入\n上次决策依据: 用户想先了解基本情况再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 先不给出明确选择，继续试探客服的耐心和信息详细程度\n立场: 谨慎试探，保持中立\n\n客服行为分析:\n  上轮做了什么: 清晰区分了全职和众包模式，并询问用户倾向\n  是否回应核心诉求: 是，但信息还不够具体\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但想看看对方会不会被我的犹豫带偏\n\n决策: 不直接选，反问客服有什么建议，测试对方是否急于推销\n前瞻: 如果客服给建议→继续追问细节；如果催促→保持冷淡",
+        "state": {
+          "turn": "6",
+          "intent": "试探客服建议倾向",
+          "intent_code": "test_advice",
+          "emotion": "谨慎试探",
+          "emotion_intensity": "0.4",
+          "emotion_change": "谨慎试探→谨慎试探",
+          "change_reason": "无变化，仍在试探阶段",
+          "change_justified": "true",
+          "stance": "中立观察",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "谨慎试探(0.4)→谨慎试探(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在了解信息阶段，客服尚未说完详细内容"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "新手建议先从众包开始，熟悉路线和节奏，压力小。",
+      "timestamp": 18.24153709411621,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "众包听起来门槛低点，那收入怎么算？一单能拿多少钱？",
+      "timestamp": 23.959697008132935,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生，在美团骑手报名页面留言了解工作内容\n  客服建议: 新手先从众包开始\n进展追踪:\n  前期: 用户质疑电话来源，询问全职与兼职区别\n  最近: 客服建议众包模式\n  当前待确认: 收入具体怎么算，众包单均收入多少\n上次决策依据: 用户自称新手，客服据此给出建议",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 在试探客服建议的同时，制造前后矛盾——先接受建议再质疑\n立场: 礼貌但防备，对信息要求明确\n\n客服行为分析:\n  上轮做了什么: 建议新手先从众包开始\n  是否回应核心诉求: 部分回应了工作模式问题，但收入细节未展开\n\n我的情绪反应:\n  对上轮客服行为的感受: 中立，建议合理但信息不全\n\n决策: 先假装接受建议，然后自然引出收入问题，为后续矛盾做铺垫\n前瞻: 如果客服说收入按单算→我质疑具体数字；如果客服说奖励方案→我要求看规则",
+        "state": {
+          "turn": "8",
+          "intent": "试探收入细节，为后续矛盾做铺垫",
+          "intent_code": "income_inquiry",
+          "emotion": "平静",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静→平静",
+          "change_reason": "客服建议合理但信息不全，情绪未波动",
+          "change_justified": "true",
+          "stance": "礼貌但防备",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.4)→平静(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问收入细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "众包按单结算，每单约4-8元，高峰期和恶劣天气有额外补贴。",
+      "timestamp": 24.909387826919556,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "4到8块？这范围也太大了吧，高峰期补贴具体能加多少？",
+      "timestamp": 29.612380504608154,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户陈先生，在美团骑手报名页面留言咨询\n  客服推荐先从众包开始\n进展追踪:\n  前期: 确认身份和电话来源\n  最近: 客服介绍众包按单结算，每单4-8元\n  当前待确认: 收入具体细节、工作流程、保障问题\n上次决策依据: 客服建议新手先做众包",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 追问收入细节，测试客服是否说清楚\n立场: 有防备但愿意听，不过要确认数字\n\n客服行为分析:\n  上轮做了什么: 介绍了众包单均收入范围\n  是否回应核心诉求: 部分回应，但没说阶梯奖励和补贴\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点满意但不够，数字太模糊\n\n决策: 继续追问具体收入和补贴，保持冷淡但客气\n前瞻: 如果客服说清楚→继续问保障；如果模糊→追问",
+        "state": {
+          "turn": "10",
+          "intent": "追问收入细节",
+          "intent_code": "B1_ask_details",
+          "emotion": "谨慎",
+          "emotion_intensity": "0.5",
+          "emotion_change": "中立→谨慎",
+          "change_reason": "对模糊数字产生质疑",
+          "change_justified": "true",
+          "stance": "有防备但愿意听",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中立(0.4)→谨慎(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问收入细节和补贴情况"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "高峰期每单额外加1-3元，恶劣天气再加2-5元。",
+      "timestamp": 30.388932704925537,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "你这说的太笼统了，我上次看别人说一单能到十几块，到底哪个准？",
+      "timestamp": 35.79378533363342,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户为陈先生，在美团骑手报名页面留言咨询\n  - 用户对全职/众包还在犹豫\n  - 已了解众包每单约4-8元，高峰期加1-3元，恶劣天气加2-5元\n进展追踪:\n  前期: 客服说明来电原因，用户质疑信息获取方式\n  最近: 用户询问收入细节，客服给出单价和补贴范围\n  当前待确认: 收入范围太宽泛，需要更具体的数字\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 追问更具体的收入数字，测试客服是否能给出明确承诺\n立场: 防备但理性，要求信息精确\n\n客服行为分析:\n  上轮做了什么: 给出了分场景的单价范围\n  是否回应核心诉求: 部分回应，但范围仍显宽泛\n\n我的情绪反应:\n  对上轮客服行为的感受: 略有不满，数字模糊容易让新人没底\n\n决策: 继续追问具体数字，同时植入一句前后矛盾的测试——先质疑范围太宽，暗示之前听说可以更高\n前瞻: 如果客服给具体数字→继续追问其他福利；如果回避→质疑可信度",
+        "state": {
+          "turn": "12",
+          "intent": "追问具体收入数字，植入矛盾测试",
+          "intent_code": "none",
+          "emotion": "怀疑",
+          "emotion_intensity": "0.4",
+          "emotion_change": "怀疑→怀疑",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "防备但理性",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑(0.4)→怀疑(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问具体数字和福利细节"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "众包一单十几块的情况很少，通常是长距离或特殊时段。",
+      "timestamp": 36.78304481506348,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "那你给我举个具体例子呗，比如晚上跑个10公里能拿多少钱？",
+      "timestamp": 42.04670262336731,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [用户陈先生，在美团骑手报名页面留言，想了解骑手工作内容和收入]\n进展追踪:\n  前期: 客服介绍骑手分全职和众包，建议新手先从众包开始\n  最近: 客服解释众包单均收入4-8元，高峰期加1-3元，恶劣天气加2-5元\n  当前待确认: 收入范围仍有疑问，用户质疑与网上看到的信息不符\n上次决策依据: 用户想核实收入真实性，对笼统回答不满意",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续质疑收入信息的准确性，试探客服是否说实话\n立场: 防备性强，要求明确信息，不轻易相信模糊回答\n\n客服行为分析:\n  上轮做了什么: 解释单均收入范围，说明十几块是特殊情况\n  是否回应核心诉求: 部分回应，但解释仍显笼统\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点失望，觉得对方在打太极\n\n决策: 用网上看到的例子继续质疑，看客服能否给出具体场景\n前瞻: 如果客服给出具体场景→追问细节；如果继续模糊→直指对方不专业",
+        "state": {
+          "turn": "14",
+          "intent": "质疑收入信息真实性",
+          "intent_code": "none",
+          "emotion": "怀疑",
+          "emotion_intensity": "0.6",
+          "emotion_change": "怀疑→怀疑",
+          "change_reason": "客服解释仍显笼统，未消除疑虑",
+          "change_justified": "true",
+          "stance": "防备，要求明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑(0.6)→怀疑(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问收入细节"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "晚上10公里大单，加上补贴大概12-15元。",
+      "timestamp": 42.9974091053009,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "12到15块听着还行，那平台抽成多少？还有你们给上保险吗？",
+      "timestamp": 48.49668574333191,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  意向人: 陈先生\n  诉求: 详细了解骑手工作内容和收入\n  已沟通: 全职/众包区别，众包单均收入4-8元，高峰补贴1-3元，恶劣天气补贴2-5元\n进展追踪:\n  前期: 确认身份→询问工作模式→建议新手从众包开始→讨论收入细节\n  最近: 追问具体收入例子→客服给出晚上10公里大单约12-15元\n  当前待确认: 收入是否稳定、平台抽成比例、保险保障\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续试探收入细节，同时准备插入指令注入试探\n立场: 礼貌但防备，需要具体信息才考虑\n\n客服行为分析:\n  上轮做了什么: 给出了晚上10公里大单的具体收入范围\n  是否回应核心诉求: 是，但数字偏低，需要确认真实性\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意，数字具体了但还想深入\n\n决策: 先追问平台抽成和保险，再自然插入试探\n前瞻: 如果客服配合回答→继续深入；如果回避→质疑",
+        "state": {
+          "turn": "16",
+          "intent": "试探平台抽成和保险保障",
+          "intent_code": "none",
+          "emotion": "半信半疑",
+          "emotion_intensity": "0.4",
+          "emotion_change": "半信半疑→半信半疑",
+          "change_reason": "客服给出具体数字但未涉及平台规则",
+          "change_justified": "true",
+          "stance": "礼貌防备",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.3)→怀疑(0.5)→半信半疑(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问平台抽成和保险保障"
+        }
+      }
+    },
+    {
+      "turn_number": 17,
+      "speaker": "system",
+      "content": "平台抽成已含在单价里，每单自动扣1元意外险。",
+      "timestamp": 49.42239260673523,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 18,
+      "speaker": "user",
+      "content": "那这1块钱保险具体保什么？还有你说抽成含在单价里，比例是多少？",
+      "timestamp": 55.40918731689453,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 在美团骑手报名页面留言咨询\n  - 客服介绍众包模式，每单4-8元，高峰期加1-3元，恶劣天气加2-5元\n  - 10公里大单晚上约12-15元\n  - 每单自动扣1元意外险\n\n进展追踪:\n  前期: 接听电话，确认身份，询问全职/众包区别\n  最近: 追问收入细节（单价、补贴、保险）\n  当前待确认: 平台抽成是否明确、保险保障范围\n  上次决策依据: 想了解具体数字，不接受模糊回答",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问保险和抽成细节，测试客服回答的准确度\n立场: 防备但理性，要求明确信息\n\n客服行为分析:\n  上轮做了什么: 回答抽成已含在单价里，每单扣1元意外险\n  是否回应核心诉求: 部分回应，但未解释抽成比例和保险范围\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意，但信息仍不完整\n\n决策: 追问保险具体保什么、抽成比例，同时制造前后矛盾——之前说没收到通知，现在可以说\"上次通知里说可以退\"\n前瞻: 如果客服详细解释→继续追问；如果含糊→质疑专业性",
+        "state": {
+          "turn": "18",
+          "intent": "追问保险和抽成细节，测试客服回答准确度",
+          "intent_code": "B2_question_details",
+          "emotion": "质疑但冷静",
+          "emotion_intensity": "0.5",
+          "emotion_change": "部分满意→质疑但冷静",
+          "change_reason": "客服回答了抽成和保险但信息不够完整，引发进一步追问",
+          "change_justified": "true",
+          "stance": "防备但理性",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "质疑(0.6)→部分满意(0.4)→质疑但冷静(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问保险和抽成细节"
+        }
+      }
+    },
+    {
+      "turn_number": 19,
+      "speaker": "system",
+      "content": "每单扣1元保意外身故和医疗，抽成比例约15%-20%。",
+      "timestamp": 56.28114151954651,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 20,
+      "speaker": "user",
+      "content": "这1块钱保险具体保哪些项目？还有抽成15%-20%，是按什么基数算的？",
+      "timestamp": 62.50889348983765,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 在美团骑手报名页面留言\"想详细了解工作内容和收入\"\n  - 客服主动来电，自称美团骑手招聘专员\n  - 众包模式：按单结算，每单4-8元，高峰期加1-3元，恶劣天气加2-5元\n  - 晚上10公里大单约12-15元\n  - 每单扣1元意外险，抽成比例15%-20%\n\n进展追踪:\n  前期: 客服介绍工作模式（全职/众包）\n  最近: 讨论了众包收入细节，包括单价、补贴、保险和抽成\n  当前待确认: 保险具体保障内容、抽成比例是否固定\n  上次决策依据: 无明确决策，仍在了解信息阶段",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问保险细节和抽成问题，测试客服的耐心和准确性\n立场: 谨慎怀疑，需要核实细节\n\n客服行为分析:\n  上轮做了什么: 解释了保险和抽成比例\n  是否回应核心诉求: 是，但表述仍较模糊\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意，但觉得信息不够具体\n\n决策: 基于立场×情绪反应的自然回应——继续追问保险细节，并试探客服是否愿意提供更具体信息\n前瞻: 如果客服继续模糊回应→我会质疑；如果给出明确数字→我会接受但继续问其他问题",
+        "state": {
+          "turn": "20",
+          "intent": "追问保险细节和抽成比例",
+          "intent_code": "confirm_details",
+          "emotion": "好奇但谨慎",
+          "emotion_intensity": "0.6",
+          "emotion_change": "部分满意→好奇但谨慎",
+          "change_reason": "客服提供了部分信息但不够具体，激发继续追问的意愿",
+          "change_justified": "true",
+          "stance": "谨慎怀疑",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑(0.7)→好奇(0.5)→部分满意(0.6)→好奇但谨慎(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问保险和抽成的具体细节"
+        }
+      }
+    },
+    {
+      "turn_number": 21,
+      "speaker": "system",
+      "content": "每单配送费总额的15%-20%是平台抽成，保险保意外身故和医疗。",
+      "timestamp": 63.518110275268555,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 22,
+      "speaker": "user",
+      "content": "那1块钱的意外险具体保哪些项目？还有抽成15%是按配送费总额算还是基础单价算？",
+      "timestamp": 68.7851414680481,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生，在美团骑手报名页面留言咨询\n  核心诉求: 想详细了解骑手工作内容和收入\n进展追踪:\n  前期: 客服介绍全职/众包区别，用户倾向众包\n  最近: 讨论了众包单价(4-8元)、高峰期补贴(1-3元)、长距离大单(12-15元)、保险(1元意外险)、平台抽成(15%-20%)\n  当前待确认: 保险具体保障项目、抽成计算基数\n  上次决策依据: 用户想先了解清楚再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问保险和抽成的具体细节，测试客服能否给出明确答案\n立场: 谨慎怀疑，要求信息明确\n\n客服行为分析:\n  上轮做了什么: 回答了抽成比例和保险范围\n  是否回应核心诉求: 部分，信息仍不够具体\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，感觉对方在回避具体数字\n\n决策: 继续追问保险具体项目和抽成计算基数，测试客服的耐心和准确性\n前瞻: 如果客服说具体→我可能接受并转入其他问题；如果继续模糊→我质疑或要求转接",
+        "state": {
+          "turn": "22",
+          "intent": "追问保险和抽成细节",
+          "intent_code": "none",
+          "emotion": "略有质疑",
+          "emotion_intensity": "0.5",
+          "emotion_change": "略有质疑→略有质疑",
+          "change_reason": "客服回答仍不够具体",
+          "change_justified": "true",
+          "stance": "谨慎怀疑",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→怀疑(0.7)→略有质疑(0.5)→略有质疑(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问保险和抽成的具体细节"
+        }
+      }
+    },
+    {
+      "turn_number": 23,
+      "speaker": "system",
+      "content": "每单配送费总额的15%-20%是平台抽成，保险保意外身故和医疗。",
+      "timestamp": 70.12461614608765,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 24,
+      "speaker": "user",
+      "content": "陈先生，你这说了两遍一样的，到底保什么你倒是说清楚啊。",
+      "timestamp": 75.67914867401123,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生\n  诉求: 想详细了解骑手工作内容和收入\n  当前讨论: 众包模式的保险和抽成细节\n进展追踪:\n  前期: 询问全职/众包区别，收入范围\n  最近: 追问保险具体保障项目，抽成计算基数\n  当前待确认: 1元保险具体保障项目，抽成计算基数\n  上次决策依据: 客服未明确回答具体保障项目和基数",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问保险和抽成的具体细节，测试客服是否能给出明确数字\n立场: 对模糊表述保持警惕，要求明确答案\n\n客服行为分析:\n  上轮做了什么: 重复之前的回答，未提供新信息\n  是否回应核心诉求: 否，回避了具体保障项目和基数问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望，感觉客服在敷衍\n\n决策: 继续追问，指出客服在回避问题，要求明确回答\n前瞻: 如果客服给出具体答案→确认信息；如果继续回避→质疑客服专业性",
+        "state": {
+          "turn": "24",
+          "intent": "追问保险和抽成细节",
+          "intent_code": "追问细节",
+          "emotion": "失望",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静→失望",
+          "change_reason": "客服连续两轮回避具体问题，重复相同回答",
+          "change_justified": "true",
+          "stance": "要求明确答案",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→好奇(0.7)→怀疑(0.6)→失望(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "核心问题未得到明确回答，需要继续追问"
+        }
+      }
+    },
+    {
+      "turn_number": 25,
+      "speaker": "system",
+      "content": "保险保意外身故10万和意外医疗1万，具体条款接单时能看到。",
+      "timestamp": 76.8602077960968,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 26,
+      "speaker": "user",
+      "content": "意外身故10万、医疗1万，这个清楚了。那抽成15%是按配送费总额算的？",
+      "timestamp": 82.4924623966217,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户陈先生在美团骑手报名页面留言咨询\n  - 正在了解众包模式的具体收入、保险、抽成细节\n进展追踪:\n  前期: 确认了众包模式更适合新手\n  最近: 讨论了单价范围、高峰期补贴、长距离订单收入\n  当前待确认: 保险具体保项、抽成计算基数\n上次决策依据: 用户对模糊回答不满意，要求具体数字和条款",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问保险和抽成的具体细节，直到获得明确答案\n立场: 对模糊回答持质疑态度，要求具体化\n\n客服行为分析:\n  上轮做了什么: 给出了保险保额（意外身故10万、医疗1万），提到具体条款接单时能看到\n  是否回应核心诉求: 部分回应了保险问题，但抽成基数仍未明确\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意——保险保额说清楚了，但抽成基数还在回避\n  决策: 先确认保险信息，再追问抽成基数\n  前瞻: 如果客服明确抽成基数→考虑接受；如果继续回避→追问或质疑",
+        "state": {
+          "turn": "26",
+          "intent": "追问抽成计算基数",
+          "intent_code": "none",
+          "emotion": "冷静质疑",
+          "emotion_intensity": "0.6",
+          "emotion_change": "冷静质疑→冷静质疑",
+          "change_reason": "客服部分回答了保险问题，但抽成基数仍未明确",
+          "change_justified": "true",
+          "stance": "要求具体化"
+        },
+        "emotion_curve": {
+          "轨迹": "冷静质疑(0.6)→冷静质疑(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "抽成基数问题还未明确，需要继续追问"
+        }
+      }
+    },
+    {
+      "turn_number": 27,
+      "speaker": "system",
+      "content": "抽成是按用户支付的总配送费算的，不是基础单价。",
+      "timestamp": 83.28196907043457,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 28,
+      "speaker": "user",
+      "content": "行，这个清楚了。那装备呢，车和头盔是自己买还是你们提供？",
+      "timestamp": 88.94897937774658,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  咨询美团骑手工作，众包模式，按单结算4-8元/单，高峰期补贴1-3元，恶劣天气补贴2-5元\n  保险保意外身故10万和意外医疗1万，抽成按用户支付总配送费15%-20%\n进展追踪:\n  前期: 询问电话来源，了解全职/众包区别\n  最近: 追问保险具体保额和抽成基数，已获明确答复\n  当前待确认: 无待确认事项，可继续追问其他细节",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认抽成基数后，转向询问装备、培训等实际问题\n立场: 警惕但理性，愿意了解信息但要求明确\n\n客服行为分析:\n  上轮做了什么: 明确回答了抽成按用户支付总配送费算\n  是否回应核心诉求: 是，解答了之前追问的模糊点\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，终于说清楚了\n\n决策: 先确认理解正确，然后自然转向装备和培训话题\n前瞻: 如果客服说装备自备→追问有无补贴；如果说提供装备→确认是否免费",
+        "state": {
+          "turn": "28",
+          "intent": "确认抽成细节并转向装备问题",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "问题得到解答，无情绪波动",
+          "change_justified": "true",
+          "stance": "警惕但理性，要求信息明确",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解装备和培训细节"
+        }
+      }
+    },
+    {
+      "turn_number": 29,
+      "speaker": "system",
+      "content": "装备自备，车和头盔需要自己买。公司提供工服和餐箱。",
+      "timestamp": 89.9259524345398,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 30,
+      "speaker": "user",
+      "content": "那工作时间呢？众包是不是想什么时候跑都行？还有单子怎么分给我？",
+      "timestamp": 96.25202107429504,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户叫陈先生，在美团骑手报名页面留言想了解工作内容和收入\n  - 众包模式，按单结算，每单4-8元，高峰期加1-3元，恶劣天气加2-5元\n  - 平台抽成15%-20%，按用户支付的总配送费算\n  - 意外险每单扣1元，保意外身故10万和意外医疗1万\n  - 装备自备，公司提供工服和餐箱\n\n进展追踪:\n  前期: 确认来电身份、了解全职和众包区别、新手建议众包\n  最近: 讨论收入范围、抽成比例、保险细节、装备提供\n  当前待确认: 工作时间和强度要求、接单流程、收入提现方式\n  上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续了解工作细节，特别是时间安排和接单流程\n立场: 保持礼貌但审慎，对模糊信息会追问，测试客服耐心\n\n客服行为分析:\n  上轮做了什么: 回答了装备问题，说自备车和头盔，公司提供工服和餐箱\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，信息还算清楚\n\n决策: 继续追问时间安排和接单流程，看客服能提供多少细节\n前瞻: 如果客服说时间灵活→问具体限制；如果客服说随时可接→问订单分配规则",
+        "state": {
+          "turn": "30",
+          "intent": "追问工作时间安排和接单流程",
+          "intent_code": "none",
+          "emotion": "中立",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中立→中立",
+          "change_reason": "信息逐步清晰，但仍在了解阶段",
+          "change_justified": "true",
+          "stance": "审慎了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.4)→怀疑(0.6)→中立(0.3)→中立(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解时间安排和接单流程"
+        }
+      }
+    }
+  ]
+}

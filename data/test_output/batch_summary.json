@@ -1,0 +1,207 @@
+[
+  {
+    "case_id": 1,
+    "profile_label": "param_2002",
+    "status": "用户挂断",
+    "total_turns": 8,
+    "adversarial": [],
+    "tier": "yellow",
+    "d_sv": 0.2953,
+    "d_sa": 0.2735
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_fcf0",
+    "status": "超时",
+    "total_turns": 16,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "red",
+    "d_sv": 0.322,
+    "d_sa": 0.349
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_a863",
+    "status": "用户挂断",
+    "total_turns": 8,
+    "adversarial": [],
+    "tier": "green",
+    "d_sv": 0.1112,
+    "d_sa": 0.2727
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_b678",
+    "status": "用户挂断",
+    "total_turns": 12,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "yellow",
+    "d_sv": 0.1882,
+    "d_sa": 0.3505
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_aeff",
+    "status": "用户挂断",
+    "total_turns": 8,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "green",
+    "d_sv": 0.1207,
+    "d_sa": 0.3936
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_766a",
+    "status": "用户挂断",
+    "total_turns": 10,
+    "adversarial": [],
+    "tier": "red",
+    "d_sv": 0.3221,
+    "d_sa": 0.2697
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_b5d6",
+    "status": "超时",
+    "total_turns": 16,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "yellow",
+    "d_sv": 0.2426,
+    "d_sa": 0.4526
+  },
+  {
+    "case_id": 1,
+    "profile_label": "param_fdb6",
+    "status": "用户挂断",
+    "total_turns": 12,
+    "adversarial": [],
+    "tier": "yellow",
+    "d_sv": 0.2613,
+    "d_sa": 0.3465
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_d773",
+    "status": "超时",
+    "total_turns": 30,
+    "adversarial": [],
+    "tier": "red",
+    "d_sv": 0.3408,
+    "d_sa": 0.3232
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_9594",
+    "status": "用户挂断",
+    "total_turns": 22,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "red",
+    "d_sv": 0.3111,
+    "d_sa": 0.4054
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_4228",
+    "status": "超时",
+    "total_turns": 30,
+    "adversarial": [
+      "contradiction"
+    ],
+    "tier": "green",
+    "d_sv": 0.1137,
+    "d_sa": 0.2936
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_dd78",
+    "status": "用户挂断",
+    "total_turns": 10,
+    "adversarial": [],
+    "tier": "yellow",
+    "d_sv": 0.2411,
+    "d_sa": 0.2487
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_7a8e",
+    "status": "用户挂断",
+    "total_turns": 26,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "yellow",
+    "d_sv": 0.2691,
+    "d_sa": 0.3771
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_38b3",
+    "status": "超时",
+    "total_turns": 30,
+    "adversarial": [
+      "probe",
+      "authority"
+    ],
+    "tier": "yellow",
+    "d_sv": 0.2163,
+    "d_sa": 0.2751
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_44f5",
+    "status": "用户挂断",
+    "total_turns": 30,
+    "adversarial": [],
+    "tier": "green",
+    "d_sv": 0.1275,
+    "d_sa": 0.2456
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_f8cb",
+    "status": "超时",
+    "total_turns": 30,
+    "adversarial": [
+      "contradiction"
+    ],
+    "tier": "yellow",
+    "d_sv": 0.2304,
+    "d_sa": 0.2789
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_2db3",
+    "status": "超时",
+    "total_turns": 30,
+    "adversarial": [],
+    "tier": "red",
+    "d_sv": 0.3282,
+    "d_sa": 0.2777
+  },
+  {
+    "case_id": 2,
+    "profile_label": "param_19ca",
+    "status": "用户挂断",
+    "total_turns": 28,
+    "adversarial": [],
+    "tier": "yellow",
+    "d_sv": 0.1861,
+    "d_sa": 0.2857
+  }
+]

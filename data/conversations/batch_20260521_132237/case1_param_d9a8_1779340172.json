@@ -1,0 +1,433 @@
+{
+  "id": "case1_param_d9a8_1779340172",
+  "case_id": 1,
+  "user_profile": "param_d9a8",
+  "status": "正常结束",
+  "total_turns": 14,
+  "duration_seconds": 34.0,
+  "complexity_score": 5.4,
+  "profile_label": "param_d9a8",
+  "sampled_vector": [
+    0.3973668516283276,
+    0.8150139141018721,
+    0.45109167875270145,
+    0.1488856165819802,
+    0.237547875676683,
+    0.6797104518826119,
+    0.7193088319977373,
+    0.2283892264557805,
+    0.9357106351067208,
+    0.6649100530109373,
+    0.6406136906308499,
+    0.3432830944425905,
+    0.3797173225234163,
+    0.2985042667975928,
+    0.9208093836271467
+  ],
+  "verified_vector": [
+    0.2,
+    0.9,
+    0.5,
+    0.3,
+    0.4,
+    0.7,
+    0.4,
+    0.3,
+    0.9,
+    0.8,
+    0.9,
+    0.3,
+    0.5,
+    0.2,
+    0.9
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "contradiction"
+  ],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认具体单量要求",
+      "intent_code": "confirm_requirements",
+      "emotion": "轻微不耐烦",
+      "emotion_intensity": "0.4",
+      "emotion_change": "中性→轻微不耐烦",
+      "change_reason": "客服用X和Y代替具体数字，信息不明确",
+      "change_justified": "true",
+      "stance": "要求明确规则",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "4",
+      "intent": "确认合同细节",
+      "intent_code": "confirm_details",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "不满→中性",
+      "change_reason": "客服明确了具体数字",
+      "change_justified": "true",
+      "stance": "要求信息明确",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "确认今天上线要求",
+      "intent_code": "confirm_today_online",
+      "emotion": "neutral",
+      "emotion_intensity": "0.4",
+      "emotion_change": "neutral→neutral",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "冷淡但配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "确认今天上线具体要求",
+      "intent_code": "confirm_today_requirement",
+      "emotion": "勉强接受",
+      "emotion_intensity": "0.4",
+      "emotion_change": "中性→勉强接受",
+      "change_reason": "被迫今天上线但规则明确",
+      "change_justified": "true",
+      "stance": "尊重规则但要求明确",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "表达对强制上线的不满",
+      "intent_code": "express_dissatisfaction",
+      "emotion": "不满",
+      "emotion_intensity": "0.4",
+      "emotion_change": "中性→不满",
+      "change_reason": "听到必须上线，感觉被强制安排",
+      "change_justified": "true",
+      "stance": "规则可接受但态度冷淡",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "12",
+      "intent": "确认结束通话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "略不耐烦→平静",
+      "change_reason": "信息已确认清楚，无需再纠缠",
+      "change_justified": "true",
+      "stance": "接受规则，冷淡配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→中性",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "配合执行",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "X和Y是多少？说清楚，别拿字母糊弄我。",
+      "timestamp": 4.053900957107544,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 身份：飞毛腿骑手\n  - 今日合同已签署\n  - 站长通知任务要求\n\n进展追踪:\n  前期: 无\n  最近: 站长通知合同已签署，提醒完成配送任务\n  当前待确认: 具体单量要求（X和Y的具体数值）",
+        "thought": "审视: 上轮回复是否偏离画像？是（首次回复，无偏离）\n意图: 确认具体任务要求，核实关键信息\n立场: 尊重规则但要求明确细节，不轻易接受模糊说法\n\n客服行为分析:\n  上轮做了什么: 通知合同签署并提醒高峰期上线，但单量要求用X和Y代替\n  是否回应核心诉求: 部分（未给出具体数值）\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，关键信息含糊\n  决策: 直接要求明确单量要求，语气生硬但合理\n  前瞻: 如果客服给具体数字→接受；如果继续含糊→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认具体单量要求",
+          "intent_code": "confirm_requirements",
+          "emotion": "轻微不耐烦",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→轻微不耐烦",
+          "change_reason": "客服用X和Y代替具体数字，信息不明确",
+          "change_justified": "true",
+          "stance": "要求明确规则",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.2)→轻微不耐烦(0.4)",
+          "趋势": "稳定偏负面"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认具体单量要求"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "X是8单，Y是12单。具体数字看合同页面有写。",
+      "timestamp": 4.916138172149658,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "行，8单和12单我知道了。合同页面我回头自己看。",
+      "timestamp": 9.054079532623291,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 报名飞毛腿骑手\n  - 单日合同每天至少完成8单\n  - 多日合同每天至少完成12单\n进展追踪:\n  前期: 客服通知合同已签署，要求高峰期上线\n  最近: 客服说明X=8单，Y=12单\n  当前待确认: 合同具体条款和任务要求\n上次决策依据: 要求客服明确数字，不接受模糊说法",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认合同细节，确保自己清楚任务要求\n立场: 要求信息明确，不接受模糊说法\n\n客服行为分析:\n  上轮做了什么: 明确了X=8单，Y=12单\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但还需确认\n\n决策: 接受数字，但要求确认合同页面信息\n前瞻: 如果客服确认→可结束对话；如果含糊→追问",
+        "state": {
+          "turn": "4",
+          "intent": "确认合同细节",
+          "intent_code": "confirm_details",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "不满→中性",
+          "change_reason": "客服明确了具体数字",
+          "change_justified": "true",
+          "stance": "要求信息明确",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.6)→中性(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认合同页面信息是否一致"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "好的，那今天合同生效了，你能正常上线配送吗？",
+      "timestamp": 9.992775201797485,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "今天必须上线吗？还是可以明天开始？",
+      "timestamp": 13.935425281524658,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 飞毛腿骑手，合同已签署\n  - 单日合同每天至少完成8单\n  - 多日合同每天至少完成12单\n进展追踪:\n  前期: 确认了最低单数要求\n  最近: 客服确认合同已生效，询问是否能上线\n  当前待确认: 今天是否需要立即上线\n上次决策依据: 接受了客服给出的具体数字",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认今天上线的具体要求，但保持冷淡态度\n立场: 主导对话，不轻易让步\n客服行为分析:\n  上轮做了什么: 确认合同生效，询问能否上线\n  是否回应核心诉求: 是\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但心情一般\n决策: 先问清楚今天是否需要立即上线，再决定回复\n前瞻: 如果客服说必须上线→我会确认具体时段；如果说可以灵活→我会说再考虑",
+        "state": {
+          "turn": "6",
+          "intent": "确认今天上线要求",
+          "intent_code": "confirm_today_online",
+          "emotion": "neutral",
+          "emotion_intensity": "0.4",
+          "emotion_change": "neutral→neutral",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "冷淡但配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "neutral(0.4)→neutral(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认今天是否必须立即上线"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "今天必须上线，合同今天生效了。",
+      "timestamp": 14.764939308166504,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "今天几点到几点必须在线？午餐和晚餐时段具体怎么算？",
+      "timestamp": 19.104700565338135,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 今天合同已签署生效\n  - 单日合同每天至少8单，多日合同每天至少12单\n进展追踪:\n  前期: 确认了X=8，Y=12\n  最近: 客服确认合同今天生效，今天必须上线\n  当前待确认: 配送任务的具体要求\n上次决策依据: 接受了合同数字，但保留查看合同页面的权利",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认今天上线的具体要求和时间安排\n立场: 尊重规则但要求明确，不接受模糊说法\n\n客服行为分析:\n  上轮做了什么: 明确告知合同今天生效，今天必须上线\n  是否回应核心诉求: 是，给出了明确答复\n\n我的情绪反应:\n  对上轮客服行为的感受: 可以接受，但不太情愿今天就得开始\n\n决策: 基于立场×情绪反应的自然回应——既然必须今天上线，问清楚具体时间窗口和任务要求\n前瞻: 如果客服说具体时间→确认并结束；如果含糊→追问",
+        "state": {
+          "turn": "8",
+          "intent": "确认今天上线具体要求",
+          "intent_code": "confirm_today_requirement",
+          "emotion": "勉强接受",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→勉强接受",
+          "change_reason": "被迫今天上线但规则明确",
+          "change_justified": "true",
+          "stance": "尊重规则但要求明确",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→中性(0.5)→勉强接受(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认今天上线的具体时间要求和任务安排"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "午餐11点到1点，晚餐5点到8点，这两个时段必须在线。",
+      "timestamp": 19.762240409851074,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "知道了，必须上线是吧。行，我中午和晚上会在线，别催太紧。",
+      "timestamp": 24.56159257888794,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 单日合同每天至少8单，多日合同每天至少12单\n  - 午餐时段11点到1点，晚餐时段5点到8点必须在线\n  - 今天合同生效，必须上线\n\n进展追踪:\n  前期: 确认了X=8单，Y=12单\n  最近: 客服确认了今天必须上线，午餐11-13点，晚餐17-20点\n  当前待确认: 无，信息已基本清楚\n\n上次决策依据: 接受了客服给出的时段信息",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认上线时间后，表达对强制上线的不满\n立场: 规则可以接受，但态度冷淡，带点挑衅\n\n客服行为分析:\n  上轮做了什么: 明确了午餐和晚餐时段\n  是否回应核心诉求: 是，信息清晰\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但强制上线让我不爽\n\n决策: 先接受规则，但故意反问“必须”这个词，体现不满\n前瞻: 如果客服解释规则→我说知道了挂断；如果客服安抚→我继续冷淡",
+        "state": {
+          "turn": "10",
+          "intent": "表达对强制上线的不满",
+          "intent_code": "express_dissatisfaction",
+          "emotion": "不满",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→不满",
+          "change_reason": "听到必须上线，感觉被强制安排",
+          "change_justified": "true",
+          "stance": "规则可接受但态度冷淡",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→中性(0.3)→中性(0.3)→不满(0.4)",
+          "趋势": "略恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续沟通，表达不满后再确认是否结束"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "好的，那辛苦你了。记得注意安全，有问题随时找我。",
+      "timestamp": 25.338559865951538,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "行，没别的事了，我中午上线。挂了啊。",
+      "timestamp": 28.88046431541443,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 今天合同生效，必须上线\n  - 午餐11点到1点，晚餐5点到8点在线\n  - X=8单，Y=12单\n进展追踪:\n  前期: 确认合同已签署，获取了具体单数和时段要求\n  最近: 确认必须今天上线，时段为午餐11-1点、晚餐5-8点\n  当前待确认: 无，信息已清楚\n上次决策依据: 接受规则，但要求别催太紧",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认无误，准备结束通话\n立场: 尊重规则但态度冷淡，信息清楚就不纠缠\n客服行为分析:\n  上轮做了什么: 确认上线要求，提醒注意安全\n  是否回应核心诉求: 是，时段和单数都讲清楚了\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息完整\n决策: 信息已确认，主动结束通话\n前瞻: 无后续",
+        "state": {
+          "turn": "12",
+          "intent": "确认结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "略不耐烦→平静",
+          "change_reason": "信息已确认清楚，无需再纠缠",
+          "change_justified": "true",
+          "stance": "接受规则，冷淡配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "略不耐烦(0.6)→平静(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "信息已确认清楚，问题已解决"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "好的，那中午见，加油！",
+      "timestamp": 30.229381799697876,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "嗯，知道了。中午见。",
+      "timestamp": 34.030067443847656,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 合同今天生效，必须上线\n  - 午餐时段11点到1点，晚餐时段5点到8点\n  - X=8单，Y=12单\n进展追踪:\n  前期: 确认了合同生效时间和任务要求\n  最近: 明确了上线时段和单量要求\n  当前待确认: 无\n上次决策依据: 接受了必须今天上线的要求",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认结束通话\n立场: 已接受任务，准备执行\n\n客服行为分析:\n  上轮做了什么: 确认了上线时段，并叮嘱注意安全\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息清晰\n\n决策: 自然结束对话\n前瞻: 无后续",
+        "state": {
+          "turn": "14",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→中性",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "配合执行",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，信息已确认，准备上线"
+        }
+      }
+    }
+  ]
+}

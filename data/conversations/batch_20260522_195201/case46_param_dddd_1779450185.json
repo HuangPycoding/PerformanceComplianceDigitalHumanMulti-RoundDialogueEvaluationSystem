@@ -1,0 +1,819 @@
+{
+  "id": "case46_param_dddd_1779450185",
+  "case_id": 46,
+  "user_profile": "param_dddd",
+  "status": "用户挂断",
+  "total_turns": 26,
+  "duration_seconds": 77.1,
+  "complexity_score": 7.8,
+  "profile_label": "param_dddd",
+  "sampled_vector": [
+    0.9004590497538063,
+    0.5767793761532907,
+    0.7342047327762364,
+    0.71508685185832,
+    0.05787970392640589,
+    0.56182683151225,
+    0.7275903325637005,
+    0.46650644353833337,
+    0.15539345034751784,
+    0.2829133934194536,
+    0.18283566865576156,
+    0.47541343689126914,
+    0.23384734751417563,
+    0.4074085819163372,
+    0.43150258876363745
+  ],
+  "verified_vector": [
+    0.75,
+    0.25,
+    0.3,
+    0.8,
+    0.15,
+    0.8,
+    0.8,
+    0.8,
+    0.25,
+    0.25,
+    0.15,
+    0.7,
+    0.3,
+    0.25,
+    0.25
+  ],
+  "audited_vector": [
+    0.9,
+    0.6,
+    0.2,
+    0.7,
+    0.4,
+    0.8,
+    0.6,
+    0.9,
+    0.3,
+    0.5,
+    0.3,
+    0.7,
+    0.2,
+    0.1,
+    0.2
+  ],
+  "adversarial_strategies": [],
+  "consistency": {
+    "d_sv": 0.205,
+    "d_va": 0.1633,
+    "d_sa": 0.2511,
+    "max_sv_dev": 0.4342,
+    "max_va_dev": 0.35,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_b_llm"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认身份，表达愿意了解",
+      "intent_code": "none",
+      "emotion": "平和",
+      "emotion_intensity": "0.3",
+      "emotion_change": "neutral→平和",
+      "change_reason": "客服主动说明来意，态度专业",
+      "change_justified": "true",
+      "stance": "愿意配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "4",
+      "intent": "如实回答现状",
+      "intent_code": "none",
+      "emotion": "平和",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平和→平和",
+      "change_reason": "对话正常推进，无情绪波动",
+      "change_justified": "true",
+      "stance": "配合但坚持自我节奏",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "询问兼职收入具体细节",
+      "intent_code": "query_income_detail",
+      "emotion": "满意",
+      "emotion_intensity": "0.5",
+      "emotion_change": "期待→满意",
+      "change_reason": "客服理解了兼职意向并推荐了合适模式",
+      "change_justified": "true",
+      "stance": "愿意配合，但需确认核心诉求",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "确认兼职收入细节",
+      "intent_code": "none",
+      "emotion": "好奇",
+      "emotion_intensity": "0.5",
+      "emotion_change": "满意→好奇",
+      "change_reason": "基础信息已获取，想深挖收入细节",
+      "change_justified": "true",
+      "stance": "愿意尝试但需细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "确认收入条件和区域差异",
+      "intent_code": "inquire_income_detail",
+      "emotion": "谨慎",
+      "emotion_intensity": "0.5",
+      "emotion_change": "期待→谨慎",
+      "change_reason": "收入范围较宽，引发对能否达到上限的疑虑",
+      "change_justified": "true",
+      "stance": "愿意尝试，但需要了解清楚再决定",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "告知区域并追问单量数据",
+      "intent_code": "none",
+      "emotion": "期待",
+      "emotion_intensity": "0.6",
+      "emotion_change": "期待→期待",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "配合但关注实际收入",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "14",
+      "intent": "询问注册流程和装备要求",
+      "intent_code": "none",
+      "emotion": "安心",
+      "emotion_intensity": "0.6",
+      "emotion_change": "期待→安心",
+      "change_reason": "收入疑虑被客服确认，心里踏实了",
+      "change_justified": "true",
+      "stance": "愿意配合但怕麻烦",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "16",
+      "intent": "了解注册和装备细节",
+      "intent_code": "none",
+      "emotion": "好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "满意→好奇",
+      "change_reason": "收入问题已解决，转向入门细节",
+      "change_justified": "true",
+      "stance": "有兴趣但谨慎",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "18",
+      "intent": "追问装备补贴细节",
+      "intent_code": "detail_clarify",
+      "emotion": "好奇",
+      "emotion_intensity": "0.5",
+      "emotion_change": "满意→好奇",
+      "change_reason": "听到有补贴，想知道具体怎么发",
+      "change_justified": "true",
+      "stance": "愿意配合但需要细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "20",
+      "intent": "确认补贴细节和注册流程",
+      "intent_code": "confirm_subsidy_and_registration",
+      "emotion": "满意",
+      "emotion_intensity": "0.6",
+      "emotion_change": "满意→满意",
+      "change_reason": "客服清晰回应补贴细节，信息透明",
+      "change_justified": "true",
+      "stance": "愿意兼职尝试，但想搞清楚投入成本和收益",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "22",
+      "intent": "追问注册流程细节",
+      "intent_code": "none",
+      "emotion": "好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "满意→好奇",
+      "change_reason": "客服回答装备补贴问题明确，但注册流程说得太简单，想了解更多",
+      "change_justified": "true",
+      "stance": "谨慎但愿意尝试",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "24",
+      "intent": "确认注册细节",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "满意→满意",
+      "change_reason": "无变化，问题已解决",
+      "change_justified": "true",
+      "stance": "配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "26",
+      "intent": "自然结束通话",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "满意→满意",
+      "change_reason": "客服已解答所有问题，信息充分",
+      "change_justified": "true",
+      "stance": "愿意接受方案",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是陈先生吗？我是美团骑手招聘的。看到你想详细了解骑手的工作内容和收入，我今天专门跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "你好，是我。对，我确实想了解下骑手工作具体怎么样，收入大概能有多少？",
+      "timestamp": 4.444706916809082,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  陈先生，在美团平台留言想了解骑手工作内容和收入\n进展追踪:\n  前期: 收到客服来电\n  最近: 客服自我介绍，说明来电目的\n  当前待确认: 骑手工作具体内容和收入情况\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[是]\n意图: 确认对方身份，表达愿意了解的态度\n立场: 愿意先听听对方说什么，态度平和\n\n客服行为分析:\n  上轮做了什么: 自我介绍并说明来电目的\n  是否回应核心诉求: 是，主动切入正题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，客服直接说明来意\n\n决策: 基于立场×情绪反应，自然回应确认身份并表达兴趣\n前瞻: 如果客服详细介绍→认真听并提问；如果客服问是否有空→表示方便",
+        "state": {
+          "turn": "2",
+          "intent": "确认身份，表达愿意了解",
+          "intent_code": "none",
+          "emotion": "平和",
+          "emotion_intensity": "0.3",
+          "emotion_change": "neutral→平和",
+          "change_reason": "客服主动说明来意，态度专业",
+          "change_justified": "true",
+          "stance": "愿意配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平和(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "对话刚开始，需要了解详细信息"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "在说收入前，先问下——你现在有工作吗？想全职还是兼职跑？",
+      "timestamp": 5.874960660934448,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "我现在有份工作，不过收入不太稳定。想先兼职跑跑看，合适再考虑全职。",
+      "timestamp": 10.868187189102173,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生，想了解骑手工作内容和收入\n  客服: 美团骑手招聘专员\n进展追踪:\n  前期: 客服确认身份，用户表达了解意愿\n  最近: 客服询问工作状态和意向（全职/兼职）\n  当前待确认: 用户需回答是否有工作、倾向全职还是兼职\n上次决策依据: 用户按真实情况回应，先了解信息",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 如实回答客服问题，分享自己的现状和想法\n立场: 愿意沟通但习惯按自己节奏来\n\n客服行为分析:\n  上轮做了什么: 询问用户当前工作状态和全职/兼职倾向\n  是否回应核心诉求: 部分，先了解背景再介绍\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，客服在了解情况\n\n决策: 如实回答，目前有工作，想先兼职试试\n前瞻: 如果客服介绍兼职模式→继续听；如果推全职→可能拒绝",
+        "state": {
+          "turn": "4",
+          "intent": "如实回答现状",
+          "intent_code": "none",
+          "emotion": "平和",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平和→平和",
+          "change_reason": "对话正常推进，无情绪波动",
+          "change_justified": "true",
+          "stance": "配合但坚持自我节奏",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平和(0.3)→平和(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在回答客服问题，对话刚开始"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "好的，兼职众包模式很适合你。自由接单，没最低时长要求。",
+      "timestamp": 11.658185482025146,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "那兼职跑的话，一单能挣多少钱？我晚上下班跑几个小时能有多少收入？",
+      "timestamp": 16.952481508255005,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 陈先生，有意向了解美团骑手工作\n  - 目前有工作但收入不稳定\n  - 想先兼职（众包模式），合适再考虑全职\n进展追踪:\n  前期: 客服介绍兼职众包模式适合\n  最近: 客服说\"自由接单，没最低时长要求\"\n  当前待确认: 具体兼职收入怎么算，一单能挣多少",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续了解兼职骑手的收入细节\n立场: 愿意配合沟通，但习惯按自己方式了解信息\n\n客服行为分析:\n  上轮做了什么: 确认了我的兼职意向，介绍了众包模式自由灵活\n  是否回应核心诉求: 部分回应了工作模式，但还没说收入\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，感觉挺理解我的情况\n\n决策: 顺着话题问收入细节，这是我最关心的\n前瞻: 如果客服说具体收入→我问要求，如果客服说大致范围→我继续追问",
+        "state": {
+          "turn": "6",
+          "intent": "询问兼职收入具体细节",
+          "intent_code": "query_income_detail",
+          "emotion": "满意",
+          "emotion_intensity": "0.5",
+          "emotion_change": "期待→满意",
+          "change_reason": "客服理解了兼职意向并推荐了合适模式",
+          "change_justified": "true",
+          "stance": "愿意配合，但需确认核心诉求",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "期待(0.6)→满意(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解收入细节"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "兼职每单平均5-8元，晚高峰跑2-3小时，日均10-15单。",
+      "timestamp": 17.850501537322998,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "那一个月下来，晚上跑跑能挣个三千左右吗？",
+      "timestamp": 22.45226764678955,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  陈先生，有工作但收入不稳定，想先兼职跑跑看\n进展追踪:\n  前期: 客服介绍兼职众包模式\n  最近: 客服回答每单5-8元，晚高峰2-3小时日均10-15单\n  当前待确认: 薪资结构细节、保障等问题\n上次决策依据: 想先了解基础收入情况",
+        "thought": "审视: 上轮回复是否偏离画像？[是/否]\n意图: 进一步确认兼职收入的具体计算方式\n立场: 想了解清楚再决定，愿意尝试但需要细节\n\n客服行为分析:\n  上轮做了什么: 给出兼职单均收入5-8元，晚高峰日均10-15单\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息清晰\n\n决策: 基于立场×情绪反应的自然回应——继续追问收入细节\n前瞻: 如果客服说具体收入结构→我继续听；如果绕开话题→我追问",
+        "state": {
+          "turn": "8",
+          "intent": "确认兼职收入细节",
+          "intent_code": "none",
+          "emotion": "好奇",
+          "emotion_intensity": "0.5",
+          "emotion_change": "满意→好奇",
+          "change_reason": "基础信息已获取，想深挖收入细节",
+          "change_justified": "true",
+          "stance": "愿意尝试但需细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.5)->满意(0.6)->好奇(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解薪资结构和保障等细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "兼职月收入参考范围是1500-3000元，具体看单量和区域。",
+      "timestamp": 23.227872371673584,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "那1500到3000差距挺大的，我这边区域单量怎么样？能跑到3000吗？",
+      "timestamp": 29.145622730255127,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户陈先生，有工作但收入不稳定，想先兼职跑美团骑手，后期考虑全职\n进展追踪:\n  前期: 确认兼职众包模式，无最低时长要求\n  最近: 客服说明兼职每单5-8元，晚高峰2-3小时日均10-15单，月收入1500-3000元\n  当前待确认: 收入是否能达到3000左右，具体区域和单量情况\n上次决策依据: 用户关心兼职收入能否达到预期",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认兼职收入是否能达到3000元，了解具体区域差异\n立场: 愿意先听介绍，但需要确认实际收入是否符合预期\n\n客服行为分析:\n  上轮做了什么: 提供了收入参考范围1500-3000元，但未具体说明如何达到3000\n  是否回应核心诉求: 部分回应，但不够具体\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点疑虑，收入范围较宽，想确认能否稳定拿到3000\n\n决策: 追问具体区域和单量情况，确认收入上限的实现条件\n前瞻: 如果客服给出具体条件→考虑接受；如果含糊→继续追问",
+        "state": {
+          "turn": "10",
+          "intent": "确认收入条件和区域差异",
+          "intent_code": "inquire_income_detail",
+          "emotion": "谨慎",
+          "emotion_intensity": "0.5",
+          "emotion_change": "期待→谨慎",
+          "change_reason": "收入范围较宽，引发对能否达到上限的疑虑",
+          "change_justified": "true",
+          "stance": "愿意尝试，但需要了解清楚再决定",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "期待(0.7)→谨慎(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想确认具体区域和单量情况，了解如何达到3000元收入"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "区域单量看商圈热度，你住哪个区？我帮你查下参考数据。",
+      "timestamp": 30.193718910217285,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "我住朝阳区这边，你看下这附近单量多不多？能跑到3000吗？",
+      "timestamp": 35.13881063461304,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [想了解兼职骑手工作，晚上跑单，月收入期望3000左右]\n进展追踪:\n  前期: 自我介绍→确认兼职意向→了解单均收入和时长\n  最近: 客服询问具体区域\n  当前待确认: 我住的区域单量如何，能否达到月入3000\n上次决策依据: 自然追问，了解自身区域情况",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 告诉客服具体区域，获取单量参考数据\n立场: 愿意配合，但关注实际收入能否达到期望\n\n客服行为分析:\n  上轮做了什么: 询问具体区域，表示可查参考数据\n  是否回应核心诉求: 部分回应，开始针对性查询\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，感觉在认真帮我评估\n\n决策: 告诉区域，继续追问收入可行性\n前瞻: 如果客服给数据→评估是否满意；如果数据低→可能犹豫但接受",
+        "state": {
+          "turn": "12",
+          "intent": "告知区域并追问单量数据",
+          "intent_code": "none",
+          "emotion": "期待",
+          "emotion_intensity": "0.6",
+          "emotion_change": "期待→期待",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "配合但关注实际收入",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "期待(0.6)→期待(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需获取区域单量数据，确认收入可行性"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "朝阳区单量充足，晚高峰跑3小时，月入3000是可行的。",
+      "timestamp": 35.7717981338501,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "那挺好的，心里有底了。我想问问，注册麻烦不？需要自己准备什么装备？",
+      "timestamp": 40.6863431930542,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  兼职众包模式，朝阳区，晚高峰跑3小时月入3000可行\n进展追踪:\n  前期: 已确认兼职模式，了解单价5-8元/单\n  最近: 客服确认朝阳区单量充足，月入3000可行\n  当前待确认: 具体怎么注册、需要什么装备、保险怎么算\n上次决策依据: 想先兼职试试水，合适再转全职",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认收入可行后，想问注册流程和装备要求\n立场: 愿意继续了解，但怕手续麻烦\n\n客服行为分析:\n  上轮做了什么: 确认朝阳区单量充足，月入3000可行\n  是否回应核心诉求: 是——解答了收入疑虑\n\n我的情绪反应:\n  对上轮客服行为的感受: 比较满意，心里有底了\n  情绪: 安心\n\n决策: 基于安心立场，顺势问注册和装备问题\n前瞻: 如果客服详细说明→继续配合；如果含糊→追问细节",
+        "state": {
+          "turn": "14",
+          "intent": "询问注册流程和装备要求",
+          "intent_code": "none",
+          "emotion": "安心",
+          "emotion_intensity": "0.6",
+          "emotion_change": "期待→安心",
+          "change_reason": "收入疑虑被客服确认，心里踏实了",
+          "change_justified": "true",
+          "stance": "愿意配合但怕麻烦",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "期待(0.5)→安心(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需了解注册和装备细节"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "注册很简单，App上填资料就行。装备需要电动车、头盔和保温箱。",
+      "timestamp": 41.479474782943726,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "电动车是自己准备还是你们有提供的？头盔保温箱也是自己买吗？",
+      "timestamp": 46.868096113204956,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [兼职众包模式/朝阳区/晚高峰跑3小时/月入3000可行]\n进展追踪:\n  前期: 确认兼职意向→了解单均收入→询问区域单量\n  最近: 客服确认朝阳区单量充足/月入3000可行/谈到注册和装备\n  当前待确认: 注册具体流程/装备是否需要自己买\n上次决策依据: 收入符合预期，想进一步了解入门细节",
+        "thought": "审视: 上轮回复是否偏离画像？[是/否]\n意图: 了解注册流程和装备准备的具体细节\n立场: 对兼职骑手工作有兴趣，但想先搞清入门门槛再决定\n\n客服行为分析:\n  上轮做了什么: 确认了朝阳区单量充足，月入3000可行，并提到注册简单需自备装备\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息给得挺清楚\n\n决策: 自然地追问装备细节——电动车是必须自备还是平台有提供？头盔保温箱是不是统一配发？\n前瞻: 如果客服说装备需自备→我会问有没有渠道推荐；如果客服说平台提供→我会问怎么领取",
+        "state": {
+          "turn": "16",
+          "intent": "了解注册和装备细节",
+          "intent_code": "none",
+          "emotion": "好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "满意→好奇",
+          "change_reason": "收入问题已解决，转向入门细节",
+          "change_justified": "true",
+          "stance": "有兴趣但谨慎",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→满意(0.7)→好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解注册和装备的具体细节"
+        }
+      }
+    },
+    {
+      "turn_number": 17,
+      "speaker": "system",
+      "content": "电动车和装备需自备，公司提供装备补贴，每月发放。",
+      "timestamp": 47.822020530700684,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 18,
+      "speaker": "user",
+      "content": "那装备补贴是每月发多少钱？直接打到账户里吗？",
+      "timestamp": 52.299062967300415,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  兼职众包模式，朝阳区，晚高峰跑3小时月入3000可行\n进展追踪:\n  前期: 了解兼职模式、单均收入、区域单量\n  最近: 确认装备需自备，有装备补贴\n  当前待确认: 装备补贴具体怎么发放？注册流程细节？\n上次决策依据: 对收入和区域单量满意，开始关心装备和注册问题",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续了解装备补贴的具体发放方式\n立场: 愿意接受但需要细节确认\n\n客服行为分析:\n  上轮做了什么: 说明装备需自备，提到有装备补贴\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，有补贴能减轻负担\n\n决策: 自然追问装备补贴怎么发放\n前瞻: 如果客服解释清楚→继续问注册流程；如果含糊→追问具体",
+        "state": {
+          "turn": "18",
+          "intent": "追问装备补贴细节",
+          "intent_code": "detail_clarify",
+          "emotion": "好奇",
+          "emotion_intensity": "0.5",
+          "emotion_change": "满意→好奇",
+          "change_reason": "听到有补贴，想知道具体怎么发",
+          "change_justified": "true",
+          "stance": "愿意配合但需要细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问装备补贴细节"
+        }
+      }
+    },
+    {
+      "turn_number": 19,
+      "speaker": "system",
+      "content": "装备补贴每月50-100元，随工资一起发放到账户。",
+      "timestamp": 53.042131662368774,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 20,
+      "speaker": "user",
+      "content": "那补贴是直接打到工资卡里是吧？注册的话，具体怎么操作？",
+      "timestamp": 59.30607891082764,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  陈先生，朝阳区，有工作想兼职跑，晚上下班跑2-3小时\n  兼职众包模式，晚高峰10-15单，月入1500-3000元\n  装备需自备（电动车、头盔、保温箱），公司每月给50-100元装备补贴随工资发放\n进展追踪:\n  前期: 确认身份、了解全职/兼职意向、解释单均收入\n  最近: 确认区域单量、询问装备和补贴细节\n  当前待确认: 装备补贴具体发放方式、注册流程细节\n上次决策依据: 接受装备自备+补贴方案，继续了解细节",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认装备补贴发放细节，了解注册流程\n立场: 愿意兼职尝试，但想搞清楚投入成本和收益\n\n客服行为分析:\n  上轮做了什么: 解释了装备补贴每月50-100元随工资发放\n  是否回应核心诉求: 是，回答了补贴发放方式\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息清楚\n\n决策: 确认补贴细节后，询问注册流程，准备决定是否尝试\n前瞻: 如果客服解释注册流程→我表示考虑或接受",
+        "state": {
+          "turn": "20",
+          "intent": "确认补贴细节和注册流程",
+          "intent_code": "confirm_subsidy_and_registration",
+          "emotion": "满意",
+          "emotion_intensity": "0.6",
+          "emotion_change": "满意→满意",
+          "change_reason": "客服清晰回应补贴细节，信息透明",
+          "change_justified": "true",
+          "stance": "愿意兼职尝试，但想搞清楚投入成本和收益",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.5)→感兴趣(0.6)→满意(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想了解注册流程，信息还没问完"
+        }
+      }
+    },
+    {
+      "turn_number": 21,
+      "speaker": "system",
+      "content": "注册很简单，下载美团骑手App，按提示填资料就行。",
+      "timestamp": 60.35158967971802,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 22,
+      "speaker": "user",
+      "content": "那填资料的时候有什么特别要注意的吗？我怕填错了耽误事。",
+      "timestamp": 65.62155318260193,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  朝阳区，兼职跑单，晚高峰跑3小时\n  月收入目标3000元\n  装备需自备，有每月50-100元补贴\n进展追踪:\n  前期: 确认兼职模式、收入范围、区域单量\n  最近: 了解装备要求、补贴、注册方式\n  当前待确认: 注册具体流程\n上次决策依据: 客服已回答装备和补贴问题，继续追问注册细节",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认注册流程细节，判断是否值得尝试\n立场: 谨慎但愿意尝试——习惯按自己方式做事，不想太麻烦\n\n客服行为分析:\n  上轮做了什么: 简单介绍了注册流程\n  是否回应核心诉求: 部分——回答了注册方式但不够详细\n\n我的情绪反应:\n  对上轮客服行为的感受: 还算满意，但觉得有点简单，想了解更多细节\n\n决策: 追问注册的具体步骤，看有没有什么需要注意的地方\n前瞻: 如果客服说很简单→我会再问有没有需要特别注意的；如果客服说具体步骤→我会考虑是否注册",
+        "state": {
+          "turn": "22",
+          "intent": "追问注册流程细节",
+          "intent_code": "none",
+          "emotion": "好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "满意→好奇",
+          "change_reason": "客服回答装备补贴问题明确，但注册流程说得太简单，想了解更多",
+          "change_justified": "true",
+          "stance": "谨慎但愿意尝试",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→满意(0.7)→好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在了解注册流程，有细节需要确认"
+        }
+      }
+    },
+    {
+      "turn_number": 23,
+      "speaker": "system",
+      "content": "注册时注意身份证和银行卡信息准确，其他按提示填就行。",
+      "timestamp": 66.40829920768738,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 24,
+      "speaker": "user",
+      "content": "好的，明白了，那我下载App注册就行，谢谢啊。",
+      "timestamp": 71.53928089141846,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  意向人: 陈先生，住朝阳区，有工作想兼职跑\n  收入预期: 晚高峰跑3小时，月入3000\n  装备需自备，有每月50-100元补贴\n进展追踪:\n  前期: 介绍了兼职模式、单均收入、区域单量\n  最近: 确认装备自备、补贴发放方式\n  当前待确认: 注册具体步骤和注意事项\n上次决策依据: 自然追问注册细节，了解操作流程",
+        "thought": "审视: 上轮回复是否偏离画像？[是/否]\n意图: 确认注册流程细节，确保自己操作不会出错\n立场: 愿意配合但习惯按自己方式，对新流程谨慎\n\n客服行为分析:\n  上轮做了什么: 简单说明注册步骤和注意事项\n  是否回应核心诉求: 是，回答了填资料的关键点\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，回答简洁明了\n\n决策: 确认理解注册流程，准备结束通话\n前瞻: 如果客服说\"还有问题吗\"→说没有，表示感谢；如果客服主动说再见→自然结束",
+        "state": {
+          "turn": "24",
+          "intent": "确认注册细节",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "满意→满意",
+          "change_reason": "无变化，问题已解决",
+          "change_justified": "true",
+          "stance": "配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "满意(0.7)→满意(0.7)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想最后确认一下注册流程，然后就差不多了"
+        }
+      }
+    },
+    {
+      "turn_number": 25,
+      "speaker": "system",
+      "content": "好的，注册后有问题随时联系我，祝你顺利。",
+      "timestamp": 72.50052952766418,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 26,
+      "speaker": "user",
+      "content": "好的，那我先下载App注册，谢谢你啊，再见。",
+      "timestamp": 77.12672400474548,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  陈先生，住朝阳区，目前有工作但收入不稳定，想先兼职跑众包\n  晚高峰跑3小时，月入3000可行\n  装备需自备，公司提供50-100元/月装备补贴\n  注册需下载美团骑手App，注意身份证和银行卡信息准确\n进展追踪:\n  前期: 了解工作模式和收入，注册流程\n  最近: 客服告知装备需自备但有补贴，注册注意事项\n  当前待确认: 暂无\n上次决策依据: 信息已了解清楚，准备去注册",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 自然收尾结束通话\n立场: 信息已了解清楚，准备行动\n\n客服行为分析:\n  上轮做了什么: 确认注册注意事项，并祝顺利\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 感谢并自然结束通话\n前瞻: 如果客服继续提供信息→继续听；如果客服告别→结束",
+        "state": {
+          "turn": "26",
+          "intent": "自然结束通话",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "满意→满意",
+          "change_reason": "客服已解答所有问题，信息充分",
+          "change_justified": "true",
+          "stance": "愿意接受方案",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→满意(0.7)→满意(0.7)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，信息已了解清楚，准备去注册"
+        }
+      }
+    }
+  ]
+}

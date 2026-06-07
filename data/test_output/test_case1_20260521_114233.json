@@ -1,0 +1,338 @@
+{
+  "case_id": 1,
+  "case_title": "美团外卖骑手站长 - 飞毛腿合同通知",
+  "complexity_score": 5.4,
+  "sampled_vector": [
+    0.8694294038734217,
+    0.1799794283921905,
+    0.4542199675358395,
+    0.3873105383471417,
+    0.624736387938286,
+    0.6559562017227275,
+    0.8842350055611998,
+    0.1965279365467245,
+    0.8705687931433644,
+    0.3762515141031352,
+    0.7477335900926838,
+    0.4915975085620441,
+    0.14637200936212724,
+    0.16017675395203357,
+    0.14005612038845505
+  ],
+  "verified_vector": [
+    0.7,
+    0.5,
+    0.2,
+    0.5,
+    0.7,
+    0.8,
+    0.6,
+    0.5,
+    0.7,
+    0.6,
+    0.8,
+    0.5,
+    0.2,
+    0.3,
+    0.2
+  ],
+  "persona_text": "这人吧，接电话的时候态度挺中性的，不冷不热，愿意听听你到底要说什么。聊起来之后，他挺信任你的，觉得你打电话来肯定是有正事儿，所以会主动配合回答问题，也会顺带问一两个自己关心的事，比如进度或者结果。不过他说话比较直接，不爱用那些客套话，语气听着有点冲，但也不是故意找茬。他对自己经历过的事儿记得大概，但具体时间、金额这些细节经常说不太准，得你帮他捋一捋。他回答问题时会给出必要的背景和关键信息，不会太简短，但也不会从头到尾全盘托出，比如问个退款进度，他会说“我上周下单的，中间物流有点问题，现在想问问怎么处理”，表达清晰，点到为止。情绪上他挺稳的，听到坏消息会有点不高兴，好消息也能乐呵一下，但很快就能平复下来，不会大起大落。他对平台规则挺熟的，像赔付标准、退款流程这些门儿清，能问出点专业问题来，不容易被糊弄。遇到不合理的事儿，他会明确表示不满，坚持自己的立场，不会轻易妥协，但也不会死缠烂打。你给的建议他愿意听，会根据自己的实际情况掂量哪个更合适，不是那种固执己见的人。他挺有耐心的，你解释得长一点或者需要查信息，他能安静等着，不催你。关键信息他会跟你确认一下，比如赔多少钱、什么时候到账，听着合理也就不再追问了。整体来说，他说话基本靠谱，偶尔记岔了或者口误，你指出来他也会承认改过来。",
+  "adversarial_strategies": [],
+  "conversation_status": "正常结束",
+  "total_turns": 14,
+  "duration_seconds": 37.8,
+  "consistency": {
+    "path_a_d_sv": 0.2729,
+    "path_a_d_va": 0.0861,
+    "path_a_d_sa": 0.2573,
+    "path_a_max_sv_dev": 0.3842,
+    "path_a_max_va_dev": 0.3333,
+    "path_a_tier": "yellow",
+    "path_a_primary_deviation": "A1_画像生成质量",
+    "path_a_method": "path_a_state",
+    "d_sv": 0.1854,
+    "d_va": 0.177,
+    "d_sa": 0.2658,
+    "max_sv_dev": 0.32,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_b_llm"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "speaker": "客服",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 2,
+      "speaker": "用户",
+      "content": "好的，站长。那个X和Y具体是多少单？我得心里有个数。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [身份: 飞毛腿骑手/合同已签署/需完成配送任务]\n进展追踪:\n  前期: 报名飞毛腿\n  最近: 接到站长电话通知合同签署和任务要求\n  当前待确认: 具体单量要求X和Y是多少\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[是]\n意图: 确认具体任务要求\n立场: 配合但直接\n\n客服行为分析:\n  上轮做了什么: 通知合同签署并提醒任务要求，但未说明具体单量\n  是否回应核心诉求: 部分\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，但需要明确要求\n\n决策: 直接询问X和Y的具体数值\n前瞻: 如果客服告知→我确认并结束；如果不告知→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认具体单量要求",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "无→中性",
+          "change_reason": "首次通话，信息不足",
+          "change_justified": "true",
+          "stance": "配合但直接",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认具体单量要求"
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "speaker": "客服",
+      "content": "单日合同X单，多日合同Y单。具体数字你App里能看到，我这边系统显示的就是这个标准。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 4,
+      "speaker": "用户",
+      "content": "站长，你直接告诉我X和Y是多少吧，省得我翻App查了。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 合同已签署\n  - 需要完成配送任务\n进展追踪:\n  前期: 接听站长通知电话\n  最近: 站长通知合同签署，提醒完成配送任务\n  当前待确认: 单日合同X单和多日合同Y单的具体数字，站长未明确告知\n上次决策依据: 想明确任务要求，以便合理安排时间",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 追问具体单数，因为站长没有给出明确数字\n立场: 愿意配合，但需要清晰信息——始终不变\n\n客服行为分析:\n  上轮做了什么: 告知X和Y单，但说具体数字在App里能看到\n  是否回应核心诉求: [部分] 他确认了标准，但没直接告诉我数字\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不满，因为他没直接说清楚\n\n决策: 基于立场×情绪反应的自然回应——直接追问具体数字，表达需要明确信息\n前瞻: 如果客服说具体数字→我确认并结束；如果客服继续推诿→我会坚持要求",
+        "state": {
+          "turn": "4",
+          "intent": "追问具体单数",
+          "intent_code": "ask_specific_number",
+          "emotion": "轻微不满",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→轻微不满",
+          "change_reason": "站长未直接告知具体单数，只让看App",
+          "change_justified": "true",
+          "stance": "愿意配合但需要清晰信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.2)→轻微不满(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问具体单数"
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "speaker": "客服",
+      "content": "单日X单，多日Y单。你App里报名页也写着，记一下就行。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 6,
+      "speaker": "用户",
+      "content": "站长，你直接告诉我X和Y是多少吧，我真不想翻App查了。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [飞毛腿骑手，合同已签署，需完成配送任务]\n进展追踪:\n  前期: 站长通知合同签署成功并提醒完成配送任务\n  最近: 询问X和Y具体单数，但站长未明确给出数字\n  当前待确认: X和Y的具体数值\n上次决策依据: 想了解任务标准",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 坚持要求站长给出具体单数，不想自己查App\n立场: 配合但直接，不轻易妥协\n客服行为分析:\n  上轮做了什么: 仍用\"App里能看到\"回避直接回答\n  是否回应核心诉求: [否]\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得在推诿\n决策: 直接点明需要具体数字，强调不想查App\n前瞻: 如果客服给数字→确认并结束；如果继续推诿→表达不满",
+        "state": {
+          "turn": "6",
+          "intent": "要求明确具体单数",
+          "intent_code": "ask_specific_numbers",
+          "emotion": "轻微不耐烦",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→轻微不耐烦",
+          "change_reason": "客服两次回避给出具体数字",
+          "change_justified": "true",
+          "stance": "坚持要求明确答复",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.2)→中性(0.3)→轻微不耐烦(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "[否]",
+          "原因": "还需追问具体数字"
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "speaker": "客服",
+      "content": "单日X单，多日Y单。你记一下，别超时或取消单子就行。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 8,
+      "speaker": "用户",
+      "content": "站长，你说了三遍X和Y，但数字呢？直接告诉我吧。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  身份: 飞毛腿骑手\n  合同: 今天已成功签署\n  任务: 需完成配送任务\n进展追踪:\n  前期: 接到站长电话通知合同签署\n  最近: 站长反复强调X和Y单数但未给具体数字\n  当前待确认: X和Y的具体数值\n上次决策依据: 想知道具体任务量以便规划",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 坚持追问具体单数，不想被糊弄\n立场: 对平台规则熟悉但需要明确信息\n\n客服行为分析:\n  上轮做了什么: 再次回避具体数字，重复模糊说法\n  是否回应核心诉求: [否]\n\n我的情绪反应:\n  对上轮客服行为的感受: [有点不耐烦]\n\n决策: 直接点明站长一直没给数字，要求明确回答\n前瞻: 如果客服给数字→确认结束；如果继续回避→质疑并坚持",
+        "state": {
+          "turn": "8",
+          "intent": "追问具体单数",
+          "intent_code": "none",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.6",
+          "emotion_change": "中性→不耐烦",
+          "change_reason": "站长多次回避具体数字",
+          "change_justified": "true",
+          "stance": "坚持获取明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→中性(0.4)→中性(0.5)→不耐烦(0.6)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "[否]",
+          "原因": "还需追问具体单数"
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "speaker": "客服",
+      "content": "单日X单，多日Y单。具体数字你App里报名页有，我这边系统没显示具体数，你查一下就行。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 10,
+      "speaker": "用户",
+      "content": "行吧，那我自己去App查一下。下次系统能显示就直接说吧。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  核心诉求: 询问单日合同和多日合同的具体单数（X和Y）\n  进展追踪:\n    前期: 客服已三次回答但未给出具体数字，只让去App查\n    最近: 客服第四次回答，仍表示系统没显示具体数\n    当前待确认: 具体单数X和Y\n  上次决策依据: 坚持要求直接给出数字，避免自己查App",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续追问具体单数，但接受客服可能确实不知道\n立场: 用户希望信息直接获取，但能理解系统限制\n\n客服行为分析:\n  上轮做了什么: 第四次回答，明确说系统没显示具体数\n  是否回应核心诉求: [否] 仍没给出数字\n\n我的情绪反应:\n  对上轮客服行为的感受: [有点无奈] 看来站长确实不知道\n  决策: 既然系统限制，不再纠缠，但表达一点不满\n  前瞻: 如果客服下轮说App查→我结束追问",
+        "state": {
+          "turn": "10",
+          "intent": "确认具体单数",
+          "intent_code": "ask_specific_numbers",
+          "emotion": "无奈",
+          "emotion_intensity": "0.4",
+          "emotion_change": "坚持→无奈",
+          "change_reason": "客服多次无法给出具体数字，接受系统限制",
+          "change_justified": "true",
+          "stance": "希望直接获取信息但能理解限制",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→坚持(0.6)→无奈(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想确认这个关键信息，但准备接受App查询"
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "speaker": "客服",
+      "content": "哈哈，好的，下次我注意。那你查完记得高峰期上线，别耽误合同。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 12,
+      "speaker": "用户",
+      "content": "好的，站长，我记下了。合同签了就行，我查完App高峰期上线。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  已报名飞毛腿骑手，已签署合同\n  单日合同每天需完成X单，多日合同每天需完成Y单\n  站长未能提供具体数字，需自行查看App\n进展追踪:\n  前期: 多次询问X和Y具体数字\n  最近: 站长三次说“单日X单，多日Y单”但未给出数字\n  当前待确认: 具体数字需自行查看App\n上次决策依据: 站长说系统没显示具体数，决定自己查App",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认合同已签署，了解配送任务要求\n立场: 配合但直接，不轻易妥协\n\n客服行为分析:\n  上轮做了什么: 确认合同签署，提醒完成任务，但未给出具体数字\n  是否回应核心诉求: 部分——合同签署已回应，但数字问题未解决\n\n我的情绪反应:\n  对上轮客服行为的感受: 略感无奈但已接受\n决策: 基于立场×情绪反应的自然回应——确认信息后结束对话\n前瞻: 如果客服说好→结束；如果追问→简单回应",
+        "state": {
+          "turn": "12",
+          "intent": "确认合同签署并接受任务提醒",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "无奈→平静",
+          "change_reason": "已接受需自行查App的事实，问题部分解决",
+          "change_justified": "true",
+          "stance": "配合但直接",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→无奈(0.6)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "合同已签署确认，任务要求已了解，具体数字可自行查App，无其他需求"
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "speaker": "客服",
+      "content": "好的，那你查完赶紧上线，注意安全，有问题随时找我。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 14,
+      "speaker": "用户",
+      "content": "好的，站长，我这就去查，高峰期见。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 合同已签署\n  - 需要查App确认X和Y具体单数\n进展追踪:\n  前期: 多次追问X和Y具体数字，客服无法提供\n  最近: 同意自己查App\n  当前待确认: App中X和Y的具体单数\n上次决策依据: 客服系统不显示具体数字，只能自己查",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 结束对话，确认合同已签署，准备上线\n立场: 配合完成任务，但保持直接\n\n客服行为分析:\n  上轮做了什么: 确认合同签署，提醒上线，表示随时可联系\n  是否回应核心诉求: 是，已解决合同签署问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，问题已解决\n\n决策: 基于满意情绪，自然结束对话\n前瞻: 无需更多追问",
+        "state": {
+          "turn": "14",
+          "intent": "结束对话",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.6",
+          "emotion_change": "中性→满意",
+          "change_reason": "问题已解决，合同签署确认",
+          "change_justified": "true",
+          "stance": "配合完成任务",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→满意(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，合同签署确认，无其他需求"
+        }
+      }
+    }
+  ],
+  "error": null
+}

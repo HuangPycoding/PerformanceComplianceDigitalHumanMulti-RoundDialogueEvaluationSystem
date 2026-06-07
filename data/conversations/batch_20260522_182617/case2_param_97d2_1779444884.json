@@ -1,0 +1,941 @@
+{
+  "id": "case2_param_97d2_1779444884",
+  "case_id": 2,
+  "user_profile": "param_97d2",
+  "status": "用户挂断",
+  "total_turns": 30,
+  "duration_seconds": 102.8,
+  "complexity_score": 8.8,
+  "profile_label": "param_97d2",
+  "sampled_vector": [
+    0.8056850504817227,
+    0.3185742367941401,
+    0.866983860109927,
+    0.5270418834037615,
+    0.5613075978195509,
+    0.4446280708432977,
+    0.7791755792290639,
+    0.13476133110412608,
+    0.3377510770950861,
+    0.3256974273426238,
+    0.564590036277303,
+    0.404967299305259,
+    0.16817757005804962,
+    0.23393434257954576,
+    0.44568963408396867
+  ],
+  "verified_vector": [
+    0.75,
+    0.2,
+    0.6,
+    0.7,
+    0.6,
+    0.5,
+    0.8,
+    0.3,
+    0.4,
+    0.1,
+    0.3,
+    0.5,
+    0.5,
+    0.2,
+    0.2
+  ],
+  "audited_vector": [
+    0.6,
+    0.3,
+    0.5,
+    0.5,
+    0.6,
+    0.3,
+    0.4,
+    0.2,
+    0.4,
+    0.4,
+    0.5,
+    0.5,
+    0.4,
+    0.3,
+    0.2
+  ],
+  "adversarial_strategies": [],
+  "consistency": {
+    "path_a_d_sv": 0.2212,
+    "path_a_d_va": 0.249,
+    "path_a_d_sa": 0.2207,
+    "path_a_max_sv_dev": 0.367,
+    "path_a_max_va_dev": 0.5,
+    "path_a_tier": "yellow",
+    "path_a_primary_deviation": "A2_用户行为一致性(夸大偏差)",
+    "path_a_method": "path_a_state",
+    "d_sv": 0.1744,
+    "d_va": 0.1718,
+    "d_sa": 0.1807,
+    "max_sv_dev": 0.3318,
+    "max_va_dev": 0.4,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_b_llm"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认身份",
+      "intent_code": "none",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "无→中性",
+      "change_reason": "正常接听电话",
+      "change_justified": "true",
+      "stance": "配合型",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "了解升级具体细节",
+      "intent_code": "inquire_details",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→中性",
+      "change_reason": "信息尚不完整，等待进一步解释",
+      "change_justified": "true",
+      "stance": "配合型用户",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "6",
+      "intent": "询问低延迟直播的价格或切换方式",
+      "intent_code": "none",
+      "emotion": "好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "中性→好奇",
+      "change_reason": "听到具体优势，想进一步了解实用细节",
+      "change_justified": "true",
+      "stance": "配合但务实",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "追问具体费用差异",
+      "intent_code": "none",
+      "emotion": "稍微着急",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静→稍微着急",
+      "change_reason": "客服没给具体费用数字",
+      "change_justified": "true",
+      "stance": "愿意配合但注重实用性",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "追问具体价格",
+      "intent_code": "price_inquiry",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.4",
+      "emotion_change": "中性→不耐烦",
+      "change_reason": "客服回避价格问题",
+      "change_justified": "true",
+      "stance": "愿意配合但需要实用信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "追问具体价格涨幅",
+      "intent_code": "price_query",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.7",
+      "emotion_change": "中性→不耐烦",
+      "change_reason": "客服两次回避价格问题",
+      "change_justified": "true",
+      "stance": "愿意配合但需要明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "14",
+      "intent": "追问价格涨幅",
+      "intent_code": "none",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.6",
+      "emotion_change": "中性→不耐烦",
+      "change_reason": "客服两次回避价格问题",
+      "change_justified": "true",
+      "stance": "愿意配合但需要明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "16",
+      "intent": "追问具体价格涨幅",
+      "intent_code": "price_clarify",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不耐烦→不耐烦",
+      "change_reason": "客服三次回避问题",
+      "change_justified": "true",
+      "stance": "需要明确信息再决定",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "18",
+      "intent": "施压客服给出价格涨幅大概范围",
+      "intent_code": "price_query_pressure",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.8",
+      "emotion_change": "耐心→不耐烦",
+      "change_reason": "客服连续3次回避价格问题",
+      "change_justified": "true",
+      "stance": "需要实际信息，否则通话无意义",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "20",
+      "intent": "表达对客服回避问题的不满",
+      "intent_code": "none",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.8",
+      "emotion_change": "中性→不耐烦",
+      "change_reason": "客服连续4次回避价格问题，未提供任何实质信息",
+      "change_justified": "true",
+      "stance": "信任客服但需要实质信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "22",
+      "intent": "确认涨幅并询问操作细节",
+      "intent_code": "none",
+      "emotion": "稍微缓和",
+      "emotion_intensity": "0.6",
+      "emotion_change": "不耐烦→稍微缓和",
+      "change_reason": "客服终于给出了具体涨幅范围",
+      "change_justified": "true",
+      "stance": "愿意配合但需要具体信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "24",
+      "intent": "确认切换低延迟直播的操作方式",
+      "intent_code": "none",
+      "emotion": "中性偏正面",
+      "emotion_intensity": "0.4",
+      "emotion_change": "不耐烦→中性偏正面",
+      "change_reason": "客服给出价格范围并开始解答切换方式",
+      "change_justified": "true",
+      "stance": "信任客服但需要明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "26",
+      "intent": "确认操作细节",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "不耐烦→平静",
+      "change_reason": "客服终于给出了明确的操作指引",
+      "change_justified": "true",
+      "stance": "愿意配合但需要明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "28",
+      "intent": "确认信息后结束通话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.4",
+      "emotion_change": "不耐烦→平静",
+      "change_reason": "客服最终给出了明确的价格范围和操作方式",
+      "change_justified": "true",
+      "stance": "配合但直接",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "30",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.2",
+      "emotion_change": "不耐烦→平静",
+      "change_reason": "问题已解决，信息明确",
+      "change_justified": "true",
+      "stance": "配合但务实",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "您好，请问您是贵培训机构/校区的负责人吗？",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "嗯，是我，你说吧，什么事？",
+      "timestamp": 5.076844215393066,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  我是机构负责人，美团客服来电通知课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个选项。\n进展追踪:\n  前期: 客服刚来电确认身份。\n  最近: 无\n  当前待确认: 客服具体要说什么变化。\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？是（首轮未回复，需开始）\n意图: 确认身份，让客服继续说明来意\n立场: 中性，愿意配合，先听对方说什么\n\n客服行为分析:\n  上轮做了什么: 打电话确认身份\n  是否回应核心诉求: 部分（刚开场，未展开）\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，正常开场\n\n决策: 直接确认身份，引导客服继续\n前瞻: 如果客服说明变化→我询问细节；如果客服继续确认→我配合回答",
+        "state": {
+          "turn": "2",
+          "intent": "确认身份",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "无→中性",
+          "change_reason": "正常接听电话",
+          "change_justified": "true",
+          "stance": "配合型",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "对话刚开始，客服还没说正事"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "我们对直播产品做了升级，新增了独立的\"低延迟直播\"选项。",
+      "timestamp": 5.877356767654419,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "哦，这个低延迟直播跟之前有啥区别？对我们上课有啥好处？",
+      "timestamp": 11.821287155151367,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  客服告知课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个独立选项\n进展追踪:\n  前期: 客服表明身份，我确认身份\n  最近: 客服说明直播产品升级，新增低延迟直播选项\n  当前待确认: 具体升级内容和对我有什么影响\n上次决策依据: 愿意听客服说明情况",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 了解这个升级具体怎么回事，对我有什么影响\n立场: 配合型用户，愿意听解释\n\n客服行为分析:\n  上轮做了什么: 告知产品升级，新增低延迟直播选项\n  是否回应核心诉求: 部分，只说了有升级，没讲细节\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，想了解更多\n  决策: 询问具体细节，确认对我的影响\n  前瞻: 如果客服详细解释→继续听；如果含糊→追问",
+        "state": {
+          "turn": "4",
+          "intent": "了解升级具体细节",
+          "intent_code": "inquire_details",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→中性",
+          "change_reason": "信息尚不完整，等待进一步解释",
+          "change_justified": "true",
+          "stance": "配合型用户",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需了解升级具体内容"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "延迟约1-2秒，互动更流畅，适合小班课和实操课。",
+      "timestamp": 12.665809154510498,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "那这个低延迟直播怎么收费？还是说直接切换就行？",
+      "timestamp": 17.872039318084717,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  机构课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个独立选项\n进展追踪:\n  前期: 客服告知产品升级\n  最近: 客服解释低延迟直播延迟1-2秒，适合小班课和实操课\n  当前待确认: 具体价格或切换方式\n上次决策依据: 想了解升级具体好处",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认低延迟直播的具体使用条件和成本\n立场: 愿意配合，但需明确细节\n\n客服行为分析:\n  上轮做了什么: 解释了低延迟直播的优势和适用场景\n  是否回应核心诉求: 部分，解释了优势但未提价格或切换\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但想进一步了解\n决策: 追问价格或切换方式\n前瞻: 如果客服给价→评估接受度；如果回避→强调需要具体信息",
+        "state": {
+          "turn": "6",
+          "intent": "询问低延迟直播的价格或切换方式",
+          "intent_code": "none",
+          "emotion": "好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "中性→好奇",
+          "change_reason": "听到具体优势，想进一步了解实用细节",
+          "change_justified": "true",
+          "stance": "配合但务实",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问价格或切换方式"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "费用略高，但互动体验更好。您之前选的是标准直播吗？",
+      "timestamp": 18.84000039100647,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "具体贵多少？能说个大概数吗？",
+      "timestamp": 24.645550966262817,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  直播产品升级，新增\"标准直播\"和\"低延迟直播\"两个独立选项\n进展追踪:\n  前期: 客服介绍低延迟直播延迟1-2秒\n  最近: 客服说明费用略高，询问我之前是否用标准直播\n  当前待确认: 具体费用差异、是否可以直接切换\n上次决策依据: 想了解收费情况再决定",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认费用具体差异，以及切换是否需要额外操作\n立场: 愿意配合但注重实用性，对费用敏感\n\n客服行为分析:\n  上轮做了什么: 说明费用略高，反问之前是否用标准直播\n  是否回应核心诉求: 部分回应（提到费用但没给具体数字）\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，有点着急想知道具体多少钱\n  决策: 直接追问费用差异，先不回答是否用标准直播\n  前瞻: 客服给具体数字→我评估是否接受；客服回避→我追问到底",
+        "state": {
+          "turn": "8",
+          "intent": "追问具体费用差异",
+          "intent_code": "none",
+          "emotion": "稍微着急",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静→稍微着急",
+          "change_reason": "客服没给具体费用数字",
+          "change_justified": "true",
+          "stance": "愿意配合但注重实用性",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.2)→稍微着急(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问费用细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "具体价格看套餐，建议您后台查看。",
+      "timestamp": 25.7638418674469,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "你让我去后台查？我哪记得住，你就说个大概涨多少呗。",
+      "timestamp": 31.737070083618164,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个选项\n  低延迟直播延迟1-2秒，费用略高\n进展追踪:\n  前期: 客服介绍新功能，用户询问区别和收费\n  最近: 客服说费用略高但互动更好，建议后台查看\n  当前待确认: 具体价格涨幅、是否影响现有套餐\n上次决策依据: 用户想了解实际成本再决定是否切换",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 追问具体价格，因为客服没给明确数字\n立场: 愿意配合但需要实用信息\n客服行为分析:\n  上轮做了什么: 回避具体价格，建议后台查看\n  是否回应核心诉求: 部分——解释了区别但没解决价格疑问\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得含糊\n决策: 直接表达不满，要求给个大致范围\n前瞻: 如果客服给范围→接受；如果继续推诿→可能妥协但会抱怨",
+        "state": {
+          "turn": "10",
+          "intent": "追问具体价格",
+          "intent_code": "price_inquiry",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→不耐烦",
+          "change_reason": "客服回避价格问题",
+          "change_justified": "true",
+          "stance": "愿意配合但需要实用信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→感兴趣(0.5)→不耐烦(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "价格问题还没搞清楚，还想追问"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "具体涨幅因套餐不同，建议您后台查看。",
+      "timestamp": 32.60988736152649,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "你就说个大概呗，比如一节课多收十块还是二十块？我也好心里有个数。",
+      "timestamp": 38.74024558067322,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个独立选项\n  - 当需要实时互动时，鼓励选择低延迟直播\n进展追踪:\n  前期: 客服介绍低延迟直播功能，延迟1-2秒\n  最近: 询问费用，客服说略高但建议后台查看\n  当前待确认: 具体价格涨幅\n上次决策依据: 想了解实际成本再做决定",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 追问具体价格涨幅，不想被推给后台\n立场: 信任客服但需要明确信息\n\n客服行为分析:\n  上轮做了什么: 再次建议后台查看价格\n  是否回应核心诉求: [否] 回避了价格问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点失望，觉得客服在敷衍\n  情绪: 不耐烦，声音变大\n\n决策: 坚持追问具体涨幅，如果客服再回避就妥协\n前瞻: 如果客服给具体数字→接受并继续；如果继续推给后台→勉强接受但不满",
+        "state": {
+          "turn": "12",
+          "intent": "追问具体价格涨幅",
+          "intent_code": "price_query",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.7",
+          "emotion_change": "中性→不耐烦",
+          "change_reason": "客服两次回避价格问题",
+          "change_justified": "true",
+          "stance": "愿意配合但需要明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→好奇(0.6)→中性(0.5)→不耐烦(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问价格，问题未解决"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "具体价格我真没法给，后台一看就清楚。",
+      "timestamp": 39.677318811416626,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "行吧，那你就告诉我，大概比标准直播贵多少？一节课多十块还是二十？",
+      "timestamp": 45.81107807159424,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个独立选项\n  低延迟直播延迟约1-2秒，适合小班课和实操课\n进展追踪:\n  前期: 客服告知产品升级，新增低延迟直播选项\n  最近: 询问具体价格涨幅，客服两次建议后台查看\n  当前待确认: 低延迟直播的具体价格涨幅\n上次决策依据: 想了解价格差异以便做决策",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问价格信息，希望得到一个大概范围\n立场: 愿意配合但记性不好，需要明确信息\n\n客服行为分析:\n  上轮做了什么: 再次建议后台查看，拒绝给出具体价格\n  是否回应核心诉求: 否，回避了价格问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得客服在推诿\n\n决策: 基于不耐烦情绪，表达不满但尝试最后一次追问\n前瞻: 如果客服继续回避，可能接受或结束对话",
+        "state": {
+          "turn": "14",
+          "intent": "追问价格涨幅",
+          "intent_code": "none",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.6",
+          "emotion_change": "中性→不耐烦",
+          "change_reason": "客服两次回避价格问题",
+          "change_justified": "true",
+          "stance": "愿意配合但需要明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→感兴趣(0.5)→不耐烦(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问价格信息"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "具体涨幅我真没法说，后台一看就清楚。",
+      "timestamp": 46.6848304271698,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "你这也不说那也不说，让我去后台查，那打电话干嘛来了？",
+      "timestamp": 53.0074737071991,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  核心诉求: 了解低延迟直播相比标准直播的具体价格涨幅\n  机构背景: 培训机构/校区负责人\n进展追踪:\n  前期: 客服告知新增低延迟直播选项，延迟1-2秒，适合小班课和实操课\n  最近: 反复询问具体价格涨幅，客服坚持让去后台查看\n  当前待确认: 具体价格涨幅（一节课多收多少）\n上次决策依据: 想心里有个数再决定是否切换",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续追问具体价格涨幅，不想被推到后台\n立场: 愿意配合但需要明确信息，不耐烦重复\n\n客服行为分析:\n  上轮做了什么: 第三次拒绝提供具体价格，坚持让去后台\n  是否回应核心诉求: 否\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望且不耐烦，感觉对方在敷衍\n  决策: 表达不满，但给最后一次机会，如果客服还不说就放弃追问\n  前瞻: 如果客服坚持后台→我放弃追问接受；如果客服给大概范围→我满意",
+        "state": {
+          "turn": "16",
+          "intent": "追问具体价格涨幅",
+          "intent_code": "price_clarify",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不耐烦→不耐烦",
+          "change_reason": "客服三次回避问题",
+          "change_justified": "true",
+          "stance": "需要明确信息再决定",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→好奇(0.5)→不耐烦(0.4)→更不耐烦(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想再追问一次，如果客服仍不回答就放弃"
+        }
+      }
+    },
+    {
+      "turn_number": 17,
+      "speaker": "system",
+      "content": "后台有详细价格，我这边确实没权限说。",
+      "timestamp": 54.12149786949158,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 18,
+      "speaker": "user",
+      "content": "那你这电话打来有啥用？好歹说个大概范围，比如涨百分之十还是二十？",
+      "timestamp": 61.01173996925354,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  核心诉求: 想知道低延迟直播比标准直播具体贵多少\n  客服身份: 课程发布平台客服\n  通话目的: 告知新增\"标准直播\"和\"低延迟直播\"两个独立选项\n\n进展追踪:\n  前期: 客服介绍新增低延迟直播选项\n  最近: 追问具体价格涨幅，客服反复说\"后台查看\"\n  当前待确认: 价格涨幅始终未告知\n\n上次决策依据: 客服一直回避问题，感到不耐烦",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 表达不满，施压客服给出大概价格\n立场: 愿意配合但需要实际信息，否则觉得通话没意义\n\n客服行为分析:\n  上轮做了什么: 再次说\"没权限\"，推给后台\n  是否回应核心诉求: 否，完全回避价格问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望且不耐烦，觉得浪费时间\n\n决策: 直接质疑客服打电话的意义，要求至少给个大致范围\n前瞻: 如果客服让步说大概数字→可以接受；如果继续推诿→考虑结束通话",
+        "state": {
+          "turn": "18",
+          "intent": "施压客服给出价格涨幅大概范围",
+          "intent_code": "price_query_pressure",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.8",
+          "emotion_change": "耐心→不耐烦",
+          "change_reason": "客服连续3次回避价格问题",
+          "change_justified": "true",
+          "stance": "需要实际信息，否则通话无意义",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→耐心(0.5)→不耐烦(0.8)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问价格，如果客服继续回避则考虑结束"
+        }
+      }
+    },
+    {
+      "turn_number": 19,
+      "speaker": "system",
+      "content": "具体涨幅因套餐不同，后台一看就清楚。",
+      "timestamp": 62.14743375778198,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 20,
+      "speaker": "user",
+      "content": "行吧，那你打电话来到底想干嘛？光让我去后台看，这电话白打了。",
+      "timestamp": 69.51937985420227,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  客服告知课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个独立选项，鼓励实时互动时选择低延迟直播。\n进展追踪:\n  前期: 客服介绍新增低延迟直播选项\n  最近: 用户反复追问具体价格涨幅，客服以\"后台查看\"为由拒绝回答\n  当前待确认: 低延迟直播的具体价格涨幅（百分比或金额范围）\n上次决策依据: 用户想了解具体费用，但客服回避，导致用户不满",
+        "thought": "审视: 上轮回复是否偏离画像？[是]——用户连续追问价格，语气从中性变为不耐烦，符合画像中\"听到坏消息会着急\"的特点，但追问次数过多略显固执，略偏离\"愿意听建议\"的设定，但整体可接受。\n意图: 表达对客服回避问题的失望和不满\n立场: 信任客服但需要实质信息——始终不变\n客服行为分析:\n  上轮做了什么: 再次以\"后台查看\"回避价格问题\n  是否回应核心诉求: 否——用户追问价格已4次，客服始终未给任何范围\n我的情绪反应:\n  对上轮客服行为的感受: 失望且不耐烦\n决策: 直接表达不满，质疑这通电话的意义\n前瞻: 如果客服道歉并给范围→我接受并继续；如果继续回避→我可能结束对话",
+        "state": {
+          "turn": "20",
+          "intent": "表达对客服回避问题的不满",
+          "intent_code": "none",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.8",
+          "emotion_change": "中性→不耐烦",
+          "change_reason": "客服连续4次回避价格问题，未提供任何实质信息",
+          "change_justified": "true",
+          "stance": "信任客服但需要实质信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→好奇(0.6)→耐心(0.5)→不耐烦(0.7)→不耐烦(0.8)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问价格信息"
+        }
+      }
+    },
+    {
+      "turn_number": 21,
+      "speaker": "system",
+      "content": "抱歉，我换个方式说——低延迟直播比标准直播贵大约10%-20%。",
+      "timestamp": 70.54325270652771,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 22,
+      "speaker": "user",
+      "content": "行，早这么说我不就明白了。那怎么切换到低延迟直播？",
+      "timestamp": 76.88116216659546,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 课程发布页面新增\"标准直播\"和\"低延迟直播\"两个独立选项\n  - 低延迟直播延迟约1-2秒，互动更流畅\n  - 价格比标准直播贵约10%-20%\n进展追踪:\n  前期: 客服告知产品升级，用户询问价格差异\n  最近: 用户反复追问具体涨幅，客服最终给出10%-20%的范围\n  当前待确认: 是否接受这个涨幅范围，以及后续如何切换\n上次决策依据: 用户坚持要具体数字，客服让步给出范围",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认这个涨幅范围，并询问切换方式\n立场: 愿意配合但需要具体信息\n\n客服行为分析:\n  上轮做了什么: 终于给出了10%-20%的涨幅范围\n  是否回应核心诉求: 部分回应，给了范围但不够精确\n\n我的情绪反应:\n  对上轮客服行为的感受: 稍微满意，终于有点实际信息了\n\n决策: 接受这个范围，转向询问具体操作\n前瞻: 如果客服解释切换流程→继续跟进；如果回避→追问",
+        "state": {
+          "turn": "22",
+          "intent": "确认涨幅并询问操作细节",
+          "intent_code": "none",
+          "emotion": "稍微缓和",
+          "emotion_intensity": "0.6",
+          "emotion_change": "不耐烦→稍微缓和",
+          "change_reason": "客服终于给出了具体涨幅范围",
+          "change_justified": "true",
+          "stance": "愿意配合但需要具体信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→好奇(0.6)→不耐烦(0.7)→稍缓(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "刚拿到价格范围，还要问切换操作"
+        }
+      }
+    },
+    {
+      "turn_number": 23,
+      "speaker": "system",
+      "content": "您是通过Web控制台还是第三方系统发课？",
+      "timestamp": 77.70340609550476,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 24,
+      "speaker": "user",
+      "content": "我用Web控制台，你直接说怎么操作就行。",
+      "timestamp": 83.35765671730042,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 低延迟直播比标准直播贵10%-20%\n  - 课程发布页面将新增\"标准直播\"和\"低延迟直播\"两个独立选项\n进展追踪:\n  前期: 客服告知升级，追问价格差异\n  最近: 客服最终给出涨幅10%-20%\n  当前待确认: 如何切换到低延迟直播\n上次决策依据: 客服给出价格范围后，追问切换方式",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 明确切换低延迟直播的具体操作流程\n立场: 信任客服但需要明确信息，不耐烦重复问题\n\n客服行为分析:\n  上轮做了什么: 询问用户使用Web控制台还是第三方系统发课\n  是否回应核心诉求: 是，开始解答切换方式\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，终于进入正题\n情绪: 中性偏正面\n\n决策: 配合回答客服问题，继续推进对话\n前瞻: 如果客服说A→继续问具体步骤，如果说B→确认后结束",
+        "state": {
+          "turn": "24",
+          "intent": "确认切换低延迟直播的操作方式",
+          "intent_code": "none",
+          "emotion": "中性偏正面",
+          "emotion_intensity": "0.4",
+          "emotion_change": "不耐烦→中性偏正面",
+          "change_reason": "客服给出价格范围并开始解答切换方式",
+          "change_justified": "true",
+          "stance": "信任客服但需要明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→不耐烦(0.7)→中性偏正面(0.4)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认切换方式"
+        }
+      }
+    },
+    {
+      "turn_number": 25,
+      "speaker": "system",
+      "content": "在发课页面选\"低延迟直播\"就行。",
+      "timestamp": 84.24181389808655,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 26,
+      "speaker": "user",
+      "content": "就选一下就行？不用填别的什么参数吧？",
+      "timestamp": 90.48997497558594,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 客服通知新增\"低延迟直播\"和\"标准直播\"两个独立选项\n  - 低延迟直播延迟约1-2秒，适合互动场景\n  - 低延迟直播比标准直播贵大约10%-20%\n  - 用户使用Web控制台发课\n\n进展追踪:\n  前期: 客服通知升级，用户询问区别和价格\n  最近: 客服最终给出价格涨幅10%-20%，用户接受\n  当前待确认: 如何切换到低延迟直播\n\n上次决策依据: 客服坚持不说价格，用户反复追问后客服让步",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认具体操作步骤，确保自己能正确切换\n立场: 愿意配合但需要明确信息，不耐烦重复沟通\n\n客服行为分析:\n  上轮做了什么: 告知在发课页面选择\"低延迟直播\"\n  是否回应核心诉求: 是，给出了操作方式\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，终于给了明确答案\n\n决策: 确认操作细节，准备结束对话\n前瞻: 如果客服说\"对，就这样\"→确认结束；如果客服补充其他→继续配合",
+        "state": {
+          "turn": "26",
+          "intent": "确认操作细节",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "不耐烦→平静",
+          "change_reason": "客服终于给出了明确的操作指引",
+          "change_justified": "true",
+          "stance": "愿意配合但需要明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→不耐烦(0.6)→平静(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认操作细节"
+        }
+      }
+    },
+    {
+      "turn_number": 27,
+      "speaker": "system",
+      "content": "对，选一下就行，其他流程不变。",
+      "timestamp": 91.17855978012085,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 28,
+      "speaker": "user",
+      "content": "行，那我知道了，没别的事了，谢谢。",
+      "timestamp": 96.86715197563171,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 低延迟直播比标准直播贵约10%-20%\n  - 在Web控制台发课页面直接选择\"低延迟直播\"即可\n  - 其他操作流程不变\n\n进展追踪:\n  前期: 客服告知直播产品升级，新增低延迟直播选项\n  最近: 追问价格差异，客服最终告知贵10%-20%；确认切换方式\n  当前待确认: 无，已了解主要信息\n\n上次决策依据: 价格和操作方式已明确，问题基本解决",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认信息后结束通话\n立场: 愿意配合，但希望得到明确答复\n\n客服行为分析:\n  上轮做了什么: 确认切换方式简单，其他流程不变\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，终于给清楚答案了\n\n决策: 信息已清楚，自然收尾\n前瞻: 如果客服确认没问题→自然结束",
+        "state": {
+          "turn": "28",
+          "intent": "确认信息后结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.4",
+          "emotion_change": "不耐烦→平静",
+          "change_reason": "客服最终给出了明确的价格范围和操作方式",
+          "change_justified": "true",
+          "stance": "配合但直接",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→好奇(0.6)→疑惑(0.5)→不耐烦(0.7)→无奈(0.6)→平静(0.4)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，价格和操作方式都清楚了，没有其他疑问"
+        }
+      }
+    },
+    {
+      "turn_number": 29,
+      "speaker": "system",
+      "content": "不客气，有问题随时联系。",
+      "timestamp": 97.6096420288086,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 30,
+      "speaker": "user",
+      "content": "行，那我知道了，谢谢，先挂了。",
+      "timestamp": 102.7703607082367,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  低延迟直播比标准直播贵约10%-20%\n  使用Web控制台发课\n  切换方式：在发课页面直接选择\"低延迟直播\"\n进展追踪:\n  前期: 客服告知新增低延迟直播选项，用户追问价格差异\n  最近: 客服告知涨幅约10%-20%，用户问切换方式\n  当前待确认: 无，问题已解决\n上次决策依据: 客服最终给出价格范围，用户满意",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认信息已完整，自然结束通话\n立场: 愿意配合但务实，问题解决就收尾\n\n客服行为分析:\n  上轮做了什么: 告知切换方式\"选一下就行\"\n  是否回应核心诉求: 是，价格和操作都回答了\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，问题已解决\n\n决策: 基于满意情绪，确认无其他需求后结束通话\n前瞻: 如果客服说告别→自然回应\"好的再见\"",
+        "state": {
+          "turn": "30",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.2",
+          "emotion_change": "不耐烦→平静",
+          "change_reason": "问题已解决，信息明确",
+          "change_justified": "true",
+          "stance": "配合但务实",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→不耐烦(0.7)→平静(0.2)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，无其他需求"
+        }
+      }
+    }
+  ]
+}

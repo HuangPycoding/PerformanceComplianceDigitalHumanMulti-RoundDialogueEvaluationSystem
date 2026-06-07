@@ -1,0 +1,917 @@
+{
+  "id": "case46_param_3d1d_1779450351",
+  "case_id": 46,
+  "user_profile": "param_3d1d",
+  "status": "超时",
+  "total_turns": 30,
+  "duration_seconds": 86.6,
+  "complexity_score": 7.8,
+  "profile_label": "param_3d1d",
+  "sampled_vector": [
+    0.274873323176172,
+    0.672268692032877,
+    0.5483297538553498,
+    0.4217873197413115,
+    0.15649920979404672,
+    0.8803296736390305,
+    0.6017417368239258,
+    0.5084996724712131,
+    0.07659725916224018,
+    0.8269138127093596,
+    0.4640585773521429,
+    0.39244078266849103,
+    0.6379789367257426,
+    0.04063830995657844,
+    0.8037951693561199
+  ],
+  "verified_vector": [
+    0.55,
+    0.85,
+    0.75,
+    0.35,
+    0.45,
+    0.65,
+    0.35,
+    0.55,
+    0.55,
+    0.75,
+    0.65,
+    0.45,
+    0.8,
+    0.3,
+    0.75
+  ],
+  "audited_vector": [
+    0.6,
+    0.8,
+    0.3,
+    0.7,
+    0.4,
+    0.9,
+    0.5,
+    0.7,
+    0.3,
+    0.8,
+    0.6,
+    0.6,
+    0.2,
+    0.1,
+    0.1
+  ],
+  "adversarial_strategies": [
+    "contradiction"
+  ],
+  "consistency": {
+    "d_sv": 0.2194,
+    "d_va": 0.3003,
+    "d_sa": 0.2794,
+    "max_sv_dev": 0.4734,
+    "max_va_dev": 0.65,
+    "tier": "yellow",
+    "primary_deviation": "A2_用户行为一致性(夸大偏差)",
+    "method": "path_b_llm"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认身份并倾听",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "无→平静",
+      "change_reason": "客服主动说明来意，态度礼貌",
+      "change_justified": "true",
+      "stance": "谨慎倾听",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "4",
+      "intent": "回答当前工作状态并表达意向",
+      "intent_code": "none",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→中性",
+      "change_reason": "客服正常询问，未触发情绪变化",
+      "change_justified": "true",
+      "stance": "愿意了解但保持戒备",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "倾听介绍",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静→平静",
+      "change_reason": "客服开始切入正题，未触发情绪变化",
+      "change_justified": "true",
+      "stance": "谨慎开放",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "追问全职具体收入细节",
+      "intent_code": "none",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→中性",
+      "change_reason": "信息还不充分，未触发情绪变化",
+      "change_justified": "true",
+      "stance": "感兴趣的候选人",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "了解兼职收入",
+      "intent_code": "query_part_time_income",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→中性",
+      "change_reason": "信息正常推进，无情绪波动",
+      "change_justified": "true",
+      "stance": "谨慎对比",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "追问兼职奖励和时长",
+      "intent_code": "B1_ask_details",
+      "emotion": "好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "好奇→好奇",
+      "change_reason": "信息逐步清晰，继续追问细节",
+      "change_justified": "true",
+      "stance": "谨慎乐观",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "追问兼职奖励和保障",
+      "intent_code": "none",
+      "emotion": "好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "中性→好奇",
+      "change_reason": "客服回答清晰，想了解更多细节",
+      "change_justified": "true",
+      "stance": "谨慎对比",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "16",
+      "intent": "表达对兼职条件的失望，并转向全职",
+      "intent_code": "B2_shift_to_fulltime",
+      "emotion": "沮丧",
+      "emotion_intensity": "0.4",
+      "emotion_change": "好奇→沮丧",
+      "change_reason": "得知兼职无阶梯奖励、保险和装备需自备，条件不如预期",
+      "change_justified": "true",
+      "stance": "谨慎观望",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "emotion": "未知",
+      "emotion_intensity": "0.5"
+    },
+    {
+      "turn": "20",
+      "intent": "追问全职阶梯奖励和补贴细节",
+      "intent_code": "inquire_details",
+      "emotion": "期待中带点急切",
+      "emotion_intensity": "0.6",
+      "emotion_change": "好奇→期待中带点急切",
+      "change_reason": "得到部分信息但不够具体，想要更多细节",
+      "change_justified": "true",
+      "stance": "倾向于全职，对收入细节敏感",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "22",
+      "intent": "追问阶梯奖励具体规则",
+      "intent_code": "B3_ask_details",
+      "emotion": "急切",
+      "emotion_intensity": "0.6",
+      "emotion_change": "好奇→急切",
+      "change_reason": "对阶梯奖励的笼统回答感到不够满意",
+      "change_justified": "true",
+      "stance": "谨慎但感兴趣",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "24",
+      "intent": "追问阶梯奖励具体细节",
+      "intent_code": "none",
+      "emotion": "稍满意但好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "稍满意但好奇→稍满意但好奇",
+      "change_reason": "客服回应了部分问题，但不够详细",
+      "change_justified": "true",
+      "stance": "谨慎乐观",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "26",
+      "intent": "追问全职工作时长要求",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.5",
+      "emotion_change": "平静→平静",
+      "change_reason": "客服回答清楚，情绪稳定",
+      "change_justified": "true",
+      "stance": "对全职感兴趣，想详细了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "28",
+      "intent": "确认保险和装备细节",
+      "intent_code": "none",
+      "emotion": "中性",
+      "emotion_intensity": "0.4",
+      "emotion_change": "中性→中性",
+      "change_reason": "信息基本对称，未产生明显情绪波动",
+      "change_justified": "true",
+      "stance": "感兴趣但谨慎",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "30",
+      "intent": "确认信息完整性，准备收尾",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "中性→满意",
+      "change_reason": "客服回答了保险和装备补贴的具体细节，信息完整清晰",
+      "change_justified": "true",
+      "stance": "谨慎但愿意接受有保障的方案",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是陈先生吗？我是美团骑手招聘的。看到你想详细了解骑手的工作内容和收入，我今天专门跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "你好，是我。对，我在平台上留过言，想了解一下骑手具体怎么干，收入怎么样。",
+      "timestamp": 4.429267168045044,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  本人姓陈，在美团平台留言了解骑手工作\n进展追踪:\n  前期: 接到招聘专员来电\n  最近: 对方自报身份并说明来意\n  当前待确认: 对方具体要介绍什么内容\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[是]\n意图: 确认对方身份，表明自己确实有意向\n立场: 谨慎但愿意倾听\n\n客服行为分析:\n  上轮做了什么: 核实身份并说明来意\n  是否回应核心诉求: 是，主动介绍工作\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，对方很直接\n\n决策: 先确认身份，表示愿意听介绍\n前瞻: 如果客服介绍具体→认真听并提问",
+        "state": {
+          "turn": "2",
+          "intent": "确认身份并倾听",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "无→平静",
+          "change_reason": "客服主动说明来意，态度礼貌",
+          "change_justified": "true",
+          "stance": "谨慎倾听",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续沟通，了解工作详情"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "先问一下，你现在有工作吗？是想全职做还是兼职跑？",
+      "timestamp": 5.2761549949646,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "现在有工作，但时间比较灵活。全职兼职都行，看收入怎么样再说。",
+      "timestamp": 10.632446527481079,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户陈先生在平台留言了解骑手工作内容和收入\n  - 客服致电介绍骑手招聘信息\n进展追踪:\n  前期: 客服确认用户身份和意向\n  最近: 客服询问用户当前工作状态和意向模式（全职/兼职）\n  当前待确认: 用户需回应当前工作情况和意向模式\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 先如实回答当前工作情况，为后续测试客服做准备\n立场: 有耐心的中年人，愿意了解但保持戒备\n\n客服行为分析:\n  上轮做了什么: 询问当前工作状态和意向模式\n  是否回应核心诉求: 部分——开始了解背景，但未直接介绍收入和内容\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，觉得客服在按流程走，可以接受\n\n决策: 如实回答，但留有余地——先说自己有工作，再表达对全职/兼职的开放态度，为后续矛盾铺垫\n前瞻: 如果客服介绍全职→我可能先接受再推翻；如果介绍兼职→同样策略",
+        "state": {
+          "turn": "4",
+          "intent": "回答当前工作状态并表达意向",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→中性",
+          "change_reason": "客服正常询问，未触发情绪变化",
+          "change_justified": "true",
+          "stance": "愿意了解但保持戒备",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "对话刚开始，客服还未介绍具体内容"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "好的，我先说两种模式的区别，你对比看看。",
+      "timestamp": 11.439494848251343,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "好，你说说看，全职和兼职到底差在哪儿。",
+      "timestamp": 15.628657102584839,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户有工作但时间灵活\n  - 想了解全职和兼职模式的区别\n  - 收入是核心关注点\n进展追踪:\n  前期: 确认身份、表明意向\n  最近: 客服准备介绍两种模式\n  当前待确认: 全职和兼职的具体区别\n上次决策依据: 看收入再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 认真听客服介绍，为后续提问做准备\n立场: 谨慎但开放，收入是核心考量\n\n客服行为分析:\n  上轮做了什么: 预告要介绍两种模式区别\n  是否回应核心诉求: 是，开始切入主题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，觉得对方在认真介绍\n\n决策: 保持开放态度，让客服继续介绍\n前瞻: 如果客服说A→我对比提问，如果说C→我追问细节",
+        "state": {
+          "turn": "6",
+          "intent": "倾听介绍",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静→平静",
+          "change_reason": "客服开始切入正题，未触发情绪变化",
+          "change_justified": "true",
+          "stance": "谨慎开放",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.4)→平静(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "客服刚开始介绍模式区别，还需继续了解"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "全职有底薪和奖励，每天需在线8小时，系统派单。",
+      "timestamp": 16.361849784851074,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "那全职一个月大概能挣多少钱？底薪多少？",
+      "timestamp": 21.08011221885681,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户陈先生，有工作但时间灵活，对全职/兼职都开放，核心关注收入\n进展追踪:\n  前期: 客服确认身份并询问工作状态\n  最近: 客服开始介绍全职和兼职区别\n  当前待确认: 全职的具体薪资构成、兼职的灵活性\n上次决策依据: 用户想先了解模式再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续倾听全职介绍，但保持戒备，准备后续制造矛盾\n立场: 感兴趣的候选人，但有耐心且细心\n\n客服行为分析:\n  上轮做了什么: 介绍了全职有底薪、奖励和8小时在线要求\n  是否回应核心诉求: 部分，提到了收入相关但未给具体数字\n\n我的情绪反应:\n  对上轮客服行为的感受: 中立，信息还太笼统\n\n决策: 简短追问具体收入细节\n前瞻: 如果客服给出具体数字→继续听；如果含糊→追问",
+        "state": {
+          "turn": "8",
+          "intent": "追问全职具体收入细节",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→中性",
+          "change_reason": "信息还不充分，未触发情绪变化",
+          "change_justified": "true",
+          "stance": "感兴趣的候选人",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在了解阶段，需要更多信息"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "全职底薪约2000-3000元，月均参考6000-9000元。",
+      "timestamp": 21.826292276382446,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "那兼职呢？一单多少钱，一个月能跑多少单？",
+      "timestamp": 26.74560546875,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户目前有工作，时间灵活\n  - 全职/兼职都考虑，取决于收入\n  - 全职底薪2000-3000元，月均6000-9000元\n  - 全职需在线8小时，系统派单\n进展追踪:\n  前期: 确认身份、说明来意\n  最近: 介绍了全职模式的基本情况\n  当前待确认: 兼职模式的具体收入情况\n上次决策依据: 想对比两种模式再决定",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续了解兼职模式的收入，为对比做决策\n立场: 谨慎，需要全面信息后再决定\n\n客服行为分析:\n  上轮做了什么: 介绍了全职底薪和月均收入\n  是否回应核心诉求: 部分回应，但只说了全职，还没说兼职\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但信息不全\n\n决策: 自然追问兼职模式收入，保持对比心态\n前瞻: 如果客服说兼职收入→我继续对比；如果回避→我追问",
+        "state": {
+          "turn": "10",
+          "intent": "了解兼职收入",
+          "intent_code": "query_part_time_income",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→中性",
+          "change_reason": "信息正常推进，无情绪波动",
+          "change_justified": "true",
+          "stance": "谨慎对比",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在了解信息阶段，需要继续对比"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "兼职每单约4-7元，午晚高峰跑2-3小时，月均能多赚2000-4000元。",
+      "timestamp": 27.583197355270386,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "兼职有奖励或者补贴吗？每天最少要跑多久？",
+      "timestamp": 32.67874526977539,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户陈先生，有工作但时间灵活，对全职/兼职均持开放态度\n  已了解全职底薪2000-3000元，月均6000-9000元\n  已了解兼职每单4-7元，月均2000-4000元\n进展追踪:\n  前期: 客服介绍全职模式（底薪+在线8小时+派单）\n  最近: 客服介绍兼职模式（单均4-7元，月均2000-4000元）\n  当前待确认: 兼职是否也有奖励或补贴？每天必须跑多久？\n上次决策依据: 看收入再决定全职还是兼职",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认兼职的额外福利和最低时长要求\n立场: 对收入敏感，想全面了解再做决定\n\n客服行为分析:\n  上轮做了什么: 介绍了兼职的单均收入和月均收入\n  是否回应核心诉求: 部分回应，但未提及奖励和时长要求\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但信息还不够全面\n\n决策: 追问兼职是否有奖励和每日最低时长\n前瞻: 如果客服说没有奖励→我会失望；如果有奖励→我会感兴趣",
+        "state": {
+          "turn": "12",
+          "intent": "追问兼职奖励和时长",
+          "intent_code": "B1_ask_details",
+          "emotion": "好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "好奇→好奇",
+          "change_reason": "信息逐步清晰，继续追问细节",
+          "change_justified": "true",
+          "stance": "谨慎乐观",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问奖励和时长细节"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "兼职高峰期和恶劣天气有补贴，没有最低时长要求。",
+      "timestamp": 33.4186851978302,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "那兼职除了补贴，有没有阶梯奖励？保险和装备怎么算？",
+      "timestamp": 38.606505155563354,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户有工作，时间灵活\n  - 全职月均6000-9000元，底薪2000-3000元\n  - 兼职每单4-7元，月均2000-4000元\n  - 兼职无最低时长要求，有高峰和天气补贴\n进展追踪:\n  前期: 用户留言咨询→客服致电介绍→用户了解全职/兼职模式\n  最近: 客服介绍了全职底薪和月收入、兼职单均收入和月收入\n  当前待确认: 兼职是否有奖励机制、保险保障、装备提供\n上次决策依据: 用户想对比全职兼职收入再做决定",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续了解兼职的奖励机制和保障细节\n立场: 谨慎对比，不轻易承诺\n\n客服行为分析:\n  上轮做了什么: 回答了兼职补贴和时长问题\n  是否回应核心诉求: 部分回应了收入问题，但未提及奖励和保障\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但信息还不够全面\n\n决策: 继续追问兼职的奖励机制和保障细节\n前瞻: 如果客服详细说明→继续追问装备和保险；如果回避→情绪转向不满",
+        "state": {
+          "turn": "14",
+          "intent": "追问兼职奖励和保障",
+          "intent_code": "none",
+          "emotion": "好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "中性→好奇",
+          "change_reason": "客服回答清晰，想了解更多细节",
+          "change_justified": "true",
+          "stance": "谨慎对比",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→中性(0.5)→中性(0.5)→好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解奖励和保障细节"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "兼职没有阶梯奖励，每单自动扣3元买意外险，装备自备。",
+      "timestamp": 39.666677951812744,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "那兼职条件听着一般啊，我还是更想了解全职，之前说兼职也行是没想清楚。",
+      "timestamp": 46.20797801017761,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户目前有工作，时间灵活\n  - 对全职和兼职都感兴趣，主要看收入\n  - 已了解：全职底薪2000-3000元，月均6000-9000元；兼职每单4-7元，月均多赚2000-4000元\n  - 兼职无阶梯奖励，每单扣3元意外险，装备自备\n进展追踪:\n  前期: 用户表达兴趣→客服介绍两种模式→用户询问全职收入→用户询问兼职收入→用户追问兼职奖励和保险\n  最近: 客服回答兼职无阶梯奖励、保险扣费、装备自备\n  当前待确认: 兼职是否有其他奖励或补贴？装备自备具体指什么？\n上次决策依据: 用户想全面了解后再决定是否加入",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 表达对兼职条件的失望，同时制造前后矛盾——之前说兼职也行，现在说更倾向全职\n立场: 用户是谨慎的中年人，对收入细节很在意\n\n客服行为分析:\n  上轮做了什么: 详细说明兼职无阶梯奖励、保险扣费、装备自备\n  是否回应核心诉求: 是，但信息偏负面\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点失望——兼职条件听起来不吸引人\n  情绪变化: 从好奇→略带沮丧\n\n决策: 表达对兼职条件的失望，同时制造矛盾——之前说兼职也行，现在说更想了解全职\n前瞻: 如果客服解释兼职优势→我会继续坚持全职；如果客服介绍全职更多细节→我会配合询问",
+        "state": {
+          "turn": "16",
+          "intent": "表达对兼职条件的失望，并转向全职",
+          "intent_code": "B2_shift_to_fulltime",
+          "emotion": "沮丧",
+          "emotion_intensity": "0.4",
+          "emotion_change": "好奇→沮丧",
+          "change_reason": "得知兼职无阶梯奖励、保险和装备需自备，条件不如预期",
+          "change_justified": "true",
+          "stance": "谨慎观望",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→沮丧(0.4)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解全职的详细情况"
+        }
+      }
+    },
+    {
+      "turn_number": 17,
+      "speaker": "system",
+      "content": "全职底薪2000-3000元，月均6000-9000元，还有阶梯奖励和补贴。",
+      "timestamp": 47.07393431663513,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 18,
+      "speaker": "user",
+      "content": "好的，我听到了。那全职具体有哪些奖励和补贴？",
+      "timestamp": 47.998443365097046,
+      "parsed_tags": {
+        "memory": null,
+        "thought": null,
+        "state": {
+          "emotion": "未知",
+          "emotion_intensity": "0.5"
+        },
+        "emotion_curve": {
+          "轨迹": "未知",
+          "趋势": "未知"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "未输出标签"
+        }
+      }
+    },
+    {
+      "turn_number": 19,
+      "speaker": "system",
+      "content": "全职有高峰期补贴、恶劣天气补贴和月度奖励，最高能加2000元。",
+      "timestamp": 48.78092288970947,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 20,
+      "speaker": "user",
+      "content": "那阶梯奖励具体怎么算？补贴是按天发还是月底统一发？",
+      "timestamp": 54.32200050354004,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  有意向了解骑手工作，目前有工作且时间灵活\n  最初说全职兼职都行，现在明确更关注全职\n  全职: 底薪2000-3000元，月均6000-9000元，有阶梯奖励和补贴\n  兼职: 每单4-7元，月均2000-4000元，无阶梯奖励，保险每单扣3元\n\n进展追踪:\n  前期: 了解两种模式差异\n  最近: 客服介绍了全职的补贴和奖励最高加2000元\n  当前待确认: 具体阶梯奖励的档位和补贴的发放条件\n  上次决策依据: 认为兼职条件一般，转向关注全职",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 追问全职阶梯奖励和补贴的具体细节\n立场: 对收入敏感，倾向于选择收入更稳定的全职\n\n客服行为分析:\n  上轮做了什么: 介绍了全职有高峰期补贴、恶劣天气补贴和月度奖励，最高加2000元\n  是否回应核心诉求: 部分回应了补贴问题，但阶梯奖励的具体档位还没说清楚\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但觉得信息还不够具体\n\n决策: 基于立场×情绪反应的自然回应——追问阶梯奖励的档位和补贴发放条件\n前瞻: 如果客服说清楚→继续追问入职条件；如果说不清→表现失望",
+        "state": {
+          "turn": "20",
+          "intent": "追问全职阶梯奖励和补贴细节",
+          "intent_code": "inquire_details",
+          "emotion": "期待中带点急切",
+          "emotion_intensity": "0.6",
+          "emotion_change": "好奇→期待中带点急切",
+          "change_reason": "得到部分信息但不够具体，想要更多细节",
+          "change_justified": "true",
+          "stance": "倾向于全职，对收入细节敏感",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.5)→期待(0.5)→期待中带点急切(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问具体细节"
+        }
+      }
+    },
+    {
+      "turn_number": 21,
+      "speaker": "system",
+      "content": "阶梯奖励：基础单量后每单单价递增，补贴月底统一发。",
+      "timestamp": 55.13291311264038,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 22,
+      "speaker": "user",
+      "content": "阶梯奖励具体怎么算？比如跑多少单以后单价开始涨？",
+      "timestamp": 60.692559242248535,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户陈先生，目前有工作但时间灵活\n  - 先表示全职兼职都行，后改为更想了解全职\n  - 已了解全职底薪2000-3000元，月均6000-9000元\n  - 已了解全职有高峰期补贴、恶劣天气补贴、月度奖励最高加2000元\n  - 最新询问：阶梯奖励具体怎么算，补贴是按天还是月底发\n进展追踪:\n  前期: 咨询工作模式、收入\n  最近: 了解全职奖励补贴细节\n  当前待确认: 阶梯奖励具体计算规则，补贴发放时间\n上次决策依据: 对兼职条件不满意，转向全职",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 追问阶梯奖励的具体计算规则，确认补贴发放时间\n立场: 谨慎但感兴趣，想搞清楚细节再决定\n\n客服行为分析:\n  上轮做了什么: 解释了阶梯奖励和补贴发放时间，但阶梯奖励只说\"基础单量后每单单价递增\"，不够具体\n  是否回应核心诉求: 部分回应，阶梯奖励细节不够清楚\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点着急，觉得回答太笼统\n决策: 追问阶梯奖励具体怎么递增，比如多少单后单价涨\n前瞻: 如果客服说具体数字→满意；如果继续笼统→再次追问",
+        "state": {
+          "turn": "22",
+          "intent": "追问阶梯奖励具体规则",
+          "intent_code": "B3_ask_details",
+          "emotion": "急切",
+          "emotion_intensity": "0.6",
+          "emotion_change": "好奇→急切",
+          "change_reason": "对阶梯奖励的笼统回答感到不够满意",
+          "change_justified": "true",
+          "stance": "谨慎但感兴趣",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.5)→急切(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在追问阶梯奖励细节，信息还未完全清楚"
+        }
+      }
+    },
+    {
+      "turn_number": 23,
+      "speaker": "system",
+      "content": "阶梯奖励：月跑满500单后，每单单价涨1-2元。",
+      "timestamp": 61.53680729866028,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 24,
+      "speaker": "user",
+      "content": "那跑不满500单呢？单价是不是就一直是基础价？",
+      "timestamp": 66.42009329795837,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [陈先生，有灵活工作，对全职更感兴趣，已了解全职底薪2000-3000元、月均6000-9000元、阶梯奖励和补贴]\n进展追踪:\n  前期: 已了解全职和兼职区别\n  最近: 客服解释了阶梯奖励（月跑满500单后单价涨1-2元）\n  当前待确认: 阶梯奖励的具体计算方式、补贴发放时间、保险和装备细节\n上次决策依据: 对兼职条件不满意，转向全职深入了解",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续追问阶梯奖励和补贴的具体细节，确认收入预期\n立场: 好奇但谨慎，需要明确信息才考虑加入\n\n客服行为分析:\n  上轮做了什么: 解释了阶梯奖励（满500单后单价涨1-2元）\n  是否回应核心诉求: 部分回应，但细节不够清晰\n\n我的情绪反应:\n  对上轮客服行为的感受: 稍满意，但觉得信息不够具体\n\n决策: 基于立场×情绪反应的自然回应\n前瞻: 如果客服详细解释→继续追问保险装备；如果含糊→表达不满",
+        "state": {
+          "turn": "24",
+          "intent": "追问阶梯奖励具体细节",
+          "intent_code": "none",
+          "emotion": "稍满意但好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "稍满意但好奇→稍满意但好奇",
+          "change_reason": "客服回应了部分问题，但不够详细",
+          "change_justified": "true",
+          "stance": "谨慎乐观",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.5)→稍满意(0.6)→稍满意但好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问阶梯奖励和保险细节"
+        }
+      }
+    },
+    {
+      "turn_number": 25,
+      "speaker": "system",
+      "content": "基础价跑满300单后每单涨0.5元，300-500单之间是过渡档。",
+      "timestamp": 67.26640319824219,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 26,
+      "speaker": "user",
+      "content": "好的，那全职每天必须在线8小时吗？保险和装备怎么算？",
+      "timestamp": 73.36528706550598,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  陈先生，有工作但时间灵活，最初说全职兼职都行，后改口说更想了解全职\n  兼职信息已了解：每单4-7元，月均2000-4000元，无阶梯奖励，保险每单扣3元，装备自备\n  全职信息：底薪2000-3000元，月均6000-9000元，有阶梯奖励和补贴，补贴月底发\n  阶梯奖励：月满300单每单涨0.5元，满500单每单再涨1-2元\n\n进展追踪:\n  前期: 询问两种模式区别和收入\n  最近: 详细询问全职阶梯奖励规则，客服已解释300单和500单两个门槛\n  当前待确认: 全职的工作时长要求、保险装备、晋升通道等\n\n上次决策依据: 说兼职条件一般，改口说更想了解全职",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续追问全职的详细条件，测试客服是否记得我之前说过的话\n立场: 讲规矩但情绪起伏大的人\n\n客服行为分析:\n  上轮做了什么: 解释了阶梯奖励的具体门槛——300单涨0.5元，500单涨1-2元\n  是否回应核心诉求: 是，回答了具体金额\n\n我的情绪反应:\n  对上轮客服行为的感受: 比较满意，回答得清楚\n\n决策: 基于立场×情绪反应的自然回应——继续追问全职其他条件\n前瞻: 如果客服说全职时长要求→我继续问保险装备；如果客服绕开→我追问",
+        "state": {
+          "turn": "26",
+          "intent": "追问全职工作时长要求",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.5",
+          "emotion_change": "平静→平静",
+          "change_reason": "客服回答清楚，情绪稳定",
+          "change_justified": "true",
+          "stance": "对全职感兴趣，想详细了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→平静(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解全职的工作时长、保险装备等条件"
+        }
+      }
+    },
+    {
+      "turn_number": 27,
+      "speaker": "system",
+      "content": "全职每天在线8小时，平台提供意外险，装备有补贴。",
+      "timestamp": 74.13031530380249,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 28,
+      "speaker": "user",
+      "content": "那保险是自己交钱还是公司出？装备补贴有多少，能补贴哪些东西？",
+      "timestamp": 79.1224455833435,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  岗位: 美团骑手\n  候选人: 陈先生\n  当前关注: 全职骑手的工作条件和收入\n进展追踪:\n  前期: 了解了全职/兼职模式区别\n  最近: 确认了阶梯奖励规则（300单基础、500单涨单价）、补贴发放方式（月底统一发放）\n  当前待确认: 保险和装备的具体细节\n上次决策依据: 兼职条件一般，决定专注了解全职",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认保险和装备的具体细节，看是否有额外成本\n立场: 对工作机会持开放态度，但需要全面了解成本和收益\n\n客服行为分析:\n  上轮做了什么: 提到全职提供意外险、装备有补贴\n  是否回应核心诉求: [部分] 回答了保险和装备，但不够具体\n\n我的情绪反应:\n  对上轮客服行为的感受: [中性] 信息基本清晰，但还要追问具体细节\n\n决策: 基于立场×情绪反应的自然回应\n前瞻: 如果客服详细说明保险和装备→接受信息并考虑下一步；如果含糊→追问具体金额",
+        "state": {
+          "turn": "28",
+          "intent": "确认保险和装备细节",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.4",
+          "emotion_change": "中性→中性",
+          "change_reason": "信息基本对称，未产生明显情绪波动",
+          "change_justified": "true",
+          "stance": "感兴趣但谨慎",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.4)→中性(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认保险和装备的具体细节"
+        }
+      }
+    },
+    {
+      "turn_number": 29,
+      "speaker": "system",
+      "content": "保险公司出，装备补贴每月200元，包括头盔、保温箱等。",
+      "timestamp": 79.84151101112366,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 30,
+      "speaker": "user",
+      "content": "对了，你刚才说兼职没有阶梯奖励，全职有——这个我记不太清了，能再确认一下吗？",
+      "timestamp": 86.6191577911377,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  核心诉求: 了解骑手工作内容和收入，正在对比全职和兼职模式\n进展追踪:\n  前期: 确认身份、表达兴趣、了解两种模式区别\n  最近: 已了解全职底薪2000-3000元、月均6000-9000元、阶梯奖励（300单过渡档、500单后每单涨1-2元）、补贴月底统一发、保险由公司出、装备补贴每月200元\n  当前待确认: 无——信息基本清晰\n上次决策依据: 对兼职条件不满意，转向全职",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认信息完整性，准备收尾\n立场: 谨慎但愿意接受有保障的方案\n\n客服行为分析:\n  上轮做了什么: 回答了保险和装备补贴的具体问题\n  是否回应核心诉求: 是——信息已基本覆盖\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意——回答清晰具体\n\n决策: 基于立场×情绪反应的自然回应——信息已够，表达感谢\n前瞻: 如果客服说\"还有其他问题吗\"→说没有了谢谢；如果说\"要不要报名\"→说再考虑一下",
+        "state": {
+          "turn": "30",
+          "intent": "确认信息完整性，准备收尾",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "中性→满意",
+          "change_reason": "客服回答了保险和装备补贴的具体细节，信息完整清晰",
+          "change_justified": "true",
+          "stance": "谨慎但愿意接受有保障的方案",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→中性(0.5)→满意(0.7)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想确认一个细节——之前说兼职没有阶梯奖励，但全职有，我记不清了"
+        }
+      }
+    }
+  ]
+}

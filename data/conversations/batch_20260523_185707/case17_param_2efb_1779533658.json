@@ -1,0 +1,350 @@
+{
+  "id": "case17_param_2efb_1779533658",
+  "case_id": 17,
+  "user_profile": "param_2efb",
+  "status": "用户挂断",
+  "total_turns": 10,
+  "duration_seconds": 26.2,
+  "complexity_score": 7.1,
+  "profile_label": "param_2efb",
+  "sampled_vector": [
+    0.062432367617733776,
+    0.9974824664730297,
+    0.5987524227166171,
+    0.22656238997849518,
+    0.9464151291150708,
+    0.5677944640655238,
+    0.7966461654952365,
+    0.6775669430978669,
+    0.3318986360210702,
+    0.47535370279642947,
+    0.43368247601196835,
+    0.3851763525222958,
+    0.4507714889499197,
+    0.2434131460231187,
+    0.4905600536622675
+  ],
+  "verified_vector": [
+    0.35,
+    0.85,
+    0.35,
+    0.45,
+    0.85,
+    0.55,
+    0.55,
+    0.75,
+    0.55,
+    0.65,
+    0.45,
+    0.35,
+    0.4,
+    0.6,
+    0.25
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [],
+  "consistency": {
+    "d_sv": 0.2069,
+    "d_va": 0.31,
+    "d_sa": 0.3544,
+    "max_sv_dev": 0.4975,
+    "max_va_dev": 0.5,
+    "tier": "red",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_a_state",
+    "n_estimated_dims": 8,
+    "n_unestimated_dims": 7,
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，d_sa 仅计算可估维度其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认客服身份可信度",
+      "intent_code": "none",
+      "emotion": "警惕中带点好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "初始→警惕中带点好奇",
+      "change_reason": "客服主动来电并准确说明问题，警惕稍减但仍有防备",
+      "change_justified": "true",
+      "stance": "防御性配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "询问退费方案",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "警惕中带点好奇→平静",
+      "change_reason": "客服确认信息准确，情绪稳定",
+      "change_justified": "true",
+      "stance": "谨慎配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "6",
+      "intent": "确认退款细节",
+      "intent_code": "confirm_refund_details",
+      "emotion": "平静中带点认真",
+      "emotion_intensity": "0.5",
+      "emotion_change": "平静→平静中带点认真",
+      "change_reason": "无变化，继续确认细节",
+      "change_justified": "true",
+      "stance": "谨慎配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "确认退费细节并结束",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "平静中带点认真→满意",
+      "change_reason": "客服给出了明确的金额和到账时间，问题得到解决",
+      "change_justified": "true",
+      "stance": "问题已解决，配合收尾",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "确认处理完成，结束通话",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "满意→满意",
+      "change_reason": "客服承诺全额退费并已开始操作",
+      "change_justified": "true",
+      "stance": "问题解决后不再纠缠",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "您好，请问是马女士吗？我是美团充电宝客服。看到您反馈归还后还在扣费的问题，我来帮您处理。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "您好，是我。请问您能说下具体哪个订单扣了68块钱吗？",
+      "timestamp": 4.498849630355835,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [订单号待确认/充电宝已归还但持续扣费68元/正常应扣约6元]\n进展追踪:\n  前期: 接到客服来电\n  最近: 客服核实身份，说明来意\n  当前待确认: 需确认订单号和具体扣费情况\n上次决策依据: 首次通话，先确认对方身份",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 确认客服身份可信后再进一步沟通\n立场: 对来电保持警惕，但愿意配合核实\n\n客服行为分析:\n  上轮做了什么: 自我介绍并说明致电目的\n  是否回应核心诉求: 部分——提到了退费问题，但未给具体方案\n\n我的情绪反应:\n  对上轮客服行为的感受: 戒备，但对方说明来意后稍缓和\n\n决策: 先确认对方身份，再了解具体扣费情况\n前瞻: 如果客服能说清订单信息→配合核实；如果含糊→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认客服身份可信度",
+          "intent_code": "none",
+          "emotion": "警惕中带点好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "初始→警惕中带点好奇",
+          "change_reason": "客服主动来电并准确说明问题，警惕稍减但仍有防备",
+          "change_justified": "true",
+          "stance": "防御性配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "初始(0.5)→警惕中带点好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "刚接通电话，需核实情况"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "好的，马女士，就是您昨天下午3点在朝阳区万达广场3号机柜归还的那个订单，目前显示扣费68元。",
+      "timestamp": 5.597278833389282,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "好的，订单没错。那这个多扣的钱能退吗？",
+      "timestamp": 9.683723211288452,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  订单: 昨天下午3点朝阳区万达广场3号机柜归还充电宝，被扣68元\n  核心诉求: 退还多扣的费用\n进展追踪:\n  前期: 接到客服来电，确认了订单信息\n  最近: 客服确认了具体订单和扣费金额\n  当前待确认: 退费金额和到账时间\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 确认订单信息准确后，询问退费方案\n立场: 谨慎但愿意配合解决问题\n\n客服行为分析:\n  上轮做了什么: 确认了订单具体时间和地点\n  是否回应核心诉求: 是，确认了问题订单\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息准确\n\n决策: 确认信息后，直接询问退费方案\n前瞻: 如果客服说全额退费→确认到账时间；如果客服说部分退费→追问为什么",
+        "state": {
+          "turn": "4",
+          "intent": "询问退费方案",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "警惕中带点好奇→平静",
+          "change_reason": "客服确认信息准确，情绪稳定",
+          "change_justified": "true",
+          "stance": "谨慎配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认退费方案"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "您放心，我先核实一下归还情况，确认后多扣的费用会全额退回。",
+      "timestamp": 10.4964439868927,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "好的，麻烦您了。请问大概能退多少钱，什么时候到账呢？",
+      "timestamp": 15.113074541091919,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  订单: 昨天下午3点朝阳区万达广场3号机柜归还，扣费68元\n  核心诉求: 退还多扣费用\n进展追踪:\n  前期: 身份确认、订单确认\n  最近: 客服承诺核实后退款\n  当前待确认: 退款金额、到账时间、操作流程\n上次决策依据: 客服主动联系，先听对方方案",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 不适用\n意图: 确认退款的具体金额和到账时间\n立场: 谨慎但愿意配合\n\n客服行为分析:\n  上轮做了什么: 承诺核实后退款，但未给具体数字和时间\n  是否回应核心诉求: 部分——答应退款，但细节模糊\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但需要确认细节\n\n决策: 追问退款金额和到账时间，因为记性好、爱较真\n前瞻: 如果客服给具体数字和时间→确认接受；如果含糊→继续追问",
+        "state": {
+          "turn": "6",
+          "intent": "确认退款细节",
+          "intent_code": "confirm_refund_details",
+          "emotion": "平静中带点认真",
+          "emotion_intensity": "0.5",
+          "emotion_change": "平静→平静中带点认真",
+          "change_reason": "无变化，继续确认细节",
+          "change_justified": "true",
+          "stance": "谨慎配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点认真(0.5)→平静中带点认真(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认退款具体金额和到账时间"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "正常应扣6元，多扣的62元会全额退回，1-3个工作日到账。",
+      "timestamp": 15.81857681274414,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "好的，62元1-3个工作日到账，我记下了。麻烦您了，谢谢。",
+      "timestamp": 20.634703159332275,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  订单: 昨天下午3点朝阳区万达广场3号机柜归还，扣费68元\n  应扣6元，多扣62元全额退，1-3个工作日到账\n进展追踪:\n  前期: 确认订单→询问退费→客服承诺全额退\n  最近: 客服确认多扣62元，1-3个工作日到账\n  当前待确认: 无\n上次决策依据: 客服核实后给出具体金额和到账时间，合理可接受",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 不适用\n意图: 确认退费细节，准备结束对话\n立场: 较真但讲理，问题解决后不再纠缠\n\n客服行为分析:\n  上轮做了什么: 明确退费金额62元，到账时间1-3个工作日\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 金额和时间都明确了，可以接受，自然收尾\n前瞻: 如果客服说\"还有其他问题吗\"→说没有并感谢；如果说\"请耐心等待\"→说好的谢谢",
+        "state": {
+          "turn": "8",
+          "intent": "确认退费细节并结束",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "平静中带点认真→满意",
+          "change_reason": "客服给出了明确的金额和到账时间，问题得到解决",
+          "change_justified": "true",
+          "stance": "问题已解决，配合收尾",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "防备(0.6)→稍微放松(0.5)→平静(0.5)→满意(0.7)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "退费金额和时间已明确，问题基本解决"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "好的，马女士，那我现在就帮您操作退费，请您留意到账通知。",
+      "timestamp": 21.696991205215454,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "好的，麻烦您了，我会留意的。谢谢，再见。",
+      "timestamp": 26.2387592792511,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 订单：昨天下午3点朝阳万达3号机柜归还充电宝\n  - 已扣费68元，正常应扣6元，多扣62元\n  - 客服承诺全额退回62元，1-3个工作日到账\n进展追踪:\n  前期: 确认订单→询问退费→客服说明全额退\n  最近: 确认金额62元→确认到账时间1-3个工作日→客服表示开始操作退费\n  当前待确认: 等待到账通知\n上次决策依据: 客服解释清楚、承诺明确，表示满意",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 不适用\n意图: 确认处理完成，结束通话\n立场: 较真但好沟通，问题解决后不再纠缠\n\n客服行为分析:\n  上轮做了什么: 告知已开始操作退费，提醒留意到账\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意]\n\n决策: 问题已解决，礼貌结束通话\n前瞻: 客服若说再见→自然结束",
+        "state": {
+          "turn": "10",
+          "intent": "确认处理完成，结束通话",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "满意→满意",
+          "change_reason": "客服承诺全额退费并已开始操作",
+          "change_justified": "true",
+          "stance": "问题解决后不再纠缠",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "防备(0.6)→平静(0.5)→满意(0.7)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已开始操作退费，无其他需求"
+        }
+      }
+    }
+  ]
+}

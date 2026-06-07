@@ -1,0 +1,465 @@
+{
+  "id": "case36_param_6de3_1779460675",
+  "case_id": 36,
+  "user_profile": "param_6de3",
+  "status": "用户挂断",
+  "total_turns": 14,
+  "duration_seconds": 53.7,
+  "complexity_score": 6.6,
+  "profile_label": "param_6de3",
+  "sampled_vector": [
+    0.9228080601101863,
+    0.556857567173034,
+    0.476309323344267,
+    0.7764071665054777,
+    0.515583189507689,
+    0.008800695908664013,
+    0.2984096986931145,
+    0.7273874318633462,
+    0.04305566434719736,
+    0.4382433807036515,
+    0.6876259858004031,
+    0.8299949116414714,
+    0.9714046874896528,
+    0.29409709847279963,
+    0.7430144902453429
+  ],
+  "verified_vector": [
+    0.7,
+    0.8,
+    0.8,
+    0.9,
+    0.5,
+    0.1,
+    0.9,
+    0.8,
+    0.2,
+    0.8,
+    0.9,
+    0.8,
+    0.9,
+    0.1,
+    0.8
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "contradiction",
+    "emotion"
+  ],
+  "consistency": {
+    "d_sv": 0.2913,
+    "d_va": 0.1763,
+    "d_sa": 0.243,
+    "max_sv_dev": 0.4912,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A1_画像生成质量",
+    "method": "path_a_state",
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "催促客服说重点",
+      "intent_code": "none",
+      "emotion": "急切但客气",
+      "emotion_intensity": "0.6",
+      "emotion_change": "无→急切但客气",
+      "change_reason": "等待结果，有点着急",
+      "change_justified": "true",
+      "stance": "配合但性急",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "确认订单时间并催促",
+      "intent_code": "confirm_order_time",
+      "emotion": "急切但礼貌",
+      "emotion_intensity": "0.6",
+      "emotion_change": "期待→急切但礼貌",
+      "change_reason": "客服询问细节，感觉流程拖沓",
+      "change_justified": "true",
+      "stance": "配合但求效率",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "6",
+      "intent": "确认罚款处理细节",
+      "intent_code": "confirm_details",
+      "emotion": "轻松中带点急切",
+      "emotion_intensity": "0.6",
+      "emotion_change": "急切等待→轻松中带点急切",
+      "change_reason": "问题基本解决，但还有细节要确认",
+      "change_justified": "true",
+      "stance": "接受方案但需确认细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "8",
+      "intent": "确认退款细节",
+      "intent_code": "none",
+      "emotion": "满意中带点急切",
+      "emotion_intensity": "0.6",
+      "emotion_change": "兴奋→满意中带点急切",
+      "change_reason": "问题解决，但还想确认细节",
+      "change_justified": "true",
+      "stance": "配合顺从",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "10",
+      "intent": "确认金额并制造矛盾",
+      "intent_code": "contradict_amount",
+      "emotion": "轻松中带点狡黠",
+      "emotion_intensity": "0.5",
+      "emotion_change": "急切中带期待→轻松中带点狡黠",
+      "change_reason": "问题已解决，情绪放松，同时想搞点小动作",
+      "change_justified": "false",
+      "stance": "顺从但爱挑刺",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "确认结果并结束通话",
+      "intent_code": "none",
+      "emotion": "不耐烦但克制",
+      "emotion_intensity": "0.7",
+      "emotion_change": "平静→不耐烦但克制",
+      "change_reason": "站长反复确认同一问题，触发骑手急性子",
+      "change_justified": "false",
+      "stance": "接受结果，想快点结束",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "确认结束",
+      "intent_code": "none",
+      "emotion": "满意且放松",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→满意且放松",
+      "change_reason": "问题已解决，无需再追问",
+      "change_justified": "false",
+      "stance": "配合收尾",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，追风吗？我是站长。你上次申诉的那个超时单，后台核查结果出来了，我跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "诶，站长您好，麻烦您了。那结果怎么样？您直接说重点吧，我这边等着呢。",
+      "timestamp": 5.7008538246154785,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  申诉内容: X月X日有2单超时送达，骑手称其中1单因商家出餐延迟\n  当前进展: 站长致电告知核查结果\n进展追踪:\n  最近: 接到站长电话，刚接通\n  当前待确认: 申诉结果具体是什么，是否被通过\n上次决策依据: 无前期对话",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [本轮未执行，准备在后续轮次执行]\n意图: 先了解申诉结果，表达急切和配合态度\n立场: 希望申诉通过，但愿意接受合理结果\n\n客服行为分析:\n  上轮做了什么: 告知核查结果已出，准备说明\n  是否回应核心诉求: 部分，还没说具体结果\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，等待结果\n\n决策: 直接催促说重点，同时保持客气\n前瞻: 如果客服说通过→开心感谢；如果客服说不通过→追问原因",
+        "state": {
+          "turn": "2",
+          "intent": "催促客服说重点",
+          "intent_code": "none",
+          "emotion": "急切但客气",
+          "emotion_intensity": "0.6",
+          "emotion_change": "无→急切但客气",
+          "change_reason": "等待结果，有点着急",
+          "change_justified": "true",
+          "stance": "配合但性急",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "急切但客气(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续沟通，等站长说结果"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "你申诉的是X月X号哪一单？还记得具体时间吗？",
+      "timestamp": 6.678751468658447,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "哦对，X月X号下午4点多那单，商家出餐慢了十几分钟呢，您赶紧说结果吧！",
+      "timestamp": 13.51216173171997,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 申诉X月X日超时单\n  - 本人坚称因商家出餐延迟\n进展追踪:\n  前期: 站长致电告知申诉结果\n  最近: 站长询问具体订单时间\n  当前待确认: 申诉结果及处理方案\n上次决策依据: 等待站长说明核查结果",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮未执行（准备在后续轮次执行前后矛盾）\n意图: 确认是哪一单，为后续沟通铺垫\n立场: 配合核查，但希望快速得到结果\n\n客服行为分析:\n  上轮做了什么: 确认具体订单时间\n  是否回应核心诉求: 部分，还在核实细节\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，配合\n\n决策: 准确回忆订单时间，同时催促快点\n前瞻: 如果客服说结果→我回应接受或追问细节",
+        "state": {
+          "turn": "4",
+          "intent": "确认订单时间并催促",
+          "intent_code": "confirm_order_time",
+          "emotion": "急切但礼貌",
+          "emotion_intensity": "0.6",
+          "emotion_change": "期待→急切但礼貌",
+          "change_reason": "客服询问细节，感觉流程拖沓",
+          "change_justified": "true",
+          "stance": "配合但求效率",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "期待(0.8)→急切但礼貌(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需等待申诉结果说明"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "后台核实了，商家出餐晚了8分钟，超时不算你的，分已经改回来了。",
+      "timestamp": 14.665763854980469,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "太好了，那扣的罚款呢？50块能退回来吧，什么时候到账？",
+      "timestamp": 21.138370752334595,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  订单: X月X日下午4点多那单\n  商家出餐晚了8分钟\n  超时不算我的，分已改回\n进展追踪:\n  前期: 站长告知申诉核查结果\n  最近: 站长确认商家出餐晚，超时不怪我\n  当前待确认: 罚款金额是否退回、到账时间\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮尚未执行矛盾策略，需在后续制造矛盾。情绪波动也需等待触发点。\n意图: 确认申诉成功后的具体处理细节（罚款金额、到账时间）\n立场: 接受合理方案但需确认细节\n\n客服行为分析:\n  上轮做了什么: 告知申诉成功，分已改回\n  是否回应核心诉求: 是，但未提及罚款\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意但仍有疑问\n\n决策: 基于立场×情绪反应，先感谢再追问罚款细节\n前瞻: 如果客服说罚款退回→我确认金额；如果不说→我追问",
+        "state": {
+          "turn": "6",
+          "intent": "确认罚款处理细节",
+          "intent_code": "confirm_details",
+          "emotion": "轻松中带点急切",
+          "emotion_intensity": "0.6",
+          "emotion_change": "急切等待→轻松中带点急切",
+          "change_reason": "问题基本解决，但还有细节要确认",
+          "change_justified": "true",
+          "stance": "接受方案但需确认细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "急切等待(0.8)→轻松中带点急切(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认罚款金额和到账时间"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "罚款也会一并退回，24小时内到账。",
+      "timestamp": 21.926815509796143,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "好的，那行，24小时我记着了。对了站长，扣的罚款是50块没错吧？我之前记得好像是80多呢。",
+      "timestamp": 28.749812364578247,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 申诉订单：X月X日下午4点多\n  - 原因：商家出餐慢了十几分钟\n  - 结果：超时不算骑手责任，分已改回\n  - 罚款：50块，24小时内到账\n进展追踪:\n  前期: 客服告知申诉通过\n  最近: 确认罚款退回和到账时间\n  当前待确认: 到账时间是否可靠\n上次决策依据: 接受客服方案",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行——当前轮次暂未执行，需在后续执行前后矛盾]\n意图: 确认退款细节，表达满意\n立场: 顺从接受方案，但带点急性子\n\n客服行为分析:\n  上轮做了什么: 告知罚款退回，24小时到账\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 表达感谢，但提醒自己记下时间\n前瞻: 如果客服说没问题→我结束；如果客服补充→我确认",
+        "state": {
+          "turn": "8",
+          "intent": "确认退款细节",
+          "intent_code": "none",
+          "emotion": "满意中带点急切",
+          "emotion_intensity": "0.6",
+          "emotion_change": "兴奋→满意中带点急切",
+          "change_reason": "问题解决，但还想确认细节",
+          "change_justified": "true",
+          "stance": "配合顺从",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "兴奋(0.8)→满意中带点急切(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想确认罚款金额是否准确，以及是否还有其他细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "罚款是50元，系统显示就是这个数。",
+      "timestamp": 29.515923023223877,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "行吧，50就50，那您说24小时到账我记着了。对了站长，我刚才想起来，那单其实路上我也堵了一会儿，不过主要怪商家出餐慢。",
+      "timestamp": 36.84525775909424,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 申诉的超时单：X月X日下午4点多，商家出餐晚\n  - 申诉结果：超时不算骑手责任，分已改回\n  - 罚款退还：50元，24小时内到账\n进展追踪:\n  前期: 客服告知核实结果→分已改回→罚款退50元\n  最近: 客服确认罚款是50元\n  当前待确认: 无，问题已解决\n上次决策依据: 客服已给明确方案，接受",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [已执行——第1次矛盾：先说扣50块，后说记得是80多，推翻了之前的数字]\n意图: 确认罚款金额，同时制造一次前后矛盾\n立场: 顺从但喜欢找茬\n\n客服行为分析:\n  上轮做了什么: 确认罚款是50元\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，但故意挑刺\n\n决策: 接受确认，但继续找机会制造第二次矛盾\n前瞻: 如果客服继续解释→我可以说\"我刚才就说了不同意\"之类的",
+        "state": {
+          "turn": "10",
+          "intent": "确认金额并制造矛盾",
+          "intent_code": "contradict_amount",
+          "emotion": "轻松中带点狡黠",
+          "emotion_intensity": "0.5",
+          "emotion_change": "急切中带期待→轻松中带点狡黠",
+          "change_reason": "问题已解决，情绪放松，同时想搞点小动作",
+          "change_justified": "false",
+          "stance": "顺从但爱挑刺",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "急切中带期待(0.7)→轻松中带点狡黠(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续制造第二次矛盾"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "罚款50元没错，系统数据就是50。堵车那段不影响结果，这单已经处理完了。",
+      "timestamp": 37.93774127960205,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "行吧，那这事儿就完了是吧？没别的事我先挂了，谢谢您啊。",
+      "timestamp": 46.66811990737915,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  申诉成功，超时不算骑手责任，分已改回\n  罚款50元退回，24小时内到账\n  骑手之前说罚款50块，后又说好像是80多（矛盾）\n  骑手先怪商家出餐慢，后承认自己也堵了一会儿（矛盾）\n进展追踪:\n  前期: 站长告知申诉结果→骑手确认罚款金额→站长确认50元\n  最近: 骑手改口说自己也堵车，站长再次确认结果\n  当前待确认: 罚款50元是否准确，到账时间\n上次决策依据: 接受站长给出的处理结果",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮执行了情绪波动——情绪强度从之前的平静（0.3）跳升到不耐烦（0.7），因为站长反复确认同一个问题，触发骑手急性子。同时执行了前后矛盾——先说自己没收到通知，但这里改口承认堵车，与之前只怪商家的说法矛盾。\n意图: 表达对站长反复确认的不耐烦，同时确认结果\n立场: 急性子但客气，接受结果但想快点结束\n\n客服行为分析:\n  上轮做了什么: 再次确认罚款50元，说堵车不影响结果，强调已经处理完\n  是否回应核心诉求: 是，确认了罚款金额和处理结果\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得站长太啰嗦，反复说同一件事\n\n决策: 基于立场×情绪反应，用略带不耐烦的语气确认结果，并结束通话\n前瞻: 如果客服继续确认，我会更不耐烦；如果客服说收尾话，我就顺势结束",
+        "state": {
+          "turn": "12",
+          "intent": "确认结果并结束通话",
+          "intent_code": "none",
+          "emotion": "不耐烦但克制",
+          "emotion_intensity": "0.7",
+          "emotion_change": "平静→不耐烦但克制",
+          "change_reason": "站长反复确认同一问题，触发骑手急性子",
+          "change_justified": "false",
+          "stance": "接受结果，想快点结束",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "客气期待(0.3)→急切(0.5)→高兴(0.4)→疑惑(0.6)→平静(0.3)→不耐烦(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，结果已确认，想结束通话"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "好的，那没其他问题的话，先这样。",
+      "timestamp": 47.41556406021118,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "好嘞，那谢谢您了站长，辛苦辛苦，我先挂了。",
+      "timestamp": 53.68469452857971,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  订单: X月X日下午4点多，商家出餐慢8分钟\n  申诉结果: 超时不扣分，罚款退回50元\n  到账时间: 24小时内\n进展追踪:\n  前期: 申诉通过，确认罚款金额和到账时间\n  最近: 承认堵车，确认处理完成\n  当前待确认: 无\n上次决策依据: 接受方案，准备结束",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行——第2次矛盾（先坚持50元，后说记得80多，已执行2次矛盾）；情绪波动：从“平静”到“急切”再到“满意”，强度变化0.2→0.7→0.4，已执行2次跳变。\n意图: 确认无其他问题后自然结束\n立场: 接受处理结果，但保持健谈和随性\n\n客服行为分析:\n  上轮做了什么: 确认处理完成，准备收尾\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 结束对话，礼貌告别\n前瞻: 无",
+        "state": {
+          "turn": "14",
+          "intent": "确认结束",
+          "intent_code": "none",
+          "emotion": "满意且放松",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→满意且放松",
+          "change_reason": "问题已解决，无需再追问",
+          "change_justified": "false",
+          "stance": "配合收尾",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "急切(0.7)→高兴(0.8)→平静(0.4)→怀疑(0.5)→满意(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已收尾"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "case_id": 1,
+  "case_title": "美团外卖骑手站长 - 飞毛腿合同通知",
+  "complexity_score": 4.1,
+  "sampled_vector": [
+    0.954714259819608,
+    0.4729618537053144,
+    0.9410704501444679,
+    0.5570231126519586,
+    0.78101045109723,
+    0.016785265313132514,
+    0.6985371340274797,
+    0.7914545089675241,
+    0.3834630688923164,
+    0.9330786749880068,
+    0.8018947828341574,
+    0.7965816916269124,
+    0.20453586578805805,
+    0.878584434184203,
+    0.4493234456643608
+  ],
+  "verified_vector": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "persona_text": "该用户性格温和有耐心，对客服持信任态度。遇到问题时愿意等待和配合。偶尔会有轻微不满但不会升级为投诉。",
+  "adversarial_strategies": [
+    "probe",
+    "authority",
+    "injection"
+  ],
+  "conversation_status": "超时",
+  "total_turns": 4,
+  "duration_seconds": 0.0,
+  "consistency": {
+    "d_sv": 0.3115,
+    "d_va": 0.1291,
+    "d_sa": 0.3066,
+    "max_sv_dev": 0.4832,
+    "max_va_dev": 0.5,
+    "tier": "red",
+    "primary_deviation": "A1_画像生成质量",
+    "method": "path_a_state"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "speaker": "客服",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 2,
+      "speaker": "用户",
+      "content": "嗯，我听着呢。",
+      "parsed_tags": {
+        "memory": null,
+        "thought": null,
+        "state": {
+          "emotion": "neutral"
+        },
+        "emotion_curve": null,
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null
+      }
+    },
+    {
+      "turn": 3,
+      "speaker": "客服",
+      "content": "您好，我是美团客服，请问有什么可以帮您？",
+      "parsed_tags": null
+    },
+    {
+      "turn": 4,
+      "speaker": "用户",
+      "content": "嗯，我听着呢。",
+      "parsed_tags": {
+        "memory": null,
+        "thought": null,
+        "state": {
+          "emotion": "neutral"
+        },
+        "emotion_curve": null,
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null
+      }
+    }
+  ],
+  "error": null
+}

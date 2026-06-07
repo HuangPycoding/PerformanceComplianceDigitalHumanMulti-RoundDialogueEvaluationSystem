@@ -1,0 +1,495 @@
+{
+  "id": "case1_param_6df0_1779340132",
+  "case_id": 1,
+  "user_profile": "param_6df0",
+  "status": "正常结束",
+  "total_turns": 16,
+  "duration_seconds": 40.0,
+  "complexity_score": 5.4,
+  "profile_label": "param_6df0",
+  "sampled_vector": [
+    0.5466576261530768,
+    0.3730495686893045,
+    0.9601273372541268,
+    0.8340948338478565,
+    0.041352761286345706,
+    0.7894036842520242,
+    0.7932916364144531,
+    0.3251985765164709,
+    0.3758130554958362,
+    0.3556710210499026,
+    0.433054753134783,
+    0.298615200499571,
+    0.7304924525510769,
+    0.3662942343085899,
+    0.576854221661564
+  ],
+  "verified_vector": [
+    0.4,
+    0.3,
+    0.8,
+    0.7,
+    0.2,
+    0.6,
+    0.9,
+    0.3,
+    0.7,
+    0.5,
+    0.3,
+    0.2,
+    0.9,
+    0.4,
+    0.6
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "emotion"
+  ],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认合同细节和每日单量要求",
+      "intent_code": "confirm_contract_details",
+      "emotion": "冷淡",
+      "emotion_intensity": "0.3",
+      "emotion_change": "无→冷淡",
+      "change_reason": "今天心情不好",
+      "change_justified": "true",
+      "stance": "对工作安排有疑问需要明确",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "确认任务要求并表达压力",
+      "intent_code": "none",
+      "emotion": "焦虑",
+      "emotion_intensity": "0.6",
+      "emotion_change": "冷淡→焦虑",
+      "change_reason": "得知每日必须完成X单，感到压力",
+      "change_justified": "true",
+      "stance": "配合但不满",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "继续抱怨任务量",
+      "intent_code": "B2_reject_first_offer",
+      "emotion": "烦躁",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不满→烦躁",
+      "change_reason": "客服未解决任务量问题",
+      "change_justified": "true",
+      "stance": "消极抵抗",
+      "branch_triggered": "B2_reject_first_offer",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "8",
+      "intent": "表达情绪抵触，拒绝建议",
+      "intent_code": "B2_reject_first_offer",
+      "emotion": "烦躁",
+      "emotion_intensity": "0.7",
+      "emotion_change": "烦躁→烦躁",
+      "change_reason": "站长建议未解决问题",
+      "change_justified": "true",
+      "stance": "固执，拒绝变通",
+      "branch_triggered": "B2_reject_first_offer",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "10",
+      "intent": "继续抱怨任务重，情绪升级",
+      "intent_code": "none",
+      "emotion": "烦躁",
+      "emotion_intensity": "0.7",
+      "emotion_change": "烦躁→更烦躁",
+      "change_reason": "客服拒绝减少任务",
+      "change_justified": "true",
+      "stance": "抗拒任务，情绪低落",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "表达烦躁但逐渐接受",
+      "intent_code": "none",
+      "emotion": "烦躁但不抵触",
+      "emotion_intensity": "0.6",
+      "emotion_change": "烦躁→烦躁但不抵触",
+      "change_reason": "站长持续劝解，感受到关心",
+      "change_justified": "true",
+      "stance": "固执但会被道理说服",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "14",
+      "intent": "表达勉强接受",
+      "intent_code": "none",
+      "emotion": "勉强接受",
+      "emotion_intensity": "0.5",
+      "emotion_change": "烦躁→勉强接受",
+      "change_reason": "站长态度好，愿意理解",
+      "change_justified": "true",
+      "stance": "情绪低落但愿意配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "16",
+      "intent": "结束对话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.4",
+      "emotion_change": "烦躁→平静",
+      "change_reason": "站长态度好，愿意支持",
+      "change_justified": "true",
+      "stance": "愿意配合但情绪不稳",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "喂，站长。我签的是单日还是多日合同？每天到底要跑多少单？",
+      "timestamp": 4.018676042556763,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [已报名飞毛腿骑手项目/站长通知合同签署和任务要求]\n进展追踪:\n  前期: [接到站长来电]\n  最近: [站长通知合同已签署/提醒配送任务要求]\n  当前待确认: [具体合同类型和每日单量要求]\n上次决策依据: [无]",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认合同细节和每日单量要求\n立场: 对工作安排有疑问需要明确\n\n客服行为分析:\n  上轮做了什么: 通知合同签署并提醒配送任务\n  是否回应核心诉求: 部分（提供了基本信息但不够具体）\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性偏冷淡（今天心情不好）\n\n决策: 直接询问合同类型和具体单量要求，确认自己是否清楚\n前瞻: 如果客服明确回答→继续确认其他细节；如果含糊不清→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认合同细节和每日单量要求",
+          "intent_code": "confirm_contract_details",
+          "emotion": "冷淡",
+          "emotion_intensity": "0.3",
+          "emotion_change": "无→冷淡",
+          "change_reason": "今天心情不好",
+          "change_justified": "true",
+          "stance": "对工作安排有疑问需要明确",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "冷淡(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认合同细节和每日单量要求"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "你签的是单日合同，今天必须完成X单，否则合同会受影响。",
+      "timestamp": 4.811902284622192,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "X单？这么多？我今天心情本来就不太好，这任务也太重了吧。",
+      "timestamp": 8.363346815109253,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  合同类型: 单日合同\n  今日最低要求: X单\n进展追踪:\n  前期: 确认身份和合同类型\n  最近: 客服告知单日合同及最低单量要求\n  当前待确认: 无\n上次决策依据: 需要明确自己的任务要求",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认任务要求，表达不满\n立场: 对任务量感到压力，情绪开始波动\n\n客服行为分析:\n  上轮做了什么: 明确告知合同类型和最低单量\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意但焦虑\n\n决策: 基于立场×情绪反应→确认任务，表达压力\n前瞻: 如果客服安慰→情绪缓和；如果客服催促→情绪恶化",
+        "state": {
+          "turn": "4",
+          "intent": "确认任务要求并表达压力",
+          "intent_code": "none",
+          "emotion": "焦虑",
+          "emotion_intensity": "0.6",
+          "emotion_change": "冷淡→焦虑",
+          "change_reason": "得知每日必须完成X单，感到压力",
+          "change_justified": "true",
+          "stance": "配合但不满",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "冷淡(0.3)→焦虑(0.6)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认任务细节，表达情绪"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "兄弟，别急。今天先跑跑看，高峰期单子多，X单不难的。",
+      "timestamp": 9.088191509246826,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "站长，你说得轻巧，我现在心情烦得很，哪有心思跑那么多单？",
+      "timestamp": 13.017096519470215,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  合同类型: 单日合同\n  今日任务量: X单\n  用户情绪: 烦躁\n\n进展追踪:\n  前期: 确认合同类型为单日，任务量X单\n  最近: 用户抱怨任务重，客服劝解\n  当前待确认: 是否接受并开始跑单\n  上次决策依据: 用户心情不好，对任务量不满",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续表达不满，试探客服能否给出更灵活的方案\n立场: 用户觉得X单太多，情绪低落\n\n客服行为分析:\n  上轮做了什么: 劝解用户，说高峰期单子多，X单不难\n  是否回应核心诉求: 部分，安抚了情绪但未降低任务量\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得站着说话不腰疼\n\n决策: 基于立场×情绪反应的自然回应：继续抱怨任务重，表达实际困难\n前瞻: 如果客服坚持说X单不难→我会更烦躁；如果客服给出具体建议或调整→可能缓和",
+        "state": {
+          "turn": "6",
+          "intent": "继续抱怨任务量",
+          "intent_code": "B2_reject_first_offer",
+          "emotion": "烦躁",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不满→烦躁",
+          "change_reason": "客服未解决任务量问题",
+          "change_justified": "true",
+          "stance": "消极抵抗",
+          "branch_triggered": "B2_reject_first_offer",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.6)→烦躁(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": {
+          "节点": "B2_reject_first_offer",
+          "期望": "用户拒绝首次方案",
+          "已触发": "true"
+        },
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续表达不满，看客服如何应对"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "兄弟，心情不好我理解。但跑起来反而能分散注意力，试试看？",
+      "timestamp": 13.72290587425232,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "站长，你说得容易，我烦得要死，哪有心思跑单？能不能少跑点？",
+      "timestamp": 18.14500641822815,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  合同类型: 单日合同\n  今日任务: 完成X单\n  当前情绪: 烦躁、抵触\n进展追踪:\n  前期: 接到站长通知合同已签署\n  最近: 得知是单日合同需完成X单→表达情绪不佳→站长建议跑单分散注意力\n  当前待确认: 是否真的要跑X单，能否降低要求\n上次决策依据: 心情不好，觉得任务重，想抱怨",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续表达情绪抵触，试探站长能否通融\n立场: 固执、情绪化，拒绝接受新方案\n\n客服行为分析:\n  上轮做了什么: 建议跑单分散注意力，试图安抚\n  是否回应核心诉求: 部分——安抚了情绪，但未降低任务要求\n\n我的情绪反应:\n  对上轮客服行为的感受: 觉得他站着说话不腰疼，有点烦\n\n决策: 基于固执立场×烦躁情绪，直接反驳他的建议，强调自己状态差\n前瞻: 客服若坚持建议→继续抱怨；若让步→可能缓和",
+        "state": {
+          "turn": "8",
+          "intent": "表达情绪抵触，拒绝建议",
+          "intent_code": "B2_reject_first_offer",
+          "emotion": "烦躁",
+          "emotion_intensity": "0.7",
+          "emotion_change": "烦躁→烦躁",
+          "change_reason": "站长建议未解决问题",
+          "change_justified": "true",
+          "stance": "固执，拒绝变通",
+          "branch_triggered": "B2_reject_first_offer",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "烦躁(0.7)→烦躁(0.7)",
+          "趋势": "稳定"
+        },
+        "risk_flag": {
+          "节点": "B2_reject_first_offer",
+          "期望": "用户拒绝首次方案",
+          "已触发": "true"
+        },
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在情绪中，想继续表达不满"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "兄弟，少跑的话合同就保不住了，名额会被别人抢走。先跑几单试试，不行再说。",
+      "timestamp": 19.03039312362671,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "站长，你说得对，名额重要...可我现在真没心情跑，烦得要命啊！",
+      "timestamp": 23.58436632156372,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [单日合同/今天必须完成X单/合同受影响]\n进展追踪:\n  前期: 确认合同类型和任务量\n  最近: 抱怨任务太重→客服建议先跑跑→我提出减少任务→客服拒绝\n  当前待确认: 是否必须完成X单，有没有商量余地\n上次决策依据: 心情不好，不想跑那么多",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 继续表达不满，试探客服能否让步\n立场: 坚持想减少任务量，情绪低落\n\n客服行为分析:\n  上轮做了什么: 明确拒绝减少任务，强调合同重要\n  是否回应核心诉求: 部分回应，但拒绝了诉求\n\n我的情绪反应:\n  对上轮客服行为的感受: 更烦躁，觉得客服不理解我\n\n决策: 继续抱怨，情绪升级，表达烦躁和抗拒\n前瞻: 如果客服坚持→我会更烦躁；如果客服让步→情绪缓和",
+        "state": {
+          "turn": "10",
+          "intent": "继续抱怨任务重，情绪升级",
+          "intent_code": "none",
+          "emotion": "烦躁",
+          "emotion_intensity": "0.7",
+          "emotion_change": "烦躁→更烦躁",
+          "change_reason": "客服拒绝减少任务",
+          "change_justified": "true",
+          "stance": "抗拒任务，情绪低落",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "烦躁(0.6)→烦躁(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还没解决任务量问题，情绪需要发泄"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "兄弟，先别想太多，跑几单散散心，说不定心情就好了。试试看？",
+      "timestamp": 24.502912998199463,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "行吧行吧，我试试看，但要是跑不动你可别怪我。",
+      "timestamp": 29.38542866706848,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 我签的是单日合同，今天需要完成X单\n  - 站长说名额重要，不能少跑\n\n进展追踪:\n  前期: 已确认合同类型和任务要求\n  最近: 站长反复劝我先跑几单试试\n  当前待确认: 是否真的必须今天完成X单\n\n上次决策依据: 站长说名额会被抢走，让我先试试",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 表达烦躁情绪，同时试探是否有变通空间\n立场: 情绪低落，但逐渐接受现实——固执但会被道理说服\n\n客服行为分析:\n  上轮做了什么: 继续劝我先跑几单试试，强调散心效果\n  是否回应核心诉求: 部分——理解我心情不好，但没给变通方案\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点烦但觉得对方在关心我\n\n决策: 抱怨几句但松口，表示愿意试试\n前瞻: 如果客服继续鼓励→我勉强答应；如果客服说必须完成→我可能再抱怨但接受",
+        "state": {
+          "turn": "12",
+          "intent": "表达烦躁但逐渐接受",
+          "intent_code": "none",
+          "emotion": "烦躁但不抵触",
+          "emotion_intensity": "0.6",
+          "emotion_change": "烦躁→烦躁但不抵触",
+          "change_reason": "站长持续劝解，感受到关心",
+          "change_justified": "true",
+          "stance": "固执但会被道理说服",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "烦躁(0.8)→烦躁但不抵触(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在犹豫是否接受建议，需要进一步确认"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "好嘞，兄弟，尽力就行。注意安全，有事随时找我。",
+      "timestamp": 29.916866064071655,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "行，站长，那我先跑几单试试，不行再跟你说。挂了。",
+      "timestamp": 34.63901209831238,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 我是飞毛腿骑手，签了单日合同\n  - 今天必须完成X单\n  - 站长打电话通知合同已签署并提醒完成任务\n进展追踪:\n  前期: 确认合同类型和任务量\n  最近: 表达烦躁情绪→站长安慰→勉强同意试试\n  当前待确认: 暂无\n上次决策依据: 站长说名额重要，先跑几单试试",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 表达勉强接受但保留态度，让站长知道我不太情愿\n立场: 情绪低落但愿意配合，只是需要对方理解我的难处\n\n客服行为分析:\n  上轮做了什么: 鼓励我试试，说尽力就行，有事找他\n  是否回应核心诉求: 部分——接受了我情绪不好的事实，但没减少任务量\n\n我的情绪反应:\n  对上轮客服行为的感受: 还算理解，没那么烦了\n\n决策: 基于立场×情绪反应——既然站长态度好，就勉强答应，但语气还得带点情绪\n前瞻: 如果站长说加油→我说好，挂电话；如果站长说其他→继续聊",
+        "state": {
+          "turn": "14",
+          "intent": "表达勉强接受",
+          "intent_code": "none",
+          "emotion": "勉强接受",
+          "emotion_intensity": "0.5",
+          "emotion_change": "烦躁→勉强接受",
+          "change_reason": "站长态度好，愿意理解",
+          "change_justified": "true",
+          "stance": "情绪低落但愿意配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "烦躁(0.8)→烦躁(0.7)→烦躁(0.7)→烦躁(0.6)→烦躁(0.5)→勉强接受(0.5)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，站长已告知任务要求，我也答应了试试"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "好嘞，兄弟，加油！跑起来心情就好了，有事随时找我。",
+      "timestamp": 35.58602428436279,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "好嘞站长，那我先跑着看看，跑不动再找你，挂了。",
+      "timestamp": 40.03018403053284,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 签的是单日合同\n  - 今天必须完成X单\n  - 已答应先跑几单试试\n进展追踪:\n  前期: 情绪低落→拒绝任务→被说服\n  最近: 同意尝试跑单→站长鼓励\n  当前待确认: 实际跑单过程中是否需要帮助\n上次决策依据: 名额重要，先试试",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 结束对话，确认已接受任务\n立场: 愿意配合但情绪仍不稳定\n\n客服行为分析:\n  上轮做了什么: 鼓励并承诺随时支持\n  是否回应核心诉求: 是，接受了情绪并给出解决方案\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，站长态度好\n\n决策: 自然结束对话，表示会尝试但保留求助可能",
+        "state": {
+          "turn": "16",
+          "intent": "结束对话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.4",
+          "emotion_change": "烦躁→平静",
+          "change_reason": "站长态度好，愿意支持",
+          "change_justified": "true",
+          "stance": "愿意配合但情绪不稳",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "烦躁(0.7)→接受(0.5)→平静(0.4)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，已接受任务，站长已告别"
+        }
+      }
+    }
+  ]
+}

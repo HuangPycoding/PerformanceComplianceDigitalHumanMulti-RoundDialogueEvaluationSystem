@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data exports (large files)
+data/exports/
+data/optimization/
+data/full_test/
+data/feasibility_output/
+data/e2e_test/
+data/narrative_test/
+
+# Logs
+*.log
+/tmp/
+nohup.out
+
+# Test cache
+.pytest_cache/

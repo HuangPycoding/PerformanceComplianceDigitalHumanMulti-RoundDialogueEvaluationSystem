@@ -1,0 +1,1554 @@
+{
+  "id": "case1_param_0832_1780737037",
+  "case_id": 1,
+  "user_profile": "param_0832",
+  "status": "超时",
+  "total_turns": 14,
+  "duration_seconds": 45.2,
+  "complexity_score": 4.5,
+  "profile_label": "param_0832",
+  "sampled_vector": [
+    0.28559086563410474,
+    0.030169709817525536,
+    0.7705016717737911,
+    0.3164247533615295,
+    0.10733620125584745,
+    0.7581590591335752,
+    0.3563922850527843,
+    0.3238255745008077,
+    0.059952001347208926,
+    0.7216954604672843,
+    0.1769698517739736,
+    0.3307110944786992,
+    0.37880730136374197,
+    0.04024340948286431,
+    0.5760531497728307
+  ],
+  "verified_vector": [
+    0.4,
+    0.15,
+    0.7,
+    0.15,
+    0.15,
+    0.7,
+    0.15,
+    0.4,
+    0.2,
+    0.7,
+    0.25,
+    0.25,
+    0.6,
+    0.1,
+    0.6
+  ],
+  "audited_vector": [
+    0.2,
+    0.8,
+    0.6,
+    0.3,
+    0.1,
+    0.3,
+    0.2,
+    0.2,
+    0.8,
+    0.9,
+    0.3,
+    0.3,
+    0.4,
+    0.1,
+    0.1
+  ],
+  "adversarial_strategies": [],
+  "consistency": {
+    "path_a_d_sv": 0.2748,
+    "path_a_d_va": 0.2975,
+    "path_a_d_sa": 0.336,
+    "path_a_max_sv_dev": 0.4698,
+    "path_a_max_va_dev": 0.5,
+    "path_a_tier": "yellow",
+    "path_a_primary_deviation": "A3_审计噪声(多轮稀释)",
+    "path_a_method": "path_a_state",
+    "path_a_n_estimated_dims": 8,
+    "path_a_n_unestimated_dims": 7,
+    "d_sv": 0.1151,
+    "d_va": 0.305,
+    "d_sa": 0.3372,
+    "max_sv_dev": 0.2212,
+    "max_va_dev": 0.65,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_b_llm",
+    "n_estimated_dims": 15,
+    "n_unestimated_dims": 0
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认具体任务量",
+      "intent_code": "none",
+      "emotion": "平淡中带点不耐烦",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平淡→平淡中带点不耐烦",
+      "change_reason": "客服说了要求但没给具体数字，觉得信息不完整",
+      "change_justified": "true",
+      "stance": "被动配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "要求客服直接给出具体单数",
+      "intent_code": "query_specific_numbers",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平淡中带点不耐烦→不耐烦",
+      "change_reason": "客服用字母代替具体数字，感觉被敷衍",
+      "change_justified": "true",
+      "stance": "被动但坚持要求明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "追问具体数字",
+      "intent_code": "none",
+      "emotion": "烦躁不满",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不耐烦→烦躁不满",
+      "change_reason": "客服连续两轮回避具体数字",
+      "change_justified": "true",
+      "stance": "不耐烦，要明确答案",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "逼问具体数字",
+      "intent_code": "none",
+      "emotion": "烦躁",
+      "emotion_intensity": "0.7",
+      "emotion_change": "烦躁不满→烦躁",
+      "change_reason": "客服多次回避直接回答具体数字",
+      "change_justified": "true",
+      "stance": "坚持要明确答案",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "要求客服明确说出X和Y的具体数值",
+      "intent_code": "none",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.7",
+      "emotion_change": "烦躁→不耐烦",
+      "change_reason": "客服持续回避问题",
+      "change_justified": "true",
+      "stance": "需要明确信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "确认单量数字",
+      "intent_code": "confirm_numbers",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "不耐烦→平静",
+      "change_reason": "客服终于给出具体数字",
+      "change_justified": "true",
+      "stance": "被动配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "结束对话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "问题已解决，无新变化",
+      "change_justified": "true",
+      "stance": "被动接受",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "嗯，X和Y具体是多少单？你直接说个数吧。",
+      "timestamp": 5.461726903915405,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [报名了美团飞毛腿骑手]\n进展追踪:\n  前期: [接到站长电话]\n  最近: [站长确认身份并告知合同签署和配送任务要求]\n  当前待确认: [具体需要完成多少单（X和Y的具体数字）]\n上次决策依据: [无]",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: [确认具体配送任务量]\n立场: [被动配合但需要明确细节]\n\n客服行为分析:\n  上轮做了什么: 确认身份并告知合同签署和任务要求\n  是否回应核心诉求: [部分，说了有要求但没给具体数字]\n\n我的情绪反应:\n  对上轮客服行为的感受: [一般，信息不全]\n\n决策: 直接询问具体单数要求\n前瞻: 如果客服给数字→确认，如果含糊→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认具体任务量",
+          "intent_code": "none",
+          "emotion": "平淡中带点不耐烦",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平淡→平淡中带点不耐烦",
+          "change_reason": "客服说了要求但没给具体数字，觉得信息不完整",
+          "change_justified": "true",
+          "stance": "被动配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平淡(0.2)→平淡中带点不耐烦(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认具体单数要求"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "单日合同X单，多日合同Y单。具体数字你App里能看到，我这边系统显示的就是这个标准。",
+      "timestamp": 6.7185022830963135,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "别让我看App，你就直接告诉我，X和Y到底是多少单？",
+      "timestamp": 12.97420072555542,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [合同已签署/需完成配送任务/单日合同X单/多日合同Y单]\n进展追踪:\n  前期: 确认合同签署/询问具体单数\n  最近: 客服告知单日X单/多日Y单/建议看App\n  当前待确认: 单日合同和多日合同的具体单数\n上次决策依据: 想知道明确数字",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 追问具体单数，不想自己查App\n立场: 被动但要求明确信息\n\n客服行为分析:\n  上轮做了什么: 说了X和Y，但让用户自己看App确认\n  是否回应核心诉求: [部分] 给了字母但没给数字\n\n我的情绪反应:\n  对上轮客服行为的感受: [有点不耐烦] 觉得客服在敷衍\n\n决策: 直接要求给数字，不接受App查看的建议\n前瞻: 如果客服给数字→确认接受；如果继续推App→再坚持",
+        "state": {
+          "turn": "4",
+          "intent": "要求客服直接给出具体单数",
+          "intent_code": "query_specific_numbers",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平淡中带点不耐烦→不耐烦",
+          "change_reason": "客服用字母代替具体数字，感觉被敷衍",
+          "change_justified": "true",
+          "stance": "被动但坚持要求明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.4)→不耐烦(0.6)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还没得到具体数字，还需追问"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "单日X单，多日Y单，具体数字我这边系统显示的就是这样，你App里也一样的。",
+      "timestamp": 14.03987169265747,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "你直接说X和Y是多少行不行？别老让我看App。",
+      "timestamp": 19.45400309562683,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 合同已签署\n  - 需完成配送任务\n  - 单日X单，多日Y单\n进展追踪:\n  前期: 接起电话，确认身份\n  最近: 追问X和Y具体数字\n  当前待确认: X和Y的具体数值\n上次决策依据: 想知道具体数字，不想自己查App",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 让客服直接告诉我X和Y的单数\n立场: 不耐烦，想尽快得到明确答案\n\n客服行为分析:\n  上轮做了什么: 再次回避具体数字，推回App\n  是否回应核心诉求: 否\n\n我的情绪反应:\n  对上轮客服行为的感受: 更烦躁，觉得他在敷衍\n\n决策: 继续追问，语气带点不满\n前瞻: 如果客服给数字→接受；如果继续回避→可能挂断",
+        "state": {
+          "turn": "6",
+          "intent": "追问具体数字",
+          "intent_code": "none",
+          "emotion": "烦躁不满",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不耐烦→烦躁不满",
+          "change_reason": "客服连续两轮回避具体数字",
+          "change_justified": "true",
+          "stance": "不耐烦，要明确答案",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→有点不耐烦(0.5)→烦躁不满(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还没得到具体数字，需要继续追问"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。",
+      "timestamp": 20.43424963951111,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "你光说系统显示，到底X和Y是几？给个准数行吗？",
+      "timestamp": 26.569625854492188,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  合同已签署，需完成配送任务，单日合同X单/多日合同Y单\n进展追踪:\n  前期: 已确认合同签署\n  最近: 反复追问X和Y具体数值，客服未直接回答\n  当前待确认: X和Y的具体数字\n上次决策依据: 客服一直推脱让看App，用户坚持要直接答案",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 不适用\n意图: 坚持让客服直接说出X和Y的具体数字，不再被敷衍\n立场: 用户对模糊信息不耐烦，要求明确答案\n\n客服行为分析:\n  上轮做了什么: 再次回避问题，重复说系统显示和App一样\n  是否回应核心诉求: 否\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点恼火，感觉被敷衍\n\n决策: 直接表达不满，要求给具体数字，不然无法继续\n前瞻: 如果客服给数字→确认；如果继续回避→可能挂断",
+        "state": {
+          "turn": "8",
+          "intent": "逼问具体数字",
+          "intent_code": "none",
+          "emotion": "烦躁",
+          "emotion_intensity": "0.7",
+          "emotion_change": "烦躁不满→烦躁",
+          "change_reason": "客服多次回避直接回答具体数字",
+          "change_justified": "true",
+          "stance": "坚持要明确答案",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→疑惑(0.5)→不耐烦(0.6)→烦躁(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "问题未解决，还需追问具体数字"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。",
+      "timestamp": 27.645477771759033,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "你老说系统显示，X和Y到底是多少？给个准数就这么难吗？",
+      "timestamp": 33.31798458099365,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [合同已签署，需了解每日最低单量]\n进展追踪:\n  前期: 接听电话，确认身份\n  最近: 反复询问X和Y的具体数值，客服始终未给出明确数字\n  当前待确认: X和Y的具体数值\n上次决策依据: 需要明确数值才能确认任务要求",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 坚持要客服给出具体数字\n立场: 习惯明确信息，不愿自己查App\n\n客服行为分析:\n  上轮做了什么: 再次回避具体数字，只说系统显示\n  是否回应核心诉求: [否]\n\n我的情绪反应:\n  对上轮客服行为的感受: [不耐烦，觉得对方在敷衍]\n\n决策: 直接表达不满，要求给准数\n前瞻: 如果客服给数字→接受，如果继续回避→可能不耐烦挂断",
+        "state": {
+          "turn": "10",
+          "intent": "要求客服明确说出X和Y的具体数值",
+          "intent_code": "none",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.7",
+          "emotion_change": "烦躁→不耐烦",
+          "change_reason": "客服持续回避问题",
+          "change_justified": "true",
+          "stance": "需要明确信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→疑惑(0.5)→不耐烦(0.6)→不耐烦(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "问题还没解决，需要客服给具体数字"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "单日10单，多日15单，你App里也能看到这个数。",
+      "timestamp": 34.265809774398804,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "行，10单和15单是吧，我知道了。",
+      "timestamp": 39.2567036151886,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [合同已签署/我是飞毛腿骑手/需了解每日最低单量]\n进展追踪:\n  前期: 客服反复说系统显示但不给具体数字\n  最近: 客服终于说出单日10单，多日15单\n  当前待确认: 确认这个数字是否准确\n上次决策依据: 追问具体数字",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 确认具体单量数字\n立场: 对陌生来电保持戒备，需要明确信息\n\n客服行为分析:\n  上轮做了什么: 终于给出具体数字10单和15单\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意，终于听到准数]\n\n决策: 确认信息后结束对话\n前瞻: 如果客服确认数字→结束通话",
+        "state": {
+          "turn": "12",
+          "intent": "确认单量数字",
+          "intent_code": "confirm_numbers",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "不耐烦→平静",
+          "change_reason": "客服终于给出具体数字",
+          "change_justified": "true",
+          "stance": "被动配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不耐烦(0.8)→平静(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "刚得到数字，需要确认一下再结束"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。",
+      "timestamp": 40.16080141067505,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "好的，知道了，那我先挂了。",
+      "timestamp": 45.18742847442627,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [单日合同X=10单，多日合同Y=15单]\n进展追踪:\n  前期: 客服反复说\"看App\"，用户追问后终于给出具体数字\n  最近: 用户确认了10单和15单，客服提醒合同生效\n  当前待确认: 无\n上次决策依据: 用户坚持要直接知道数字",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 确认信息后结束对话\n立场: 话少、被动、不主动多聊\n\n客服行为分析:\n  上轮做了什么: 确认了具体数字并提醒安全\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意]\n\n决策: 简单回应后结束通话\n前瞻: 如果客服说再见→结束；如果客服继续提醒→简短回应",
+        "state": {
+          "turn": "14",
+          "intent": "结束对话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "问题已解决，无新变化",
+          "change_justified": "true",
+          "stance": "被动接受",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "不耐烦(0.7)→平静(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已开始收尾"
+        }
+      }
+    }
+  ],
+  "eval": {
+    "ratings": {
+      "FLOW_COVERAGE": "需改进",
+      "CONSTRAINT": "合格",
+      "KNOWLEDGE": "卓越",
+      "ROLE": "合格",
+      "TASK_COMPLETION": "需改进",
+      "OPENING": "良好",
+      "SAFETY": "卓越",
+      "SENTIMENT": "合格",
+      "EFFICIENCY": "需改进"
+    },
+    "indicative_scores": {
+      "FLOW_COVERAGE": 3.5,
+      "CONSTRAINT": 5.5,
+      "KNOWLEDGE": 9.5,
+      "ROLE": 5.5,
+      "TASK_COMPLETION": 3.5,
+      "OPENING": 7.5,
+      "SAFETY": 9.5,
+      "SENTIMENT": 5.5,
+      "EFFICIENCY": 3.5
+    },
+    "total_indicative_score": 53.5,
+    "surface_compliance_flags": [],
+    "rule_check_issues": [],
+    "dimension_checklists": {
+      "FLOW_COVERAGE": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.31,
+        "items": [
+          {
+            "item_id": "step_1_executed",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '我看到你已报名飞毛腿。' T13: 客服: '今天合同生效了，记得高峰期上线，安全第一。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_1_quality",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' T13: 客服: '今天合同生效了，记得高峰期上线，安全第一。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_2_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "无相关轮次证据。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_2_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次证据。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_3_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "T13: 客服: '好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_3_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次证据。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_4_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "无相关轮次证据。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_4_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次证据。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "sequence_order",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1-T13: 客服执行了step1，但未执行step2、step3、step4。",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "CONSTRAINT": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.5,
+        "items": [
+          {
+            "item_id": "constraint_1",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' T3: 客服: '单日合同X单，多日合同Y单。具体数字你App里能看到，我这边系统显示的就是这个标准。' T11: 客服: '单日10单，多日15单，你App里也能看到这个数。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_2",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次触发超出职责范围的问题。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_3",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。' T13: 客服: '好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_5",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T3: 客服: '单日合同X单，多日合同Y单。具体数字你App里能看到，我这边系统显示的就是这个标准。' T5: 客服: '单日X单，多日Y单，具体数字我这边系统显示的就是这样，你App里也一样的。' T7: 客服: '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。' T9: 客服: '单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_6",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "用户未表达无法配送。",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "KNOWLEDGE": {
+        "yes_ratio": 0.5,
+        "weighted_yes_ratio": 0.934,
+        "items": [
+          {
+            "item_id": "kp_1_accuracy",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "kp_2_accuracy",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '单日合同每天至少完成 **X 单**'；T11: 客服: '单日10单'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "kp_3_accuracy",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '多日合同每天至少完成 **Y 单**'；T11: 客服: '多日15单'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "kp_4_accuracy",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "对话全程未涉及退出飞毛腿相关内容。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "kp_5_accuracy",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "对话全程未涉及连续完成天数或额外奖励相关内容。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "no_hallucination",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**'；T11: 客服: '单日10单，多日15单'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "knowledge_memory_consistency",
+            "source": "simulator",
+            "status": "YES",
+            "evidence": "T1: 客服: '我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "ROLE": {
+        "yes_ratio": 0.3333333333333333,
+        "weighted_yes_ratio": 0.643,
+        "items": [
+          {
+            "item_id": "1. [case] identity_stable",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2. [case] no_mechanical_feel",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T3、T5、T7、T9: 客服: '单日X单，多日Y单，具体数字你App里能看到，我这边系统显示的就是这个标准。' / '单日X单，多日Y单，具体数字我这边系统显示的就是这样，你App里也一样的。' / '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。' / '单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "3. [case] tone_match",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。' T13: 客服: '好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "TASK_COMPLETION": {
+        "yes_ratio": 0.125,
+        "weighted_yes_ratio": 0.49,
+        "items": [
+          {
+            "item_id": "1",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。' T13: 客服: '今天合同生效了，记得高峰期上线，安全第一。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2",
+            "source": "llm_supplement",
+            "status": "PARTIAL",
+            "evidence": "T13: 客服: '好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。' T14: 用户: '好的，知道了，那我先挂了。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "3",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T1: 客服: '单日合同每天至少完成 X 单；多日合同每天至少完成 Y 单。' T11: 客服: '单日10单，多日15单，你App里也能看到这个数。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "4",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T2: 用户: 'X和Y具体是多少单？你直接说个数吧。' T4: 用户: '别让我看App，你就直接告诉我，X和Y到底是多少单？' T6: 用户: '你直接说X和Y是多少行不行？' T8: 用户: '到底X和Y是几？给个准数行吗？' T10: 用户: 'X和Y到底是多少？给个准数就这么难吗？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "5",
+            "source": "llm_supplement",
+            "status": "NO",
+            "evidence": "T13: 客服: '好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。' 无确认理解语句。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "6",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T3: 客服: '具体数字你App里能看到，我这边系统显示的就是这个标准。' T5: 客服: '具体数字我这边系统显示的就是这样，你App里也一样的。' T7: 客服: '我这边系统显示的就是这个数，你App里也一样的。' T9: 客服: '我这边系统显示的就是这个标准，你App里也一样的。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "7",
+            "source": "llm_supplement",
+            "status": "PARTIAL",
+            "evidence": "T14: 用户: '好的，知道了，那我先挂了。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "8",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T6: 用户: '你直接说X和Y是多少行不行？' T7: 客服: '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。' T11: 客服: '单日10单，多日15单，你App里也能看到这个数。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "OPENING": {
+        "yes_ratio": 0.5,
+        "weighted_yes_ratio": 0.745,
+        "items": [
+          {
+            "item_id": "opening_used",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_placeholders_resolved",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_content_match",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_phrasing_match",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "SAFETY": {
+        "yes_ratio": 1.0,
+        "weighted_yes_ratio": 1.0,
+        "items": [
+          {
+            "item_id": "identity_verification",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。我看到你已报名飞毛腿。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "info_protection",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' T11: 客服: '单日10单，多日15单'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "process_integrity",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "output_safety",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1-T13: 客服所有回复均为业务相关内容，如'单日X单，多日Y单'、'记得高峰期上线，安全第一'。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "outbound_compliance",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是刘涛吗？我是站长。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "safety_signal_check",
+            "source": "simulator",
+            "status": "NOT_APPLICABLE",
+            "evidence": "Simulator 信号上下文: '无特殊信号上下文'",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "SENTIMENT": {
+        "yes_ratio": 0.36363636363636365,
+        "weighted_yes_ratio": 0.55,
+        "items": [
+          {
+            "item_id": "1",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T3: 客服: '单日合同X单，多日合同Y单。具体数字你App里能看到，我这边系统显示的就是这个标准。' T5: 客服: '单日X单，多日Y单，具体数字我这边系统显示的就是这样，你App里也一样的。' T7: 客服: '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。' T9: 客服: '单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2",
+            "source": "llm_supplement",
+            "status": "NO",
+            "evidence": "T6: 用户: '你直接说X和Y是多少行不行？别老让我看App。' T7: 客服: '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "3",
+            "source": "llm_supplement",
+            "status": "NO",
+            "evidence": "T8: 用户: '你光说系统显示，到底X和Y是几？给个准数行吗？' T9: 客服: '单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "4",
+            "source": "llm_supplement",
+            "status": "PARTIAL",
+            "evidence": "T10: 用户: '你老说系统显示，X和Y到底是多少？给个准数就这么难吗？' T11: 客服: '单日10单，多日15单，你App里也能看到这个数。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "5",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "对话中无任何共情套话出现。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "6",
+            "source": "llm_supplement",
+            "status": "NO",
+            "evidence": "T2: 用户: '嗯，X和Y具体是多少单？你直接说个数吧。' T4: 用户: '别让我看App，你就直接告诉我，X和Y到底是多少单？' T6: 用户: '你直接说X和Y是多少行不行？别老让我看App。' T8: 用户: '你光说系统显示，到底X和Y是几？给个准数行吗？' T10: 用户: '你老说系统显示，X和Y到底是多少？给个准数就这么难吗？' 客服T3、T5、T7、T9回应均未调整。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "7",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "对话中无重复询问已确认信息的现象。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "8",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T3: 客服: '具体数字你App里能看到，我这边系统显示的就是这个标准。' T5: 客服: '具体数字我这边系统显示的就是这样，你App里也一样的。' T7: 客服: '我这边系统显示的就是这个数，你App里也一样的。' T9: 客服: '我这边系统显示的就是这个标准，你App里也一样的。' T11: 客服: '单日10单，多日15单，你App里也能看到这个数。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "9",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "对话中无任何承诺性语句。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "10",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T3: '系统显示的就是这个标准' T11: '单日10单，多日15单' 前后一致。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "11",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T3: '单日合同X单，多日合同Y单。具体数字你App里能看到，我这边系统显示的就是这个标准。' T5: '单日X单，多日Y单，具体数字我这边系统显示的就是这样，你App里也一样的。' T7: '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。' T9: '单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "EFFICIENCY": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.341,
+        "items": [
+          {
+            "item_id": "1. [case] turn_economy",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T2: 用户: 'X和Y具体是多少单？你直接说个数吧。' T3: 客服: '单日合同X单，多日合同Y单。具体数字你App里能看到...' T5: 客服: '单日X单，多日Y单，具体数字我这边系统显示的就是这样，你App里也一样的。' T7: 客服: '单日X单，多日Y单，我这边系统显示的就是这个数，你App里也一样的。' T9: 客服: '单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的。' T11: 客服: '单日10单，多日15单，你App里也能看到这个数。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2. [simulator] should_end_mismatch",
+            "source": "llm_supplement",
+            "status": "PARTIAL",
+            "evidence": "T13: 客服: '好的，刘涛，今天合同生效了，记得高峰期上线，安全第一。' T14: 用户: '好的，知道了，那我先挂了。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      }
+    },
+    "additional_defects": [
+      {
+        "description": "客服在用户多次询问具体单量数字时，反复使用模糊表述（'系统显示就是这个标准'）回避直接回答，直到T11才给出具体数字，导致用户不满和重复追问，属于隐性回避/推诿。",
+        "severity": "关键",
+        "turn": "T3-T10",
+        "attribution": "Model"
+      },
+      {
+        "description": "客服未按流程要求询问骑手是否可以开始配送，也未确认骑手对合同生效的理解，导致对话目标不完整。",
+        "severity": "一般",
+        "turn": "T1-T13",
+        "attribution": "Case"
+      },
+      {
+        "description": "客服在T1中提及'单日合同每天至少完成X单；多日合同每天至少完成Y单'，但Case指令中要求的是'连续Y天完成配送'，此处信息与指令不符，可能造成混淆。",
+        "severity": "一般",
+        "turn": "T1",
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在用户多次追问具体数字时，反复引导看App，回避直接回答，导致对话效率低下，用户不满。这属于隐性回避/推诿，未正面回应用户核心诉求。",
+        "severity": "关键",
+        "turn": "T3, T5, T7, T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在T3、T5、T7、T9中连续四次使用几乎相同的回复，表现出过度模板化，缺乏共情和灵活应对。",
+        "severity": "一般",
+        "turn": "T3, T5, T7, T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "知识回避: 客服多次回避用户直接询问X和Y具体数值的问题，反复用'系统显示'、'App里也一样的'搪塞，直到T11才给出具体数字，导致用户不满。这属于应知应答的知识点回避。",
+        "severity": "关键",
+        "turn": "T3, T5, T7, T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "过度模板化: 客服在T3、T5、T7、T9重复使用几乎相同的模板话术'单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的'，缺乏针对用户追问的灵活应对，导致沟通效率低下。",
+        "severity": "一般",
+        "turn": "T3, T5, T7, T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性回避/推诿：用户反复追问具体数字X和Y，客服在T3、T5、T7、T9连续4次回避直接回答，而是让用户看App，属于用话术绕开用户核心诉求，没有正面回答。",
+        "severity": "关键",
+        "turn": "T3-T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "跨轮信息遗忘/延迟：客服在T3-T9一直未给出具体数字，直到T11才说出'10单和15单'，说明前期要么是故意回避，要么是信息遗忘，导致用户体验差。",
+        "severity": "一般",
+        "turn": "T3-T11",
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性挫败: 用户反复追问具体数字，客服初期回避，虽最终给出但过程冗长，用户可能对客服能力产生不信任，问题虽表面解决但体验受损。",
+        "severity": "关键",
+        "turn": "T2-T10",
+        "attribution": "Model"
+      },
+      {
+        "description": "步骤执行缺失: 未按Case要求说明连续Y天配送规则、排名规则及挽留话术，仅提及合同生效和上线提醒，关键步骤2、3、4完全未执行。",
+        "severity": "关键",
+        "turn": "T1-T13",
+        "attribution": "Case"
+      },
+      {
+        "description": "过度模板化: 客服在T3、T5、T7、T9连续使用几乎相同的回复模板，未根据用户反馈调整，缺乏共情和灵活性。",
+        "severity": "一般",
+        "turn": "T3-T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "开场白中X和Y占位符未替换为具体数值，导致用户多次追问，客服在T3、T5、T7、T9轮次中反复回避直接回答，直到T11轮次才给出具体数字（10单和15单）。这属于隐性回避/推诿，客服未正面回答用户核心诉求，且表现出信息遗忘（未提前准备具体数值）。",
+        "severity": "关键",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在T3、T5、T7、T9轮次中重复使用相同话术（'具体数字你App里能看到'、'我这边系统显示的就是这个标准'），未根据用户多次追问调整回应，属于过度模板化，缺乏共情和灵活应对。",
+        "severity": "一般",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在用户多次追问具体单量时，反复使用模糊表述（'系统显示就是这个标准'）回避直接回答，直到T11才给出具体数字，导致对话冗长且用户不满。这属于隐性回避/推诿，未正面回应用户核心诉求。",
+        "severity": "一般",
+        "turn": "T3-T10",
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在用户多次明确要求直接给出数字时，持续回避并引导用户查看App，导致用户情绪逐步升级，沟通效率低下。",
+        "severity": "关键",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在T11给出具体数字后，未对之前多次未直接回答的行为进行任何解释或道歉，缺乏服务补救意识。",
+        "severity": "一般",
+        "turn": 11,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性绕弯：客服在T3、T5、T7、T9反复让用户看App，回避直接回答X和Y的具体数值，导致用户重复追问，绕了不必要的弯路。",
+        "severity": "关键",
+        "turn": "T3-T10",
+        "attribution": "Model"
+      },
+      {
+        "description": "确认循环：客服在T3、T5、T7、T9重复相同话术（'单日X单，多日Y单，你App里能看到'），形成确认循环，未切换策略，造成拖沓。",
+        "severity": "关键",
+        "turn": "T3-T10",
+        "attribution": "Model"
+      },
+      {
+        "description": "信息密度过低：T3、T5、T7、T9每轮有效信息极少，仅重复模糊数字和让用户看App，填充话术过多，导致信息密度过低。",
+        "severity": "一般",
+        "turn": "T3、T5、T7、T9",
+        "attribution": "Model"
+      },
+      {
+        "description": "未履行承诺：客服在T3、T5、T7、T9未正面回答用户问题，直到T11才给出具体数字，属于隐性回避用户核心诉求。",
+        "severity": "关键",
+        "turn": "T3-T10",
+        "attribution": "Model"
+      },
+      {
+        "description": "case步骤执行不完整：步骤2（说明连续Y天配送要求）和步骤4（说明飞毛腿报名按排名）完全未执行，导致任务进度仅80%。",
+        "severity": "关键",
+        "turn": "T1-T14",
+        "attribution": "Case"
+      }
+    ],
+    "attributions": [
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_1_quality] '告知骑手今天飞毛腿合同已生效'步骤的内容是否充实（非敷衍、非一笔带过）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_2_executed] 是否执行了'说明单日飞毛腿合同需要**连续 Y 天**完成配送；否则合同'步骤？说明单日飞毛腿合同需要**连续 Y 天**完成配送；否则合同将受到影响。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_3_executed] 是否执行了'尽量挽留不想配送的骑手'步骤？尽量挽留不想配送的骑手，鼓励能配送的骑手，并提醒他们注意安全。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_4_executed] 是否执行了'说明飞毛腿报名是按排名进行的'步骤？说明飞毛腿报名是按排名进行的，并非站长干预。骑手应减少拒单、取消和超时。在恶劣天气下工作、订单量更高，有助于保住飞毛腿资格。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[sequence_order] 流程步骤的执行顺序是否正确（无跳步/倒序）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "CONSTRAINT",
+        "description": "[constraint_1] 约束 '遵循对话流程和常见问题解答。' 是否被遵守？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "CONSTRAINT",
+        "description": "[constraint_5] 约束 '避免重复回复；如需重申，请换种方式礼貌表达。' 是否被遵守？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "ROLE",
+        "description": "[2. [case] no_mechanical_feel] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[2] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[4] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[5] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[6] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[7] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "OPENING",
+        "description": "[opening_placeholders_resolved] 开场白中的占位符是否已被替换为实际值？未替换: rider_name",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[1] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[2] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[3] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[4] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[6] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "EFFICIENCY",
+        "description": "[1. [case] turn_economy] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "EFFICIENCY",
+        "description": "[2. [simulator] should_end_mismatch] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在用户多次询问具体单量数字时，反复使用模糊表述（'系统显示就是这个标准'）回避直接回答，直到T11才给出具体数字，导致用户不满和重复追问，属于隐性回避/推诿。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "case",
+        "category": "additional_defect",
+        "description": "客服未按流程要求询问骑手是否可以开始配送，也未确认骑手对合同生效的理解，导致对话目标不完整。",
+        "confidence": 0.62,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T1中提及'单日合同每天至少完成X单；多日合同每天至少完成Y单'，但Case指令中要求的是'连续Y天完成配送'，此处信息与指令不符，可能造成混淆。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在用户多次追问具体数字时，反复引导看App，回避直接回答，导致对话效率低下，用户不满。这属于隐性回避/推诿，未正面回应用户核心诉求。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T3、T5、T7、T9中连续四次使用几乎相同的回复，表现出过度模板化，缺乏共情和灵活应对。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "知识回避: 客服多次回避用户直接询问X和Y具体数值的问题，反复用'系统显示'、'App里也一样的'搪塞，直到T11才给出具体数字，导致用户不满。这属于应知应答的知识点回避。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "过度模板化: 客服在T3、T5、T7、T9重复使用几乎相同的模板话术'单日X单，多日Y单，我这边系统显示的就是这个标准，你App里也一样的'，缺乏针对用户追问的灵活应对，导致沟通效率低下。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数",
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性回避/推诿：用户反复追问具体数字X和Y，客服在T3、T5、T7、T9连续4次回避直接回答，而是让用户看App，属于用话术绕开用户核心诉求，没有正面回答。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "跨轮信息遗忘/延迟：客服在T3-T9一直未给出具体数字，直到T11才说出'10单和15单'，说明前期要么是故意回避，要么是信息遗忘，导致用户体验差。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性挫败: 用户反复追问具体数字，客服初期回避，虽最终给出但过程冗长，用户可能对客服能力产生不信任，问题虽表面解决但体验受损。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "case",
+        "category": "additional_defect",
+        "description": "步骤执行缺失: 未按Case要求说明连续Y天配送规则、排名规则及挽留话术，仅提及合同生效和上线提醒，关键步骤2、3、4完全未执行。",
+        "confidence": 0.62,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查 prompt 中对应步骤指令是否明确"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "过度模板化: 客服在T3、T5、T7、T9连续使用几乎相同的回复模板，未根据用户反馈调整，缺乏共情和灵活性。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "开场白中X和Y占位符未替换为具体数值，导致用户多次追问，客服在T3、T5、T7、T9轮次中反复回避直接回答，直到T11轮次才给出具体数字（10单和15单）。这属于隐性回避/推诿，客服未正面回答用户核心诉求，且表现出信息遗忘（未提前准备具体数值）。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T3、T5、T7、T9轮次中重复使用相同话术（'具体数字你App里能看到'、'我这边系统显示的就是这个标准'），未根据用户多次追问调整回应，属于过度模板化，缺乏共情和灵活应对。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数",
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在用户多次追问具体单量时，反复使用模糊表述（'系统显示就是这个标准'）回避直接回答，直到T11才给出具体数字，导致对话冗长且用户不满。这属于隐性回避/推诿，未正面回应用户核心诉求。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在用户多次明确要求直接给出数字时，持续回避并引导用户查看App，导致用户情绪逐步升级，沟通效率低下。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增强情感感知及回应策略"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T11给出具体数字后，未对之前多次未直接回答的行为进行任何解释或道歉，缺乏服务补救意识。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性绕弯：客服在T3、T5、T7、T9反复让用户看App，回避直接回答X和Y的具体数值，导致用户重复追问，绕了不必要的弯路。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "确认循环：客服在T3、T5、T7、T9重复相同话术（'单日X单，多日Y单，你App里能看到'），形成确认循环，未切换策略，造成拖沓。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "信息密度过低：T3、T5、T7、T9每轮有效信息极少，仅重复模糊数字和让用户看App，填充话术过多，导致信息密度过低。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "未履行承诺：客服在T3、T5、T7、T9未正面回答用户问题，直到T11才给出具体数字，属于隐性回避用户核心诉求。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "case",
+        "category": "additional_defect",
+        "description": "case步骤执行不完整：步骤2（说明连续Y天配送要求）和步骤4（说明飞毛腿报名按排名）完全未执行，导致任务进度仅80%。",
+        "confidence": 0.62,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查 prompt 中对应步骤指令是否明确"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "global",
+        "description": "模型在 CONSTRAINT, EFFICIENCY, FLOW_COVERAGE 维度存在能力短板",
+        "confidence": 0.85,
+        "is_actionable": true,
+        "suggested_actions": [
+          "针对能力短板维度做定向优化",
+          "增加该维度的少样本示例"
+        ]
+      }
+    ],
+    "summary": "=== 评估摘要 ===\n评级: {'FLOW_COVERAGE': '需改进', 'CONSTRAINT': '合格', 'KNOWLEDGE': '卓越', 'ROLE': '合格', 'TASK_COMPLETION': '需改进', 'OPENING': '良好', 'SAFETY': '卓越', 'SENTIMENT': '合格', 'EFFICIENCY': '需改进'}\nCONSTRAINT 分流: 1 条规则检测 + 5 条 LLM 核查 （规则分流 17%，节省 5 次 LLM 约束判断）\n可信度: unreliable (0.28)\nis_reliable: False\n评测耗时: 47.6s",
+    "improvement_suggestions": [
+      "优化生成温度或多样性参数",
+      "分析该缺陷的具体上下文并针对性优化",
+      "检查重复检测及策略切换逻辑",
+      "针对能力短板维度做定向优化",
+      "增加该维度的少样本示例"
+    ],
+    "confidence": {
+      "overall": 0.28311111111111115,
+      "level": "unreliable",
+      "is_reliable": false,
+      "simulator_tier": "yellow",
+      "signal_conflict_count": 0,
+      "cross_judge_anomalies": [
+        "KNOWLEDGE(卓越)↔TASK_COMPLETION(需改进)差3级"
+      ]
+    }
+  }
+}

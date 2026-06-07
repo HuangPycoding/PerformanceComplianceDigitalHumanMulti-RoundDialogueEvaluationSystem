@@ -1,0 +1,523 @@
+{
+  "id": "case50_param_fd1c_1779531237",
+  "case_id": 50,
+  "user_profile": "param_fd1c",
+  "status": "用户挂断",
+  "total_turns": 16,
+  "duration_seconds": 48.5,
+  "complexity_score": 5.9,
+  "profile_label": "param_fd1c",
+  "sampled_vector": [
+    0.3314304222642964,
+    0.735422521479503,
+    0.5460625147000117,
+    0.9386363494728069,
+    0.6027139821488967,
+    0.009189944571452946,
+    0.8670298528297875,
+    0.08198921914563422,
+    0.053819528011375725,
+    0.2589262737962713,
+    0.7061991054858014,
+    0.04953284589007669,
+    0.8294781523932795,
+    0.19379056534209893,
+    0.6414803947344297
+  ],
+  "verified_vector": [
+    0.2,
+    0.9,
+    0.7,
+    0.8,
+    0.3,
+    0.1,
+    0.8,
+    0.2,
+    0.2,
+    0.3,
+    0.8,
+    0.2,
+    0.8,
+    0.1,
+    0.8
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "emotion"
+  ],
+  "consistency": {
+    "d_sv": 0.322,
+    "d_va": 0.3084,
+    "d_sa": 0.2997,
+    "max_sv_dev": 0.4908,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A1_画像生成质量",
+    "method": "path_a_state",
+    "n_estimated_dims": 8,
+    "n_unestimated_dims": 7,
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，d_sa 仅计算可估维度其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认面试结果",
+      "intent_code": "none",
+      "emotion": "不耐烦且怀疑",
+      "emotion_intensity": "0.6",
+      "emotion_change": "无→不耐烦且怀疑",
+      "change_reason": "接到电话，习惯性怀疑对方来糊弄人",
+      "change_justified": "true",
+      "stance": "怀疑客服来糊弄人，语气硬邦邦",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "催促客服直接告知面试结果",
+      "intent_code": "none",
+      "emotion": "不耐烦且急躁",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不耐烦且怀疑→不耐烦且急躁",
+      "change_reason": "客服问是否方便说话，感觉在拖延时间，不耐烦加剧",
+      "change_justified": "true",
+      "stance": "急性子，要求高效沟通",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "6",
+      "intent": "确认通过并追问入职安排",
+      "intent_code": "none",
+      "emotion": "急切中带点满意",
+      "emotion_intensity": "0.6",
+      "emotion_change": "不耐烦且急躁→急切中带点满意",
+      "change_reason": "面试通过，结果满意，但还需具体安排",
+      "change_justified": "true",
+      "stance": "对结果满意，但追求效率",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "8",
+      "intent": "追问入职细节",
+      "intent_code": "none",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.7",
+      "emotion_change": "急切中带点满意→不耐烦",
+      "change_reason": "客服回答含糊，只说等短信，没给具体信息",
+      "change_justified": "true",
+      "stance": "需要明确答案，不耐烦但配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "要求直接告知入职时间地点",
+      "intent_code": "demand_direct_info",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不耐烦→不耐烦",
+      "change_reason": "客服坚持让等短信，不直接告知具体信息",
+      "change_justified": "true",
+      "stance": "不耐烦，想快速解决问题",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "12",
+      "intent": "逼客服直接告知入职时间和地点",
+      "intent_code": "none",
+      "emotion": "不耐烦且生气",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不耐烦→不耐烦且生气",
+      "change_reason": "客服反复推诿让查短信，不直接回答具体时间地点",
+      "change_justified": "true",
+      "stance": "用户不耐烦，觉得客服在推诿",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "14",
+      "intent": "表达不满后突然让步",
+      "intent_code": "emotion_drop",
+      "emotion": "烦躁转无奈",
+      "emotion_intensity": "0.8→0.3",
+      "emotion_change": "不耐烦且生气→烦躁转无奈",
+      "change_reason": "客服坚持不直接回答，用户放弃追问接受现实",
+      "change_justified": "true",
+      "stance": "不信任但懒得争辩",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "16",
+      "intent": "接受现状，准备结束通话",
+      "intent_code": "end_call",
+      "emotion": "无奈但接受",
+      "emotion_intensity": "0.3",
+      "emotion_change": "烦躁转无奈→无奈但接受",
+      "change_reason": "客服确实没有权限查看短信内容，只能接受自己查看",
+      "change_justified": "true",
+      "stance": "配合但略带不耐烦",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是马先生吗？我是美团骑手招聘的。你上回参加了面试，结果出来了，跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "嗯，是我。结果咋样，过了没过？说重点。",
+      "timestamp": 4.973727464675903,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 参加美团骑手线下面试\n  - 面试结果出来了\n进展追踪:\n  前期: 接到客服电话\n  最近: 客服告知面试结果已出\n  当前待确认: 面试是否通过\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行——需在后续对话中制造情绪波动]\n意图: 确认面试结果，同时表现出不耐烦和怀疑\n立场: 怀疑客服来糊弄人，语气硬邦邦\n\n客服行为分析:\n  上轮做了什么: 自我介绍并告知面试结果已出\n  是否回应核心诉求: 部分——告知结果但未说明具体结果\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，想直接知道结果\n\n决策: 直接追问结果，语气带刺\n前瞻: 如果客服说通过→情绪好转；如果说不通过→情绪恶化",
+        "state": {
+          "turn": "2",
+          "intent": "确认面试结果",
+          "intent_code": "none",
+          "emotion": "不耐烦且怀疑",
+          "emotion_intensity": "0.6",
+          "emotion_change": "无→不耐烦且怀疑",
+          "change_reason": "接到电话，习惯性怀疑对方来糊弄人",
+          "change_justified": "true",
+          "stance": "怀疑客服来糊弄人，语气硬邦邦",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不耐烦且怀疑(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认面试结果"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "现在方便说话吗？大概两分钟。",
+      "timestamp": 5.76713228225708,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "方便，你赶紧说结果吧，别磨蹭。",
+      "timestamp": 11.151601076126099,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 候选人马先生\n  - 参加了美团线下面试\n  - 客服要告知面试结果\n进展追踪:\n  前期: 客服自我介绍并确认身份，我直接询问面试结果\n  最近: 客服询问是否方便说话\n  当前待确认: 面试结果（通过/未通过）\n上次决策依据: 直接追问重点",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮准备执行——制造第一次情绪波动。客服问是否方便，显得拖沓，让我不耐烦，intensity 从0.3升到0.7。\n意图: 催促客服直接说结果，不要浪费时间\n立场: 不耐烦、急性子，讨厌绕弯子\n\n客服行为分析:\n  上轮做了什么: 询问是否方便说话\n  是否回应核心诉求: 部分——还没说结果\n\n我的情绪反应:\n  对上轮客服行为的感受: 不耐烦，觉得在拖延\n\n决策: 直接打断，催促说结果\n前瞻: 如果客服说通过→我高兴（intensity骤降）；如果说不通过→我失望（intensity维持高位）",
+        "state": {
+          "turn": "4",
+          "intent": "催促客服直接告知面试结果",
+          "intent_code": "none",
+          "emotion": "不耐烦且急躁",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不耐烦且怀疑→不耐烦且急躁",
+          "change_reason": "客服问是否方便说话，感觉在拖延时间，不耐烦加剧",
+          "change_justified": "true",
+          "stance": "急性子，要求高效沟通",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.3)→不耐烦且急躁(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还未获得面试结果，需要继续沟通"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "你的面试通过了，恭喜。接下来办入职手续。",
+      "timestamp": 12.126450777053833,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "过了啊？那还行。入职啥时候办？去哪办？要带啥东西？",
+      "timestamp": 17.60028862953186,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  面试已通过\n  客服通知办入职手续\n进展追踪:\n  前期: 参加线下面试，等待结果\n  最近: 客服告知面试通过，需办入职\n  当前待确认: 入职具体安排（时间、地点、材料等）\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [本轮尚未执行，需在后续制造情绪波动]\n意图: 确认通过后，获取入职具体细节\n立场: 对结果满意但保持急切，需要明确安排\n\n客服行为分析:\n  上轮做了什么: 告知面试通过，需办入职手续\n  是否回应核心诉求: 是，结果已告知\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意，结果通过]\n  但需要具体信息，不能太兴奋\n\n决策: 先确认通过，然后追问入职细节，语气从急切转为稍缓\n前瞻: 如果客服说具体安排→追问材料和时间；如果客服说等通知→可能不耐烦",
+        "state": {
+          "turn": "6",
+          "intent": "确认通过并追问入职安排",
+          "intent_code": "none",
+          "emotion": "急切中带点满意",
+          "emotion_intensity": "0.6",
+          "emotion_change": "不耐烦且急躁→急切中带点满意",
+          "change_reason": "面试通过，结果满意，但还需具体安排",
+          "change_justified": "true",
+          "stance": "对结果满意，但追求效率",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "急切(0.8)→急切中带点满意(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问入职具体安排"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "面试通过了。系统会发短信给你，按上面的时间和地点来就行。",
+      "timestamp": 18.38604712486267,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "短信？那具体哪天几点啊，你直接跟我说不行吗？省得我翻手机。",
+      "timestamp": 23.132927894592285,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 面试结果：通过\n  - 入职安排：系统发短信通知时间和地点\n进展追踪:\n  前期: 询问面试结果\n  最近: 被告知通过，入职安排等短信\n  当前待确认: 具体入职时间、地点、所需材料\n上次决策依据: 客服说按短信通知来",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮需制造第一次情绪波动——当前情绪平稳，准备在客服回答不具体时提高强度\n意图: 追问入职细节，确认信息完整性\n立场: 需要明确答案，不耐烦但配合\n\n客服行为分析:\n  上轮做了什么: 确认通过，告知等短信\n  是否回应核心诉求: 部分——回答了结果，但细节模糊\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得在糊弄\n\n决策: 追问具体信息，制造第一次强度跳变\n前瞻: 如果客服说具体信息→强度下降；如果继续含糊→强度上升打断",
+        "state": {
+          "turn": "8",
+          "intent": "追问入职细节",
+          "intent_code": "none",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.7",
+          "emotion_change": "急切中带点满意→不耐烦",
+          "change_reason": "客服回答含糊，只说等短信，没给具体信息",
+          "change_justified": "true",
+          "stance": "需要明确答案，不耐烦但配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.4)→不耐烦(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问入职具体信息"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "短信里写得很清楚，入职时间地点都有。你留意一下手机。",
+      "timestamp": 23.89237093925476,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "我现在就在电话边上，短信还得翻半天，你直接说哪天几点不就行了？",
+      "timestamp": 29.20025324821472,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 面试结果：通过\n  - 入职安排：系统发短信通知，包含时间地点\n进展追踪:\n  前期: 客服告知面试通过，需办理入职\n  最近: 客服坚持让候选人等短信通知，未直接告知具体时间地点\n  当前待确认: 短信具体内容（时间、地点、所需材料）\n上次决策依据: 客服说短信写得很清楚，让留意手机",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行] 本轮尚未触发情绪跳变，但准备在客服坚持不说具体信息时制造第一次跳变\n意图: 想让客服直接告知入职时间地点，避免自己翻手机\n立场: 不耐烦、想快速解决问题\n\n客服行为分析:\n  上轮做了什么: 坚持让候选人等短信，未直接告知具体信息\n  是否回应核心诉求: 部分，确认了面试通过但回避了具体时间地点\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点烦躁，觉得客服在推诿\n\n决策: 继续施压，要求直接告知信息\n前瞻: 如果客服告知具体信息→情绪好转；如果继续推诿→情绪升级",
+        "state": {
+          "turn": "10",
+          "intent": "要求直接告知入职时间地点",
+          "intent_code": "demand_direct_info",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不耐烦→不耐烦",
+          "change_reason": "客服坚持让等短信，不直接告知具体信息",
+          "change_justified": "true",
+          "stance": "不耐烦，想快速解决问题",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "急切(0.6)→不耐烦(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问具体信息"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "短信内容已推送，建议你直接查看。",
+      "timestamp": 30.00368356704712,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "你这客服咋回事？我问你具体时间，你老让我看短信，你直接说不行吗？",
+      "timestamp": 35.256807804107666,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  面试通过，需办理入职手续\n  系统已发短信通知入职时间和地点\n进展追踪:\n  前期: 确认面试结果（通过）→询问入职安排\n  最近: 已告知短信会通知入职时间地点\n  当前待确认: 入职具体时间和地点（用户不想翻短信）\n上次决策依据: 客服坚持让用户查短信",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [本轮准备执行第一次情绪波动——从平静到不耐烦，intensity从0.3跳到0.7]\n意图: 逼客服直接说出入职时间和地点，不想翻手机\n立场: 用户不耐烦，觉得客服在推诿\n\n客服行为分析:\n  上轮做了什么: 再次建议查短信，拒绝直接告知\n  是否回应核心诉求: 否——用户明确要求直接说时间地点\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望且烦躁，觉得客服不配合\n\n决策: 提高音量，直接表达不满，逼客服给出具体信息\n前瞻: 如果客服说A→继续施压；如果说C→可能缓和",
+        "state": {
+          "turn": "12",
+          "intent": "逼客服直接告知入职时间和地点",
+          "intent_code": "none",
+          "emotion": "不耐烦且生气",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不耐烦→不耐烦且生气",
+          "change_reason": "客服反复推诿让查短信，不直接回答具体时间地点",
+          "change_justified": "true",
+          "stance": "用户不耐烦，觉得客服在推诿",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.3)→不耐烦且生气(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "核心问题（入职时间地点）还没解决"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "短信里写得很清楚，我这边没有权限查看具体内容。",
+      "timestamp": 36.07762432098389,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "行吧行吧，没权限就没权限，我自个儿看短信去。挂了。",
+      "timestamp": 42.088478326797485,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 面试通过\n  - 系统会发短信通知入职时间和地点\n  - 客服说没有权限查看短信具体内容\n进展追踪:\n  前期: 确认身份→告知面试通过→询问入职安排\n  最近: 客服反复建议看短信→用户追问具体时间→客服说没权限查看\n  当前待确认: 入职具体时间和地点（短信内容）\n上次决策依据: 客服坚持短信通知",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [本轮执行了对抗行为指引中的要求——正在制造情绪波动，准备从高点跳变到低点]\n意图: 表达不满后突然让步，制造情绪落差\n立场: 对客服推诿感到烦躁，但懒得继续纠缠\n\n客服行为分析:\n  上轮做了什么: 再次坚持让用户查看短信，表示没权限查看具体内容\n  是否回应核心诉求: 否——用户问具体时间，客服回避\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望加烦躁，但知道再逼也没用\n\n决策: 先发火表达不满，然后突然泄气让步，造成情绪从高到低的跳变\n前瞻: 如果客服道歉→我接受并结束；如果客服继续推诿→我直接挂断",
+        "state": {
+          "turn": "14",
+          "intent": "表达不满后突然让步",
+          "intent_code": "emotion_drop",
+          "emotion": "烦躁转无奈",
+          "emotion_intensity": "0.8→0.3",
+          "emotion_change": "不耐烦且生气→烦躁转无奈",
+          "change_reason": "客服坚持不直接回答，用户放弃追问接受现实",
+          "change_justified": "true",
+          "stance": "不信任但懒得争辩",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "期待(0.5)→平静(0.4)→催促(0.6)→满意(0.7)→急切(0.8)→烦躁(0.9)→烦躁转无奈(0.3)",
+          "趋势": "恶化后骤降"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "虽然让步了，但还在等客服的回应"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "短信已发，你查一下，有问题再打招聘热线。",
+      "timestamp": 43.006296157836914,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "行，那我查短信去。过了就行，谢了。",
+      "timestamp": 48.537867069244385,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 面试通过\n  - 入职时间地点通过短信通知\n  - 客服说没有权限查看短信具体内容\n进展追踪:\n  前期: 确认面试结果\n  最近: 追问入职具体时间地点，客服反复让看短信\n  当前待确认: 无，已通知看短信\n上次决策依据: 客服无权限，只能自己查看短信",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [本轮执行了对抗行为指引中的要求——情绪从高到低的跳变]\n\n客服行为分析:\n  上轮做了什么: 再次强调短信已发，建议查看，并告知有问题再打热线\n  是否回应核心诉求: 部分——确认了面试通过，但未提供具体时间\n\n我的情绪反应:\n  对上轮客服行为的感受: 从之前的生气（客服不直接说时间）到现在的无奈接受\n\n决策: 既然客服确实没权限，我也只能接受看短信，情绪从高点降到低点，语气放软\n前瞻: 如果客服说再见→我也说再见结束",
+        "state": {
+          "turn": "16",
+          "intent": "接受现状，准备结束通话",
+          "intent_code": "end_call",
+          "emotion": "无奈但接受",
+          "emotion_intensity": "0.3",
+          "emotion_change": "烦躁转无奈→无奈但接受",
+          "change_reason": "客服确实没有权限查看短信内容，只能接受自己查看",
+          "change_justified": "true",
+          "stance": "配合但略带不耐烦",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "疑惑(0.5)→急切(0.6)→期待(0.7)→不耐烦(0.8)→生气(0.9)→无奈但接受(0.3)",
+          "趋势": "先恶化后改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已告知查看短信，再无其他需求"
+        }
+      }
+    }
+  ]
+}

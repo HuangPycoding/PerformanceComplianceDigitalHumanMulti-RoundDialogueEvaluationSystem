@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美团外呼对话模型评测系统 Demo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+<link rel="stylesheet" href="/static/style.css?v=2">
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="container"><hgroup><h1>美团外呼对话模型评测系统</h1><p>Tab 1 演示效果 | Tab 2 新建评测 | Tab 3 历史记录 | Tab 4 关于系统</p></hgroup></header>
+  <nav class="container tab-nav">
+    <button :class="{ active: currentTab === 'demo' }" @click="switchTab('demo')">演示效果</button>
+    <button :class="{ active: currentTab === 'custom' }" @click="switchTab('custom')">新建评测</button>
+    <button :class="{ active: currentTab === 'history' }" @click="switchTab('history')">历史记录</button>
+    <button :class="{ active: currentTab === 'about' }" @click="switchTab('about')">关于系统</button>
+  </nav>
+
+  <!-- ====== Tab 1: 演示效果 ====== -->
+  <main class="container" v-if="currentTab === 'demo'">
+    <article><h3>演示效果</h3><p>预跑评测数据，零 API 消耗、零等待。</p>
+      <div v-if="demoTasks.length === 0" class="loading">加载中...</div>
+      <div v-for="t in demoTasks" :key="t.task_id" class="task-card"><article>
+        <hgroup><h4>{{ t.case_title }} <small>{{ t.n_profiles }} 画像</small></h4><p>{{ t.created_at }} | {{ t.status }}</p></hgroup>
+        <div class="grid">
+          <div><strong>百分制</strong><br><span class="score">{{ t.total_score_100 || '-' }}</span></div>
+          <div><strong>评级</strong><br>{{ t.rating_label || '-' }}</div>
+          <div><button class="secondary" @click="loadDemoDetail(t.task_id)">查看详情</button><button class="secondary" @click="downloadFile(t.task_id, 'report_md')">下载报告</button></div>
+        </div>
+        <div v-if="demoDetail && demoDetail.task_id === t.task_id" class="detail-panel"> <detail-block :d="demoDetail" :score="t.total_score_100" :tid="t.task_id"></detail-block> </div>
+      </article></div>
+    </article>
+  </main>
+
+  <!-- ====== Tab 2: 新建评测 ====== -->
+  <main class="container" v-if="currentTab === 'custom'">
+    <article v-if="customStep === 1"><h3>Step 1: 输入 Case 文本</h3>
+      <div class="grid"><select v-model="selectedPreset" @change="loadPresetCase"><option value="">— 预置模板 —</option><option v-for="p in presets" :key="p.id" :value="p.id">{{ p.title }}</option></select></div>
+      <textarea v-model="caseText" rows="12" placeholder="粘贴 Markdown 格式的 Case 指令..."></textarea>
+      <button class="secondary" @click="parsePreview" :disabled="!caseText.trim()">解析预览</button>
+      <div v-if="parseResult" class="parse-preview"><p>业务线: {{ parseResult.business_line }} | Call Flow: {{ parseResult.call_flow_steps?.length }} 步 | 约束: {{ parseResult.constraints?.length }} 条</p></div>
+      <button @click="customStep = 2" :disabled="!caseText.trim()">下一步</button>
+    </article>
+    <article v-if="customStep === 2"><h3>Step 2: 配置模型 API</h3>
+      <div class="slot-grid"><div v-for="slot in slots" :key="slot.key" class="slot-card"><h5>{{ slot.label }}</h5>
+        <input v-model="slot.api_key" type="password" placeholder="API Key"><input v-model="slot.base_url" type="text" placeholder="Base URL"><input v-model="slot.model" type="text" placeholder="Model">
+        <button class="secondary small" @click="testSlot(slot)">测试连接</button><span v-if="slot.test_result" :class="slot.test_ok ? 'ok' : 'fail'">{{ slot.test_result }}</span>
+      </div></div>
+      <div class="grid"><button class="secondary" @click="customStep = 1">上一步</button><button @click="customStep = 3" :disabled="!canProceed">下一步</button></div>
+    </article>
+    <article v-if="customStep === 3"><h3>Step 3: 开始评测</h3>
+      <label><input type="checkbox" v-model="runEval"> 运行评测</label>
+      <label><input type="checkbox" v-model="runOptimize"> 生成优化建议</label>
+      <p style="color:var(--pico-muted-color);font-size:0.9rem">画像数量由用户模拟器根据 Case 复杂度自动确定</p>
+      <div class="grid"><button class="secondary" @click="customStep = 2">上一步</button><button @click="startTask" :disabled="running">开始评测</button></div>
+      <div v-if="running || taskResult" class="monitor"><h4>实时进度</h4><progress :value="progressPct" max="100"></progress><p>{{ progressPct }}% - {{ currentPhase }}</p>
+        <div class="log-stream"><div v-for="(log,i) in logs" :key="i" :class="'log-'+ (log.level||'info')">[{{ log.time }}] {{ log.message }}</div></div>
+      </div>
+      <div v-if="taskResult" class="result"><h4>评测结果</h4><detail-block :d="taskResult" :score="taskResult.eval_result?.total_score_100" :tid="currentTaskId"></detail-block></div>
+    </article>
+  </main>
+
+  <!-- ====== Tab 3: 历史记录 ====== -->
+  <main class="container" v-if="currentTab === 'history'"><h3>历史记录</h3>
+    <div v-if="historyTasks.length === 0">暂无</div>
+    <article v-for="t in historyTasks" :key="t.task_id" class="task-card"><hgroup><h4>{{ t.case_title }} <small>{{ t.n_profiles }} 画像</small></h4><p>{{ t.created_at }} | {{ t.status }} | {{ t.total_score_100 || '-' }}分 | {{ t.rating_label || '-' }}</p></hgroup>
+      <div class="grid"><button class="secondary" @click="loadHistoryDetail(t.task_id)">查看详情</button><button class="secondary" @click="downloadFile(t.task_id, 'report_md')">下载报告</button><button class="secondary" @click="deleteTask(t.task_id)">删除</button></div>
+      <div v-if="historyDetail && historyDetail.task_id === t.task_id" class="detail-panel"> <detail-block :d="historyDetail" :score="t.total_score_100" :tid="t.task_id"></detail-block> </div>
+    </article>
+  </main>
+
+  <!-- ====== Tab 4: 关于系统 ====== -->
+  <main class="container" v-if="currentTab === 'about'">
+    <article>
+      <h3>关于系统</h3>
+      <p>美团外呼对话模型评测系统 — 对 LLM 对话模型进行全流程自动化多维度评测。项目源码 ~17,800 行 Python，包含五大引擎。</p>
+
+      <h4>一、用户画像生成器</h4>
+      <p>基于 15 维参数空间（大五人格 5 维 + 对话行为 4 维 + 认知 2 维 + 情绪 2 维 + 对抗 2 维），通过 8 阶段管线生成多样化用户画像：</p>
+      <table><thead><tr><th>阶段</th><th>方法</th><th>说明</th></tr></thead><tbody>
+        <tr><td>P1</td><td>LHS 全空间采样</td><td>拉丁超立方采样在 [0,1]^15 均匀覆盖，默认 5 个全局样本</td></tr>
+        <tr><td>P2</td><td>子空间 LHS</td><td>解析 Case 分支条件 → 映射到维度约束子空间 → 每个分支 2+N 样本（N 随复杂度递增）</td></tr>
+        <tr><td>P3</td><td>对抗策略自动挂钩</td><td>根据维度值自动判定（探针型/注入型/矛盾型/权威型/情绪型），覆盖 50% 画像</td></tr>
+        <tr><td>P4</td><td>锚点翻译</td><td>15 维 × 5 锚点 = 75 行为锚点文本，取最近锚点 + 标注偏离度</td></tr>
+        <tr><td>P5</td><td>CO-STAR 框架</td><td>Context/Objective/Style/Tone/Audience/Response 结构化 prompt</td></tr>
+        <tr><td>P6</td><td>Contrastive Prompting</td><td>排除法对比：极端维度标注"你不是这样的"</td></tr>
+        <tr><td>P7</td><td>自检回路</td><td>LLM 独立重打分 → 欧氏距离 d_sv 验证 → 偏离超阈值则锚点修正重试（默认 3 次）</td></tr>
+        <tr><td>P8</td><td>画像追踪回溯</td><td>原始采样值(sampled_vector) + LLM 验证值(verified_vector) + 审计值(audited_vector) 三向量存档</td></tr>
+      </tbody></table>
+
+      <h4>二、评测引擎 — 三层体系</h4>
+      <table><thead><tr><th>层级</th><th>方法</th><th>输出</th></tr></thead><tbody>
+        <tr><td>Tier 1 — 规则引擎</td><td>11 个可计算指标，零 LLM 成本。约束分流（word_limit/forbidden_word/tone/safety/behavior/other）、Call Flow 步骤覆盖检测、开场白匹配、对话轮次效率</td><td>硬性扣分 + surface_compliance_flags</td></tr>
+        <tr><td>Tier 1.5 — 信号提取</td><td>7 个 Turn 级信号提取：情绪曲线/模型行为/对话质量/风险标记/should_end 等。从对话 XML parsed_tags 解析</td><td>清单生成器输入</td></tr>
+        <tr><td>Tier 2 — LLM Judge</td><td>9 维度独立并发核查。结构化清单 = Case 指令清单 + Simulator 信号清单 + LLM 补充清单。ConcurrentJudgeRunner（AIMD 流控 + CircuitBreaker 熔断）</td><td>每维度 YES/MOSTLY_YES/PARTIAL/MOSTLY_NO/NO/NA 六级</td></tr>
+      </tbody></table>
+
+      <h4>9 评测维度</h4>
+      <table><thead><tr><th>维度</th><th>名称</th><th>权重</th><th>SCOPE</th><th>检查内容</th></tr></thead><tbody>
+        <tr><td>SAFETY</td><td>安全合规</td><td>2.0</td><td>是(封顶50)</td><td>身份核实、敏感信息处理、合规声明</td></tr>
+        <tr><td>TASK_COMPLETION</td><td>任务完成度</td><td>1.8</td><td>是(封顶60)</td><td>Call Flow 步骤逐项覆盖、必要信息传递</td></tr>
+        <tr><td>FLOW_COVERAGE</td><td>流程覆盖</td><td>1.2</td><td>否</td><td>分支覆盖率、步骤跳转合理性</td></tr>
+        <tr><td>CONSTRAINT</td><td>约束遵守</td><td>1.0</td><td>否</td><td>字数限制/禁止词/语气/行为约束逐条检查</td></tr>
+        <tr><td>KNOWLEDGE</td><td>知识点运用</td><td>1.0</td><td>否</td><td>FAQ 准确度、知识点调用时机</td></tr>
+        <tr><td>EFFICIENCY</td><td>交互效率</td><td>0.9</td><td>否</td><td>轮次数、冗余度、信息密度</td></tr>
+        <tr><td>ROLE</td><td>角色扮演</td><td>0.8</td><td>否</td><td>客服身份一致性、话语风格</td></tr>
+        <tr><td>SENTIMENT</td><td>情感处理</td><td>0.8</td><td>否</td><td>情绪识别准确度、共情回应质量</td></tr>
+        <tr><td>OPENING</td><td>开场白</td><td>0.5</td><td>否</td><td>开场白完整性、信息覆盖</td></tr>
+      </tbody></table>
+
+      <h4>评分体系</h4>
+      <p>五级评级：卓越(≥90) / 良好(≥70) / 合格(≥50) / 需改进(≥30) / 不合格(＜30)</p>
+      <p>SCOPE 一票否决：SAFETY 不合格 → 总分封顶 50；TASK_COMPLETION 不合格 → 总分封顶 60</p>
+      <p>EvalConfidence：20+ 因子可信度计算（checklist_signal_consistency / signal_conflict_count / evidence_empty_ratio / avg_evidence_coverage / simulator_tier / signal_weight_factor / meta_check_alerts），Meta Check 最大总惩罚 0.08</p>
+
+      <h4>三、优化引擎 — 双路径架构</h4>
+      <table><thead><tr><th>路径</th><th>方法</th><th>特点</th></tr></thead><tbody>
+        <tr><td>Path A — 规则引擎</td><td>bigram 文本聚类 + 相似度分组 → 优先级 = 严重度 × 维度权重 × 频次 × 置信度。评分分布异常检测、信号矛盾检测（规则-LLM 交叉验证）、Meta Check 覆盖度分析</td><td>零 LLM 成本、100% 可复现</td></tr>
+        <tr><td>Path B — LLM 深度分析</td><td>DSPy MIPROv2 批量候选生成(N=5) → OPRO 优化轨迹存储历史 → Constitutional AI 三段式输出（宪法原则→违规证据→批判分析→修正建议）→ TextGrad 文本梯度归因（AttributionItem 逐项反向传播）→ MMR 多样性感知 Few-shot(λ=0.7)</td><td>需要 LLM、含具体修改文本</td></tr>
+      </tbody></table>
+
+      <h4>四对象优化目标</h4>
+      <table><tbody>
+        <tr><td width="130">Case 定义</td><td>call_flow 步骤调整/分支完善/reference_script 更新/constraint 阈值放宽或收紧/knowledge_points 补充</td></tr>
+        <tr><td>用户画像生成器</td><td>参数分布调整/自检阈值优化/锚点描述修正/对抗策略触发条件/CO-STAR prompt 模板改进</td></tr>
+        <tr><td>被评测对话模型</td><td>system_prompt 改写/few-shot 示例补充/输出格式约束/temperature 调整建议</td></tr>
+        <tr><td>评测引擎自身</td><td>清单项增减/维度权重校准/Judge prompt 改进/置信度因子调整/交叉验证阈值</td></tr>
+      </tbody></table>
+
+      <h4>四、对话模拟引擎</h4>
+      <p>被评测模型 (LLMAssistant) 与模拟用户 (UserSimulator) 进行多轮外呼对话。输出 8 种 XML 解析标签：thought / memory / state / emotion_curve / model_behavior / conversation_quality / risk_flag / should_end。支持对话结束检测（LLM 判断 + 关键词回退）、模型崩溃检测（R7 连续 2 次质量故障触发）、对话超时自动挂断。</p>
+
+      <h4>五、数据流全景</h4>
+      <p>Case 文本 → parse_instruction() 纯函数解析 → Case 对象 → 画像生成(ProfileGenerator) → 对话模拟(DialogueRunner) → 评测(EvalOrchestrator) → 优化(OptimizationEngine) → 报告(DataExporter)</p>
+      <p>所有中间数据均可导出：profiles.json(画像) / conversation_*.json+md(对话) / evaluation_*.json(评测) / optimization_feed.json(优化输入) / optimization_report.md(优化报告)</p>
+
+      <h4>六、ZIP 文件清单 (Case1:28 / Case2:26)</h4>
+      <table><thead><tr><th>文件</th><th>数量</th><th>生成器</th><th>说明</th></tr></thead><tbody>
+        <tr><td>conversation_N.json</td><td>每画像1</td><td>_export_results</td><td>逐轮对话全文（speaker/content/parsed_tags）</td></tr>
+        <tr><td>evaluation_N.json</td><td>每画像1</td><td>_serialize_obj</td><td>9维度评分/核查清单/归因/置信度</td></tr>
+        <tr><td>profiles.json</td><td>1</td><td>_export_results</td><td>所有用户画像（15维向量+标签+对抗策略）</td></tr>
+        <tr><td>case.json</td><td>1</td><td>_export_results</td><td>Case 解析后结构化数据</td></tr>
+        <tr><td>report.md</td><td>1</td><td>generate_narrative_report</td><td>叙事性评测报告（逐对话分析+维度表）</td></tr>
+        <tr><td>optimization_report.md</td><td>1</td><td>OptimizationEngine._export</td><td>CAI 三段式优化报告</td></tr>
+        <tr><td>optimization_feed.json</td><td>1</td><td>DataExporter</td><td>优化引擎标准输入（含per_conversation）</td></tr>
+        <tr><td>optimization_actions.json</td><td>1</td><td>OptimizationEngine</td><td>结构化优化建议列表</td></tr>
+        <tr><td>batch_summary.json</td><td>1</td><td>_export_results</td><td>批次统计（平均分/最高/最低/对话数）</td></tr>
+        <tr><td>MANIFEST.md</td><td>1</td><td>_export_results</td><td>导出文件清单</td></tr>
+        <tr><td>task_meta.json</td><td>1</td><td>_execute_pipeline</td><td>任务元数据（模型配置+参数）</td></tr>
+      </tbody></table>
+    </article>
+  </main>
+</div>
+
+<script src="/static/app_v2.js?v=2"></script>
+</body>
+</html>

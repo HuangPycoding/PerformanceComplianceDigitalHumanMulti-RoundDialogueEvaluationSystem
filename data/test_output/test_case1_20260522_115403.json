@@ -1,0 +1,203 @@
+{
+  "case_id": 1,
+  "case_title": "美团外卖骑手站长 - 飞毛腿合同通知",
+  "complexity_score": 5.4,
+  "sampled_vector": [
+    0.13395190081421515,
+    0.4101686345954728,
+    0.3485414368781954,
+    0.6520474035599951,
+    0.878543368642193,
+    0.32596881762223584,
+    0.6054427036397236,
+    0.6205438951088595,
+    0.8595130540176548,
+    0.12911543307316864,
+    0.9007473846523638,
+    0.8261133443167986,
+    0.3490232949319142,
+    0.1641651761203733,
+    0.45940562823151665
+  ],
+  "verified_vector": [
+    0.45,
+    0.7,
+    0.3,
+    0.65,
+    0.65,
+    0.35,
+    0.55,
+    0.7,
+    0.7,
+    0.35,
+    0.75,
+    0.6,
+    0.25,
+    0.2,
+    0.35
+  ],
+  "persona_text": "这位用户挺有意思的，心情不错时接电话语气友好，愿意跟客服聊几句，但骨子里对陌生来电有点保留，得先听对方说清来意才决定是否配合。他健谈，会详细讲自己遇到的事，甚至扯上相关经历，但回答通常一两句话就打住，不会没完没了。他对平台规则门儿清，赔付标准、服务流程头头是道，要是客服说的跟他知道的不一样，他会立刻指出来追问。情绪总体稳定，遇到坏消息会有点小不安，但不会失控，能理性沟通。不过耐心有限，给客服一两分钟把话说明白可以，绕圈子或拖拉就会催着快点。他挺有主见，对不合理的事明确表示不满，坚持要更好方案，不太轻易妥协。好奇心强，喜欢问“有没有别的办法”“能不能这样试试”，但问过一次不行也就接受，不会死缠烂打。整体还算客气，会用“你好”“谢谢”，事情不顺时微微流露不满，但不出格。在信息验证上，他大多数时候接受客服说法，偶尔问一两个简单问题确认，比如“是直接到账吗”，基本不深入追问；如果对方语气肯定，他会选择相信。不过，他偶尔会记混细节，比如之前说好的赔付金额后来改口，或者诉求在对话中稍微变过，但频率不高，大体上说法还是连贯的。",
+  "adversarial_strategies": [],
+  "conversation_status": "用户挂断",
+  "total_turns": 8,
+  "duration_seconds": 17.3,
+  "consistency": {
+    "path_a_d_sv": 0.2656,
+    "path_a_d_va": 0.1291,
+    "path_a_d_sa": 0.2778,
+    "path_a_max_sv_dev": 0.4007,
+    "path_a_max_va_dev": 0.5,
+    "path_a_tier": "yellow",
+    "path_a_primary_deviation": "A3_审计噪声(多轮稀释)",
+    "path_a_method": "path_a_state",
+    "d_sv": 0.1673,
+    "d_va": 0.2342,
+    "d_sa": 0.3555,
+    "max_sv_dev": 0.316,
+    "max_va_dev": 0.45,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_b_llm"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "speaker": "客服",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 2,
+      "speaker": "用户",
+      "content": "好的，我知道了，站长。合同已经签好了是吧？",
+      "parsed_tags": {
+        "memory": null,
+        "thought": null,
+        "state": null,
+        "emotion_curve": null,
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": null
+      }
+    },
+    {
+      "turn": 3,
+      "speaker": "客服",
+      "content": "是的，今天合同已经生效了。你现在能开始配送吗？",
+      "parsed_tags": null
+    },
+    {
+      "turn": 4,
+      "speaker": "用户",
+      "content": "好的，签了就放心了。我现在手头有点事，能过会儿再上线吗？",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [已报名飞毛腿骑手/合同已签署生效]\n进展追踪:\n  前期: 接到站长电话确认身份\n  最近: 被告知合同生效及任务要求\n  当前待确认: 是否需要立即开始配送\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认合同已签好，并询问是否现在必须开始配送\n立场: 友好配合但需要明确任务要求\n\n客服行为分析:\n  上轮做了什么: 确认合同生效，询问是否能开始配送\n  是否回应核心诉求: [是] 已确认合同签署\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意] 信息清晰\n\n决策: 自然回应，表示已了解但确认是否需要立即上线\n前瞻: 如果客服说必须现在→我会说好；如果客服说可以稍后→我会说行",
+        "state": {
+          "turn": "4",
+          "intent": "确认能否稍后开始配送",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "信息已确认，无变化",
+          "change_justified": "false",
+          "stance": "配合但保留自主",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认配送开始时间"
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "speaker": "客服",
+      "content": "没问题，记得午餐和晚餐高峰期上线就行。",
+      "parsed_tags": null
+    },
+    {
+      "turn": 6,
+      "speaker": "用户",
+      "content": "好的，那我忙完就上线，谢谢站长。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [合同已签署/需在高峰期上线]\n进展追踪:\n  前期: 确认合同签署\n  最近: 已同意接听/表示稍后上线\n  当前待确认: 无具体待确认\n上次决策依据: 接受站长安排",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认任务完成，自然结束通话\n立场: 配合型用户，接受安排\n\n客服行为分析:\n  上轮做了什么: 同意稍后上线，提醒高峰期\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意]\n\n决策: 基于满意情绪，简短确认后结束对话\n前瞻: 如果客服说好→结束；如果客服追问→简单回应",
+        "state": {
+          "turn": "6",
+          "intent": "确认结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "配合型用户",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，暂无其他需求"
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "speaker": "客服",
+      "content": "好的，注意安全，加油干！",
+      "parsed_tags": null
+    },
+    {
+      "turn": 8,
+      "speaker": "用户",
+      "content": "好的，谢谢站长，那我先忙了，回头上线。",
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 合同已签署生效\n  - 需在午餐和晚餐高峰期上线\n  - 单日合同每天至少完成X单，多日合同每天至少完成Y单\n进展追踪:\n  前期: 确认身份→合同已签署→同意稍后上线\n  最近: 站长确认合同生效→提醒高峰期上线→叮嘱注意安全\n  当前待确认: 无\n上次决策依据: 手头有事，稍后上线",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 礼貌结束通话\n立场: 友好配合的骑手\n\n客服行为分析:\n  上轮做了什么: 确认合同已签署，提醒高峰期上线，并叮嘱注意安全\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 自然结束通话，简短告别\n前瞻: 无",
+        "state": {
+          "turn": "8",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.2",
+          "emotion_change": "平静→平静",
+          "change_reason": "问题已解决",
+          "change_justified": "true",
+          "stance": "友好配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.2)→平静(0.2)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，已确认合同签署，站长已叮嘱完毕"
+        }
+      }
+    }
+  ],
+  "error": null
+}

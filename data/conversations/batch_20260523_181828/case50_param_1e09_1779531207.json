@@ -1,0 +1,407 @@
+{
+  "id": "case50_param_1e09_1779531207",
+  "case_id": 50,
+  "user_profile": "param_1e09",
+  "status": "用户挂断",
+  "total_turns": 12,
+  "duration_seconds": 30.1,
+  "complexity_score": 5.9,
+  "profile_label": "param_1e09",
+  "sampled_vector": [
+    0.4156931785926493,
+    0.9896594674745431,
+    0.2449597523723277,
+    0.5970063642845844,
+    0.9793912821840285,
+    0.7592091623744948,
+    0.2977339099223258,
+    0.25149487190267594,
+    0.7582851384034636,
+    0.18375290394753796,
+    0.8995784778878416,
+    0.6314663772171356,
+    0.47168115103057906,
+    0.3153419378117469,
+    0.3411022001888111
+  ],
+  "verified_vector": [
+    0.75,
+    0.95,
+    0.25,
+    0.6,
+    0.75,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.5,
+    0.9,
+    0.75,
+    0.2,
+    0.4,
+    0.15
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [],
+  "consistency": {
+    "d_sv": 0.1864,
+    "d_va": 0.3152,
+    "d_sa": 0.3362,
+    "max_sv_dev": 0.4897,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_a_state",
+    "n_estimated_dims": 8,
+    "n_unestimated_dims": 7,
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，d_sa 仅计算可估维度其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认面试结果",
+      "intent_code": "none",
+      "emotion": "平静中带点期待",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静中带点期待",
+      "change_reason": "客服开场，即将得知结果",
+      "change_justified": "true",
+      "stance": "配合沟通，但会较真细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "确认方便通话",
+      "intent_code": "none",
+      "emotion": "平静中带点期待",
+      "emotion_intensity": "0.5",
+      "emotion_change": "平静中带点期待→平静中带点期待",
+      "change_reason": "流程正常推进，无变化",
+      "change_justified": "true",
+      "stance": "配合沟通，关注结果",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "确认入职细节",
+      "intent_code": "none",
+      "emotion": "平静中带点期待",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点期待→平静中带点期待",
+      "change_reason": "结果通过，情绪稳定",
+      "change_justified": "true",
+      "stance": "配合但较真",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "确认入职细节",
+      "intent_code": "confirm_details",
+      "emotion": "平静中带点认真",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点期待→平静中带点认真",
+      "change_reason": "对话平稳推进，无情绪波动",
+      "change_justified": "true",
+      "stance": "配合但较真",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "确认入职细节",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点认真→满意",
+      "change_reason": "客服提供了明确清晰的入职指引",
+      "change_justified": "true",
+      "stance": "理性配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "满意→满意",
+      "change_reason": "客服提供了清晰完整的入职信息",
+      "change_justified": "true",
+      "stance": "配合完成流程",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是马先生吗？我是美团骑手招聘的。你上回参加了面试，结果出来了，跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "嗯，是我。你说吧，结果怎么样？",
+      "timestamp": 4.096765518188477,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户马先生，参加了美团骑手线下面试\n  - 客服来电告知面试结果\n进展追踪:\n  前期: 第1轮客服来电自我介绍\n  最近: 客服告知面试结果已出\n  当前待确认: 面试通过与否及后续安排\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否（首次回复，无偏离）\n对抗策略执行: 不适用\n意图: 确认面试结果\n立场: 资深美团用户，对流程熟悉，愿意正常沟通\n\n客服行为分析:\n  上轮做了什么: 自我介绍并告知面试结果已出\n  是否回应核心诉求: 部分（刚开场，未告知具体结果）\n\n我的情绪反应:\n  对上轮客服行为的感受: 平静，等待结果\n\n决策: 直接回应，让客服告知结果\n前瞻: 如果通过→问入职安排；如果不通过→问原因和改进方向",
+        "state": {
+          "turn": "2",
+          "intent": "确认面试结果",
+          "intent_code": "none",
+          "emotion": "平静中带点期待",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静中带点期待",
+          "change_reason": "客服开场，即将得知结果",
+          "change_justified": "true",
+          "stance": "配合沟通，但会较真细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.2)→平静中带点期待(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需等待客服告知面试结果"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "现在方便说话吗？大概需要3分钟。",
+      "timestamp": 5.023866891860962,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "方便，你说吧，我听着呢。",
+      "timestamp": 9.496562957763672,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 马先生，参加了美团骑手线下面试\n  当前: 客服来电告知面试结果\n进展追踪:\n  前期: 客服确认身份并准备告知结果\n  最近: 客服询问是否方便通话\n  当前待确认: 面试结果（通过/未通过）\n上次决策依据: 配合客服流程，等待结果公布",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无对抗行为指引）\n意图: 确认方便通话，让客服继续告知结果\n立场: 配合沟通，但保持对结果的关注\n\n客服行为分析:\n  上轮做了什么: 询问是否方便通话\n  是否回应核心诉求: 部分，正在推进流程\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，正常流程\n\n决策: 表示方便，让客服继续\n前瞻: 如果客服说通过→询问入职安排；如果未通过→询问原因和改进方向",
+        "state": {
+          "turn": "4",
+          "intent": "确认方便通话",
+          "intent_code": "none",
+          "emotion": "平静中带点期待",
+          "emotion_intensity": "0.5",
+          "emotion_change": "平静中带点期待→平静中带点期待",
+          "change_reason": "流程正常推进，无变化",
+          "change_justified": "true",
+          "stance": "配合沟通，关注结果",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点期待(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "客服还在推进流程，需要继续沟通"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "你的面试通过了，接下来就是办理入职手续了。",
+      "timestamp": 10.10856580734253,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "好的，通过了。那后续入职具体怎么安排？",
+      "timestamp": 14.602342128753662,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  参加美团骑手面试，结果已出——通过\n进展追踪:\n  前期: 接到电话确认身份\n  最近: 客服告知面试通过，需办理入职\n  当前待确认: 入职具体安排（时间、地点、材料等）\n上次决策依据: 正常沟通，等待后续信息",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 确认入职手续的细节\n立场: 通过面试，愿意配合但需明确安排\n\n客服行为分析:\n  上轮做了什么: 告知面试通过，提到办理入职\n  是否回应核心诉求: 是，结果已明确\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，结果好\n\n决策: 基于立场×情绪反应，自然追问入职细节\n前瞻: 如果客服说具体安排→确认信息；如果模糊→追问",
+        "state": {
+          "turn": "6",
+          "intent": "确认入职细节",
+          "intent_code": "none",
+          "emotion": "平静中带点期待",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点期待→平静中带点期待",
+          "change_reason": "结果通过，情绪稳定",
+          "change_justified": "true",
+          "stance": "配合但较真",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点期待(0.6)→平静中带点期待(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认入职具体安排"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "面试通过了，恭喜。系统会发短信给你，按里面的时间和地点来就行。",
+      "timestamp": 15.302314519882202,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "短信大概什么时候发？入职需要带什么东西吗？",
+      "timestamp": 19.66856050491333,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 面试通过\n  - 需等待系统短信通知入职时间和地点\n进展追踪:\n  前期: 确认身份→同意通话→被告知面试通过\n  最近: 询问后续入职安排\n  当前待确认: 短信发送时间、入职需携带材料\n上次决策依据: 面试通过后自然询问入职流程",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无对抗指引）\n意图: 确认具体入职细节，确保流程清晰\n立场: 资深用户，习惯较真细节\n\n客服行为分析:\n  上轮做了什么: 告知面试通过，让等短信通知\n  是否回应核心诉求: 部分回应，但细节不明确\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但想确认更多\n\n决策: 基于立场追问短信时间和所需材料，确保万无一失\n前瞻: 如果客服给明确时间→接受；如果含糊→继续追问",
+        "state": {
+          "turn": "8",
+          "intent": "确认入职细节",
+          "intent_code": "confirm_details",
+          "emotion": "平静中带点认真",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点期待→平静中带点认真",
+          "change_reason": "对话平稳推进，无情绪波动",
+          "change_justified": "true",
+          "stance": "配合但较真",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→平静(0.5)→平静(0.5)→平静中带点认真(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认短信时间和入职材料等细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "短信今天内发，请带身份证、健康证、银行卡和两张一寸照片。",
+      "timestamp": 20.396952152252197,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "好的，知道了，谢谢。那我等短信通知。",
+      "timestamp": 24.870531797409058,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 面试结果：通过\n  - 后续流程：等待短信，按短信指引办理入职\n  - 所需材料：身份证、健康证、银行卡、两张一寸照片\n进展追踪:\n  前期: 面试通过确认\n  最近: 询问短信发送时间和所需材料\n  当前待确认: 短信发送时间（今天内）\n上次决策依据: 无特殊决策",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 未执行（无相关指引）\n意图: 确认入职细节，确保材料准备齐全\n立场: 理性配合，但注重细节确认\n\n客服行为分析:\n  上轮做了什么: 告知短信今天内发送，列出所需材料（身份证、健康证、银行卡、照片）\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息清晰\n\n决策: 确认信息无误，表达感谢并结束通话\n前瞻: 如果客服说“还有其他问题吗”→我回答“没有了，谢谢”",
+        "state": {
+          "turn": "10",
+          "intent": "确认入职细节",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点认真→满意",
+          "change_reason": "客服提供了明确清晰的入职指引",
+          "change_justified": "true",
+          "stance": "理性配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→平静(0.5)→平静(0.5)→满意(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "核心问题已解决，信息已确认，可自然结束"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "不客气，祝你入职顺利。",
+      "timestamp": 25.49675726890564,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "好的，那我等短信，没别的事了，谢谢啊。",
+      "timestamp": 30.06497597694397,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  面试通过，等待短信通知入职\n进展追踪:\n  前期: 确认身份→告知面试通过\n  最近: 询问短信时间和入职材料→客服告知今天内发短信，需带身份证、健康证、银行卡和照片\n  当前待确认: 无，等短信\n上次决策依据: 面试通过，按流程走",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 确认信息后结束通话\n立场: 配合完成流程，但需明确细节\n\n客服行为分析:\n  上轮做了什么: 告知短信时间和入职材料\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 信息已明确，自然收尾\n前瞻: 客服若说再见→结束通话；若追问→简单回应",
+        "state": {
+          "turn": "12",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "满意→满意",
+          "change_reason": "客服提供了清晰完整的入职信息",
+          "change_justified": "true",
+          "stance": "配合完成流程",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→满意(0.7)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已告别"
+        }
+      }
+    }
+  ]
+}

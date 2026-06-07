@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python generate_more_cases.py)",
+      "Bash(python3 run_web.py)"
+    ]
+  }
+}

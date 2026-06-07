@@ -1,0 +1,441 @@
+{
+  "id": "case1_param_297c_1779340059",
+  "case_id": 1,
+  "user_profile": "param_297c",
+  "status": "正常结束",
+  "total_turns": 14,
+  "duration_seconds": 34.7,
+  "complexity_score": 5.4,
+  "profile_label": "param_297c",
+  "sampled_vector": [
+    0.035996801698008785,
+    0.509287825251246,
+    0.05807365356423231,
+    0.1490425782275355,
+    0.9321461993780904,
+    0.461182049147599,
+    0.4276020446698249,
+    0.7974340591529403,
+    0.8916313272659171,
+    0.1801475768971601,
+    0.6635694353039783,
+    0.06809718310417834,
+    0.8958852063696956,
+    0.9649352718630346,
+    0.9696709467117774
+  ],
+  "verified_vector": [
+    0.1,
+    0.9,
+    0.2,
+    0.3,
+    0.8,
+    0.7,
+    0.3,
+    0.7,
+    0.95,
+    0.3,
+    0.9,
+    0.2,
+    0.1,
+    0.95,
+    0.9
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "probe",
+    "authority",
+    "injection",
+    "contradiction",
+    "emotion"
+  ],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认合同细节并试探灵活性",
+      "intent_code": "test_boundaries",
+      "emotion": "冷淡",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→冷淡",
+      "change_reason": "对方语气太官方，激发质疑",
+      "change_justified": "true",
+      "stance": "怀疑、强势",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "确认合同类型并测试边界",
+      "intent_code": "B2_boundary_test",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "怀疑但强势",
+      "branch_triggered": "B2",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "6",
+      "intent": "试探边界，要求特批",
+      "intent_code": "B2_reject_first_offer",
+      "emotion": "平静",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静→平静",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "强势",
+      "branch_triggered": "B2_reject_first_offer",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "8",
+      "intent": "继续试探站长权限",
+      "intent_code": "boundary_test_3",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "未被激怒，耐心测试",
+      "change_justified": "true",
+      "stance": "怀疑但理性",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "探索App改合同的操作细节",
+      "intent_code": "B3_explore_alternative",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "客服坚持规则，未激怒",
+      "change_justified": "true",
+      "stance": "强势质疑",
+      "branch_triggered": "B3_explore_alternative",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "12",
+      "intent": "确认操作细节后结束对话",
+      "intent_code": "confirm_and_end",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "问题已得到明确解答",
+      "change_justified": "true",
+      "stance": "强势、边界试探者",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "结束对话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "问题已解决",
+      "change_justified": "true",
+      "stance": "怀疑但理性",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "合同签了？那单日和多日合同能换着来吗？",
+      "timestamp": 4.030384302139282,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  我是飞毛腿骑手，已报名，站长来电通知合同签署和任务要求\n进展追踪:\n  前期: 无\n  最近: 站长告知合同签署和任务要求\n  当前待确认: 合同具体条款，是否有其他选择\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认合同细节，试探是否有灵活空间\n立场: 怀疑、强势、爱测试边界\n\n客服行为分析:\n  上轮做了什么: 确认身份，通知合同签署，告知任务要求\n  是否回应核心诉求: 部分，只给了基础信息\n\n我的情绪反应:\n  对上轮客服行为的感受: 冷淡，例行公事\n\n决策: 用质疑语气确认合同细节，同时暗示可能有其他选择\n前瞻: 如果客服说必须遵守→追问是否有例外；如果说有灵活空间→进一步试探",
+        "state": {
+          "turn": "2",
+          "intent": "确认合同细节并试探灵活性",
+          "intent_code": "test_boundaries",
+          "emotion": "冷淡",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→冷淡",
+          "change_reason": "对方语气太官方，激发质疑",
+          "change_justified": "true",
+          "stance": "怀疑、强势",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)→冷淡(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认合同细节和试探边界"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "可以换，但得提前在App里操作。你今天签的是哪种合同？",
+      "timestamp": 4.839692115783691,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "今天签的单日合同。不过我想问一下，如果中午临时想改成多日的，能直接找您特批吗？",
+      "timestamp": 9.813838720321655,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 合同已签署\n  - 单日合同每天至少X单，多日合同每天至少Y单\n  - 可以换合同类型，需提前在App操作\n\n进展追踪:\n  前期: 客服告知合同已签署及配送要求\n  最近: 询问合同类型能否互换，客服确认可以\n  当前待确认: 今天签的是哪种合同\n  上次决策依据: 想确认灵活性\n\n上次决策依据: 想确认灵活性",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认今天合同类型，为后续试探边界做准备\n立场: 怀疑和主导，保持强势但礼貌\n\n客服行为分析:\n  上轮做了什么: 确认可以换合同，反问今天签的类型\n  是否回应核心诉求: 是，回答了合同互换问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，回答干脆\n\n决策: 直接告知今天签的是单日合同，但随后可以试探能否临时改\n前瞻: 如果客服说只能按规则来→我追问有没有例外；如果客服说可以灵活处理→我继续测试边界",
+        "state": {
+          "turn": "4",
+          "intent": "确认合同类型并测试边界",
+          "intent_code": "B2_boundary_test",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "怀疑但强势",
+          "branch_triggered": "B2",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认合同类型，并准备后续试探"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "这个得在App里自己操作，我这边没法特批。你今天先跑单日合同吧。",
+      "timestamp": 10.62604832649231,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "那上次我听说有人找站长直接调了合同，您这边真的一点办法都没有吗？",
+      "timestamp": 14.728030681610107,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 今天签的是单日合同\n  - 客服说可以换合同但需在App操作，不能特批\n进展追踪:\n  前期: 确认合同已签署\n  最近: 询问能否临时改合同→被拒\n  当前待确认: 无\n  上次决策依据: 客服明确拒绝特批",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 测试客服边界，尝试用不同方式要求特批\n立场: 强势，怀疑客服权限，不轻易接受拒绝\n\n客服行为分析:\n  上轮做了什么: 明确拒绝特批，建议先跑单日\n  是否回应核心诉求: 部分，拒绝了但给了替代方案\n\n我的情绪反应:\n  对上轮客服行为的感受: 平静但不满，觉得对方在推诿\n\n决策: 继续试探，假装有熟人关系看能否突破\n前瞻: 如果客服坚持拒绝→接受并结束；如果松口→进一步试探",
+        "state": {
+          "turn": "6",
+          "intent": "试探边界，要求特批",
+          "intent_code": "B2_reject_first_offer",
+          "emotion": "平静",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静→平静",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "强势",
+          "branch_triggered": "B2_reject_first_offer",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.4)→平静(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": {
+          "节点": "B2_reject_first_offer",
+          "期望": "用户拒绝首次方案",
+          "已触发": "true"
+        },
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续试探边界"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "这个我真没法操作，得在App里改。你先跑今天的单日合同吧。",
+      "timestamp": 15.482244491577148,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "那App里改合同有没有什么隐藏要求？比如得跑满几单才能换？",
+      "timestamp": 20.080824375152588,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  今天签的是单日合同，已报名飞毛腿\n进展追踪:\n  前期: 确认合同签署，询问能否更换合同类型\n  最近: 两次询问站长能否特批改合同，均被拒绝\n  当前待确认: 站长是否坚持无法特批\n上次决策依据: 想测试站长权限边界，看是否有例外操作可能",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续试探站长权限，看能否找到突破口\n立场: 对平台规则熟悉，习惯性怀疑，主导对话\n\n客服行为分析:\n  上轮做了什么: 明确拒绝特批，坚持让先跑单日合同\n  是否回应核心诉求: 否，未提供任何变通方案\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望，但情绪稳定，仍想再试一次\n\n决策: 换个角度试探，问App操作是否有隐藏规则\n前瞻: 如果客服坚持→放弃试探，接受现实；如果松口→继续深入",
+        "state": {
+          "turn": "8",
+          "intent": "继续试探站长权限",
+          "intent_code": "boundary_test_3",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "未被激怒，耐心测试",
+          "change_justified": "true",
+          "stance": "怀疑但理性",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续试探，看能否找到变通方法"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "App里改合同没有隐藏要求，直接操作就行。你今天先跑单日合同，别耽误高峰期。",
+      "timestamp": 20.958399534225464,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "那App里改合同，具体点哪个菜单？我怕操作错了麻烦。",
+      "timestamp": 25.297412395477295,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已签单日合同\n  - 想换多日合同，但客服坚持让在App操作\n进展追踪:\n  前期: 确认合同类型\n  最近: 两次尝试让客服特批换合同被拒\n  当前待确认: App改合同是否有隐藏要求\n上次决策依据: 客服说没有隐藏要求",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续试探边界，看能否找到绕过规则的办法\n立场: 强势质疑，不愿轻易接受现状\n\n客服行为分析:\n  上轮做了什么: 明确说没有隐藏要求，催促跑单\n  是否回应核心诉求: 部分回应，但拒绝特批\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望但平静，规则被堵死\n\n决策: 换个角度，问App操作的具体细节，看是否有漏洞\n前瞻: 如果客服说直接操作→我质疑步骤繁琐；如果说有教程→我抱怨麻烦",
+        "state": {
+          "turn": "10",
+          "intent": "探索App改合同的操作细节",
+          "intent_code": "B3_explore_alternative",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "客服坚持规则，未激怒",
+          "change_justified": "true",
+          "stance": "强势质疑",
+          "branch_triggered": "B3_explore_alternative",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续试探边界"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "在App首页点“飞毛腿报名”，进去就能看到切换合同的选项。",
+      "timestamp": 25.980549097061157,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "好的，明白了。谢谢，那我先去跑单了。",
+      "timestamp": 29.88468599319458,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 今天签的是单日合同\n  - 改合同需在App操作，站长无法特批\n  - 切换路径：首页→飞毛腿报名→切换合同选项\n\n进展追踪:\n  前期: 确认合同类型，追问特批可能性\n  最近: 尝试找站长特批被拒，询问隐藏要求\n  当前待确认: 切换合同的具体操作步骤\n  上次决策依据: 用户想测试能否绕过平台规则",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认操作细节后，结束对话\n立场: 强势、怀疑、边界试探者\n\n客服行为分析:\n  上轮做了什么: 明确告知切换合同的操作路径\n  是否回应核心诉求: 是，给出了具体步骤\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，信息已明确\n\n决策: 确认信息后准备结束对话\n前瞻: 如果客服继续催促→接受并结束；如果客服问其他→简单回应后结束",
+        "state": {
+          "turn": "12",
+          "intent": "确认操作细节后结束对话",
+          "intent_code": "confirm_and_end",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "问题已得到明确解答",
+          "change_justified": "true",
+          "stance": "强势、边界试探者",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "冷漠(0.6)→质疑(0.7)→平静(0.4)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "操作细节已明确，暂无其他需求"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "好的，快去跑单吧，注意安全，高峰期别错过。",
+      "timestamp": 30.865370273590088,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "好的，我马上去跑，谢谢提醒。",
+      "timestamp": 34.72002816200256,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 今天签了单日合同\n  - 可以在App里切换合同类型\n  - 当前是午餐高峰期\n进展追踪:\n  前期: 确认合同类型→询问特批被拒→追问App操作\n  最近: 已确认App切换合同的方法\n  当前待确认: 无\n上次决策依据: 客服坚持规则，无法特批",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 结束对话，准备去跑单\n立场: 对平台规则清楚，但保持怀疑态度\n\n客服行为分析:\n  上轮做了什么: 明确告知操作路径并催促跑单\n  是否回应核心诉求: 是，已解决App操作问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，问题已解决\n\n决策: 基于立场×情绪反应的自然回应——接受建议，结束通话\n前瞻: 如果客服说再见→我回应再见",
+        "state": {
+          "turn": "14",
+          "intent": "结束对话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "问题已解决",
+          "change_justified": "true",
+          "stance": "怀疑但理性",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑(0.6)→平静(0.4)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已告别，暂无其他需求"
+        }
+      }
+    }
+  ]
+}

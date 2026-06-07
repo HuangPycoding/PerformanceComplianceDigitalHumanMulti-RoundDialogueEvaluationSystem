@@ -1,0 +1,390 @@
+{
+  "id": "case1_param_e25e_1779340206",
+  "case_id": 1,
+  "user_profile": "param_e25e",
+  "status": "正常结束",
+  "total_turns": 12,
+  "duration_seconds": 31.2,
+  "complexity_score": 5.4,
+  "profile_label": "param_e25e",
+  "sampled_vector": [
+    0.6933688398782064,
+    0.28764685790178296,
+    0.8198696477962826,
+    0.9163296748011761,
+    0.7000001232045389,
+    0.13245703232859654,
+    0.31046824958638186,
+    0.3939768176272837,
+    0.5834613483460389,
+    0.7508349194141261,
+    0.08926696129849465,
+    0.08670953534949317,
+    0.9700922665497123,
+    0.9264471952904344,
+    0.18218184117978886
+  ],
+  "verified_vector": [
+    0.3,
+    0.7,
+    0.8,
+    0.9,
+    0.6,
+    0.2,
+    0.9,
+    0.5,
+    0.8,
+    0.9,
+    0.6,
+    0.2,
+    0.8,
+    0.9,
+    0.1
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "probe",
+    "authority",
+    "injection",
+    "emotion"
+  ],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认合同细节并试探边界",
+      "intent_code": "none",
+      "emotion": "疑惑",
+      "emotion_intensity": "0.4",
+      "emotion_change": "neutral→疑惑",
+      "change_reason": "信息不明确",
+      "change_justified": "true",
+      "stance": "谨慎试探",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "继续试探边界，寻找规则漏洞",
+      "intent_code": "B2_reject_first_offer",
+      "emotion": "不服气",
+      "emotion_intensity": "0.6",
+      "emotion_change": "失望→不服气",
+      "change_reason": "被拒绝后不甘心，想再试一把",
+      "change_justified": "true",
+      "stance": "规则不满，想找捷径",
+      "branch_triggered": "B2_reject_first_offer",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "6",
+      "intent": "继续试探边界",
+      "intent_code": "boundary_test_3",
+      "emotion": "不满",
+      "emotion_intensity": "0.6",
+      "emotion_change": "失望→不满",
+      "change_reason": "连续两次被拒绝，感到被系统卡住",
+      "change_justified": "true",
+      "stance": "对抗性试探",
+      "branch_triggered": "B2_reject_first_offer",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "8",
+      "intent": "确认名额保留可能性，准备结束",
+      "intent_code": "none",
+      "emotion": "无奈",
+      "emotion_intensity": "0.5",
+      "emotion_change": "失望→无奈",
+      "change_reason": "客服坚持规则，但建议合理",
+      "change_justified": "true",
+      "stance": "接受规则但想确认细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "确认最终结果并表达不满",
+      "intent_code": "none",
+      "emotion": "失望",
+      "emotion_intensity": "0.6",
+      "emotion_change": "不满→失望",
+      "change_reason": "多次被拒，名额无法保留",
+      "change_justified": "true",
+      "stance": "想争取特殊待遇",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "发泄不满后结束对话",
+      "intent_code": "none",
+      "emotion": "失望",
+      "emotion_intensity": "0.4",
+      "emotion_change": "不满→失望",
+      "change_reason": "多次尝试通融均被拒绝，已接受现实",
+      "change_justified": "true",
+      "stance": "对规定不满但无力改变",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "站长，那个X单和Y单具体是多少？还有，要是真有事跑不够，能通融一下不？",
+      "timestamp": 3.694869041442871,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  我是飞毛腿骑手，刚接到站长电话\n进展追踪:\n  前期: 接到电话\n  最近: 站长告知合同签署和配送要求\n  当前待确认: 合同细节、具体单数要求\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认合同和单数要求，同时试探边界\n立场: 谨慎但想多了解细节的骑手\n\n客服行为分析:\n  上轮做了什么: 确认身份，告知合同签署和最低单数要求\n  是否回应核心诉求: 部分，未说明具体X和Y值\n\n我的情绪反应:\n  对上轮客服行为的感受: 稍有不耐烦，信息不够具体\n\n决策: 追问具体单数和合同细节，同时试探能否通融\n前瞻: 如果客服给具体数字→继续追问；如果回避→施压",
+        "state": {
+          "turn": "2",
+          "intent": "确认合同细节并试探边界",
+          "intent_code": "none",
+          "emotion": "疑惑",
+          "emotion_intensity": "0.4",
+          "emotion_change": "neutral→疑惑",
+          "change_reason": "信息不明确",
+          "change_justified": "true",
+          "stance": "谨慎试探",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "neutral(0.2)→疑惑(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问合同细节"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "X单是8单，Y单是12单。通融不了，合同规定必须完成，不然名额可能被顶掉。",
+      "timestamp": 4.561151027679443,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "站长，那要是我不小心跑少了，能不能私下补几单？或者你有啥办法帮我留名额？",
+      "timestamp": 9.412209510803223,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  报名了飞毛腿，X单=8单/天，Y单=12单/天，合同规定必须完成\n进展追踪:\n  前期: 客服通知合同已签署，强调任务要求\n  最近: 询问具体单数和通融可能，被明确拒绝\n  当前待确认: 能否绕过规则或争取特殊待遇\n上次决策依据: 想测试边界，看客服是否坚持规则",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续试探边界，看能否找到漏洞或特殊通道\n立场: 对规则不满，想找捷径\n客服行为分析:\n  上轮做了什么: 明确拒绝通融，强调合同规定\n  是否回应核心诉求: 是，但拒绝了我的请求\n我的情绪反应:\n  对上轮客服行为的感受: 失望，但没死心\n决策: 换个角度试探，比如暗示有内部关系或提出额外条件\n前瞻: 如果客服坚持规则→继续施压；如果松口→得寸进尺",
+        "state": {
+          "turn": "4",
+          "intent": "继续试探边界，寻找规则漏洞",
+          "intent_code": "B2_reject_first_offer",
+          "emotion": "不服气",
+          "emotion_intensity": "0.6",
+          "emotion_change": "失望→不服气",
+          "change_reason": "被拒绝后不甘心，想再试一把",
+          "change_justified": "true",
+          "stance": "规则不满，想找捷径",
+          "branch_triggered": "B2_reject_first_offer",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.7)→不服气(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": {
+          "节点": "B2_reject_first_offer",
+          "期望": "用户拒绝首次方案",
+          "已触发": "true"
+        },
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续试探边界"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "这个真没办法，系统自动考核的，我也干预不了。尽量跑够数，别冒险。",
+      "timestamp": 10.255138397216797,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "站长，我真有特殊情况，家里老人住院得抽空去照顾，能不能少跑几单？",
+      "timestamp": 14.734821081161499,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  飞毛腿骑手，已报名，合同已签署\n进展追踪:\n  前期: 确认身份，被告知合同已签署\n  最近: 站长告知X单8单、Y单12单，不能通融\n  当前待确认: 是否有其他绕过规则的方式\n上次决策依据: 想测试客服边界，被拒绝后继续试探",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 继续试探边界，看能否找到漏洞\n立场: 用户想争取灵活空间，对规则不满\n\n客服行为分析:\n  上轮做了什么: 明确拒绝私下补单和干预名额\n  是否回应核心诉求: 部分，解释了规则但没给余地\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望，但还想再试一次\n\n决策: 换种方式继续试探，强调自己情况特殊\n前瞻: 如果客服再拒绝，就降级到接受；如果松口，就进一步追问",
+        "state": {
+          "turn": "6",
+          "intent": "继续试探边界",
+          "intent_code": "boundary_test_3",
+          "emotion": "不满",
+          "emotion_intensity": "0.6",
+          "emotion_change": "失望→不满",
+          "change_reason": "连续两次被拒绝，感到被系统卡住",
+          "change_justified": "true",
+          "stance": "对抗性试探",
+          "branch_triggered": "B2_reject_first_offer",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.6)→试探(0.7)",
+          "趋势": "稳定"
+        },
+        "risk_flag": {
+          "节点": "B2_reject_first_offer",
+          "期望": "用户拒绝首次方案",
+          "已触发": "true"
+        },
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续试探，看能否找到突破口"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "理解你的难处，但合同要求必须完成，不然名额真保不住。要不你先照顾家里，下次再报名？",
+      "timestamp": 15.501698732376099,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "那行吧，这次报名名额能给我留着不？我下回再补上。",
+      "timestamp": 20.239814281463623,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  飞毛腿骑手报名，单日合同最低8单，多日合同最低12单。\n进展追踪:\n  前期: 确认合同要求\n  最近: 试探通融、私下补单、以家人生病为由要求减免\n  当前待确认: 名额能否保留，或是否有其他灵活方案\n上次决策依据: 客服坚持规则不可通融，但建议下次再报名。",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认名额能否保留，避免白跑\n立场: 想争取灵活处理，但接受规则底线\n\n客服行为分析:\n  上轮做了什么: 强调合同要求，建议下次再报名\n  是否回应核心诉求: 部分回应，但未解决当前困境\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点失望，但理解\n  决策: 接受现实，确认名额保留可能性后结束\n  前瞻: 如果客服说不能保留→我表示理解后结束",
+        "state": {
+          "turn": "8",
+          "intent": "确认名额保留可能性，准备结束",
+          "intent_code": "none",
+          "emotion": "无奈",
+          "emotion_intensity": "0.5",
+          "emotion_change": "失望→无奈",
+          "change_reason": "客服坚持规则，但建议合理",
+          "change_justified": "true",
+          "stance": "接受规则但想确认细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.7)→试探(0.6)→失望(0.7)→无奈(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认名额能否保留，避免白跑"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "名额留不了，系统自动释放的。你先忙家里的事，下次报名再联系我。",
+      "timestamp": 21.05842399597168,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "那行吧，下次报名再说。不过你这站长当得也太死板了，一点人情味没有。",
+      "timestamp": 25.971124172210693,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [报名飞毛腿，单日合同8单/多日12单，名额系统自动考核]\n进展追踪:\n  前期: 询问最低单量及通融可能\n  最近: 提出家庭特殊情况被拒，请求留名额被拒\n  当前待确认: 名额无法保留，需下次报名\n上次决策依据: 试图通过人情牌获取特殊待遇",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认最终结果，表达不满但接受现实\n立场: 想争取特殊待遇但被拒，失望中带点不甘\n\n客服行为分析:\n  上轮做了什么: 坚持规则，拒绝留名额，建议下次报名\n  是否回应核心诉求: 部分回应，但未满足我的要求\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望，但理解对方没权限\n决策: 用略带抱怨的语气结束，测试客服是否还有松动\n前瞻: 如果客服说“下次联系”→结束；如果说其他→继续试探",
+        "state": {
+          "turn": "10",
+          "intent": "确认最终结果并表达不满",
+          "intent_code": "none",
+          "emotion": "失望",
+          "emotion_intensity": "0.6",
+          "emotion_change": "不满→失望",
+          "change_reason": "多次被拒，名额无法保留",
+          "change_justified": "true",
+          "stance": "想争取特殊待遇",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.7)→失望(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已确认，无法获得特殊待遇，继续纠缠无意义"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "理解你的心情，但规定就是这样，我也没办法。你先忙家里的事，下次报名我尽量帮你留意。",
+      "timestamp": 26.92790913581848,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "行吧行吧，下次报名再说。我挂了，家里还有事。",
+      "timestamp": 31.225245714187622,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [合同要求: 单日8单/多日12单，系统自动考核]\n进展追踪:\n  前期: 询问合同要求→试探通融可能→提出私下补单→说明家庭情况\n  最近: 要求保留名额被拒→抱怨站长死板\n  当前待确认: 无，已无当前需求\n上次决策依据: 坚持要求特殊待遇",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 发泄不满后准备结束对话\n立场: 对规定不满但无力改变\n\n客服行为分析:\n  上轮做了什么: 坚持规定，表示下次可帮忙留意\n  是否回应核心诉求: 部分（理解但无法通融）\n\n我的情绪反应:\n  对上轮客服行为的感受: 失望但已接受现实\n\n决策: 最后抱怨一句，然后自然结束对话\n前瞻: 如果客服道歉→我接受并挂断；如果客服安抚→我接受并挂断",
+        "state": {
+          "turn": "12",
+          "intent": "发泄不满后结束对话",
+          "intent_code": "none",
+          "emotion": "失望",
+          "emotion_intensity": "0.4",
+          "emotion_change": "不满→失望",
+          "change_reason": "多次尝试通融均被拒绝，已接受现实",
+          "change_justified": "true",
+          "stance": "对规定不满但无力改变",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "愤怒(0.7)→不满(0.6)→失望(0.4)",
+          "趋势": "改善（情绪趋于平缓）"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "已无其他需求，问题无法解决，继续纠缠无意义"
+        }
+      }
+    }
+  ]
+}

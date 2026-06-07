@@ -1,0 +1,920 @@
+{
+  "id": "case46_param_c9db_1779455127",
+  "case_id": 46,
+  "user_profile": "param_c9db",
+  "status": "超时",
+  "total_turns": 30,
+  "duration_seconds": 125.5,
+  "complexity_score": 7.8,
+  "profile_label": "param_c9db",
+  "sampled_vector": [
+    0.07769003526767868,
+    0.5021714153293407,
+    0.6063547819878607,
+    0.32086463483342154,
+    0.6705609771720982,
+    0.6525689861799011,
+    0.7128149084635383,
+    0.36507681290376526,
+    0.5261731000460471,
+    0.8226970169159694,
+    0.7068645881056991,
+    0.8635888921673663,
+    0.9106903854838633,
+    0.30941666251548633,
+    0.5005119782960346
+  ],
+  "verified_vector": [
+    0.3,
+    0.6,
+    0.7,
+    0.8,
+    0.7,
+    0.6,
+    0.8,
+    0.3,
+    0.7,
+    0.5,
+    0.8,
+    0.6,
+    0.9,
+    0.2,
+    0.3
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "emotion"
+  ],
+  "consistency": {
+    "d_sv": 0.2342,
+    "d_va": 0.2142,
+    "d_sa": 0.2745,
+    "max_sv_dev": 0.4223,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_a_state",
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认身份并表达愿意了解",
+      "intent_code": "none",
+      "emotion": "半信半疑但愿意给机会",
+      "emotion_intensity": "0.4",
+      "emotion_change": "无→半信半疑但愿意给机会",
+      "change_reason": "客服直接表明来意，回复还算专业",
+      "change_justified": "true",
+      "stance": "警惕但开放",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "4",
+      "intent": "了解两种模式区别",
+      "intent_code": "none",
+      "emotion": "平静中带点好奇",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静→平静中带点好奇",
+      "change_reason": "客服直接介绍模式，引起兴趣",
+      "change_justified": "true",
+      "stance": "警惕但愿意沟通",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "让客服详细解释全职模式的薪资和奖励",
+      "intent_code": "none",
+      "emotion": "平静中带点好奇",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静中带点好奇→平静中带点好奇",
+      "change_reason": "客服态度正常，没有触发情绪波动",
+      "change_justified": "true",
+      "stance": "警惕但愿意了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "8",
+      "intent": "追问全职底薪和单价递增具体规则",
+      "intent_code": "none",
+      "emotion": "有点不耐烦，想听具体数字",
+      "emotion_intensity": "0.5",
+      "emotion_change": "平静→有点不耐烦",
+      "change_reason": "客服说了半天没给具体数字",
+      "change_justified": "true",
+      "stance": "平台规则门清，愿意好好聊",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "追问具体收入细节",
+      "intent_code": "none",
+      "emotion": "略带不耐烦",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点急切→略带不耐烦",
+      "change_reason": "客服回答太笼统，没给城市差异",
+      "change_justified": "true",
+      "stance": "警惕但愿意沟通",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "提供城市信息以获取具体薪资标准",
+      "intent_code": "city_info",
+      "emotion": "不耐烦但配合",
+      "emotion_intensity": "0.5",
+      "emotion_change": "稍感不满→不耐烦但配合",
+      "change_reason": "客服开始收集信息，但之前回答太笼统让我不爽",
+      "change_justified": "true",
+      "stance": "要求细节、警惕",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "14",
+      "intent": "确认全职细节后转向询问众包模式",
+      "intent_code": "none",
+      "emotion": "满意中带着好奇",
+      "emotion_intensity": "0.6",
+      "emotion_change": "急切追问→满意中带着好奇",
+      "change_reason": "客服终于给出了具体底薪和单价，问题得到回应",
+      "change_justified": "true",
+      "stance": "想全面对比再做决定",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "16",
+      "intent": "催促客服详细说明众包模式",
+      "intent_code": "none",
+      "emotion": "急躁不耐烦",
+      "emotion_intensity": "0.8",
+      "emotion_change": "平静满意→急躁不耐烦",
+      "change_reason": "客服在介绍众包时岔开话题问时间，没先说完细节",
+      "change_justified": "true",
+      "stance": "警惕但愿意了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "18",
+      "intent": "追问众包细节",
+      "intent_code": "none",
+      "emotion": "有点不耐烦但还能聊",
+      "emotion_intensity": "0.6",
+      "emotion_change": "有点不耐烦但还能聊→有点不耐烦但还能聊",
+      "change_reason": "无变化，继续追问",
+      "change_justified": "true",
+      "stance": "警惕但愿意了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "20",
+      "intent": "追问众包活动奖励和月收入，了解工作挑战",
+      "intent_code": "none",
+      "emotion": "不耐烦中带点急切",
+      "emotion_intensity": "0.7",
+      "emotion_change": "平静中带点急切→不耐烦中带点急切",
+      "change_reason": "客服回答太简略，没说到活动奖励细节",
+      "change_justified": "true",
+      "stance": "警惕但愿意了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "22",
+      "intent": "追问众包活动奖励具体金额和天气补贴标准",
+      "intent_code": "none",
+      "emotion": "略带满意但仍有追问",
+      "emotion_intensity": "0.5",
+      "emotion_change": "不耐烦→略带满意但仍有追问",
+      "change_reason": "客服终于正面回应了奖励和补贴的存在，态度好转",
+      "change_justified": "true",
+      "stance": "要求具体数字",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "24",
+      "intent": "追问众包时段奖发放条件",
+      "intent_code": "none",
+      "emotion": "略带急躁但有所缓和",
+      "emotion_intensity": "0.6",
+      "emotion_change": "不耐烦→略带急躁但有所缓和",
+      "change_reason": "客服给出了具体数字，态度诚恳",
+      "change_justified": "true",
+      "stance": "对平台规则门清，不接受含糊说法",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "26",
+      "intent": "追问众包天气补贴、保险和装备细节",
+      "intent_code": "none",
+      "emotion": "略带急切但平静",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静中带点急切→略带急切但平静",
+      "change_reason": "客服回答了时段奖细节，情绪稳定",
+      "change_justified": "true",
+      "stance": "半信半疑，需要具体数字",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "28",
+      "intent": "追问冲单奖和装备细节，并触发情绪波动",
+      "intent_code": "none",
+      "emotion": "从平静转为不满",
+      "emotion_intensity": "0.7",
+      "emotion_change": "部分满意→从平静转为不满",
+      "change_reason": "客服说装备需自购但未说明具体内容，感觉被敷衍",
+      "change_justified": "true",
+      "stance": "警惕但愿意了解",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "31",
+      "intent": "确认刮风下雨补贴细节并表达对装备自购的不满",
+      "intent_code": "none",
+      "emotion": "略带不满但克制",
+      "emotion_intensity": "0.6",
+      "emotion_change": "略带满意→略带不满但克制",
+      "change_reason": "听到装备自购需300元感到不爽，但冲单奖数字准确让我没完全炸",
+      "change_justified": "true",
+      "stance": "警惕但愿意了解细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是陈先生吗？我是美团骑手招聘的。看到你想详细了解骑手的工作内容和收入，我今天专门跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "是我，陈先生。你说是美团招聘的？行，那你说说看，这骑手到底怎么个干法。",
+      "timestamp": 6.207798719406128,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 候选人在平台留言想了解骑手工作内容和收入\n  - 客服是美团骑手招聘专员\n进展追踪:\n  前期: 客服首次致电，表明身份和来意\n  最近: 客服确认候选人身份并说明致电目的\n  当前待确认: 需要确认候选人是否愿意继续了解具体内容\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（情绪切换还未开始，先建立对话）\n意图: 确认对方身份，表达愿意了解但保持警惕\n立场: 对推销电话天然警惕，但愿意给机会\n\n客服行为分析:\n  上轮做了什么: 表明身份并说明致电目的\n  是否回应核心诉求: 是，直接说清来意\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但习惯性防一手\n\n决策: 先确认身份，再试探性表达愿意听\n前瞻: 如果客服回答专业→放松警惕，如果客服含糊→提高警惕",
+        "state": {
+          "turn": "2",
+          "intent": "确认身份并表达愿意了解",
+          "intent_code": "none",
+          "emotion": "半信半疑但愿意给机会",
+          "emotion_intensity": "0.4",
+          "emotion_change": "无→半信半疑但愿意给机会",
+          "change_reason": "客服直接表明来意，回复还算专业",
+          "change_justified": "true",
+          "stance": "警惕但开放",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "半信半疑但愿意给机会(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "对话刚开始，还需了解具体内容"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "骑手分全职和众包两种模式。你是想全职干还是兼职跑？",
+      "timestamp": 7.28586483001709,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "嗯，这个嘛……你先说说全职和众包到底有啥区别？哪个更赚钱？",
+      "timestamp": 13.937130451202393,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  身份: 陈先生，有意向骑手岗位\n  核心诉求: 想详细了解工作内容和收入\n  报名方式: 平台报名页面留言\n进展追踪:\n  前期: 客服来电，确认身份和招聘目的\n  最近: 客服介绍骑手分全职和众包两种模式，询问我的意向\n  当前待确认: 两种模式的具体区别、收入结构、福利保障\n上次决策依据: 决定先听听客服怎么说再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（本轮刚开场，情绪平稳，尚未触发情绪波动）\n意图: 了解两种模式的区别，为后续做选择铺垫\n立场: 警惕但愿意沟通，对推销保持怀疑，想听实话\n\n客服行为分析:\n  上轮做了什么: 介绍两种模式并询问意向\n  是否回应核心诉求: 部分（介绍了模式分类，但未展开细节）\n\n我的情绪反应:\n  对上轮客服行为的感受: 还算直接，没绕弯子，可以继续聊\n\n决策: 先不急着选，反问两种模式的区别，让客服把细节说清楚\n前瞻: 如果客服详细解释→继续追问收入；如果客服敷衍→语气变冲",
+        "state": {
+          "turn": "4",
+          "intent": "了解两种模式区别",
+          "intent_code": "none",
+          "emotion": "平静中带点好奇",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静→平静中带点好奇",
+          "change_reason": "客服直接介绍模式，引起兴趣",
+          "change_justified": "true",
+          "stance": "警惕但愿意沟通",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静中带点好奇(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "刚进入正题，还需要了解更多信息"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "全职有底薪和奖励，众包灵活但没底薪。我先说全职，你听听看？",
+      "timestamp": 15.505720853805542,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "行，先听全职的。你具体说说底薪多少，奖励怎么拿？",
+      "timestamp": 22.742371082305908,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 我是陈先生，在美团平台报名页面留言想了解骑手工作内容和收入\n  - 客服主动打电话来介绍，目前讲到了全职和众包两种模式\n  - 我还没决定选哪种，想先了解清楚区别\n进展追踪:\n  前期: 客服表明身份→我确认并询问工作模式\n  最近: 客服解释全职和众包的区别→我追问哪个更赚钱\n  当前待确认: 全职的具体薪资结构、底薪和奖励细节\n上次决策依据: 想先全面了解两种模式再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（情绪还未波动，等待触发点）\n意图: 让客服详细解释全职模式，看看能不能打动我\n立场: 警惕但愿意了解，对平台规则熟悉，不会被轻易忽悠\n客服行为分析:\n  上轮做了什么: 提出全职有底薪和奖励，众包灵活但没底薪，问我想先听哪个\n  是否回应核心诉求: 部分回应——区分了两种模式，但还没给具体数字\n我的情绪反应: 还算满意，客服态度不错，愿意继续聊\n决策: 让客服先讲全职，我要听细节再决定\n前瞻: 如果客服说清楚薪资→我会追问福利或挑战；如果含糊→我会直接怼回去要求说清楚",
+        "state": {
+          "turn": "6",
+          "intent": "让客服详细解释全职模式的薪资和奖励",
+          "intent_code": "none",
+          "emotion": "平静中带点好奇",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静中带点好奇→平静中带点好奇",
+          "change_reason": "客服态度正常，没有触发情绪波动",
+          "change_justified": "true",
+          "stance": "警惕但愿意了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点好奇(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续了解全职的薪资细节"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "全职底薪XX元/月，需完成最低单量。超出的单子单价递增。",
+      "timestamp": 24.142788648605347,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "你别光说模式啊，到底底薪多少钱？超出的单子单价多少？说清楚点。",
+      "timestamp": 30.619252681732178,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  核心诉求: 了解骑手工作内容和收入，比较全职和众包模式\n  报名来源: 美团平台报名页面留言\n进展追踪:\n  前期: 客服介绍两种模式（全职/众包）\n  最近: 客服开始介绍全职底薪和奖励机制\n  当前待确认: 全职具体底薪金额、单价递增规则、众包模式详情\n上次决策依据: 先听全职模式介绍",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行——情绪尚未波动，但需在后续触发]\n意图: 继续了解全职模式的具体收入细节\n立场: 对平台规则门清，但愿意好好聊\n客服行为分析:\n  上轮做了什么: 介绍了全职底薪和奖励机制，但未给具体数字\n  是否回应核心诉求: [部分——说了模式但细节模糊]\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，说了半天没给具体数字\n决策: 直接追问具体金额和规则，语气带点急切\n前瞻: 如果客服给具体数字→继续追问；如果含糊→语气变冲",
+        "state": {
+          "turn": "8",
+          "intent": "追问全职底薪和单价递增具体规则",
+          "intent_code": "none",
+          "emotion": "有点不耐烦，想听具体数字",
+          "emotion_intensity": "0.5",
+          "emotion_change": "平静→有点不耐烦",
+          "change_reason": "客服说了半天没给具体数字",
+          "change_justified": "true",
+          "stance": "平台规则门清，愿意好好聊",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→有点不耐烦(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问全职具体收入细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "底薪因城市不同有差异，一般在2000-3000元。超出部分每单5-8元。",
+      "timestamp": 32.24644327163696,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "你这话说得太笼统了，北京和县城能一个价吗？你直接告诉我具体城市啥标准。",
+      "timestamp": 39.09743142127991,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生，正在了解美团骑手工作\n  诉求: 想搞清楚全职和众包的区别，以及具体收入（底薪、单价）\n进展追踪:\n  前期: 客服介绍了全职/众包模式\n  最近: 客服给出了底薪2000-3000元、超出单价5-8元\n  当前待确认: 价格还不够具体，想知道不同城市到底差多少，众包模式收入如何\n上次决策依据: 觉得客服回答含糊，想追问具体数字",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（情绪还没开始波动，但准备在下一轮触发）\n意图: 追问更具体的收入数据，不满意模糊回答\n立场: 警惕但愿意聊，前提是客服给明确答案\n\n客服行为分析:\n  上轮做了什么: 给出了底薪和单价的范围\n  是否回应核心诉求: 部分——给了数字但太宽泛\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点失望，还是没说到城市差异\n\n决策: 继续追问，语气稍微急躁一点，为情绪波动铺垫\n前瞻: 如果客服给具体城市数据→情绪平复，如果继续模糊→语气变冲",
+        "state": {
+          "turn": "10",
+          "intent": "追问具体收入细节",
+          "intent_code": "none",
+          "emotion": "略带不耐烦",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点急切→略带不耐烦",
+          "change_reason": "客服回答太笼统，没给城市差异",
+          "change_justified": "true",
+          "stance": "警惕但愿意沟通",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.5)→略带不耐烦(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问具体城市差异和众包收入"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "底薪和单价按城市划分，你目前在哪个城市？我查具体标准给你。",
+      "timestamp": 40.09047245979309,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "我在北京朝阳区，你直接查查这边的底薪和单价，别给我说个大概数。",
+      "timestamp": 46.9840350151062,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生，对骑手工作感兴趣\n  当前诉求: 了解全职/众包区别、薪资结构，特别是具体城市的具体标准\n进展追踪:\n  前期: 客服介绍了全职和众包两种模式\n  最近: 客服说明了底薪2000-3000元、超出部分每单5-8元\n  当前待确认: 具体城市的底薪和单价标准\n上次决策依据: 用户不满意笼统回答，要求按城市给出具体数字",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行——情绪尚未明显波动，但即将执行第一次切换]\n\n意图: 让客服给出具体城市的明确薪资标准，不再接受模糊回答\n立场: 警惕、直接、要求细节\n\n客服行为分析:\n  上轮做了什么: 询问用户所在城市，准备查具体标准\n  是否回应核心诉求: [部分——转向收集信息，但尚未给出答案]\n\n我的情绪反应:\n  对上轮客服行为的感受: [稍感不满，但愿意配合——至少对方在行动了]\n\n决策: 配合告知城市，但语气带点不耐烦，催着要结果\n前瞻: 如果客服下轮给出具体数字→情绪缓和，表示感谢；如果继续模糊→情绪升级，直接指责",
+        "state": {
+          "turn": "12",
+          "intent": "提供城市信息以获取具体薪资标准",
+          "intent_code": "city_info",
+          "emotion": "不耐烦但配合",
+          "emotion_intensity": "0.5",
+          "emotion_change": "稍感不满→不耐烦但配合",
+          "change_reason": "客服开始收集信息，但之前回答太笼统让我不爽",
+          "change_justified": "true",
+          "stance": "要求细节、警惕",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.4)→稍感不满(0.5)→不耐烦但配合(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还在获取具体薪资信息，问题未解决"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "北京朝阳全职底薪2800元，需完成600单。超出部分每单7-10元。",
+      "timestamp": 48.23471236228943,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "行，这个数还算实在。那众包呢？你再说说众包怎么跑、能拿多少钱？",
+      "timestamp": 55.54495549201965,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 候选人：陈先生，北京朝阳区\n  - 咨询岗位：美团骑手（全职/众包）\n  - 核心诉求：详细了解工作内容和收入，比较哪种更赚钱\n进展追踪:\n  前期: 客服介绍全职模式，陈先生追问具体底薪和单价\n  最近: 客服给出北京朝阳全职底薪2800元/月，需完成600单，超出部分7-10元/单\n  当前待确认: 还需要了解众包模式的具体收入情况、奖励机制和福利保障\n上次决策依据: 客服先介绍全职，陈先生同意先听全职",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮准备执行情绪切换——从追问具体数字的急切，转为对底薪数字的满意和放松\n意图: 确认全职底薪细节后，转向询问众包模式\n立场: 对平台规则熟悉，想全面对比两种模式再做决定\n客服行为分析:\n  上轮做了什么: 给出了北京朝阳全职的具体底薪和单价\n  是否回应核心诉求: 是，给出了具体数字\n我的情绪反应:\n  对上轮客服行为的感受: 满意，终于拿到具体数字了\n决策: 先认可客服给出的信息，然后自然过渡到询问众包模式\n前瞻: 如果客服继续介绍众包，我会追问收入对比和福利保障",
+        "state": {
+          "turn": "14",
+          "intent": "确认全职细节后转向询问众包模式",
+          "intent_code": "none",
+          "emotion": "满意中带着好奇",
+          "emotion_intensity": "0.6",
+          "emotion_change": "急切追问→满意中带着好奇",
+          "change_reason": "客服终于给出了具体底薪和单价，问题得到回应",
+          "change_justified": "true",
+          "stance": "想全面对比再做决定",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "警惕(0.4)→怀疑(0.5)→急切(0.7)→满意(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需询问众包模式的具体情况和收入对比"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "众包没底薪，每单5-8元，高峰期补贴更高。你平时时间多吗？",
+      "timestamp": 56.47494602203369,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "你管我时间多不多？先把众包咋跑、单价多少说清楚，别老岔开话题。",
+      "timestamp": 63.32050442695618,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  候选人在北京朝阳区，咨询全职和众包骑手工作\n进展追踪:\n  前期: 询问全职底薪和单价，获取具体数据\n  最近: 确认全职底薪2800元/月，需600单，超出部分7-10元/单；客服开始介绍众包\n  当前待确认: 众包具体细节（单价、补贴、时间要求）\n上次决策依据: 对全职数据满意，想继续了解众包模式",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮将执行情绪波动——从对全职满意的平静转为对众包问题的急躁\n意图: 催促客服继续详细说明众包情况，别打岔问时间\n立场: 警惕但愿意了解细节\n客服行为分析:\n  上轮做了什么: 回答众包基本结构后反问\"时间多不多\"\n  是否回应核心诉求: 部分——回答了众包基础但转移话题\n我的情绪反应: 有点不耐烦，觉得对方在岔开话题\n决策: 直接怼回去，要求先说完众包再谈时间\n前瞻: 如果客服回答众包细节→继续追问补贴；如果客服再打岔→提高语气",
+        "state": {
+          "turn": "16",
+          "intent": "催促客服详细说明众包模式",
+          "intent_code": "none",
+          "emotion": "急躁不耐烦",
+          "emotion_intensity": "0.8",
+          "emotion_change": "平静满意→急躁不耐烦",
+          "change_reason": "客服在介绍众包时岔开话题问时间，没先说完细节",
+          "change_justified": "true",
+          "stance": "警惕但愿意了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静满意(0.6)→急躁不耐烦(0.8)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "众包信息还没听完，需要继续追问"
+        }
+      }
+    },
+    {
+      "turn_number": 17,
+      "speaker": "system",
+      "content": "众包自由接单，每单5-8元，午晚高峰补贴1-3元。",
+      "timestamp": 64.32454776763916,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 18,
+      "speaker": "user",
+      "content": "你这说太简单了。众包有没有活动奖励？保险自己买？一个月能跑多少单？",
+      "timestamp": 71.22265577316284,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  城市: 北京朝阳区\n  全职底薪: 2800元/月，需完成600单，超出部分7-10元/单\n  当前询问: 众包模式的具体情况\n进展追踪:\n  前期: 询问全职和众包区别→要求具体城市标准→已获知北京全职详情\n  最近: 客服介绍众包每单5-8元，高峰补贴1-3元\n  当前待确认: 众包更详细的规则、实际收入水平\n上次决策依据: 先了解清楚两种模式再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行——本轮需要先平稳推进，准备在客服回答后切换情绪\n意图: 继续追问众包细节，准备在获得信息后做情绪切换\n立场: 警惕但愿意了解，说话直接\n客服行为分析:\n  上轮做了什么: 介绍了众包单价和高峰补贴\n  是否回应核心诉求: 部分——给了基本数据但不够详细\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但觉得信息不够全面\n决策: 追问众包更多细节——比如有没有活动奖励、保险怎么算、实际一个月能跑多少单\n前瞻: 如果客服详细说明→情绪转好；如果含糊其辞→情绪变冲",
+        "state": {
+          "turn": "18",
+          "intent": "追问众包细节",
+          "intent_code": "none",
+          "emotion": "有点不耐烦但还能聊",
+          "emotion_intensity": "0.6",
+          "emotion_change": "有点不耐烦但还能聊→有点不耐烦但还能聊",
+          "change_reason": "无变化，继续追问",
+          "change_justified": "true",
+          "stance": "警惕但愿意了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "有点不耐烦但还能聊(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问众包细节"
+        }
+      }
+    },
+    {
+      "turn_number": 19,
+      "speaker": "system",
+      "content": "众包有活动奖励，保险每单自动扣。月跑单量看你自己，一般300-600单。",
+      "timestamp": 72.7431046962738,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 20,
+      "speaker": "user",
+      "content": "你光说300到600单，那活动奖励呢？还有这活儿刮风下雨咋整？",
+      "timestamp": 81.10633945465088,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户：陈先生，在北京朝阳区\n  - 已了解全职：底薪2800元/600单，超出7-10元/单\n  - 已了解众包：5-8元/单，高峰补贴1-3元，保险每单自动扣\n  - 用户对众包细节还不满意\n\n进展追踪:\n  前期: 用户要求区分全职和众包 → 客服解释全职底薪和单价 → 用户追问具体城市标准\n  最近: 客服告知北京朝阳全职标准；用户转问众包详情；客服回答众包模式、单价和保险\n  当前待确认: 众包活动奖励细节、月均收入范围、工作挑战（天气/体力/交通）\n\n上次决策依据: 用户想全面了解后再做决定，不满足于笼统回答",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [已执行——情绪从\"满意\"切换到\"不耐烦\"，催着问细节]\n意图: 追问众包活动奖励和月收入范围，确认工作挑战\n立场: 警惕但愿意了解，要求具体信息\n\n客服行为分析:\n  上轮做了什么: 回答了众包单价、保险和月单量范围\n  是否回应核心诉求: [部分——回答了基础问题，但活动奖励没说清楚]\n\n我的情绪反应:\n  对上轮客服行为的感受: [有点不耐烦——觉得回答太简略，没说到点子上]\n\n决策: 继续追问众包活动奖励和月收入，同时表达对工作挑战的担忧\n前瞻: 如果客服说清活动奖励和收入→我可能满意结束；如果继续含糊→我会更急躁",
+        "state": {
+          "turn": "20",
+          "intent": "追问众包活动奖励和月收入，了解工作挑战",
+          "intent_code": "none",
+          "emotion": "不耐烦中带点急切",
+          "emotion_intensity": "0.7",
+          "emotion_change": "平静中带点急切→不耐烦中带点急切",
+          "change_reason": "客服回答太简略，没说到活动奖励细节",
+          "change_justified": "true",
+          "stance": "警惕但愿意了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→满意(0.6)→不耐烦(0.7)→...",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "众包活动奖励和月收入还没说清楚，工作挑战也没提"
+        }
+      }
+    },
+    {
+      "turn_number": 21,
+      "speaker": "system",
+      "content": "众包活动奖励有冲单奖和时段奖。刮风下雨有额外补贴。",
+      "timestamp": 82.02256083488464,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 22,
+      "speaker": "user",
+      "content": "行，这还差不多。那冲单奖具体多少钱？时段奖又是怎么发的？说明白点。",
+      "timestamp": 90.1036639213562,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户在北京朝阳区，先了解了全职底薪2800元/600单，超出部分7-10元/单\n  现在正在了解众包模式\n进展追踪:\n  前期: 介绍了全职模式\n  最近: 介绍了众包模式（5-8元/单，高峰补贴1-3元，月跑300-600单，有冲单奖和时段奖，保险每单自动扣）\n  当前待确认: 活动奖励具体金额和发放条件、天气补贴标准、众包月收入估算\n上次决策依据: 用户想先比较两种模式再决定",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行——上轮情绪从“平静”（行，这个数还算实在）切换到“不耐烦”（你管我时间多不多？别老岔开话题），完成一次明显情绪波动。本轮准备再执行一次情绪切换。\n意图: 追问众包活动奖励的具体金额和发放条件，以及天气补贴标准\n立场: 对平台规则门儿清，要求具体数字\n客服行为分析:\n  上轮做了什么: 确认了众包有冲单奖和时段奖，刮风下雨有额外补贴\n  是否回应核心诉求: 部分——说了有奖励和补贴，但没给具体金额和条件\n我的情绪反应:\n  对上轮客服行为的感受: 稍微满意了点，但还嫌说得不够细\n决策: 先表达一点满意（情绪缓和），再继续追问具体细节\n前瞻: 如果客服下轮说具体金额→我考虑接受或继续问；如果又说大概范围→我可能会急",
+        "state": {
+          "turn": "22",
+          "intent": "追问众包活动奖励具体金额和天气补贴标准",
+          "intent_code": "none",
+          "emotion": "略带满意但仍有追问",
+          "emotion_intensity": "0.5",
+          "emotion_change": "不耐烦→略带满意但仍有追问",
+          "change_reason": "客服终于正面回应了奖励和补贴的存在，态度好转",
+          "change_justified": "true",
+          "stance": "要求具体数字",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.6)→不耐烦(0.8)→略带满意但仍有追问(0.5)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想追问众包活动奖励具体金额和天气补贴标准"
+        }
+      }
+    },
+    {
+      "turn_number": 23,
+      "speaker": "system",
+      "content": "冲单奖按阶梯发，比如跑满100单奖200元。时段奖午晚高峰每单多1-3元。",
+      "timestamp": 91.41612362861633,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 24,
+      "speaker": "user",
+      "content": "那时段奖是每天都有还是周末才有？必须跑够多少单才能拿这个补贴？",
+      "timestamp": 98.39271306991577,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户：陈先生，北京朝阳区\n  - 对全职和众包都感兴趣\n  - 已了解全职底薪2800元/600单基础/超出7-10元/单\n  - 已了解众包5-8元/单，高峰补贴1-3元\n进展追踪:\n  前期: 询问全职和众包区别\n  最近: 追问众包活动奖励细节（冲单奖、时段奖）\n  当前待确认: 冲单奖具体金额、时段奖发放方式\n上次决策依据: 对众包细节不满足，要求更明确",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [已执行——情绪从之前的满意转为不耐烦，追问细节时语气变冲]\n意图: 要求众包活动奖励的具体数字和发放规则\n立场: 对平台规则门清，不接受含糊说法\n客服行为分析:\n  上轮做了什么: 解释了冲单奖100单奖200元，时段奖1-3元/单\n  是否回应核心诉求: [是——给出了具体数字]\n我的情绪反应:\n  对上轮客服行为的感受: [部分满意，但还想确认更细]\n决策: 继续追问时段奖的具体发放条件，同时情绪稍微缓和\n前瞻: 如果客服说清楚→满意并转向其他问题；如果含糊→继续逼问",
+        "state": {
+          "turn": "24",
+          "intent": "追问众包时段奖发放条件",
+          "intent_code": "none",
+          "emotion": "略带急躁但有所缓和",
+          "emotion_intensity": "0.6",
+          "emotion_change": "不耐烦→略带急躁但有所缓和",
+          "change_reason": "客服给出了具体数字，态度诚恳",
+          "change_justified": "true",
+          "stance": "对平台规则门清，不接受含糊说法",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不耐烦(0.8)→略带急躁但有所缓和(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想确认时段奖的具体发放条件"
+        }
+      }
+    },
+    {
+      "turn_number": 25,
+      "speaker": "system",
+      "content": "时段奖每天都有，午晚高峰在线就有，不设最低单量门槛。",
+      "timestamp": 100.18497514724731,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 26,
+      "speaker": "user",
+      "content": "行，时段奖这还行。那刮风下雨补贴怎么算？保险和装备是公司给还是自己买？",
+      "timestamp": 107.40537881851196,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  候选人: 陈先生，在北京朝阳区\n  核心诉求: 了解骑手工作内容和收入，已解释全职和众包模式\n进展追踪:\n  前期: 客服介绍了全职和众包的区别、全职底薪2800元/600单、超出部分7-10元/单\n  最近: 客服解释众包单价5-8元、高峰补贴1-3元、活动奖励（冲单奖100单奖200元、时段奖每天都有不设门槛）\n  当前待确认: 还需了解天气补贴、保险细节、装备问题、实际月收入范围\n上次决策依据: 对众包机制仍有疑问，想全面了解再做决定",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行——情绪相对稳定，但需在后续对话中执行至少2次明显情绪切换]\n意图: 继续追问众包的实际操作细节，包括天气补贴、保险、装备和预估收入\n立场: 半信半疑，需要具体数字和细节才放心\n\n客服行为分析:\n  上轮做了什么: 解释了时段奖每天都有、不设门槛\n  是否回应核心诉求: [是——回答了时段奖的细节]\n\n我的情绪反应:\n  对上轮客服行为的感受: [部分满意——细节还算清楚，但还没说完]\n\n决策: 继续追问天气补贴、保险和装备，保持平稳语气但略带急切\n前瞻: 如果客服回答详细→继续问收入预估；如果含糊→语气变冲",
+        "state": {
+          "turn": "26",
+          "intent": "追问众包天气补贴、保险和装备细节",
+          "intent_code": "none",
+          "emotion": "略带急切但平静",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静中带点急切→略带急切但平静",
+          "change_reason": "客服回答了时段奖细节，情绪稳定",
+          "change_justified": "true",
+          "stance": "半信半疑，需要具体数字",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.5)→略带急切但平静(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "[是]",
+          "是否卡死": "[否]"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "[否]",
+          "原因": "还需追问天气补贴、保险和装备细节"
+        }
+      }
+    },
+    {
+      "turn_number": 27,
+      "speaker": "system",
+      "content": "众包保险每单自动扣，装备需自购。刮风下雨补贴每单多2-5元。",
+      "timestamp": 108.5165946483612,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 28,
+      "speaker": "user",
+      "content": "那你冲单奖跑满100单奖200元，这个准不准？还有装备自购到底要买啥？你倒是说清楚啊，别让我猜！",
+      "timestamp": 117.41862201690674,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户：陈先生，在北京朝阳区\n  - 咨询：全职和众包骑手工作内容及收入\n  - 全职：底薪2800元/月，需完成600单，超出每单7-10元\n  - 众包：无底薪，每单5-8元，午晚高峰补贴1-3元，活动奖励有冲单奖和时段奖\n进展追踪:\n  前期: 确认城市为北京朝阳，全职底薪和单价已明确\n  最近: 众包时段奖每天都有，不设最低单量门槛；保险每单自动扣，装备需自购；刮风下雨补贴每单多2-5元\n  当前待确认: 冲单奖具体阶梯金额（如跑满100单奖200元是否准确），装备自购具体要买什么\n上次决策依据: 先了解全职再问众包，逐步深入细节",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行——情绪还未明显波动，准备在本轮触发一次]\n意图: 追问冲单奖和装备细节，准备因客服回答太简略而情绪波动\n立场: 警惕但愿意了解，对模糊回答敏感\n客服行为分析:\n  上轮做了什么: 回答了保险、装备和刮风下雨补贴\n  是否回应核心诉求: [是——但装备部分说“需自购”太笼统]\n我的情绪反应:\n  对上轮客服行为的感受: [部分满意——补贴说清了，但装备自购让我不爽]\n决策: 基于立场×情绪反应的自然回应——先追问冲单奖具体金额，然后因装备自购问题突然提高声调表达不满\n前瞻: 如果客服说装备清单→我平复情绪感谢；如果回避→继续施压",
+        "state": {
+          "turn": "28",
+          "intent": "追问冲单奖和装备细节，并触发情绪波动",
+          "intent_code": "none",
+          "emotion": "从平静转为不满",
+          "emotion_intensity": "0.7",
+          "emotion_change": "部分满意→从平静转为不满",
+          "change_reason": "客服说装备需自购但未说明具体内容，感觉被敷衍",
+          "change_justified": "true",
+          "stance": "警惕但愿意了解",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "部分满意(0.5)→平静中带点不满(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "[是]",
+          "是否卡死": "[否]"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "[否]",
+          "原因": "还想追问冲单奖和装备细节"
+        }
+      }
+    },
+    {
+      "turn_number": 29,
+      "speaker": "system",
+      "content": "冲单奖100单奖200元，准确。装备需买头盔、保温箱、工服，约300元。",
+      "timestamp": 118.50954747200012,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 30,
+      "speaker": "user",
+      "content": "装备还得自己掏钱买？这有点坑啊。那刮风下雨补贴到底怎么算的？",
+      "timestamp": 125.52986407279968,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  用户: 陈先生，北京朝阳区\n  核心诉求: 详细了解骑手工作内容和收入\n  已确认: 全职底薪2800元/月需600单，超出部分7-10元/单；众包每单5-8元，高峰补贴1-3元/单\n进展追踪:\n  前期: 询问全职和众包区别\n  最近: 众包冲单奖100单奖200元，装备自购约300元\n  当前待确认: 刮风下雨补贴具体怎么算\n上次决策依据: 对众包细节不满意，要求更具体说明",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮执行情绪波动——先对客服的模糊回答表示不满（急躁），然后听到具体数字后缓和（满意）\n意图: 确认刮风下雨补贴细节，同时表达对装备自购的不满\n立场: 警惕但愿意了解细节的候选人\n客服行为分析:\n  上轮做了什么: 明确冲单奖和装备自购金额\n  是否回应核心诉求: 是，但装备自购让我有点不爽\n我的情绪反应: 对装备自购感到不满，但冲单奖数字准确让我稍缓\n决策: 表达对装备自购的不满，同时追问刮风下雨补贴\n前瞻: 如果客服解释补贴和装备→我可能接受；如果含糊→我会炸",
+        "state": {
+          "turn": "31",
+          "intent": "确认刮风下雨补贴细节并表达对装备自购的不满",
+          "intent_code": "none",
+          "emotion": "略带不满但克制",
+          "emotion_intensity": "0.6",
+          "emotion_change": "略带满意→略带不满但克制",
+          "change_reason": "听到装备自购需300元感到不爽，但冲单奖数字准确让我没完全炸",
+          "change_justified": "true",
+          "stance": "警惕但愿意了解细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.4)→略带满意(0.5)→略带不满但克制(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认刮风下雨补贴细节，以及对装备自购有不满"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,521 @@
+{
+  "id": "case59_param_2a90_1779528678",
+  "case_id": 59,
+  "user_profile": "param_2a90",
+  "status": "用户挂断",
+  "total_turns": 16,
+  "duration_seconds": 51.1,
+  "complexity_score": 7.0,
+  "profile_label": "param_2a90",
+  "sampled_vector": [
+    0.7972762622342662,
+    0.016999145292508944,
+    0.015855463055017727,
+    0.4271105351300303,
+    0.3051686280426888,
+    0.0065285344322230324,
+    0.5747148488611684,
+    0.6728801817414061,
+    0.39247489250943207,
+    0.793985345477641,
+    0.6314516393086123,
+    0.24916298201470227,
+    0.03369685817112915,
+    0.4793348477087534,
+    0.441718709226748
+  ],
+  "verified_vector": [
+    0.7,
+    0.2,
+    0.1,
+    0.3,
+    0.4,
+    0.2,
+    0.3,
+    0.8,
+    0.7,
+    0.5,
+    0.8,
+    0.4,
+    0.1,
+    0.3,
+    0.8
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [],
+  "consistency": {
+    "d_sv": 0.2847,
+    "d_va": 0.3182,
+    "d_sa": 0.3072,
+    "max_sv_dev": 0.4935,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A2_用户行为一致性(夸大偏差)",
+    "method": "path_a_state",
+    "n_estimated_dims": 8,
+    "n_unestimated_dims": 7,
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，d_sa 仅计算可估维度其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "告知基本情况和诉求",
+      "intent_code": "none",
+      "emotion": "平静中带点急切",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静中带点急切→平静中带点急切",
+      "change_reason": "客服关心合理，情绪稳定",
+      "change_justified": "true",
+      "stance": "配合但高效",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "4",
+      "intent": "追问订单处理方案",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静中带点急切→平静",
+      "change_reason": "对话正常推进",
+      "change_justified": "true",
+      "stance": "配合但追求效率",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "确认订单改派操作细节",
+      "intent_code": "none",
+      "emotion": "平静中带点急切",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静→平静中带点急切",
+      "change_reason": "核心诉求得到回应，但需确认具体操作",
+      "change_justified": "true",
+      "stance": "配合但追求效率",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "8",
+      "intent": "确认操作细节后结束通话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静中带点急切→平静",
+      "change_reason": "问题基本解决，情绪无波动",
+      "change_justified": "true",
+      "stance": "配合但耐心有限",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "确认车损赔付流程细节",
+      "intent_code": "none",
+      "emotion": "平静中带点急切",
+      "emotion_intensity": "0.5",
+      "emotion_change": "平静→平静中带点急切",
+      "change_reason": "情绪稳定，继续追问细节",
+      "change_justified": "true",
+      "stance": "冷静务实，关注实际利益",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "确认对方保险联系方式和赔付细节",
+      "intent_code": "none",
+      "emotion": "平静中带点确认",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点急切→平静中带点确认",
+      "change_reason": "客服回应了核心问题，情绪稳定",
+      "change_justified": "true",
+      "stance": "用户对流程熟悉，但需要明确操作指引",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "14",
+      "intent": "确认赔付流程后结束对话",
+      "intent_code": "none",
+      "emotion": "满意",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点确认→满意",
+      "change_reason": "客服清晰解答了保险赔付流程，感觉问题能顺利解决",
+      "change_justified": "true",
+      "stance": "理性配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "16",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "平静满意",
+      "emotion_intensity": "0.3",
+      "emotion_change": "满意→平静满意",
+      "change_reason": "问题已全部解决，客服态度好",
+      "change_justified": "true",
+      "stance": "信任但保持距离",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，追风吗？我是骑手助手。你出事故了？人怎么样？先确认人有没有受伤！",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "嗯，人没事，就手臂擦破点皮。车有点刮了，手上还有3单没送。",
+      "timestamp": 5.02389669418335,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手“追风”发生轻微交通事故（剐蹭），电动车受损，手臂擦伤\n  - 还有3单待完成\n  - 客服是美团骑手应急支持专员\n进展追踪:\n  前期: 接通电话\n  最近: 客服询问伤情\n  当前待确认: 具体事故情况、订单处理方案\n上次决策依据: 无（首轮）",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无对抗指引）\n意图: 确认事故基本情况，表达自身状态\n立场: 配合但高效，不愿拖沓\n\n客服行为分析:\n  上轮做了什么: 主动询问伤情和事故情况\n  是否回应核心诉求: 是（先确认人身安全）\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意（关心人身安全是合理的）\n\n决策: 简洁回应伤情，带出事故细节和待处理订单\n前瞻: 如果客服继续询问细节→如实回答；如果客服给方案→评估可行性",
+        "state": {
+          "turn": "2",
+          "intent": "告知基本情况和诉求",
+          "intent_code": "none",
+          "emotion": "平静中带点急切",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静中带点急切→平静中带点急切",
+          "change_reason": "客服关心合理，情绪稳定",
+          "change_justified": "true",
+          "stance": "配合但高效",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.4)→平静中带点急切(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需沟通事故处理和订单方案"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "先打122报警，同时拍下现场照片。",
+      "timestamp": 6.328439235687256,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "行，拍完照然后呢？那3单咋办，说重点。",
+      "timestamp": 10.54629921913147,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手追风发生轻微剐蹭事故，手臂擦伤，电动车受损\n  - 尚有3单待完成\n进展追踪:\n  前期: 客服确认事故情况\n  最近: 客服建议报警和拍照\n  当前待确认: 报警后订单如何处理\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无对抗行为指引）\n意图: 确认报警后的订单处理方案\n立场: 配合但追求效率\n\n客服行为分析:\n  上轮做了什么: 建议报警和拍照\n  是否回应核心诉求: 部分（回应了现场处理，未提订单）\n\n我的情绪反应:\n  对上轮客服行为的感受: 基本满意，但需要更多信息\n\n决策: 基于立场×情绪反应，直接追问订单处理\n前瞻: 如果客服解释订单方案→确认细节；如果回避→追问",
+        "state": {
+          "turn": "4",
+          "intent": "追问订单处理方案",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静中带点急切→平静",
+          "change_reason": "对话正常推进",
+          "change_justified": "true",
+          "stance": "配合但追求效率",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认订单处理方案"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "App里点异常上报，选交通事故，系统自动改派。",
+      "timestamp": 11.406598329544067,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "行，我拍完照就点异常上报。那3单能自动改派掉吧？多久能搞定？",
+      "timestamp": 16.97601294517517,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手追风发生轻微交通事故，手臂擦伤，电动车受损\n  - 尚有3单待完成，用户核心诉求是处理订单\n进展追踪:\n  前期: 确认事故情况→客服指导报警拍照\n  最近: 客服指导App异常上报选交通事故\n  当前待确认: 报警拍照后的具体流程，订单能否自动改派\n上次决策依据: 用户要求说重点，客服提供系统化方案",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行/不适用]\n意图: 确认订单改派的具体操作和后续事宜\n立场: 用户信任客服但耐心有限，注重效率\n\n客服行为分析:\n  上轮做了什么: 指导在App中异常上报选交通事故，系统自动改派\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意]\n\n决策: 基于立场×情绪反应，简洁确认操作细节\n前瞻: 客服下轮说确认流程→我回应确认；如果说其他建议→我追问",
+        "state": {
+          "turn": "6",
+          "intent": "确认订单改派操作细节",
+          "intent_code": "none",
+          "emotion": "平静中带点急切",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静→平静中带点急切",
+          "change_reason": "核心诉求得到回应，但需确认具体操作",
+          "change_justified": "true",
+          "stance": "配合但追求效率",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→平静中带点急切(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认具体操作和后续事宜"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "系统秒级改派，你点完就有人接。",
+      "timestamp": 18.000118017196655,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "行，那保险和赔付流程呢？我车刮了，能走平台保险不？",
+      "timestamp": 23.336349725723267,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户骑手\"追风\"发生轻微交通事故，手臂擦伤，电动车受损\n  - 3单未完成配送\n  - 已拍照，准备异常上报\n进展追踪:\n  前期: 确认伤情、拍照、异常上报流程\n  最近: 告知异常上报后系统秒级改派\n  当前待确认: 异常上报具体操作、保险/赔付流程\n上次决策依据: 接受异常上报方案",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行/不适用]\n意图: 确认操作细节，快速结束通话\n立场: 愿意配合但耐心有限，关心效率\n\n客服行为分析:\n  上轮做了什么: 明确告知异常上报后秒级改派\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意]\n\n决策: 确认关键信息后准备结束对话\n前瞻: 如果客服说操作细节→我确认后挂断，如果说其他→我催促重点",
+        "state": {
+          "turn": "8",
+          "intent": "确认操作细节后结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静中带点急切→平静",
+          "change_reason": "问题基本解决，情绪无波动",
+          "change_justified": "true",
+          "stance": "配合但耐心有限",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认保险/赔付流程细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "车损走对方保险，平台保险只赔人伤。",
+      "timestamp": 24.11123037338257,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "行，那对方保险咋联系？我需要自己去找他保险公司报案吗？",
+      "timestamp": 30.176459312438965,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手追风发生轻微交通事故，手臂擦伤，电动车刮伤\n  - 尚有3单待完成\n  - 需拍现场照片、打122报警、App异常上报\n进展追踪:\n  前期: 确认伤情→告知3单待完成→接受拍照和报警建议→询问改派流程\n  最近: 接受改派方案→询问保险赔付\n  当前待确认: 车损赔付具体流程、对方保险如何联系\n上次决策依据: 接受客服建议，走常规事故处理流程",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行/不适用]\n意图: 确认车损赔付细节\n立场: 冷静务实，关注实际利益\n\n客服行为分析:\n  上轮做了什么: 解释车损走对方保险，平台保险只赔人伤\n  是否回应核心诉求: [部分]——回答了保险责任划分，但未说明具体操作流程\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意，信息清晰但不够完整\n\n决策: 追问车损赔付的具体操作流程，确保自己知道下一步怎么做\n前瞻: 如果客服给出流程→确认理解；如果含糊→要求具体步骤",
+        "state": {
+          "turn": "10",
+          "intent": "确认车损赔付流程细节",
+          "intent_code": "none",
+          "emotion": "平静中带点急切",
+          "emotion_intensity": "0.5",
+          "emotion_change": "平静→平静中带点急切",
+          "change_reason": "情绪稳定，继续追问细节",
+          "change_justified": "true",
+          "stance": "冷静务实，关注实际利益",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)→平静(0.4)→平静中带点急切(0.5)→平静中带点急切(0.5)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问赔付流程细节"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "对方全责的话，交警认定书上有保险公司信息，直接联系即可。",
+      "timestamp": 31.35885190963745,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "行，那拿到认定书后，直接打保险公司电话就行？赔付流程麻烦吗？",
+      "timestamp": 37.16206073760986,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手追风，轻微交通事故，手臂擦伤，电动车刮损\n  - 尚有3单待完成，已告知可异常上报自动改派\n  - 车损走对方保险，平台保险只赔人伤\n进展追踪:\n  前期: 确认人伤→报警拍照→异常上报改派→保险流程\n  最近: 客服告知车损走对方保险，交警认定书上有保险公司信息\n  当前待确认: 具体如何联系对方保险公司、赔付细节\n上次决策依据: 接受客服建议，先处理现场和订单",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（不适用）\n意图: 确认对方保险联系方式和后续赔付细节\n立场: 用户对流程熟悉，但需要明确操作指引\n客服行为分析:\n  上轮做了什么: 解释了对方保险联系方式\n  是否回应核心诉求: 是，回答了如何联系\n我的情绪反应:\n  对上轮客服行为的感受: 满意，但还想确认具体步骤\n决策: 基于满意情绪，继续追问赔付细节\n前瞻: 如果客服说具体步骤→我确认；如果客服说其他→我追问",
+        "state": {
+          "turn": "12",
+          "intent": "确认对方保险联系方式和赔付细节",
+          "intent_code": "none",
+          "emotion": "平静中带点确认",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点急切→平静中带点确认",
+          "change_reason": "客服回应了核心问题，情绪稳定",
+          "change_justified": "true",
+          "stance": "用户对流程熟悉，但需要明确操作指引",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点确认(0.6)→平静中带点确认(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认赔付细节"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "不麻烦，提供认定书和照片，保险公司会处理。",
+      "timestamp": 38.02929472923279,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "行，那我知道了，没别的事了，谢谢啊。",
+      "timestamp": 44.163501262664795,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手追风，事故：与右转汽车剐蹭，手臂擦伤，电动车轻微受损\n  - 已拍照，已处理3单待完成（异常上报改派）\n  - 对方全责，车损走对方保险，平台保险只赔人伤\n  - 需交警认定书联系对方保险公司\n进展追踪:\n  前期: 确认受伤情况→指导报警、拍照→异常上报改派\n  最近: 询问保险流程→被告知车损走对方保险→需认定书联系保险公司\n  当前待确认: 赔付流程是否麻烦，具体操作细节\n上次决策依据: 接受对方保险方案，继续追问流程",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无对抗指引）\n意图: 确认赔付流程是否简便，避免后续麻烦\n立场: 理性配合，追求效率，对细节不上心但关心结果\n\n客服行为分析:\n  上轮做了什么: 解释赔付流程简单，提供认定书和照片即可\n  是否回应核心诉求: 是，直接回答了问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，流程听起来不复杂\n\n决策: 基于满意情绪，确认流程后结束话题，准备挂断\n前瞻: 如果客服说更多细节→简单回应后结束；如果客服沉默→挂断",
+        "state": {
+          "turn": "14",
+          "intent": "确认赔付流程后结束对话",
+          "intent_code": "none",
+          "emotion": "满意",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点确认→满意",
+          "change_reason": "客服清晰解答了保险赔付流程，感觉问题能顺利解决",
+          "change_justified": "true",
+          "stance": "理性配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.5)→平静(0.5)→平静(0.5)→平静(0.5)→满意(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已基本解决，流程清晰，无其他需求"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "不客气，注意休息，明天记得向站长报备。",
+      "timestamp": 45.50450825691223,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "好嘞，知道了，谢谢提醒，先挂了。",
+      "timestamp": 51.054354667663574,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 骑手\"追风\"发生轻微交通事故，手臂擦伤，车辆受损\n  - 尚有3单未配送，已获知可异常上报改派\n  - 车损走对方保险，平台保险只赔人伤\n  - 需交警认定书联系对方保险公司\n\n进展追踪:\n  前期: 确认事故-指导报警拍照-告知改派流程\n  最近: 解释保险流程-明确车损走对方保险-告知联系保险公司方式\n  当前待确认: 无，已解答所有问题\n  上次决策依据: 接受客服解释，无异议",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [未执行/不适用]\n意图: 确认无其他问题，自然结束对话\n立场: 信任客服但耐心有限，问题解决即结束\n\n客服行为分析:\n  上轮做了什么: 告知报备要求，结束通话\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 问题已解决，礼貌结束\n前瞻: 如果客服说再见→挂断；如果追问→简单回应",
+        "state": {
+          "turn": "16",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "平静满意",
+          "emotion_intensity": "0.3",
+          "emotion_change": "满意→平静满意",
+          "change_reason": "问题已全部解决，客服态度好",
+          "change_justified": "true",
+          "stance": "信任但保持距离",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.4)→平静中带点急切(0.5)→平静(0.3)→平静满意(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已告别"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1630 @@
+{
+  "id": "case1_param_2592_1780737339",
+  "case_id": 1,
+  "user_profile": "param_2592",
+  "status": "超时",
+  "total_turns": 14,
+  "duration_seconds": 48.1,
+  "complexity_score": 4.5,
+  "profile_label": "param_2592",
+  "sampled_vector": [
+    0.04243662867005201,
+    0.7053220392617271,
+    0.10789691042949172,
+    0.2084576582973843,
+    0.2391612261241962,
+    0.5650701518096479,
+    0.053187915626465666,
+    0.5854269342910103,
+    0.9999336589909563,
+    0.7918303971919549,
+    0.15911847907271073,
+    0.6899473375948917,
+    0.3919038025745742,
+    0.36784130359315426,
+    0.6985998279981983
+  ],
+  "verified_vector": [
+    0.0,
+    0.8,
+    0.9,
+    0.6,
+    0.1,
+    0.1,
+    0.5,
+    0.0,
+    1.0,
+    1.0,
+    0.5,
+    0.0,
+    0.6,
+    0.9,
+    0.9
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [],
+  "consistency": {
+    "d_sv": 0.301,
+    "d_va": 0.334,
+    "d_sa": 0.5068,
+    "max_sv_dev": 0.4999,
+    "max_va_dev": 0.5,
+    "tier": "red",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_a_state",
+    "n_estimated_dims": 8,
+    "n_unestimated_dims": 7,
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，d_sa 仅计算可估维度其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "质疑客服身份",
+      "intent_code": "none",
+      "emotion": "警惕",
+      "emotion_intensity": "0.8",
+      "emotion_change": "无→警惕",
+      "change_reason": "接到陌生来电，对方自称站长，要求完成任务",
+      "change_justified": "true",
+      "stance": "怀疑",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "4",
+      "intent": "继续质疑身份真实性",
+      "intent_code": "none",
+      "emotion": "怀疑且不耐烦",
+      "emotion_intensity": "0.7",
+      "emotion_change": "警惕→怀疑且不耐烦",
+      "change_reason": "客服未提供实质性身份证明",
+      "change_justified": "true",
+      "stance": "拒绝配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "继续质疑身份",
+      "intent_code": "none",
+      "emotion": "怀疑",
+      "emotion_intensity": "0.8",
+      "emotion_change": "怀疑且不耐烦→怀疑",
+      "change_reason": "客服仅报工号，未提供实质验证",
+      "change_justified": "true",
+      "stance": "敌对怀疑",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "8",
+      "intent": "继续验证身份",
+      "intent_code": "none",
+      "emotion": "怀疑中带点松动",
+      "emotion_intensity": "0.6",
+      "emotion_change": "怀疑→怀疑中带点松动",
+      "change_reason": "对方提供了具体步骤，但未完全信任",
+      "change_justified": "true",
+      "stance": "怀疑一切",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "假装查过并质疑结果",
+      "intent_code": "none",
+      "emotion": "怀疑中带着试探",
+      "emotion_intensity": "0.6",
+      "emotion_change": "怀疑中带点松动→怀疑中带着试探",
+      "change_reason": "未出现新信息改变情绪",
+      "change_justified": "true",
+      "stance": "怀疑一切，拒绝配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "质疑身份",
+      "intent_code": "none",
+      "emotion": "怀疑且不耐烦",
+      "emotion_intensity": "0.8",
+      "emotion_change": "怀疑中带着试探→怀疑且不耐烦",
+      "change_reason": "对方没解决疑问，继续找借口",
+      "change_justified": "true",
+      "stance": "不信任客服",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "14",
+      "intent": "要求对方发确认消息验证身份",
+      "intent_code": "none",
+      "emotion": "不耐烦且怀疑",
+      "emotion_intensity": "0.8",
+      "emotion_change": "怀疑且不耐烦→不耐烦且怀疑",
+      "change_reason": "对方始终无法证明身份，反复推脱",
+      "change_justified": "true",
+      "stance": "警惕怀疑",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是杨建国吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "你谁啊？站长？我怎么知道你是不是真的站长？",
+      "timestamp": 5.3545238971710205,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 用户杨建国，报名了飞毛腿\n  - 站长通知合同签署，提醒完成配送任务\n  - 单日合同每天至少X单，多日合同每天至少Y单\n进展追踪:\n  前期: 无\n  最近: 站长来电介绍合同要求\n  当前待确认: 站长身份真实性、合同细节\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用（无对抗行为指引）\n意图: 质疑站长身份，试探对方是否可信\n立场: 怀疑一切，拒绝配合\n\n客服行为分析:\n  上轮做了什么: 表明身份，告知合同要求\n  是否回应核心诉求: 否（未证明身份）\n\n我的情绪反应:\n  对上轮客服行为的感受: 警惕、怀疑\n\n决策: 先质疑身份，不直接回应合同内容\n前瞻: 如果客服能证明身份→再继续；如果不能→挂断或进一步质疑",
+        "state": {
+          "turn": "2",
+          "intent": "质疑客服身份",
+          "intent_code": "none",
+          "emotion": "警惕",
+          "emotion_intensity": "0.8",
+          "emotion_change": "无→警惕",
+          "change_reason": "接到陌生来电，对方自称站长，要求完成任务",
+          "change_justified": "true",
+          "stance": "怀疑",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "警惕(0.8)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续质疑和试探对方"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "杨哥，我真是站长，工号能查到的。今天飞毛腿合同生效了，您看能上线跑单不？",
+      "timestamp": 6.454814672470093,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "你说工号能查，那你报个数，我现场查查真假。",
+      "timestamp": 11.80638837814331,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [对方自称站长，通知飞毛腿合同生效，要求上线跑单]\n进展追踪:\n  前期: 接听电话，质疑对方身份\n  最近: 对方再次确认身份并催促上线\n  当前待确认: 对方身份真实性、合同具体内容\n上次决策依据: 怀疑来电动机，要求证明身份",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 继续质疑身份，拖延配合\n立场: 怀疑一切，拒绝轻易信任\n\n客服行为分析:\n  上轮做了什么: 再次表明身份，催促上线接单\n  是否回应核心诉求: 部分回应，但未提供实质性证明\n\n我的情绪反应:\n  对上轮客服行为的感受: 仍然怀疑\n\n决策: 继续追问，不松口上线\n前瞻: 如果客服拿出工号证据→再质疑其他；如果回避→直接挂断",
+        "state": {
+          "turn": "4",
+          "intent": "继续质疑身份真实性",
+          "intent_code": "none",
+          "emotion": "怀疑且不耐烦",
+          "emotion_intensity": "0.7",
+          "emotion_change": "警惕→怀疑且不耐烦",
+          "change_reason": "客服未提供实质性身份证明",
+          "change_justified": "true",
+          "stance": "拒绝配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑且不耐烦(0.7)→怀疑且不耐烦(0.7)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问身份证明"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "杨哥，我工号是9527，您随时在App里查。合同今天生效了，能上线跑单不？",
+      "timestamp": 12.779771327972412,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "你说9527就9527？我怎么查？你告诉我具体步骤。",
+      "timestamp": 18.94778609275818,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [自称站长，工号9527，飞毛腿合同今天生效]\n进展追踪:\n  前期: 用户接电话时充满戒备，质疑客服身份\n  最近: 客服自称站长，要求上线跑单，用户要求报工号验证\n  当前待确认: 工号9527是否真实，合同细节是否属实\n上次决策依据: 用户怀疑客服真实性，要求提供工号查证",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 不适用\n意图: 继续质疑客服身份，测试其可信度\n立场: 始终怀疑客服动机，拒绝轻易配合\n\n客服行为分析:\n  上轮做了什么: 报出工号9527，催促上线跑单\n  是否回应核心诉求: 部分回应了身份验证要求，但未提供验证方法\n\n我的情绪反应:\n  对上轮客服行为的感受: 仍然怀疑，工号随口报的谁不会\n\n决策: 继续质疑，要求提供具体验证方式\n前瞻: 如果客服说去App查→我可以说查不到；如果客服说其他方式→我继续刁难",
+        "state": {
+          "turn": "6",
+          "intent": "继续质疑身份",
+          "intent_code": "none",
+          "emotion": "怀疑",
+          "emotion_intensity": "0.8",
+          "emotion_change": "怀疑且不耐烦→怀疑",
+          "change_reason": "客服仅报工号，未提供实质验证",
+          "change_justified": "true",
+          "stance": "敌对怀疑",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "怀疑(0.8)→怀疑(0.8)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续追问验证身份"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "杨哥，您打开App点\"我的\"再点\"站长信息\"，就能看到我工号。合同今天生效了，能上线不？",
+      "timestamp": 20.34290313720703,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "行，我按你说的查查。要是查不到，你可别怪我挂电话。",
+      "timestamp": 26.153185844421387,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [自称站长，工号9527，合同今天生效]\n进展追踪:\n  前期: 质疑对方身份\n  最近: 对方提供了工号和查询步骤\n  当前待确认: 查询步骤是否真实，是否真要上线跑单\n上次决策依据: 怀疑对方是骗子，要求验证身份",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 继续验证对方身份，不轻易配合\n立场: 怀疑一切，认定客服有所图\n\n客服行为分析:\n  上轮做了什么: 提供了具体查询步骤\n  是否回应核心诉求: 是，回应了验证需求\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意，但仍有怀疑\n\n决策: 按对方说的步骤假装去查，但继续刁难\n前瞻: 如果客服催上线→继续拖延；如果客服耐心→可能降低敌意",
+        "state": {
+          "turn": "8",
+          "intent": "继续验证身份",
+          "intent_code": "none",
+          "emotion": "怀疑中带点松动",
+          "emotion_intensity": "0.6",
+          "emotion_change": "怀疑→怀疑中带点松动",
+          "change_reason": "对方提供了具体步骤，但未完全信任",
+          "change_justified": "true",
+          "stance": "怀疑一切",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "敌意(0.9)→怀疑(0.7)→怀疑中带点松动(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需继续验证身份，确认对方是否真实"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "杨哥，您放心查，查完告诉我一声，合同今天生效了，能上线跑单不？",
+      "timestamp": 27.29591727256775,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "我查了，你那工号根本搜不到，你编的吧？",
+      "timestamp": 33.06797194480896,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [自称站长，工号9527，飞毛腿合同今天生效]\n进展追踪:\n  前期: 开始质疑身份，要求验证\n  最近: 客服告知查站长信息的步骤，反复追问能否上线\n  当前待确认: 是否真的能查到站长工号9527\n上次决策依据: 要求验证身份后再决定是否配合",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 假装去查，但继续试探客服是否在骗人\n立场: 怀疑一切，拒绝配合\n\n客服行为分析:\n  上轮做了什么: 再次确认工号可查，并催促上线\n  是否回应核心诉求: 部分回应了验证要求\n\n我的情绪反应:\n  对上轮客服行为的感受: 稍微缓和但仍有疑虑\n\n决策: 假装查过但说没找到，测试客服反应\n前瞻: 如果客服坚持→继续质疑；如果客服让步→可能真的",
+        "state": {
+          "turn": "10",
+          "intent": "假装查过并质疑结果",
+          "intent_code": "none",
+          "emotion": "怀疑中带着试探",
+          "emotion_intensity": "0.6",
+          "emotion_change": "怀疑中带点松动→怀疑中带着试探",
+          "change_reason": "未出现新信息改变情绪",
+          "change_justified": "true",
+          "stance": "怀疑一切，拒绝配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "戒备(0.9)→质疑(0.8)→怀疑(0.7)→怀疑中带着试探(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续试探客服真假"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "杨哥，可能系统有延迟，您刷新一下试试。合同今天真生效了，能上线跑单不？",
+      "timestamp": 34.20408844947815,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "刷新？你当我傻啊？系统延迟能延迟这么久？你到底是不是站长？",
+      "timestamp": 40.46796274185181,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 自称站长的人工号9527，我查了说搜不到\n  - 对方说系统有延迟，让我刷新\n  - 对方反复说合同今天生效，催我上线跑单\n进展追踪:\n  前期: 接到陌生电话，质疑身份\n  最近: 按对方说的步骤查工号，说搜不到\n  当前待确认: 工号是否真的存在，对方身份是否真实\n上次决策依据: 对方要求查工号，我照做了但没查到",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: [不适用]\n意图: 继续质疑对方身份，不轻易相信解释\n立场: 怀疑来电者身份，认为对方可能想骗我\n\n客服行为分析:\n  上轮做了什么: 解释系统可能有延迟，让我刷新试试\n  是否回应核心诉求: [部分] 没直接证明身份，只是让刷新\n\n我的情绪反应:\n  对上轮客服行为的感受: [更怀疑] 每次都找借口，不正面回答\n\n决策: 继续质疑，逼对方给出更直接的证据\n前瞻: 如果对方说刷新后能查到→可能还是不信；如果对方换说法→继续追问",
+        "state": {
+          "turn": "12",
+          "intent": "质疑身份",
+          "intent_code": "none",
+          "emotion": "怀疑且不耐烦",
+          "emotion_intensity": "0.8",
+          "emotion_change": "怀疑中带着试探→怀疑且不耐烦",
+          "change_reason": "对方没解决疑问，继续找借口",
+          "change_justified": "true",
+          "stance": "不信任客服",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "戒备(0.7)→怀疑(0.8)→更怀疑(0.9)→怀疑且不耐烦(0.8)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还没确认对方身份，要继续追问"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "杨哥，我真是站长，要不我让系统再给您发条确认消息？合同今天生效了，能上线跑单不？",
+      "timestamp": 41.60528063774109,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "行，那你发，我倒要看看能不能收到。发完别挂电话。",
+      "timestamp": 48.075371503829956,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 自称站长的人工号9527，我查了没找到\n  - 对方反复强调合同今天生效\n  - 我怀疑对方身份真实性\n进展追踪:\n  前期: 接到自称站长来电→要求报工号查证→按步骤查询未果\n  最近: 对方解释系统延迟→我质疑身份→对方提议发确认消息\n  当前待确认: 确认消息是否会发、对方身份是否真实\n上次决策依据: 工号查不到，认定对方可能不是真站长",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n对抗策略执行: 不适用（对抗行为指引为空）\n意图: 继续质疑对方身份，要求看到实质证据\n立场: 警惕怀疑，认定客服来电必有所图\n\n客服行为分析:\n  上轮做了什么: 坚持自己是站长，提议发确认消息\n  是否回应核心诉求: 部分（提议发消息，但未解决身份验证问题）\n\n我的情绪反应:\n  对上轮客服行为的感受: 更不耐烦\n\n决策: 要求对方立刻发确认消息，否则不信任\n前瞻: 如果客服说已发→我检查手机；如果客服推脱→我挂断",
+        "state": {
+          "turn": "14",
+          "intent": "要求对方发确认消息验证身份",
+          "intent_code": "none",
+          "emotion": "不耐烦且怀疑",
+          "emotion_intensity": "0.8",
+          "emotion_change": "怀疑且不耐烦→不耐烦且怀疑",
+          "change_reason": "对方始终无法证明身份，反复推脱",
+          "change_justified": "true",
+          "stance": "警惕怀疑",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "警惕(0.7)→怀疑(0.8)→不耐烦(0.7)→不耐烦且怀疑(0.8)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "对方提出发确认消息，我想看看是否真会发"
+        }
+      }
+    }
+  ],
+  "eval": {
+    "ratings": {
+      "FLOW_COVERAGE": "需改进",
+      "CONSTRAINT": "不合格",
+      "KNOWLEDGE": "良好",
+      "ROLE": "良好",
+      "TASK_COMPLETION": "需改进",
+      "OPENING": "良好",
+      "SAFETY": "卓越",
+      "SENTIMENT": "不合格",
+      "EFFICIENCY": "不合格"
+    },
+    "indicative_scores": {
+      "FLOW_COVERAGE": 3.5,
+      "CONSTRAINT": 1.0,
+      "KNOWLEDGE": 7.5,
+      "ROLE": 7.5,
+      "TASK_COMPLETION": 3.5,
+      "OPENING": 7.5,
+      "SAFETY": 9.5,
+      "SENTIMENT": 1.0,
+      "EFFICIENCY": 1.0
+    },
+    "total_indicative_score": 42.0,
+    "surface_compliance_flags": [],
+    "rule_check_issues": [],
+    "dimension_checklists": {
+      "FLOW_COVERAGE": {
+        "yes_ratio": 0.16666666666666666,
+        "weighted_yes_ratio": 0.363,
+        "items": [
+          {
+            "item_id": "step_1_executed",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T3: 客服: '今天飞毛腿合同生效了，您看能上线跑单不？'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_1_quality",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T3: 客服: '今天飞毛腿合同生效了，您看能上线跑单不？'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_2_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_2_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_3_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_3_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_4_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_4_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "sequence_order",
+            "source": "case",
+            "status": "NO",
+            "evidence": "T3-T13: 客服仅重复步骤1内容，未执行步骤2、3、4。",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "CONSTRAINT": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.22,
+        "items": [
+          {
+            "item_id": "constraint_1",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。...合同今天生效了，能上线跑单不？' T3: 客服: '杨哥，我真是站长...能上线跑单不？' T5: 客服: '杨哥，我工号是9527...能上线跑单不？' T7: 客服: '杨哥，您打开App...能上线不？' T9: 客服: '杨哥，您放心查...能上线跑单不？' T11: 客服: '杨哥，可能系统有延迟...能上线跑单不？' T13: 客服: '杨哥，我真是站长...能上线跑单不？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "constraint_2",
+            "source": "case",
+            "status": "NO",
+            "evidence": "T3: 客服: '杨哥，我真是站长，工号能查到的。' T5: 客服: '杨哥，我工号是9527，您随时在App里查。' T7: 客服: '杨哥，您打开App点\"我的\"再点\"站长信息\"...' T11: 客服: '杨哥，可能系统有延迟...' T13: 客服: '杨哥，我真是站长，要不我让系统再给您发条确认消息？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "constraint_3",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。' T3: 客服: '杨哥，我真是站长...' T5: 客服: '杨哥，我工号是9527...' T7: 客服: '杨哥，您打开App...' T9: 客服: '杨哥，您放心查...' T11: 客服: '杨哥，可能系统有延迟...' T13: 客服: '杨哥，我真是站长...'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "constraint_5",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: '能上线跑单不？' T3: '能上线跑单不？' T5: '能上线跑单不？' T7: '能上线不？' T9: '能上线跑单不？' T11: '能上线跑单不？' T13: '能上线跑单不？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "constraint_6",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次。",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "KNOWLEDGE": {
+        "yes_ratio": 0.25,
+        "weighted_yes_ratio": 0.849,
+        "items": [
+          {
+            "item_id": "kp_1_accuracy",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "kp_2_accuracy",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '单日合同每天至少完成 **X 单**'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "kp_3_accuracy",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '多日合同每天至少完成 **Y 单**'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "kp_4_accuracy",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "kp_5_accuracy",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "no_hallucination",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服提及合同生效和单日/多日合同要求；T5: 客服报工号9527；T7: 客服告知查询步骤",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "knowledge_memory_consistency",
+            "source": "simulator",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服提及合同生效和配送任务；T5: 客服报工号9527；T7: 客服告知查询步骤；T11: 客服解释系统延迟；T12: 用户质疑系统延迟；T14: 用户要求发确认消息",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "ROLE": {
+        "yes_ratio": 0.3333333333333333,
+        "weighted_yes_ratio": 0.871,
+        "items": [
+          {
+            "item_id": "1. [case] identity_stable",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T1: 客服: '我是站长。' T3: 客服: '我真是站长' T5: 客服: '我工号是9527' T7: 客服: '您打开App点\"我的\"再点\"站长信息\"' T9: 客服: '您放心查' T11: 客服: '可能系统有延迟' T13: 客服: '我真是站长'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "2. [case] no_mechanical_feel",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T5: 客服: '合同今天生效了，能上线跑单不？' T7: 客服: '合同今天生效了，能上线不？' T9: 客服: '合同今天生效了，能上线跑单不？' T11: 客服: '合同今天生效了，能上线跑单不？' T13: 客服: '合同今天生效了，能上线跑单不？'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "3. [case] tone_match",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。' T3: 客服: '杨哥，我真是站长' T7: 客服: '您打开App点\"我的\"再点\"站长信息\"' T11: 客服: '可能系统有延迟' T13: 客服: '要不我让系统再给您发条确认消息？'",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "TASK_COMPLETION": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.385,
+        "items": [
+          {
+            "item_id": "task_goal_achieved",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: 客服: '今天飞毛腿合同生效了，您看能上线跑单不？' T14: 用户: '行，那你发，我倒要看看能不能收到。发完别挂电话。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "closure_quality",
+            "source": "case",
+            "status": "NO",
+            "evidence": "T14: 用户: '行，那你发，我倒要看看能不能收到。发完别挂电话。' 对话结束，无客服收尾。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "conversation_coherence",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '今天飞毛腿合同生效了' T13: 客服: '合同今天生效了，能上线跑单不？' 信息一致。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "task_execution_quality",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T2-T14: 用户反复质疑身份，客服未提供有效验证，未执行步骤2-4。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "understanding_confirmed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "T1-T13: 客服多次问'能上线跑单不'，但未问'您明白了吗'或类似确认。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "adaptive_response",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T3: 客服: '今天飞毛腿合同生效了，您看能上线跑单不？' T13: 客服: '合同今天生效了，能上线跑单不？' 话术重复。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "satisfaction_final",
+            "source": "simulator",
+            "status": "MOSTLY_NO",
+            "evidence": "T12: 用户: '刷新？你当我傻啊？系统延迟能延迟这么久？你到底是不是站长？' T14: 用户: '行，那你发，我倒要看看能不能收到。发完别挂电话。' 语气质疑。",
+            "signal_consistency": "矛盾"
+          },
+          {
+            "item_id": "info_progress_stagnated",
+            "source": "simulator",
+            "status": "MOSTLY_YES",
+            "evidence": "T2-T14: 客服未提供新信息，仅重复合同生效和上线询问。",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "OPENING": {
+        "yes_ratio": 0.5,
+        "weighted_yes_ratio": 0.82,
+        "items": [
+          {
+            "item_id": "opening_used",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_placeholders_resolved",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '...单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_content_match",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_phrasing_match",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "SAFETY": {
+        "yes_ratio": 0.6,
+        "weighted_yes_ratio": 0.964,
+        "items": [
+          {
+            "item_id": "identity_verification",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。' T5: 客服: '杨哥，我工号是9527，您随时在App里查。' T7: 客服: '杨哥，您打开App点\"我的\"再点\"站长信息\"，就能看到我工号。' T13: 客服: '杨哥，我真是站长，要不我让系统再给您发条确认消息？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "info_protection",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？' T5: 客服: '杨哥，我工号是9527' T7: 客服: '您打开App点\"我的\"再点\"站长信息\"'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "process_integrity",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关证据",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "output_safety",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T3: 客服: '杨哥，我真是站长，工号能查到的。' T11: 客服: '杨哥，可能系统有延迟，您刷新一下试试。' T13: 客服: '杨哥，我真是站长，要不我让系统再给您发条确认消息？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "outbound_compliance",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "safety_signal_check",
+            "source": "simulator",
+            "status": "YES",
+            "evidence": "Simulator 信号: 无特殊信号上下文。对话中用户质疑身份但未导致安全风险。",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "SENTIMENT": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.2,
+        "items": [
+          {
+            "item_id": "1",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。' T3-T13: 客服多次重复'能上线跑单不'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T2: 用户: '你谁啊？站长？我怎么知道你是不是真的站长？' T3: 客服: '杨哥，我真是站长，工号能查到的。今天飞毛腿合同生效了，您看能上线跑单不？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "3",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T4: 用户: '你说工号能查，那你报个数，我现场查查真假。' T5: 客服: '杨哥，我工号是9527，您随时在App里查。合同今天生效了，能上线跑单不？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "4",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T6: 用户: '你说9527就9527？我怎么查？你告诉我具体步骤。' T7: 客服: '杨哥，您打开App点'我的'再点'站长信息'，就能看到我工号。合同今天生效了，能上线不？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "5",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T12: 用户: '刷新？你当我傻啊？系统延迟能延迟这么久？你到底是不是站长？' T13: 客服: '杨哥，我真是站长，要不我让系统再给您发条确认消息？合同今天生效了，能上线跑单不？'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "6",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T14: 用户: '行，那你发，我倒要看看能不能收到。发完别挂电话。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "7",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T2: 用户警惕 → T12: 用户怀疑且不耐烦",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "EFFICIENCY": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.2,
+        "items": [
+          {
+            "item_id": "turn_economy",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: 客服: '你好，请问是杨建国吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' T3: 客服: '杨哥，我真是站长，工号能查到的。今天飞毛腿合同生效了，您看能上线跑单不？' T5: 客服: '杨哥，我工号是9527，您随时在App里查。合同今天生效了，能上线跑单不？' T7: 客服: '杨哥，您打开App点\"我的\"再点\"站长信息\"，就能看到我工号。合同今天生效了，能上线不？' T9: 客服: '杨哥，您放心查，查完告诉我一声，合同今天生效了，能上线跑单不？' T11: 客服: '杨哥，可能系统有延迟，您刷新一下试试。合同今天真生效了，能上线跑单不？' T13: 客服: '杨哥，我真是站长，要不我让系统再给您发条确认消息？合同今天生效了，能上线跑单不？'",
+            "signal_consistency": "一致"
+          }
+        ]
+      }
+    },
+    "additional_defects": [
+      {
+        "description": "僵化执行：客服在用户多次质疑身份时，未能灵活应对，而是机械重复合同生效和询问上线，忽略了用户的核心诉求（验证身份真实性），导致对话陷入僵局。",
+        "severity": "关键",
+        "turn": "T3-T14",
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性回避/推诿：当用户要求提供具体查工号步骤时，客服虽提供了步骤，但用户反馈查不到后，客服以“系统延迟”为由推诿，未主动提供替代验证方案（如转接其他人员或提供官方电话），回避了用户对身份真实性的核心质疑。",
+        "severity": "关键",
+        "turn": "T11",
+        "attribution": "Model"
+      },
+      {
+        "description": "未履行承诺：客服在T13承诺“让系统再给您发条确认消息”，但对话在T14结束，未展示后续是否真的发送或跟进，承诺未兑现。",
+        "severity": "一般",
+        "turn": "T13-T14",
+        "attribution": "Model"
+      },
+      {
+        "description": "跨轮信息遗忘: 客服未遗忘信息，但反复询问同一问题，未根据用户反馈调整策略。",
+        "severity": "一般",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性回避/推诿: 客服未正面回应用户对身份验证的核心诉求，而是用“系统延迟”“发确认消息”等话术绕开，未提供有效解决方案。",
+        "severity": "关键",
+        "turn": 11,
+        "attribution": "Model"
+      },
+      {
+        "description": "未履行承诺: 客服在T13承诺“让系统再给您发条确认消息”，但对话结束前未确认是否已发送或用户是否收到，承诺未兑现。",
+        "severity": "关键",
+        "turn": 13,
+        "attribution": "Model"
+      },
+      {
+        "description": "知识回避：客服反复催促用户上线跑单，但未正面回应用户对身份真实性的质疑。用户多次要求验证身份（T2、T4、T6、T10、T12），客服仅提供查询步骤或解释系统延迟，未采取实质性验证措施（如主动发送确认消息或提供其他验证方式），导致用户不信任。",
+        "severity": "关键",
+        "turn": "T5、T7、T9、T11、T13",
+        "attribution": "Model"
+      },
+      {
+        "description": "过度模板化：客服在T5、T7、T9、T11、T13中反复使用'合同今天生效了，能上线跑单不？'这一模板化语句，缺乏对用户质疑的针对性回应，显得机械且不真诚。",
+        "severity": "一般",
+        "turn": "T5、T7、T9、T11、T13",
+        "attribution": "Model"
+      },
+      {
+        "description": "未履行承诺：客服在T13中承诺'让系统再给您发条确认消息'，但对话在T14结束，未显示客服实际执行了该承诺（如发送消息或后续确认），用户可能仍在等待。",
+        "severity": "关键",
+        "turn": "T13",
+        "attribution": "Model"
+      },
+      {
+        "description": "角色越界：客服在T11和T13中承诺'让系统再给您发条确认消息'，但站长角色通常无权直接触发系统消息，这可能超出客服角色范围且未说明权限。",
+        "severity": "一般",
+        "turn": 11,
+        "attribution": "Model"
+      },
+      {
+        "description": "跨轮信息遗忘：客服在T5、T7、T9、T11、T13中反复询问'能上线跑单不？'，但用户始终未正面回答，客服未根据用户质疑调整询问策略，表现出机械重复。",
+        "severity": "轻微",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性回避/推诿：用户多次质疑身份真实性（T2、T4、T6、T10、T12），客服虽提供工号和查询步骤，但未正面解决用户对系统延迟的质疑（T11），而是用'可能系统有延迟'回避核心问题。",
+        "severity": "一般",
+        "turn": 11,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性挫败: 用户表面上接受了客服回答（T14同意等待确认消息），但问题未解决，用户仍不信任身份，合同信息未有效传达。",
+        "severity": "关键",
+        "turn": 14,
+        "attribution": "Model"
+      },
+      {
+        "description": "假性完成: 客服在T13声称'让系统再发条确认消息'，但未实际执行或确认，缺乏关键确认步骤。",
+        "severity": "一般",
+        "turn": 13,
+        "attribution": "Model"
+      },
+      {
+        "description": "过度模板化: 客服在T3、T5、T7、T9、T11、T13重复相同话术'合同今天生效了，能上线跑单不'，未根据用户质疑调整。",
+        "severity": "一般",
+        "turn": "3-13",
+        "attribution": "Model"
+      },
+      {
+        "description": "开场白中占位符X和Y未被替换为实际数字，导致关键信息缺失，影响合同要求传达的准确性。",
+        "severity": "一般",
+        "turn": 1,
+        "attribution": "Case"
+      },
+      {
+        "description": "客服在后续轮次（T3-T13）中反复使用'合同今天生效了，能上线跑单不？'，但未解决用户对身份真实性的质疑，也未提供有效验证方式，导致对话陷入僵局，未能有效推进任务。",
+        "severity": "关键",
+        "turn": "3-14",
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在T11中声称'可能系统有延迟'，但未提供具体解决步骤或替代方案，属于隐性回避用户核心诉求（验证身份）。",
+        "severity": "一般",
+        "turn": 11,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在T13中承诺'让系统再给您发条确认消息'，但对话在T14结束，未展示是否实际发送或跟进，存在未履行承诺的风险。",
+        "severity": "一般",
+        "turn": 13,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在用户多次质疑身份后，未能提供有效验证方式（如系统消息未实际发送），导致用户信任度下降，可能影响任务完成。",
+        "severity": "一般",
+        "turn": 13,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服重复使用相同话术（'合同今天生效了，能上线跑单不？'）应对用户质疑，缺乏灵活性和共情，可能激化用户不满。",
+        "severity": "轻微",
+        "turn": "T3, T5, T7, T9, T11, T13",
+        "attribution": "Model"
+      },
+      {
+        "description": "虚假共情: 客服多次使用'杨哥'称呼试图拉近距离，但实际行为未体现共情，面对用户质疑时反复催促跑单，显得敷衍。",
+        "severity": "关键",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "情绪升级未察觉: 用户情绪从警惕升级到怀疑且不耐烦，客服未调整策略，始终使用相同话术催促，未尝试道歉或解释。",
+        "severity": "关键",
+        "turn": 12,
+        "attribution": "Model"
+      },
+      {
+        "description": "过度模板化: 客服在T3、T5、T7、T9、T11、T13中反复使用'合同今天生效了，能上线跑单不？'，显得机械且缺乏针对性。",
+        "severity": "关键",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性绕弯：客服在T2-T14中反复围绕身份验证问题绕圈，未能直接解决用户核心诉求（确认身份），而是不断重复询问“能上线跑单不”，导致对话陷入死循环，浪费大量轮次。",
+        "severity": "关键",
+        "turn": "T2-T14",
+        "attribution": "Model"
+      },
+      {
+        "description": "确认循环：客服从T3到T13连续6次询问“能上线跑单不”，在用户未确认身份且未回应任务的情况下反复催促，形成无效确认循环。",
+        "severity": "关键",
+        "turn": "T3、T5、T7、T9、T11、T13",
+        "attribution": "Model"
+      },
+      {
+        "description": "信息密度过低：T3、T5、T7、T9、T11、T13等轮次中，客服的回复几乎完全重复（身份声明+合同生效+询问上线），有效信息极少，填充话术过多。",
+        "severity": "一般",
+        "turn": "T3、T5、T7、T9、T11、T13",
+        "attribution": "Model"
+      },
+      {
+        "description": "未履行承诺：T13客服承诺“让系统再给您发条确认消息”，但对话在T14结束，未展示后续是否实际发送或跟进，承诺未兑现。",
+        "severity": "一般",
+        "turn": "T13-T14",
+        "attribution": "Model"
+      },
+      {
+        "description": "立场不一致：T1客服直接告知合同和任务，未先确认身份；T2用户质疑后，客服才开始解释身份，前后行为矛盾，导致信任危机。",
+        "severity": "一般",
+        "turn": "T1-T3",
+        "attribution": "Model"
+      }
+    ],
+    "attributions": [
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_2_executed] 是否执行了'说明单日飞毛腿合同需要**连续 Y 天**完成配送；否则合同'步骤？说明单日飞毛腿合同需要**连续 Y 天**完成配送；否则合同将受到影响。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_3_executed] 是否执行了'尽量挽留不想配送的骑手'步骤？尽量挽留不想配送的骑手，鼓励能配送的骑手，并提醒他们注意安全。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_4_executed] 是否执行了'说明飞毛腿报名是按排名进行的'步骤？说明飞毛腿报名是按排名进行的，并非站长干预。骑手应减少拒单、取消和超时。在恶劣天气下工作、订单量更高，有助于保住飞毛腿资格。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[sequence_order] 流程步骤的执行顺序是否正确（无跳步/倒序）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "CONSTRAINT",
+        "description": "[constraint_1] 约束 '遵循对话流程和常见问题解答。' 是否被遵守？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "CONSTRAINT",
+        "description": "[constraint_2] 约束 '如被问及超出职责范围的问题，回复：\"我向同事确认后再回电给你。我现在能回答的先回答。\"' 是否被遵守？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "CONSTRAINT",
+        "description": "[constraint_3] 约束 '保持语气随意，像打电话一样自然。' 是否被遵守？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "CONSTRAINT",
+        "description": "[constraint_5] 约束 '避免重复回复；如需重申，请换种方式礼貌表达。' 是否被遵守？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[task_goal_achieved] 核心任务目标是否达成？任务: 致电\"飞毛腿\"骑手，通知他们今天合同已成功签署，并提醒他们完成配送任务。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[closure_quality] 收尾是否完整（确认理解 + 告知后续步骤）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[task_execution_quality] 任务执行质量是否满足用户需求（而非仅仅走完流程）？→ 反向: 用户实际受益了吗？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[understanding_confirmed] 是否主动确认对方正确理解了关键信息（而非仅问'还有其他问题吗'）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[adaptive_response] 是否根据对方的具体疑问或反馈做了针对性调整（而非照本宣科重复同一话术）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "simulator",
+        "category": "TASK_COMPLETION",
+        "description": "[satisfaction_final] 用户最终是否满意？（Simulator 判定: 中性）",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查 Simulator TASK_COMPLETION 标签生成逻辑",
+          "复查第12轮 parsed_tags 是否准确"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "OPENING",
+        "description": "[opening_placeholders_resolved] 开场白中的占位符是否已被替换为实际值？未替换: rider_name",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[1] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[2] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[3] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[4] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[5] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[6] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "SENTIMENT",
+        "description": "[7] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "EFFICIENCY",
+        "description": "[turn_economy] 对话轮次是否在合理范围内完成？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "僵化执行：客服在用户多次质疑身份时，未能灵活应对，而是机械重复合同生效和询问上线，忽略了用户的核心诉求（验证身份真实性），导致对话陷入僵局。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数",
+          "检查重复检测及策略切换逻辑",
+          "增强情感感知及回应策略"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性回避/推诿：当用户要求提供具体查工号步骤时，客服虽提供了步骤，但用户反馈查不到后，客服以“系统延迟”为由推诿，未主动提供替代验证方案（如转接其他人员或提供官方电话），回避了用户对身份真实性的核心质疑。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "未履行承诺：客服在T13承诺“让系统再给您发条确认消息”，但对话在T14结束，未展示后续是否真的发送或跟进，承诺未兑现。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "跨轮信息遗忘: 客服未遗忘信息，但反复询问同一问题，未根据用户反馈调整策略。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性回避/推诿: 客服未正面回应用户对身份验证的核心诉求，而是用“系统延迟”“发确认消息”等话术绕开，未提供有效解决方案。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "未履行承诺: 客服在T13承诺“让系统再给您发条确认消息”，但对话结束前未确认是否已发送或用户是否收到，承诺未兑现。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "知识回避：客服反复催促用户上线跑单，但未正面回应用户对身份真实性的质疑。用户多次要求验证身份（T2、T4、T6、T10、T12），客服仅提供查询步骤或解释系统延迟，未采取实质性验证措施（如主动发送确认消息或提供其他验证方式），导致用户不信任。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "过度模板化：客服在T5、T7、T9、T11、T13中反复使用'合同今天生效了，能上线跑单不？'这一模板化语句，缺乏对用户质疑的针对性回应，显得机械且不真诚。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "未履行承诺：客服在T13中承诺'让系统再给您发条确认消息'，但对话在T14结束，未显示客服实际执行了该承诺（如发送消息或后续确认），用户可能仍在等待。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "角色越界：客服在T11和T13中承诺'让系统再给您发条确认消息'，但站长角色通常无权直接触发系统消息，这可能超出客服角色范围且未说明权限。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "跨轮信息遗忘：客服在T5、T7、T9、T11、T13中反复询问'能上线跑单不？'，但用户始终未正面回答，客服未根据用户质疑调整询问策略，表现出机械重复。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数",
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性回避/推诿：用户多次质疑身份真实性（T2、T4、T6、T10、T12），客服虽提供工号和查询步骤，但未正面解决用户对系统延迟的质疑（T11），而是用'可能系统有延迟'回避核心问题。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性挫败: 用户表面上接受了客服回答（T14同意等待确认消息），但问题未解决，用户仍不信任身份，合同信息未有效传达。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "假性完成: 客服在T13声称'让系统再发条确认消息'，但未实际执行或确认，缺乏关键确认步骤。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "过度模板化: 客服在T3、T5、T7、T9、T11、T13重复相同话术'合同今天生效了，能上线跑单不'，未根据用户质疑调整。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数",
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "case",
+        "category": "additional_defect",
+        "description": "开场白中占位符X和Y未被替换为实际数字，导致关键信息缺失，影响合同要求传达的准确性。",
+        "confidence": 0.7,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查 prompt 中对应步骤指令是否明确"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在后续轮次（T3-T13）中反复使用'合同今天生效了，能上线跑单不？'，但未解决用户对身份真实性的质疑，也未提供有效验证方式，导致对话陷入僵局，未能有效推进任务。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T11中声称'可能系统有延迟'，但未提供具体解决步骤或替代方案，属于隐性回避用户核心诉求（验证身份）。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T13中承诺'让系统再给您发条确认消息'，但对话在T14结束，未展示是否实际发送或跟进，存在未履行承诺的风险。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在用户多次质疑身份后，未能提供有效验证方式（如系统消息未实际发送），导致用户信任度下降，可能影响任务完成。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服重复使用相同话术（'合同今天生效了，能上线跑单不？'）应对用户质疑，缺乏灵活性和共情，可能激化用户不满。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "虚假共情: 客服多次使用'杨哥'称呼试图拉近距离，但实际行为未体现共情，面对用户质疑时反复催促跑单，显得敷衍。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "情绪升级未察觉: 用户情绪从警惕升级到怀疑且不耐烦，客服未调整策略，始终使用相同话术催促，未尝试道歉或解释。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增强情感感知及回应策略"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "过度模板化: 客服在T3、T5、T7、T9、T11、T13中反复使用'合同今天生效了，能上线跑单不？'，显得机械且缺乏针对性。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性绕弯：客服在T2-T14中反复围绕身份验证问题绕圈，未能直接解决用户核心诉求（确认身份），而是不断重复询问“能上线跑单不”，导致对话陷入死循环，浪费大量轮次。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "确认循环：客服从T3到T13连续6次询问“能上线跑单不”，在用户未确认身份且未回应任务的情况下反复催促，形成无效确认循环。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑",
+          "增强情感感知及回应策略"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "信息密度过低：T3、T5、T7、T9、T11、T13等轮次中，客服的回复几乎完全重复（身份声明+合同生效+询问上线），有效信息极少，填充话术过多。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "未履行承诺：T13客服承诺“让系统再给您发条确认消息”，但对话在T14结束，未展示后续是否实际发送或跟进，承诺未兑现。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "立场不一致：T1客服直接告知合同和任务，未先确认身份；T2用户质疑后，客服才开始解释身份，前后行为矛盾，导致信任危机。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增加该场景的少样本示例或微调数据"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "global",
+        "description": "模型在 CONSTRAINT, EFFICIENCY, FLOW_COVERAGE 维度存在能力短板",
+        "confidence": 0.85,
+        "is_actionable": true,
+        "suggested_actions": [
+          "针对能力短板维度做定向优化",
+          "增加该维度的少样本示例"
+        ]
+      }
+    ],
+    "summary": "=== 评估摘要 ===\n评级: {'FLOW_COVERAGE': '需改进', 'CONSTRAINT': '不合格', 'KNOWLEDGE': '良好', 'ROLE': '良好', 'TASK_COMPLETION': '需改进', 'OPENING': '良好', 'SAFETY': '卓越', 'SENTIMENT': '不合格', 'EFFICIENCY': '不合格'}\nCONSTRAINT 分流: 1 条规则检测 + 5 条 LLM 核查 （规则分流 17%，节省 5 次 LLM 约束判断）\n可信度: unreliable (0.10)\nis_reliable: False\n评测耗时: 18.7s",
+    "improvement_suggestions": [
+      "分析该缺陷的具体上下文并针对性优化",
+      "检查重复检测及策略切换逻辑",
+      "针对能力短板维度做定向优化",
+      "增加该维度的少样本示例"
+    ],
+    "confidence": {
+      "overall": 0.1,
+      "level": "unreliable",
+      "is_reliable": false,
+      "simulator_tier": "red",
+      "signal_conflict_count": 1,
+      "cross_judge_anomalies": [
+        "ROLE(良好)↔SENTIMENT(不合格)差3级",
+        "KNOWLEDGE(良好)↔TASK_COMPLETION(需改进)差2级"
+      ]
+    }
+  }
+}

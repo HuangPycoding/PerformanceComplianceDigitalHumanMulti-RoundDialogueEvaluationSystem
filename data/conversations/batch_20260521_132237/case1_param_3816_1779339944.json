@@ -1,0 +1,272 @@
+{
+  "id": "case1_param_3816_1779339944",
+  "case_id": 1,
+  "user_profile": "param_3816",
+  "status": "正常结束",
+  "total_turns": 8,
+  "duration_seconds": 18.0,
+  "complexity_score": 5.4,
+  "profile_label": "param_3816",
+  "sampled_vector": [
+    0.3650055632237267,
+    0.9768213064662783,
+    0.36209859035133196,
+    0.36944924177490146,
+    0.278811126591154,
+    0.9295926568439505,
+    0.21631733530683253,
+    0.18097114006574205,
+    0.6566529609736103,
+    0.6131943988264685,
+    0.3239821061546597,
+    0.43081508125408574,
+    0.5560770601342158,
+    0.6797315019791159,
+    0.8005672217415941
+  ],
+  "verified_vector": [
+    0.2,
+    0.9,
+    0.3,
+    0.2,
+    0.5,
+    0.9,
+    0.2,
+    0.4,
+    0.9,
+    0.9,
+    0.3,
+    0.4,
+    0.4,
+    0.8,
+    0.8
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [
+    "probe",
+    "contradiction"
+  ],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认合同状态和具体单量要求",
+      "intent_code": "confirm_details",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "中性→中性",
+      "change_reason": "信息正常接收",
+      "change_justified": "true",
+      "stance": "谨慎确认",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "追问具体单数",
+      "intent_code": "none",
+      "emotion": "不耐烦",
+      "emotion_intensity": "0.5",
+      "emotion_change": "平静→不耐烦",
+      "change_reason": "客服未直接回答，推诿到App",
+      "change_justified": "true",
+      "stance": "对数字较真",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "确认信息完毕，准备结束",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "稍不耐烦→平静",
+      "change_reason": "得到明确数字，需求已满足",
+      "change_justified": "true",
+      "stance": "对规则较真但讲理",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "8",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.2",
+      "emotion_change": "平静→平静",
+      "change_reason": "信息已确认，无变化",
+      "change_justified": "true",
+      "stance": "信息明确即可结束",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "合同签了是吧？那X和Y具体是多少单，你说清楚。",
+      "timestamp": 3.9791488647460938,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  核心诉求: 接到站长电话通知飞毛腿合同签署及任务要求\n进展追踪:\n  前期: 第1轮，站长自我介绍并说明合同签署情况\n  最近: 站长提醒午餐晚餐高峰期需上线，并告知单日/多日合同的最低单量要求\n  当前待确认: 确认合同是否已正式签署，以及具体的最低单量数值\n上次决策依据: 初次接触，先确认基本信息",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认合同签署状态和具体单量要求\n立场: 对平台规则不太了解，需要明确信息\n\n客服行为分析:\n  上轮做了什么: 通知合同签署，提醒高峰期上线，告知最低单量要求\n  是否回应核心诉求: 部分，告知了要求但未明确具体数值\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，信息还算清晰但不够具体\n\n决策: 直接询问具体的最低单量数值，确认合同已签\n前瞻: 如果客服明确数值→确认并结束；如果含糊→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认合同状态和具体单量要求",
+          "intent_code": "confirm_details",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "中性→中性",
+          "change_reason": "信息正常接收",
+          "change_justified": "true",
+          "stance": "谨慎确认",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认具体单量数值和合同状态"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "单日合同每天至少完成X单，多日合同每天至少完成Y单。具体数字你可以在App里看到。",
+      "timestamp": 4.859564304351807,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "你直接说数字不就行了，非得让我自己去查？",
+      "timestamp": 8.919624328613281,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  合同已签署，我是飞毛腿骑手\n进展追踪:\n  前期: 确认合同签署\n  最近: 询问X和Y具体单数，客服说App里看\n  当前待确认: X和Y具体数值\n上次决策依据: 需要明确数字",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 追问X和Y的具体数值，不接受模糊回答\n立场: 对数字较真，必须得到明确说法\n\n客服行为分析:\n  上轮做了什么: 重复了X和Y，但说具体数字在App里看\n  是否回应核心诉求: 部分，没有直接给出数字\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得在推诿\n\n决策: 坚持要客服直接说数字，不自己去查\n前瞻: 如果客服给数字→确认；如果继续推诿→表达不满",
+        "state": {
+          "turn": "4",
+          "intent": "追问具体单数",
+          "intent_code": "none",
+          "emotion": "不耐烦",
+          "emotion_intensity": "0.5",
+          "emotion_change": "平静→不耐烦",
+          "change_reason": "客服未直接回答，推诿到App",
+          "change_justified": "true",
+          "stance": "对数字较真",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)→不耐烦(0.5)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问X和Y的具体数值"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "X是8单，Y是12单。记得高峰期上线啊。",
+      "timestamp": 9.543295621871948,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "行，8单12单记住了。没别的事我挂了。",
+      "timestamp": 13.772894859313965,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿\n  - 合同已签署\n  - 单日合同每天至少8单\n  - 多日合同每天至少12单\n  - 高峰期需要上线\n\n进展追踪:\n  前期: 确认合同签署，询问具体单数要求\n  最近: 客服告知X=8，Y=12\n  当前待确认: 无\n  上次决策依据: 要求对方明确数字",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认信息后结束对话\n立场: 对规则较真但讲理\n\n客服行为分析:\n  上轮做了什么: 给出具体数字8和12\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，终于说清楚了\n\n决策: 确认信息后准备结束对话\n前瞻: 如果客服继续提醒→简单确认；如果客服告别→回应结束",
+        "state": {
+          "turn": "6",
+          "intent": "确认信息完毕，准备结束",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "稍不耐烦→平静",
+          "change_reason": "得到明确数字，需求已满足",
+          "change_justified": "true",
+          "stance": "对规则较真但讲理",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.2)→稍不耐烦(0.6)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "信息已确认，无其他需求"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "好的，那祝你跑单顺利，注意安全！",
+      "timestamp": 14.429093599319458,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "好，知道了。挂了。",
+      "timestamp": 18.024540424346924,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已成功签署合同\n  - 单日合同每天至少完成8单\n  - 多日合同每天至少完成12单\n进展追踪:\n  前期: 确认合同签署、询问具体单数\n  最近: 客服告知8单和12单，并提醒高峰期上线\n  当前待确认: 无\n上次决策依据: 信息已明确，准备结束通话",
+        "thought": "审视: 上轮回复是否偏离画像？否\n意图: 确认信息后结束通话\n立场: 信息明确即可，不纠缠\n客服行为分析:\n  上轮做了什么: 告知具体单数并祝福\n  是否回应核心诉求: 是\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息清楚\n决策: 自然结束通话\n前瞻: 如果客服再问→简单回应后挂断",
+        "state": {
+          "turn": "8",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.2",
+          "emotion_change": "平静→平静",
+          "change_reason": "信息已确认，无变化",
+          "change_justified": "true",
+          "stance": "信息明确即可结束",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.2)→平静(0.2)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，信息已确认"
+        }
+      }
+    }
+  ]
+}

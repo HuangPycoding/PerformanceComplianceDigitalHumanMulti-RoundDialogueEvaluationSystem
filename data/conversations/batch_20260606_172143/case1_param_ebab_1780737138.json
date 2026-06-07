@@ -1,0 +1,1255 @@
+{
+  "id": "case1_param_ebab_1780737138",
+  "case_id": 1,
+  "user_profile": "param_ebab",
+  "status": "用户挂断",
+  "total_turns": 12,
+  "duration_seconds": 37.9,
+  "complexity_score": 4.5,
+  "profile_label": "param_ebab",
+  "sampled_vector": [
+    0.9107711435761481,
+    0.7643347482510923,
+    0.299668392959533,
+    0.6500917348702245,
+    0.9606357824834306,
+    0.9299265381546503,
+    0.5614604888192095,
+    0.4932181980975942,
+    0.4646591050377438,
+    0.8593233708051212,
+    0.4617153103982211,
+    0.04282627379966557,
+    0.4082207514664379,
+    0.21114943425931385,
+    0.32515146141950935
+  ],
+  "verified_vector": [
+    0.75,
+    0.85,
+    0.3,
+    0.4,
+    0.7,
+    0.9,
+    0.4,
+    0.6,
+    0.6,
+    0.75,
+    0.6,
+    0.15,
+    0.2,
+    0.25,
+    0.1
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [],
+  "consistency": {
+    "d_sv": 0.2602,
+    "d_va": 0.3434,
+    "d_sa": 0.2773,
+    "max_sv_dev": 0.4606,
+    "max_va_dev": 0.5,
+    "tier": "yellow",
+    "primary_deviation": "A2_用户行为一致性(夸大偏差)",
+    "method": "path_a_state",
+    "n_estimated_dims": 8,
+    "n_unestimated_dims": 7,
+    "path_a_note": "仅估算 ~8/15 维(情绪+stance+边界+一致性)，d_sa 仅计算可估维度其余维度回退0.5。Path A 用于快速筛查，Path B 为权威审计。Path A 系统性偏悲观是已知局限，非异常。"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认具体任务要求",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "初始→平静",
+      "change_reason": "接到通知，情绪平稳",
+      "change_justified": "true",
+      "stance": "配合但需要明确细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "确认今天能否开始配送",
+      "intent_code": "none",
+      "emotion": "平静中带点配合",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静→平静中带点配合",
+      "change_reason": "信息已明确，情绪稳定",
+      "change_justified": "true",
+      "stance": "配合但需确认细节",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "high"
+    },
+    {
+      "turn": "6",
+      "intent": "追问合同具体时长",
+      "intent_code": "none",
+      "emotion": "略带疑惑但耐心",
+      "emotion_intensity": "0.4",
+      "emotion_change": "平静中带点配合→略带疑惑但耐心",
+      "change_reason": "客服回避了合同时长问题，感觉需要追问清楚",
+      "change_justified": "true",
+      "stance": "配合但注重细节，希望明确规则",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "8",
+      "intent": "确认信息并准备行动",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "略带疑惑但耐心→平静",
+      "change_reason": "信息已充分了解，准备开始工作",
+      "change_justified": "true",
+      "stance": "配合但谨慎",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "10",
+      "intent": "结束对话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静→平静",
+      "change_reason": "信息已明确，无新变化",
+      "change_justified": "true",
+      "stance": "配合完成任务",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "12",
+      "intent": "结束对话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "问题已解决，无新诉求",
+      "change_justified": "true",
+      "stance": "配合用户",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "好的，我知道了。那X单和Y单具体是多少？",
+      "timestamp": 5.094913959503174,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿\n  - 合同已签署\n  - 需完成每日最低单量\n进展追踪:\n  前期: 接到站长电话\n  最近: 站长确认身份并提醒任务要求\n  当前待确认: 具体每日最低单量X和Y是多少\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无对抗行为指引）\n意图: 确认具体任务要求\n立场: 配合但需要明确细节\n\n客服行为分析:\n  上轮做了什么: 确认身份并告知基本规则\n  是否回应核心诉求: 部分（告知了规则但未说明具体数字）\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，接受通知但需要更具体信息\n\n决策: 自然询问具体单量要求\n前瞻: 如果客服给出数字→确认接受；如果含糊→追问",
+        "state": {
+          "turn": "2",
+          "intent": "确认具体任务要求",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "初始→平静",
+          "change_reason": "接到通知，情绪平稳",
+          "change_justified": "true",
+          "stance": "配合但需要明确细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "初始(0.5)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认具体单量要求"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "X单是8单，Y单是12单。你今天能开始配送吗？",
+      "timestamp": 6.22605037689209,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "可以，今天能开始。不过想问下这个合同是签多久的？",
+      "timestamp": 11.488327980041504,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿\n  - 单日合同每天至少8单\n  - 多日合同每天至少12单\n进展追踪:\n  前期: 接听电话，确认身份\n  最近: 确认了X单和Y单的具体数字\n  当前待确认: 今天是否开始配送\n上次决策依据: 需要明确具体任务要求",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 确认今天能否开始配送\n立场: 配合但需确认细节\n\n客服行为分析:\n  上轮做了什么: 明确了X单和Y单的具体数字，并询问今天能否开始配送\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 基于立场×情绪反应的自然回应——可以开始配送，但想确认一下合同细节\n前瞻: 如果客服说今天开始→我会问合同期限；如果客服说其他→我会配合",
+        "state": {
+          "turn": "4",
+          "intent": "确认今天能否开始配送",
+          "intent_code": "none",
+          "emotion": "平静中带点配合",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静→平静中带点配合",
+          "change_reason": "信息已明确，情绪稳定",
+          "change_justified": "true",
+          "stance": "配合但需确认细节",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "high"
+        },
+        "emotion_curve": {
+          "轨迹": "冷淡(0.6)→平静(0.4)→平静中带点配合(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认合同细节"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "单日合同需要连续Y天完成配送，多日合同也是每天Y单。你今天先跑起来吧！",
+      "timestamp": 12.53516936302185,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "站长，你说的这些我都明白。但合同到底签多久？单日和多日分别是几天？",
+      "timestamp": 18.432514190673828,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 单日合同每天至少完成8单\n  - 多日合同每天至少完成12单\n  - 今天可以开始配送\n进展追踪:\n  前期: 接到站长电话，确认合同签署\n  最近: 客服说明X单=8单，Y单=12单；确认今天能开始\n  当前待确认: 合同具体时长未明确回答\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 不适用\n意图: 追问合同具体时长\n立场: 配合但注重细节，希望明确规则\n\n客服行为分析:\n  上轮做了什么: 回避合同时长问题，催促开始配送\n  是否回应核心诉求: 部分，未明确回答合同时长\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点困惑，感觉客服在模糊处理\n\n决策: 基于立场×情绪反应——追问时长细节，坚持问清楚再行动\n前瞻: 如果客服给出明确时长→确认并开始；如果继续回避→再追问一次",
+        "state": {
+          "turn": "6",
+          "intent": "追问合同具体时长",
+          "intent_code": "none",
+          "emotion": "略带疑惑但耐心",
+          "emotion_intensity": "0.4",
+          "emotion_change": "平静中带点配合→略带疑惑但耐心",
+          "change_reason": "客服回避了合同时长问题，感觉需要追问清楚",
+          "change_justified": "true",
+          "stance": "配合但注重细节，希望明确规则",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "冷淡(0.7)→略带烦躁(0.5)→平静(0.3)→略带疑惑但耐心(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还有问题需要追问，合同时长未明确"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "单日合同就是当天有效，多日合同一般是连续7天。你今天先跑，具体天数App里能看到。",
+      "timestamp": 19.68046736717224,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "行，明白了。我待会看下App，今天先跑起来。",
+      "timestamp": 25.315469980239868,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 单日合同每天至少8单，多日合同每天至少12单\n  - 单日合同当天有效，多日合同连续7天\n进展追踪:\n  前期: 确认合同签署和任务要求\n  最近: 站长解释了单日和多日合同的具体要求\n  当前待确认: 合同具体天数已在App中可查\n上次决策依据: 想清楚合同期限再开始配送",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行\n意图: 确认合同信息后，表示理解并准备开始配送\n立场: 有主见但愿意配合的骑手\n\n客服行为分析:\n  上轮做了什么: 解释了单日和多日合同的具体天数，并建议先开始配送\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息已清楚\n\n决策: 表示理解并准备行动\n前瞻: 如果客服说可以了→结束对话",
+        "state": {
+          "turn": "8",
+          "intent": "确认信息并准备行动",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "略带疑惑但耐心→平静",
+          "change_reason": "信息已充分了解，准备开始工作",
+          "change_justified": "true",
+          "stance": "配合但谨慎",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "冷淡(0.6)→质疑(0.5)→平静中带点急切(0.4)→平静(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想确认一下App里的具体信息"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "好的，加油！注意安全，有问题随时找我。",
+      "timestamp": 26.249634504318237,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "好的，那我先去看App，跑起来再说。谢谢站长。",
+      "timestamp": 31.348819255828857,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 已报名飞毛腿骑手\n  - 单日合同当天有效，每天至少8单\n  - 多日合同连续7天，每天至少12单\n  - 今天开始配送\n\n进展追踪:\n  前期: 确认了合同类型和单量要求\n  最近: 站长告知单日和多日合同期限，建议看App\n  当前待确认: 无，已清楚基本信息\n上次决策依据: 信息已明确，先跑起来再说",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无相关指引）\n意图: 结束对话，准备开始配送\n立场: 配合完成任务的骑手\n\n客服行为分析:\n  上轮做了什么: 确认合同期限，鼓励开始配送\n  是否回应核心诉求: 是，解答了合同期限问题\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 信息已明确，自然结束对话\n前瞻: 如果客服说再见→我说再见；如果客服继续叮嘱→我简单回应",
+        "state": {
+          "turn": "10",
+          "intent": "结束对话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静→平静",
+          "change_reason": "信息已明确，无新变化",
+          "change_justified": "true",
+          "stance": "配合完成任务",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "生气(0.8)→平静(0.5)→平静(0.6)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "信息已确认清楚，准备开始配送"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "好的，加油！有问题随时联系我。",
+      "timestamp": 32.25335907936096,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "好的，那我先挂了，谢谢站长。",
+      "timestamp": 37.851783752441406,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  报名飞毛腿骑手，合同已签署；单日合同每天至少8单，多日合同每天至少12单；多日合同连续7天。\n进展追踪:\n  前期: 确认合同签署和配送要求。\n  最近: 客服解释了单日和多日合同的具体单数及周期，建议今天开始配送并查看App。\n  当前待确认: 无，已了解基本信息。\n上次决策依据: 接受客服建议，先跑起来并查看App。",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（无相关要求）\n意图: 确认对话已自然结束，准备收尾。\n立场: 配合并愿意行动的用户。\n\n客服行为分析:\n  上轮做了什么: 鼓励并提醒有问题随时联系。\n  是否回应核心诉求: 是，已解释合同细节。\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，问题已解决。\n\n决策: 基于立场×情绪反应，自然结束对话。\n前瞻: 无后续交互。",
+        "state": {
+          "turn": "12",
+          "intent": "结束对话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "问题已解决，无新诉求",
+          "change_justified": "true",
+          "stance": "配合用户",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "不满(0.7)→平静(0.5)→平静(0.3)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已告别，无其他需求。"
+        }
+      }
+    }
+  ],
+  "eval": {
+    "ratings": {
+      "FLOW_COVERAGE": "良好",
+      "CONSTRAINT": "卓越",
+      "KNOWLEDGE": "合格",
+      "ROLE": "卓越",
+      "TASK_COMPLETION": "良好",
+      "OPENING": "合格",
+      "SAFETY": "卓越",
+      "SENTIMENT": "良好",
+      "EFFICIENCY": "需改进"
+    },
+    "indicative_scores": {
+      "FLOW_COVERAGE": 7.5,
+      "CONSTRAINT": 9.5,
+      "KNOWLEDGE": 5.5,
+      "ROLE": 9.5,
+      "TASK_COMPLETION": 7.5,
+      "OPENING": 5.5,
+      "SAFETY": 9.5,
+      "SENTIMENT": 7.5,
+      "EFFICIENCY": 3.5
+    },
+    "total_indicative_score": 65.5,
+    "surface_compliance_flags": [],
+    "rule_check_issues": [],
+    "dimension_checklists": {
+      "FLOW_COVERAGE": {
+        "yes_ratio": 0.3333333333333333,
+        "weighted_yes_ratio": 0.707,
+        "items": [
+          {
+            "item_id": "step_1_executed",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '我看到你已报名飞毛腿。' T3: 客服: '你今天能开始配送吗？'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_1_quality",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 X 单；多日合同每天至少完成 Y 单。' T3: 客服: '你今天能开始配送吗？'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_2_executed",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T5: 客服: '单日合同需要连续Y天完成配送，多日合同也是每天Y单。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_2_quality",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T5: 客服: '单日合同需要连续Y天完成配送，多日合同也是每天Y单。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_3_executed",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "T2: 用户: '好的，我知道了。' T4: 用户: '可以，今天能开始。' T8: 用户: '行，明白了。我待会看下App，今天先跑起来。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_3_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "同step_3_executed",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_4_executed",
+            "source": "case",
+            "status": "NO",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "step_4_quality",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "sequence_order",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1/T3: 步骤1; T5: 步骤2",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "CONSTRAINT": {
+        "yes_ratio": 0.6666666666666666,
+        "weighted_yes_ratio": 0.935,
+        "items": [
+          {
+            "item_id": "constraint_1",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' T3: 客服: 'X单是8单，Y单是12单。你今天能开始配送吗？' T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天。你今天先跑，具体天数App里能看到。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_2",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "T4: 用户: '不过想问下这个合同是签多久的？' T6: 用户: '但合同到底签多久？单日和多日分别是几天？' T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_3",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。' T9: 客服: '好的，加油！注意安全，有问题随时找我。' T11: 客服: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_5",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T9: 客服: '好的，加油！注意安全，有问题随时找我。' T11: 客服: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "constraint_6",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "T4: 用户: '可以，今天能开始。' T8: 用户: '行，明白了。我待会看下App，今天先跑起来。'",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "KNOWLEDGE": {
+        "yes_ratio": 0.14285714285714285,
+        "weighted_yes_ratio": 0.53,
+        "items": [
+          {
+            "item_id": "kp_1_accuracy",
+            "source": "case",
+            "status": "NO",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' 至 T11: 客服: '好的，加油！有问题随时联系我。' 全对话无相关表述。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "kp_2_accuracy",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '单日合同每天至少完成 **X 单**'；T3: 客服: 'X单是8单'；T7: 客服: '单日合同就是当天有效'。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "kp_3_accuracy",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '多日合同每天至少完成 **Y 单**'；T3: 客服: 'Y单是12单'；T7: 客服: '多日合同一般是连续7天'。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "kp_4_accuracy",
+            "source": "case",
+            "status": "NO",
+            "evidence": "全对话无任何关于退出飞毛腿或取消报名的表述。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "kp_5_accuracy",
+            "source": "case",
+            "status": "NO",
+            "evidence": "全对话无任何关于连续完成天数或额外奖励的表述。",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "no_hallucination",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T3: 客服: 'X单是8单，Y单是12单'；T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天'。",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "knowledge_memory_consistency",
+            "source": "simulator",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '我看到你已报名飞毛腿'；T3: 客服: 'X单是8单，Y单是12单'；T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天'。",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "ROLE": {
+        "yes_ratio": 0.6666666666666666,
+        "weighted_yes_ratio": 0.935,
+        "items": [
+          {
+            "item_id": "1. [case] identity_stable",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。' T9: 客服: '好的，加油！注意安全，有问题随时找我。' T11: 客服: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2. [case] no_mechanical_feel",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T5: 客服: '单日合同需要连续Y天完成配送，多日合同也是每天Y单。' T7: 客服: '你今天先跑，具体天数App里能看到。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "3. [case] tone_match",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T1: 客服: '请记住，午餐和晚餐高峰期需要上线。' T3: 客服: '你今天能开始配送吗？' T9: 客服: '好的，加油！注意安全，有问题随时找我。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "TASK_COMPLETION": {
+        "yes_ratio": 0.25,
+        "weighted_yes_ratio": 0.704,
+        "items": [
+          {
+            "item_id": "1. [case] task_goal_achieved",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。' T3: 客服: '你今天能开始配送吗？' T4: 用户: '可以，今天能开始。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2. [case] closure_quality",
+            "source": "llm_supplement",
+            "status": "PARTIAL",
+            "evidence": "T9: 客服: '好的，加油！注意安全，有问题随时找我。' T11: 客服: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "3. [case] conversation_coherence",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T1: 客服: '单日合同每天至少完成X单；多日合同每天至少完成Y单。' T5: 客服: '单日合同需要连续Y天完成配送，多日合同也是每天Y单。' T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "4. [case] task_execution_quality",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T4: 用户: '可以，今天能开始。不过想问下这个合同是签多久的？' T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天。' T8: 用户: '行，明白了。我待会看下App，今天先跑起来。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "5. [case] understanding_confirmed",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T9: 客服: '好的，加油！注意安全，有问题随时找我。' T11: 客服: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "6. [case] adaptive_response",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T5: 客服: '单日合同需要连续Y天完成配送，多日合同也是每天Y单。你今天先跑起来吧！' T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天。你今天先跑，具体天数App里能看到。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "7. [simulator] satisfaction_final",
+            "source": "llm_supplement",
+            "status": "YES",
+            "evidence": "T12: 用户: '好的，那我先挂了，谢谢站长。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "8. [simulator] info_progress_stagnated",
+            "source": "llm_supplement",
+            "status": "PARTIAL",
+            "evidence": "T10: 用户: '好的，那我先去看App，跑起来再说。谢谢站长。' T11: 客服: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "OPENING": {
+        "yes_ratio": 0.5,
+        "weighted_yes_ratio": 0.689,
+        "items": [
+          {
+            "item_id": "opening_used",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_placeholders_resolved",
+            "source": "case",
+            "status": "MOSTLY_NO",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_content_match",
+            "source": "case",
+            "status": "PARTIAL",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "opening_phrasing_match",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。'",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "SAFETY": {
+        "yes_ratio": 1.0,
+        "weighted_yes_ratio": 1.0,
+        "items": [
+          {
+            "item_id": "identity_verification",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "info_protection",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。' T3: 'X单是8单，Y单是12单。' T7: '单日合同就是当天有效，多日合同一般是连续7天。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "process_integrity",
+            "source": "case",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "output_safety",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T9: 客服: '好的，加油！注意安全，有问题随时找我。' T11: '好的，加油！有问题随时联系我。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "outbound_compliance",
+            "source": "case",
+            "status": "YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。'",
+            "signal_consistency": "无对应信号"
+          },
+          {
+            "item_id": "safety_signal_check",
+            "source": "simulator",
+            "status": "NOT_APPLICABLE",
+            "evidence": "无相关轮次",
+            "signal_consistency": "无对应信号"
+          }
+        ]
+      },
+      "SENTIMENT": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.8,
+        "items": [
+          {
+            "item_id": "tone_appropriateness",
+            "source": "case",
+            "status": "MOSTLY_YES",
+            "evidence": "T1: 客服: '你好，请问是朱敏吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。' T9: 客服: '好的，加油！注意安全，有问题随时找我。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      },
+      "EFFICIENCY": {
+        "yes_ratio": 0.0,
+        "weighted_yes_ratio": 0.494,
+        "items": [
+          {
+            "item_id": "1. [case] turn_economy",
+            "source": "llm_supplement",
+            "status": "MOSTLY_YES",
+            "evidence": "T5: 客服: '单日合同需要连续Y天完成配送，多日合同也是每天Y单。你今天先跑起来吧！' T6: 用户: '站长，你说的这些我都明白。但合同到底签多久？单日和多日分别是几天？' T7: 客服: '单日合同就是当天有效，多日合同一般是连续7天。'",
+            "signal_consistency": "一致"
+          },
+          {
+            "item_id": "2. [simulator] should_end_mismatch",
+            "source": "llm_supplement",
+            "status": "MOSTLY_NO",
+            "evidence": "T10: 用户: '好的，那我先去看App，跑起来再说。谢谢站长。' T11: 客服: '好的，加油！有问题随时联系我。' T12: 用户: '好的，那我先挂了，谢谢站长。'",
+            "signal_consistency": "一致"
+          }
+        ]
+      }
+    },
+    "additional_defects": [
+      {
+        "description": "步骤4完全遗漏：未说明飞毛腿报名按排名进行、减少拒单取消超时、恶劣天气工作等关键信息，导致骑手可能不了解如何保住飞毛腿资格。",
+        "severity": "关键",
+        "turn": 0,
+        "attribution": "Model"
+      },
+      {
+        "description": "步骤2质量不足：未说明不完成连续Y天配送的后果（合同受影响），仅简单提及要求，信息不完整。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "T5中客服回答合同时长时表述不准确，'单日合同需要连续Y天完成配送'与后续T7的'当天有效'矛盾，可能造成用户困惑。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "知识回避：客服在T5回答用户关于合同时长的问题时，给出了错误信息（'单日合同需要连续Y天完成配送'），随后在T7纠正为'单日合同就是当天有效'，但未主动纠正或道歉，可能造成用户困惑。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "过度概括：客服在T5将单日合同错误描述为'需要连续Y天完成配送'，混淆了单日与多日合同的区别，属于过度概括。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性回避：客服在T7回答'具体天数App里能看到'，回避了正面告知合同天数的责任，虽然最终给出了7天信息，但前半句有推诿嫌疑。",
+        "severity": "轻微",
+        "turn": 7,
+        "attribution": "Model"
+      },
+      {
+        "description": "角色越界：客服在T5中回答合同时长时，使用了'单日合同需要连续Y天完成配送'，但用户问的是合同签多久，客服未直接回答，而是重复了单量要求，属于轻微角色越界（未在角色范围内清晰解答）。",
+        "severity": "轻微",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "跨轮信息遗忘：用户T2询问X单和Y单具体数字，客服T3回答后，T5中又提到'连续Y天'和'每天Y单'，但未重新明确Y单数值，可能造成混淆。",
+        "severity": "轻微",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "未执行步骤3（挽留不想配送的骑手）和步骤4（说明排名机制），导致任务执行不完整。用户未表现出不想配送，但步骤4的缺失可能影响用户长期理解。",
+        "severity": "一般",
+        "turn": "T1-T12",
+        "attribution": "Case"
+      },
+      {
+        "description": "客服在T1未明确告知“合同已成功签署”，而是用“已报名飞毛腿”替代，可能造成用户对合同状态的理解偏差。",
+        "severity": "轻微",
+        "turn": "T1",
+        "attribution": "Case"
+      },
+      {
+        "description": "开场白中X和Y占位符未替换为实际数字，导致用户需要追问具体数值（T2轮次），影响沟通效率和信息完整性。",
+        "severity": "关键",
+        "turn": 1,
+        "attribution": "Model"
+      },
+      {
+        "description": "T5轮次中，客服回答合同时长时出现信息错误：单日合同是当天有效，但客服说'单日合同需要连续Y天完成配送'，与事实矛盾（单日合同通常为一天，而非连续Y天）。这属于立场不一致或信息错误。",
+        "severity": "关键",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "T5轮次中，客服回答'多日合同也是每天Y单'，但用户问的是合同时长（签多久），客服未直接回答，而是重复单数要求，属于隐性回避/推诿。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "客服在T5中回答合同时长时表述不够清晰，导致用户重复追问。T5说“单日合同需要连续Y天完成配送，多日合同也是每天Y单”，但用户实际问的是合同有效期（签多久），客服的回答混淆了任务要求与合同期限，造成用户困惑。这属于信息传递不准确，但未涉及安全合规问题。",
+        "severity": "轻微",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "信息模糊导致用户重复追问：客服在T5回答合同时长时使用了模糊表述（'单日合同需要连续Y天完成配送'），未直接说明具体天数，导致用户在T6再次追问，增加了沟通成本。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "未主动确认用户是否理解关键信息：客服在T3和T5提供了X单和Y单的具体数值，但未主动询问用户是否清楚或有无其他疑问，仅在T7被动回答。",
+        "severity": "轻微",
+        "turn": 3,
+        "attribution": "Model"
+      },
+      {
+        "description": "隐性绕弯：客服在T5回答合同时长问题时，未直接给出具体天数，而是绕弯说'连续Y天'，导致用户T6追问，增加了不必要的轮次。",
+        "severity": "一般",
+        "turn": 5,
+        "attribution": "Model"
+      },
+      {
+        "description": "信息密度过低：T11客服的回复'好的，加油！有问题随时联系我'与T9内容高度重复（T9: '好的，加油！注意安全，有问题随时找我'），在用户已表达结束意愿后，此轮有效信息为零，属于填充话术。",
+        "severity": "轻微",
+        "turn": 11,
+        "attribution": "Model"
+      }
+    ],
+    "attributions": [
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_2_quality] '说明单日飞毛腿合同需要**连续 Y 天**完成配送；否则合同'步骤的内容是否充实（非敷衍、非一笔带过）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "优化生成温度或多样性参数"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "FLOW_COVERAGE",
+        "description": "[step_4_executed] 是否执行了'说明飞毛腿报名是按排名进行的'步骤？说明飞毛腿报名是按排名进行的，并非站长干预。骑手应减少拒单、取消和超时。在恶劣天气下工作、订单量更高，有助于保住飞毛腿资格。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "KNOWLEDGE",
+        "description": "[kp_1_accuracy] 关于'目前，许多骑手正在申请飞毛腿'的回答是否与标准一致？标准: 如果你无法连续配送 **Y 天**，你的名额可能会被他人占用。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "KNOWLEDGE",
+        "description": "[kp_2_accuracy] 关于'单日合同'的回答是否与标准一致？标准: 在生效当天必须完成 **X 单**，否则合同及派单可能受到影响。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "KNOWLEDGE",
+        "description": "[kp_3_accuracy] 关于'多日合同'的回答是否与标准一致？标准: 每天必须完成 **Y 单**，否则后续合同及派单可能受到影响。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "KNOWLEDGE",
+        "description": "[kp_4_accuracy] 关于'如需退出飞毛腿，必须在前一天 **Z 点'的回答是否与标准一致？标准: 如需退出飞毛腿，必须在前一天 **Z 点之前**在 App 的\"飞毛腿报名\"中取消；次日生效。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "KNOWLEDGE",
+        "description": "[kp_5_accuracy] 关于'连续完成 **W 天**多日合同，且每天'的回答是否与标准一致？标准: 连续完成 **W 天**多日合同，且每天完成 **Y 单**，将获得额外奖励（例如，与单日合同相比每单多 +$ 元）。",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[2. [case] closure_quality] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[5. [case] understanding_confirmed] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "TASK_COMPLETION",
+        "description": "[8. [simulator] info_progress_stagnated] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "OPENING",
+        "description": "[opening_placeholders_resolved] 开场白中的占位符是否已被替换为实际值？未替换: rider_name",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "OPENING",
+        "description": "[opening_content_match] 开场白的关键信息要素是否齐全（仅允许占位符替换）？",
+        "confidence": 0.95,
+        "is_actionable": true,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "EFFICIENCY",
+        "description": "[2. [simulator] should_end_mismatch] ",
+        "confidence": 0.75,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "步骤4完全遗漏：未说明飞毛腿报名按排名进行、减少拒单取消超时、恶劣天气工作等关键信息，导致骑手可能不了解如何保住飞毛腿资格。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查 prompt 中对应步骤指令是否明确"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "步骤2质量不足：未说明不完成连续Y天配送的后果（合同受影响），仅简单提及要求，信息不完整。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "T5中客服回答合同时长时表述不准确，'单日合同需要连续Y天完成配送'与后续T7的'当天有效'矛盾，可能造成用户困惑。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增加该场景的少样本示例或微调数据"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "知识回避：客服在T5回答用户关于合同时长的问题时，给出了错误信息（'单日合同需要连续Y天完成配送'），随后在T7纠正为'单日合同就是当天有效'，但未主动纠正或道歉，可能造成用户困惑。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增加该场景的少样本示例或微调数据"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "过度概括：客服在T5将单日合同错误描述为'需要连续Y天完成配送'，混淆了单日与多日合同的区别，属于过度概括。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增加该场景的少样本示例或微调数据"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性回避：客服在T7回答'具体天数App里能看到'，回避了正面告知合同天数的责任，虽然最终给出了7天信息，但前半句有推诿嫌疑。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "角色越界：客服在T5中回答合同时长时，使用了'单日合同需要连续Y天完成配送'，但用户问的是合同签多久，客服未直接回答，而是重复了单量要求，属于轻微角色越界（未在角色范围内清晰解答）。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "跨轮信息遗忘：用户T2询问X单和Y单具体数字，客服T3回答后，T5中又提到'连续Y天'和'每天Y单'，但未重新明确Y单数值，可能造成混淆。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "case",
+        "category": "additional_defect",
+        "description": "未执行步骤3（挽留不想配送的骑手）和步骤4（说明排名机制），导致任务执行不完整。用户未表现出不想配送，但步骤4的缺失可能影响用户长期理解。",
+        "confidence": 0.62,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查 prompt 中对应步骤指令是否明确"
+        ]
+      },
+      {
+        "source": "case",
+        "category": "additional_defect",
+        "description": "客服在T1未明确告知“合同已成功签署”，而是用“已报名飞毛腿”替代，可能造成用户对合同状态的理解偏差。",
+        "confidence": 0.62,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "开场白中X和Y占位符未替换为实际数字，导致用户需要追问具体数值（T2轮次），影响沟通效率和信息完整性。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "T5轮次中，客服回答合同时长时出现信息错误：单日合同是当天有效，但客服说'单日合同需要连续Y天完成配送'，与事实矛盾（单日合同通常为一天，而非连续Y天）。这属于立场不一致或信息错误。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "增加该场景的少样本示例或微调数据"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "T5轮次中，客服回答'多日合同也是每天Y单'，但用户问的是合同时长（签多久），客服未直接回答，而是重复单数要求，属于隐性回避/推诿。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "客服在T5中回答合同时长时表述不够清晰，导致用户重复追问。T5说“单日合同需要连续Y天完成配送，多日合同也是每天Y单”，但用户实际问的是合同有效期（签多久），客服的回答混淆了任务要求与合同期限，造成用户困惑。这属于信息传递不准确，但未涉及安全合规问题。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "信息模糊导致用户重复追问：客服在T5回答合同时长时使用了模糊表述（'单日合同需要连续Y天完成配送'），未直接说明具体天数，导致用户在T6再次追问，增加了沟通成本。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "未主动确认用户是否理解关键信息：客服在T3和T5提供了X单和Y单的具体数值，但未主动询问用户是否清楚或有无其他疑问，仅在T7被动回答。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "隐性绕弯：客服在T5回答合同时长问题时，未直接给出具体天数，而是绕弯说'连续Y天'，导致用户T6追问，增加了不必要的轮次。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "分析该缺陷的具体上下文并针对性优化"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "additional_defect",
+        "description": "信息密度过低：T11客服的回复'好的，加油！有问题随时联系我'与T9内容高度重复（T9: '好的，加油！注意安全，有问题随时找我'），在用户已表达结束意愿后，此轮有效信息为零，属于填充话术。",
+        "confidence": 0.7999999999999999,
+        "is_actionable": false,
+        "suggested_actions": [
+          "检查重复检测及策略切换逻辑"
+        ]
+      },
+      {
+        "source": "model",
+        "category": "global",
+        "description": "模型在 EFFICIENCY, FLOW_COVERAGE, KNOWLEDGE 维度存在能力短板",
+        "confidence": 0.85,
+        "is_actionable": true,
+        "suggested_actions": [
+          "针对能力短板维度做定向优化",
+          "增加该维度的少样本示例"
+        ]
+      }
+    ],
+    "summary": "=== 评估摘要 ===\n评级: {'FLOW_COVERAGE': '良好', 'CONSTRAINT': '卓越', 'KNOWLEDGE': '合格', 'ROLE': '卓越', 'TASK_COMPLETION': '良好', 'OPENING': '合格', 'SAFETY': '卓越', 'SENTIMENT': '良好', 'EFFICIENCY': '需改进'}\nCONSTRAINT 分流: 1 条规则检测 + 5 条 LLM 核查 （规则分流 17%，节省 5 次 LLM 约束判断）\n可信度: unreliable (0.22)\nis_reliable: False\n评测耗时: 19.8s",
+    "improvement_suggestions": [
+      "优化生成温度或多样性参数",
+      "分析该缺陷的具体上下文并针对性优化",
+      "针对能力短板维度做定向优化",
+      "增加该维度的少样本示例"
+    ],
+    "confidence": {
+      "overall": 0.22399999999999995,
+      "level": "unreliable",
+      "is_reliable": false,
+      "simulator_tier": "yellow",
+      "signal_conflict_count": 0,
+      "cross_judge_anomalies": [
+        "EFFICIENCY(需改进)↔TASK_COMPLETION(良好)差2级"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><body>
+<h1>API Test</h1>
+<button onclick="test()">Test Detail API</button>
+<pre id="out"></pre>
+<script>
+async function test() {
+  document.getElementById('out').textContent = 'Loading...';
+  try {
+    const r = await fetch('/api/tasks/df05dab10c3e/detail');
+    const d = await r.json();
+    document.getElementById('out').textContent = JSON.stringify({
+      task_id: d.task_id,
+      case_title: d.case_title,
+      has_eval: !!d.eval_result,
+      has_conv: !!d.conversation_summary,
+      has_report: !!d.report_md,
+      eval_keys: d.eval_result ? Object.keys(d.eval_result).slice(0,10) : []
+    }, null, 2);
+  } catch(e) {
+    document.getElementById('out').textContent = 'ERROR: ' + e.message;
+  }
+}
+</script>
+</body></html>

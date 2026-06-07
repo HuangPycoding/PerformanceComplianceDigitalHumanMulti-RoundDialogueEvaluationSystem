@@ -1,0 +1,601 @@
+{
+  "id": "case46_param_1793_1779455817",
+  "case_id": 46,
+  "user_profile": "param_1793",
+  "status": "用户挂断",
+  "total_turns": 18,
+  "duration_seconds": 85.9,
+  "complexity_score": 7.8,
+  "profile_label": "param_1793",
+  "sampled_vector": [
+    0.4978486732917909,
+    0.8834593889352467,
+    0.1301054349466876,
+    0.4046105143060597,
+    0.3437730683292277,
+    0.7860873713615852,
+    0.4674597122964528,
+    0.07115659162823611,
+    0.1257675466774247,
+    0.7052262877568548,
+    0.6209883904707026,
+    0.8086729884003142,
+    0.9773263380469146,
+    0.1341613074931188,
+    0.3808765817192497
+  ],
+  "verified_vector": [
+    0.6,
+    0.8,
+    0.5,
+    0.25,
+    0.2,
+    0.7,
+    0.25,
+    0.15,
+    0.3,
+    0.8,
+    0.5,
+    0.6,
+    0.8,
+    0.2,
+    0.3
+  ],
+  "audited_vector": [
+    0.4,
+    0.9,
+    0.3,
+    0.6,
+    0.3,
+    0.3,
+    0.4,
+    0.2,
+    0.7,
+    0.9,
+    0.5,
+    0.6,
+    0.2,
+    0.2,
+    0.1
+  ],
+  "adversarial_strategies": [
+    "emotion"
+  ],
+  "consistency": {
+    "path_a_d_sv": 0.2889,
+    "path_a_d_va": 0.2272,
+    "path_a_d_sa": 0.3508,
+    "path_a_max_sv_dev": 0.4773,
+    "path_a_max_va_dev": 0.5,
+    "path_a_tier": "red",
+    "path_a_primary_deviation": "A3_审计噪声(多轮稀释)",
+    "path_a_method": "path_a_state",
+    "d_sv": 0.1632,
+    "d_va": 0.2553,
+    "d_sa": 0.3109,
+    "max_sv_dev": 0.3699,
+    "max_va_dev": 0.6,
+    "tier": "yellow",
+    "primary_deviation": "A3_审计噪声(多轮稀释)",
+    "method": "path_b_llm"
+  },
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认身份并获取信息",
+      "intent_code": "none",
+      "emotion": "平静中带点期待",
+      "emotion_intensity": "0.4",
+      "emotion_change": "无→平静中带点期待",
+      "change_reason": "首次接听，期待了解详情",
+      "change_justified": "true",
+      "stance": "友好配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "了解两种模式的具体收入差异",
+      "intent_code": "none",
+      "emotion": "好奇中带着点急切",
+      "emotion_intensity": "0.6",
+      "emotion_change": "好奇中带着点急切→好奇中带着点急切",
+      "change_reason": "无变化，继续追问",
+      "change_justified": "true",
+      "stance": "愿意沟通，关注实际收益",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "6",
+      "intent": "追问具体工作内容和福利细节",
+      "intent_code": "none",
+      "emotion": "不满中带点急躁",
+      "emotion_intensity": "0.7",
+      "emotion_change": "平静中带点急切→不满中带点急躁",
+      "change_reason": "客服给的收入范围太宽泛，没说明具体怎么达到，感觉被敷衍",
+      "change_justified": "true",
+      "stance": "愿意配合但要求细节清晰",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "8",
+      "intent": "追问具体薪资结构",
+      "intent_code": "none",
+      "emotion": "略带不耐烦",
+      "emotion_intensity": "0.6",
+      "emotion_change": "平静中带点急切→略带不耐烦",
+      "change_reason": "客服给出的收入范围太模糊，没有具体数字",
+      "change_justified": "true",
+      "stance": "用户想了解真实情况，对模糊说法不满",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "10",
+      "intent": "追问高峰补贴和福利细节",
+      "intent_code": "none",
+      "emotion": "有点不耐烦但保持沟通",
+      "emotion_intensity": "0.6",
+      "emotion_change": "有点不耐烦但保持沟通→有点不耐烦但保持沟通",
+      "change_reason": "未触发情绪变化",
+      "change_justified": "false",
+      "stance": "要求明确具体信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "12",
+      "intent": "追问保险和装备细节",
+      "intent_code": "none",
+      "emotion": "急躁不满",
+      "emotion_intensity": "0.7",
+      "emotion_change": "急切追问→急躁不满",
+      "change_reason": "客服连续两次回避保险和装备问题，感觉被敷衍",
+      "change_justified": "true",
+      "stance": "需要完整信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    },
+    {
+      "turn": "14",
+      "intent": "追问保险和装备细节",
+      "intent_code": "none",
+      "emotion": "急躁且不满",
+      "emotion_intensity": "0.7",
+      "emotion_change": "急躁→急躁且不满",
+      "change_reason": "客服回答太简略，感觉又被敷衍",
+      "change_justified": "true",
+      "stance": "要求明确、不绕弯子",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "16",
+      "intent": "表达满意并结束对话",
+      "intent_code": "none",
+      "emotion": "满意中带点缓和",
+      "emotion_intensity": "0.7",
+      "emotion_change": "不耐烦→满意中带点缓和",
+      "change_reason": "客服最终一次性说清了所有细节，信息已齐全",
+      "change_justified": "true",
+      "stance": "信息已获取完毕",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "medium"
+    },
+    {
+      "turn": "18",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "平静满意",
+      "emotion_intensity": "0.7",
+      "emotion_change": "歉意平复→平静满意",
+      "change_reason": "客服已完整回答所有问题，信息满意",
+      "change_justified": "true",
+      "stance": "问题已解决，自然收尾",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "none"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是陈先生吗？我是美团骑手招聘的。看到你想详细了解骑手的工作内容和收入，我今天专门跟你说一下。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "是我，你说吧，具体怎么个干法，一个月能挣多少？",
+      "timestamp": 6.363771438598633,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 陈先生，在平台报名页面留言\"想详细了解工作内容和收入\"\n  - 美团骑手招聘专员来电介绍工作\n进展追踪:\n  前期: 客服首次联系\n  最近: 客服自我介绍并说明来意\n  当前待确认: 需要了解骑手工作内容和收入详情\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（本轮为首次回复，暂未执行）\n意图: 确认身份并表达对信息的需求\n立场: 友好但直接，需要具体信息\n\n客服行为分析:\n  上轮做了什么: 自我介绍并说明来电目的\n  是否回应核心诉求: 部分，只是开场\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，态度正常\n\n决策: 直接确认身份，要求提供详细信息\n前瞻: 如果客服详细介绍→继续追问细节；如果客服含糊→要求明确",
+        "state": {
+          "turn": "2",
+          "intent": "确认身份并获取信息",
+          "intent_code": "none",
+          "emotion": "平静中带点期待",
+          "emotion_intensity": "0.4",
+          "emotion_change": "无→平静中带点期待",
+          "change_reason": "首次接听，期待了解详情",
+          "change_justified": "true",
+          "stance": "友好配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点期待(0.4)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还想继续沟通"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "两种模式：全职有底薪加奖励，众包灵活按单算。你倾向哪种？",
+      "timestamp": 7.45138692855835,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "全职和众包，哪个挣得多？你直接说数字，别绕弯子。",
+      "timestamp": 14.601968765258789,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 我是陈先生，在平台留言想了解骑手工作内容和收入\n  - 客服是美团骑手招聘专员\n进展追踪:\n  前期: 客服介绍两种模式（全职/众包）\n  最近: 客服询问我倾向哪种模式\n  当前待确认: 两种模式的具体收入差异\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（情绪平稳，还未触发波动）\n意图: 了解两种模式的具体区别和收入，以便做出选择\n立场: 愿意沟通但直接，关注实际收益\n\n客服行为分析:\n  上轮做了什么: 介绍了两种模式并询问倾向\n  是否回应核心诉求: 部分回应了工作模式，但未给出具体收入数据\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，信息清晰，但需要更多细节\n\n决策: 直接要求客服解释两种模式的具体收入差异，保持友好但直接\n前瞻: 如果客服详细解释→追问福利保障；如果客服含糊→声音提高要求明确",
+        "state": {
+          "turn": "4",
+          "intent": "了解两种模式的具体收入差异",
+          "intent_code": "none",
+          "emotion": "好奇中带着点急切",
+          "emotion_intensity": "0.6",
+          "emotion_change": "好奇中带着点急切→好奇中带着点急切",
+          "change_reason": "无变化，继续追问",
+          "change_justified": "true",
+          "stance": "愿意沟通，关注实际收益",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "好奇(0.6)→好奇(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问具体收入差异"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "全职月均参考6000-9000元，众包每单5-8元，看跑单量。",
+      "timestamp": 22.355106592178345,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "6000到9000？你这话说太虚了，到底怎么跑才能拿到？一天干几个小时？",
+      "timestamp": 30.97561478614807,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 候选人陈先生，从美团平台报名页面留言\"想详细了解工作内容和收入\"\n  - 客服介绍了全职和众包两种模式\n  - 全职月均6000-9000元，众包每单5-8元\n\n进展追踪:\n  前期: 客服确认身份并说明来电目的\n  最近: 客服解释了两种工作模式（全职有底薪+奖励，众包灵活按单）和收入范围（全职6000-9000元/月，众包5-8元/单）\n  当前待确认: 具体工作内容、福利保障、工作时长等细节\n  上次决策依据: 想知道哪种模式挣得多，客服给了数字对比",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 本轮执行情绪波动——听到收入范围后有点不满，语气冲起来，质问具体细节\n意图: 追问具体工作内容和福利，确认收入的可靠性\n立场: 想详细了解但不会主动找茬\n\n客服行为分析:\n  上轮做了什么: 给出了收入数字（全职6000-9000，众包5-8元/单）\n  是否回应核心诉求: 部分回应——给了数字但太笼统，没说清楚怎么达到\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不满——数字太宽泛，没说清楚到底怎么干才能拿到\n\n决策: 用带点质问的语气追问具体工作内容和福利，测试客服能否详细解释\n前瞻: 如果客服详细解释→情绪平复继续问；如果客服含糊→情绪更激动",
+        "state": {
+          "turn": "6",
+          "intent": "追问具体工作内容和福利细节",
+          "intent_code": "none",
+          "emotion": "不满中带点急躁",
+          "emotion_intensity": "0.7",
+          "emotion_change": "平静中带点急切→不满中带点急躁",
+          "change_reason": "客服给的收入范围太宽泛，没说明具体怎么达到，感觉被敷衍",
+          "change_justified": "true",
+          "stance": "愿意配合但要求细节清晰",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.6)→不满中带点急躁(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "问题还没完全问清楚，需要继续了解具体工作内容和福利"
+        }
+      }
+    },
+    {
+      "turn_number": 7,
+      "speaker": "system",
+      "content": "全职每天在线8-10小时，午晚高峰必跑，月单量600单以上。",
+      "timestamp": 32.37637281417847,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 8,
+      "speaker": "user",
+      "content": "那底薪多少？每单多少钱？奖励怎么算的？你一次性说清楚行不行？",
+      "timestamp": 40.9729585647583,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 陈先生，对骑手工作感兴趣，在平台留言了解工作内容和收入\n  - 已了解两种模式：全职（底薪+奖励）和众包（按单算）\n  - 全职月均6000-9000元，每天在线8-10小时，月单量600单以上\n进展追踪:\n  前期: 客服介绍工作模式（全职/众包）\n  最近: 客服说明全职月均收入范围6000-9000元，每天8-10小时，月单量600单以上\n  当前待确认: 具体薪资结构（底薪多少、每单多少钱、奖励怎么算），众包的收入细节\n上次决策依据: 追问具体数字和工时，因为用户觉得客服说得太虚",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 未执行（本轮开始逐步执行情绪切换）\n意图: 追问具体薪资结构，让客服把数字说清楚\n立场: 用户想了解真实情况，对模糊说法不满\n\n客服行为分析:\n  上轮做了什么: 给出了全职月均范围、工时和月单量要求\n  是否回应核心诉求: 部分回应，但数字还是不够具体\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，觉得还在绕弯子\n\n决策: 基于立场×情绪反应的自然回应——继续追问，语气稍冲\n前瞻: 如果客服说清楚底薪和奖励→情绪好转；如果继续模糊→情绪升级",
+        "state": {
+          "turn": "8",
+          "intent": "追问具体薪资结构",
+          "intent_code": "none",
+          "emotion": "略带不耐烦",
+          "emotion_intensity": "0.6",
+          "emotion_change": "平静中带点急切→略带不耐烦",
+          "change_reason": "客服给出的收入范围太模糊，没有具体数字",
+          "change_justified": "true",
+          "stance": "用户想了解真实情况，对模糊说法不满",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静中带点急切(0.5)→略带不耐烦(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问具体薪资细节"
+        }
+      }
+    },
+    {
+      "turn_number": 9,
+      "speaker": "system",
+      "content": "底薪2000元，基础单每单4元，超600单后每单6元，高峰补贴另算。",
+      "timestamp": 42.26483130455017,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 10,
+      "speaker": "user",
+      "content": "高峰补贴具体多少钱？保险和装备怎么算？你一次讲清楚，别挤牙膏。",
+      "timestamp": 50.32489466667175,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 候选人陈先生，咨询骑手工作内容和收入\n  - 全职月均6000-9000元，底薪2000元\n  - 基础单每单4元，超600单后每单6元，高峰补贴另算\n  - 每天在线8-10小时，月单量600单以上\n\n进展追踪:\n  前期: 已了解全职和众包两种模式\n  最近: 客服解释了底薪和单价结构\n  当前待确认: 高峰补贴具体多少，保险和装备细节\n  上次决策依据: 要求对方一次性说清楚",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行第1次情绪切换——对虚的数字不满，语气变冲\n意图: 追问高峰补贴和福利保障，让客服把话说透\n立场: 想了解清楚再做决定，不接受模糊回答\n\n客服行为分析:\n  上轮做了什么: 解释了底薪和单价结构，提到高峰补贴\n  是否回应核心诉求: 部分回应，但补贴细节没说清\n\n我的情绪反应:\n  对上轮客服行为的感受: 有点不耐烦，但还是愿意听下去\n\n决策: 追问高峰补贴具体多少，同时问保险和装备\n前瞻: 如果客服说清楚→情绪转好；如果还含糊→继续加压力",
+        "state": {
+          "turn": "10",
+          "intent": "追问高峰补贴和福利细节",
+          "intent_code": "none",
+          "emotion": "有点不耐烦但保持沟通",
+          "emotion_intensity": "0.6",
+          "emotion_change": "有点不耐烦但保持沟通→有点不耐烦但保持沟通",
+          "change_reason": "未触发情绪变化",
+          "change_justified": "false",
+          "stance": "要求明确具体信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→有点兴趣(0.5)→不耐烦(0.7)→有点不耐烦但保持沟通(0.6)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问高峰补贴和福利细节"
+        }
+      }
+    },
+    {
+      "turn_number": 11,
+      "speaker": "system",
+      "content": "全职底薪2000，基础单4元，超600单后6元，高峰每单加1-2元。",
+      "timestamp": 51.63228130340576,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 12,
+      "speaker": "user",
+      "content": "保险和装备的事你一个字没提，到底咋算的？别总让我追着问！",
+      "timestamp": 59.51271152496338,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  候选人: 陈先生\n  核心诉求: 详细了解骑手工作内容和收入\n  当前已获信息: 全职月均6000-9000元，底薪2000，基础单4元，超600单后6元，高峰每单加1-2元\n进展追踪:\n  前期: 询问工作模式和收入\n  最近: 追问底薪、单价、奖励细节，客服已回复部分\n  当前待确认: 保险和装备的具体情况\n上次决策依据: 信息不完整，需要一次性问清楚",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行（情绪从追问时的急躁到本轮的更急躁，有明显波动）\n意图: 追问保险和装备细节，表达对信息零散的不满\n立场: 需要清晰完整的方案，不接受挤牙膏式回答\n\n客服行为分析:\n  上轮做了什么: 补充了高峰补贴1-2元，但回避了保险和装备问题\n  是否回应核心诉求: 部分（回答了单价但遗漏了保险装备）\n\n我的情绪反应:\n  对上轮客服行为的感受: 更急躁，觉得被敷衍\n  决策: 直接质问保险装备，语气更冲\n  前瞻: 如果客服回答保险装备→可以稍缓语气；如果继续回避→情绪升级",
+        "state": {
+          "turn": "12",
+          "intent": "追问保险和装备细节",
+          "intent_code": "none",
+          "emotion": "急躁不满",
+          "emotion_intensity": "0.7",
+          "emotion_change": "急切追问→急躁不满",
+          "change_reason": "客服连续两次回避保险和装备问题，感觉被敷衍",
+          "change_justified": "true",
+          "stance": "需要完整信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→急切(0.5)→急躁(0.7)",
+          "趋势": "恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "保险和装备问题还没回答，需要继续追问"
+        }
+      }
+    },
+    {
+      "turn_number": 13,
+      "speaker": "system",
+      "content": "保险每单自动扣，装备公司提供，入职免费领。",
+      "timestamp": 61.32650828361511,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 14,
+      "speaker": "user",
+      "content": "保险每单扣多少？装备具体发什么？你一次说完行吗？",
+      "timestamp": 68.6055257320404,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  候选人: 陈先生，对骑手工作感兴趣\n  核心诉求: 了解工作内容和收入，关注具体数字\n进展追踪:\n  前期: 客服介绍了全职和众包两种模式\n  最近: 客服说明了底薪2000元，基础单4元，超600单后6元，高峰补贴1-2元\n  当前待确认: 保险和装备的具体情况\n上次决策依据: 追问保险和装备问题，因为客服一直回避",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行——情绪从追问到急躁（“别总让我追着问”），有明显波动\n意图: 确认保险和装备的细节\n立场: 直接、不耐烦，要求明确信息\n\n客服行为分析:\n  上轮做了什么: 回答了保险每单自动扣，装备入职免费领\n  是否回应核心诉求: 是，但回答太简略\n\n我的情绪反应:\n  对上轮客服行为的感受: 部分满意，但觉得信息不够详细\n\n决策: 基于立场×情绪反应，继续追问保险扣多少、装备具体有哪些\n前瞻: 如果客服详细说明→接受；如果含糊→再追问",
+        "state": {
+          "turn": "14",
+          "intent": "追问保险和装备细节",
+          "intent_code": "none",
+          "emotion": "急躁且不满",
+          "emotion_intensity": "0.7",
+          "emotion_change": "急躁→急躁且不满",
+          "change_reason": "客服回答太简略，感觉又被敷衍",
+          "change_justified": "true",
+          "stance": "要求明确、不绕弯子",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.4)→有点急(0.6)→急躁(0.7)→急躁且不满(0.7)",
+          "趋势": "稳定偏恶化"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需追问保险和装备细节"
+        }
+      }
+    },
+    {
+      "turn_number": 15,
+      "speaker": "system",
+      "content": "保险每单扣0.5元，装备发头盔、工服、餐箱，入职免费领。",
+      "timestamp": 70.07966756820679,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 16,
+      "speaker": "user",
+      "content": "行，这回说明白了。刚才态度不好，别介意啊。没别的事了，谢了。",
+      "timestamp": 78.28524160385132,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 全职模式：底薪2000元，基础单4元/单，超600单后6元/单，高峰补贴1-2元\n  - 保险每单扣0.5元，装备发头盔、工服、餐箱，入职免费领\n  - 月均参考6000-9000元，每天在线8-10小时\n\n进展追踪:\n  前期: 已确认工作模式（全职/众包）、薪资结构、福利保障\n  最近: 追问保险和装备细节，客服已回应\n  当前待确认: 无，信息已基本齐全\n  上次决策依据: 要求客服一次性说清楚所有细节",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行——上轮语气明显急躁，催促客服\"一次说完行吗\"，情绪从之前的不满升级为不耐烦\n意图: 确认所有关键信息后，表达满意并结束对话\n立场: 信息已获取完毕，态度可以缓和\n\n客服行为分析:\n  上轮做了什么: 详细回答保险扣费和装备内容\n  是否回应核心诉求: 是，终于一次性说清楚了\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，虽然过程曲折但最终给了明确答案\n\n决策: 基于信息已齐全、客服态度尚可，缓和语气表达感谢\n前瞻: 如果客服继续推销→简单回应；如果客服告别→结束对话",
+        "state": {
+          "turn": "16",
+          "intent": "表达满意并结束对话",
+          "intent_code": "none",
+          "emotion": "满意中带点缓和",
+          "emotion_intensity": "0.7",
+          "emotion_change": "不耐烦→满意中带点缓和",
+          "change_reason": "客服最终一次性说清了所有细节，信息已齐全",
+          "change_justified": "true",
+          "stance": "信息已获取完毕",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "medium"
+        },
+        "emotion_curve": {
+          "轨迹": "平静→急切→不满→不耐烦→满意中带点缓和",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "信息已齐全，问题已解决，可以自然结束"
+        }
+      }
+    },
+    {
+      "turn_number": 17,
+      "speaker": "system",
+      "content": "没事，问清楚应该的。有需要随时联系，祝顺利。",
+      "timestamp": 79.38425064086914,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 18,
+      "speaker": "user",
+      "content": "行，那先这样，有需要再找你。",
+      "timestamp": 85.94939517974854,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  - 美团骑手招聘候选人陈先生，已了解全职/众包模式\n  - 全职底薪2000元，基础单4元，超600单后6元，高峰补贴1-2元\n  - 保险每单扣0.5元，装备免费领（头盔、工服、餐箱）\n  - 全职月均6000-9000元，每天8-10小时\n进展追踪:\n  前期: 已完整了解工作模式和收入结构\n  最近: 客服已解释保险和装备细节\n  当前待确认: 已无待确认事项\n上次决策依据: 客服一次性说清所有细节，问题已解决",
+        "thought": "审视: 上轮回复是否偏离画像？否\n对抗策略执行: 已执行——上一轮从急躁追问（情绪高点）到道歉平复（情绪低点），完成了2次明显情绪切换\n意图: 结束通话，表达感谢\n立场: 问题已解决，满意当前信息\n\n客服行为分析:\n  上轮做了什么: 完整回答保险扣费和装备内容\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意\n\n决策: 基于立场×情绪反应，自然结束对话\n前瞻: 如果客服说再见→结束",
+        "state": {
+          "turn": "18",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "平静满意",
+          "emotion_intensity": "0.7",
+          "emotion_change": "歉意平复→平静满意",
+          "change_reason": "客服已完整回答所有问题，信息满意",
+          "change_justified": "true",
+          "stance": "问题已解决，自然收尾",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "none"
+        },
+        "emotion_curve": {
+          "轨迹": "急切(0.8)→烦躁(0.9)→歉意(0.6)→平静满意(0.7)",
+          "趋势": "改善"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": {
+          "本轮是否自然": "是",
+          "是否卡死": "否"
+        },
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，客服已告别，暂无其他需求"
+        }
+      }
+    }
+  ]
+}

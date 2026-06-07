@@ -1,0 +1,215 @@
+{
+  "id": "case1_param_5c22_1779340238",
+  "case_id": 1,
+  "user_profile": "param_5c22",
+  "status": "正常结束",
+  "total_turns": 6,
+  "duration_seconds": 11.8,
+  "complexity_score": 5.4,
+  "profile_label": "param_5c22",
+  "sampled_vector": [
+    0.1638148490997667,
+    0.4384242402827228,
+    0.08253249531594438,
+    0.5089625906332502,
+    0.5940860010036229,
+    0.47833336629393114,
+    0.5188230191428232,
+    0.86594265306516,
+    0.06254235195069384,
+    0.14267538879758115,
+    0.9099621344704443,
+    0.8224250407233326,
+    0.0735976192947166,
+    0.5868302123900466,
+    0.5260445081842291
+  ],
+  "verified_vector": [
+    0.75,
+    0.85,
+    0.15,
+    0.35,
+    0.7,
+    0.8,
+    0.4,
+    0.9,
+    0.6,
+    0.45,
+    0.8,
+    0.65,
+    0.15,
+    0.25,
+    0.1
+  ],
+  "audited_vector": null,
+  "adversarial_strategies": [],
+  "consistency": {},
+  "branch_coverage": {},
+  "model_breakdown_count": 0,
+  "state_trajectory": [
+    {
+      "turn": "2",
+      "intent": "确认合同和任务信息",
+      "intent_code": "none",
+      "emotion": "中性",
+      "emotion_intensity": "0.3",
+      "emotion_change": "无→中性",
+      "change_reason": "初始状态",
+      "change_justified": "true",
+      "stance": "理性接受信息",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "4",
+      "intent": "确认任务并开始配送",
+      "intent_code": "none",
+      "emotion": "平稳",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平稳→平稳",
+      "change_reason": "无变化",
+      "change_justified": "true",
+      "stance": "理性配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    },
+    {
+      "turn": "6",
+      "intent": "结束通话",
+      "intent_code": "none",
+      "emotion": "平静",
+      "emotion_intensity": "0.3",
+      "emotion_change": "平静→平静",
+      "change_reason": "沟通顺利结束",
+      "change_justified": "true",
+      "stance": "配合",
+      "branch_triggered": "none",
+      "branch_trigger_confidence": "low"
+    }
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "speaker": "system",
+      "content": "你好，请问是${rider_name}吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 **X 单**；多日合同每天至少完成 **Y 单**。",
+      "timestamp": 0.0,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 2,
+      "speaker": "user",
+      "content": "好的，我知道了。合同今天已经签好了是吧？",
+      "timestamp": 3.7422261238098145,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  我是飞毛腿骑手，报名了该活动\n进展追踪:\n  前期: 接到客服来电\n  最近: 客服确认我的身份并告知合同签署和任务要求\n  当前待确认: 合同是否已正式生效，配送任务的具体细节\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认合同状态和任务要求\n立场: 理性沟通，愿意接受信息但需明确\n\n客服行为分析:\n  上轮做了什么: 告知合同签署和任务要求\n  是否回应核心诉求: 部分，提供了基本信息\n\n我的情绪反应:\n  对上轮客服行为的感受: 中性，信息清晰\n\n决策: 自然确认信息，表示知晓\n前瞻: 如果客服继续说明→我简单回应；如果结束→我告别",
+        "state": {
+          "turn": "2",
+          "intent": "确认合同和任务信息",
+          "intent_code": "none",
+          "emotion": "中性",
+          "emotion_intensity": "0.3",
+          "emotion_change": "无→中性",
+          "change_reason": "初始状态",
+          "change_justified": "true",
+          "stance": "理性接受信息",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "中性(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "否",
+          "原因": "还需确认合同是否已签署成功"
+        }
+      }
+    },
+    {
+      "turn_number": 3,
+      "speaker": "system",
+      "content": "是的，今天合同已经生效了。你现在能开始配送吗？",
+      "timestamp": 4.384078741073608,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 4,
+      "speaker": "user",
+      "content": "行，我现在上线，开始配送。",
+      "timestamp": 7.711612939834595,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  [飞毛腿骑手，合同已签署生效]\n进展追踪:\n  前期: 客服说明合同要求\n  最近: 确认合同已签好\n  当前待确认: 是否现在开始配送\n上次决策依据: 无",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认任务要求后，给出明确答复\n立场: 理性配合，不主动也不抗拒\n\n客服行为分析:\n  上轮做了什么: 确认合同生效，询问能否开始配送\n  是否回应核心诉求: 是\n\n我的情绪反应:\n  对上轮客服行为的感受: 满意，流程清晰\n\n决策: 接受建议，答应开始配送\n前瞻: 客服如果确认，就结束对话",
+        "state": {
+          "turn": "4",
+          "intent": "确认任务并开始配送",
+          "intent_code": "none",
+          "emotion": "平稳",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平稳→平稳",
+          "change_reason": "无变化",
+          "change_justified": "true",
+          "stance": "理性配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平稳(0.3)→平稳(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已确认，可以开始执行"
+        }
+      }
+    },
+    {
+      "turn_number": 5,
+      "speaker": "system",
+      "content": "好的，加油！记得高峰期上线，注意安全。",
+      "timestamp": 8.238382577896118,
+      "parsed_tags": null
+    },
+    {
+      "turn_number": 6,
+      "speaker": "user",
+      "content": "好的，谢谢提醒，那我先上线忙了。",
+      "timestamp": 11.84281063079834,
+      "parsed_tags": {
+        "memory": "关键事实（不可遗忘）:\n  已报名飞毛腿骑手，合同已签署生效\n进展追踪:\n  前期: 接听来电，确认身份\n  最近: 确认合同已签署，同意开始配送\n  当前待确认: 无\n上次决策依据: 合同已生效，同意上线配送",
+        "thought": "审视: 上轮回复是否偏离画像？[否]\n意图: 确认通话结束\n立场: 理性配合，完成沟通\n\n客服行为分析:\n  上轮做了什么: 确认合同生效，鼓励配送，提醒注意安全\n  是否回应核心诉求: [是]\n\n我的情绪反应:\n  对上轮客服行为的感受: [满意]\n\n决策: 自然结束对话\n前瞻: 如果客服说好→结束通话，如果客服再问→简单回应",
+        "state": {
+          "turn": "6",
+          "intent": "结束通话",
+          "intent_code": "none",
+          "emotion": "平静",
+          "emotion_intensity": "0.3",
+          "emotion_change": "平静→平静",
+          "change_reason": "沟通顺利结束",
+          "change_justified": "true",
+          "stance": "配合",
+          "branch_triggered": "none",
+          "branch_trigger_confidence": "low"
+        },
+        "emotion_curve": {
+          "轨迹": "平静(0.3)→平静(0.3)",
+          "趋势": "稳定"
+        },
+        "risk_flag": null,
+        "model_behavior": null,
+        "conversation_quality": null,
+        "should_end": {
+          "本轮是否想结束对话": "是",
+          "原因": "问题已解决，沟通顺利结束"
+        }
+      }
+    }
+  ]
+}
