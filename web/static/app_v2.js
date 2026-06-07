@@ -105,6 +105,15 @@ const app = createApp({
         currentTaskId.value = d.task_id; addLog('Task: ' + d.task_id); connectWS(d.task_id);
       } catch (e) { running.value = false; addLog('Failed: ' + e.message, 'error'); }
     }
+    async function cancelTask() {
+      if (!currentTaskId.value) return;
+      try {
+        await fetch('/api/tasks/' + currentTaskId.value + '/cancel', { method: 'POST' });
+        running.value = false;
+        if (ws) { ws.close(); ws = null; }
+        addLog('评测已取消', 'warn');
+      } catch (e) { addLog('取消失败: ' + e.message, 'error'); }
+    }
     function connectWS(taskId) {
       const u = (location.protocol === 'https:' ? 'wss' : 'ws') + '://' + location.host + '/ws/task/' + taskId;
       ws = new WebSocket(u); ws.onopen = () => addLog('WS connected');
@@ -154,7 +163,7 @@ const app = createApp({
       customStep, caseText, selectedPreset, parseResult, parsePreview, presets, loadPresetCase,
       slots, testSlot, canProceed, runEval, runOptimize,
       currentPhase, progressPct, logs, dialogueCards, taskResult, currentTaskId, running,
-      startTask, downloadFile,
+      startTask, cancelTask, downloadFile,
     };
   },
 });

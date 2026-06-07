@@ -54,7 +54,7 @@
       <label><input type="checkbox" v-model="runOptimize"> 生成优化建议</label>
       <p style="color:var(--pico-muted-color);font-size:0.9rem">画像数量由用户模拟器根据 Case 复杂度自动确定</p>
       <div class="grid"><button class="secondary" @click="customStep = 2">上一步</button><button @click="startTask" :disabled="running">开始评测</button></div>
-      <div v-if="running || taskResult" class="monitor"><h4>实时进度</h4><progress :value="progressPct" max="100"></progress><p>{{ progressPct }}% - {{ currentPhase }}</p>
+      <div v-if="running || taskResult" class="monitor"><h4>实时进度 <button class="secondary small" @click="cancelTask" v-if="running" style="float:right;color:var(--pico-del-color)">取消评测</button></h4><progress :value="progressPct" max="100"></progress><p>{{ progressPct }}% - {{ currentPhase }}</p>
         <div class="log-stream"><div v-for="(log,i) in logs" :key="i" :class="'log-'+ (log.level||'info')">[{{ log.time }}] {{ log.message }}</div></div>
       </div>
       <div v-if="taskResult" class="result"><h4>评测结果</h4><detail-block :d="taskResult" :score="taskResult.eval_result?.total_score_100" :tid="currentTaskId"></detail-block></div>
@@ -153,6 +153,6 @@
   </main>
 </div>
 
-<script src="/static/app_v2.js?v=2"></script>
+<script src="/static/app_v2.js?v=3"></script>
 </body>
 </html>
