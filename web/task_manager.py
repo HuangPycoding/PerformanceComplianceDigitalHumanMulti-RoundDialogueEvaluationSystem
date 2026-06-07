@@ -542,8 +542,7 @@ class TaskManager:
                 conv.adversarial_strategies = list(conv.user_profile.adversarial_strategy)
             # 覆写 profile_label 为人类可读标签（原值为 param_xxxx 哈希）
             try:
-                up = conv.user_profile
-                adv_list = getattr(up, 'adversarial_strategy', []) or []
+                adv_list = getattr(conv, 'adversarial_strategies', []) or []
                 if adv_list:
                     _ADV_CN = {"probe": "试探", "injection": "注入", "contradiction": "矛盾", "authority": "权威", "emotion": "情绪"}
                     adv_cn = [_ADV_CN.get(a, a) for a in adv_list]
