@@ -14,6 +14,7 @@ from src.llm.client import LLMClient
 from src.loader.case_parser import parse_instruction
 from src.simulator.batch_runner import BatchRunner
 from src.optimizer.optimizer import OptimizationEngine
+from src.eval.rules import compute_complexity_score
 
 from web import config
 from web.schemas import (
@@ -111,7 +112,7 @@ def _export_results(output_dir: Path, case, profiles_dict: dict,
             if cf.exists():
                 try:
                     cdata = _json.loads(cf.read_text(encoding="utf-8"))
-                    if case and hasattr(case, 'complexity_score') and case.complexity_score:
+                    if case and hasattr(case, 'complexity_score') and case.complexity_score is not None:
                         cdata.setdefault('complexity_score', case.complexity_score)
                     found_label = False
                     for plist in profiles_dict.values():
@@ -305,7 +306,7 @@ def _generate_basic_report(output_dir: Path, case, conversations: list, eval_res
     lines = [f"# 评测报告\n"]
     title = case.title if case and hasattr(case, 'title') else "评测任务"
     lines.append(f"## Case: {title}")
-    if case and hasattr(case, 'complexity_score'):
+    if case and hasattr(case, 'complexity_score') and case.complexity_score is not None:
         lines.append(f"- 指令复杂度: {case.complexity_score}")
     lines.append(f"- 对话数量: {len(conversations)}")
     lines.append(f"- 评测数量: {len(eval_results)}")
@@ -508,6 +509,7 @@ class TaskManager:
         await self._push_event(task, {"type": "phase", "phase": "parsing", "status": "started"})
         await self._push_event(task, {"type": "log", "message": "正在解析 Case 文本...", "level": "info"})
         case = await asyncio.to_thread(parse_instruction, instruction=task.case_text, case_id=0, title=task.case_title or "外部 Case")
+        case.complexity_score = compute_complexity_score(case)
         await self._push_event(task, {"type": "phase", "phase": "parsing", "status": "completed"})
         await self._push_event(task, {"type": "log", "message": f"解析完成: {case.title} | {case.business_line} | {len(case.call_flow)} 步 call flow", "level": "info"})
         if task.cancel_event.is_set():
@@ -536,7 +538,7 @@ class TaskManager:
         await self._push_event(task, {"type": "log", "message": f"[对话模拟] 被评测模型 {task.effective_models.assistant} ←→ 模拟用户 {task.effective_models.simulator}", "level": "info"})
         conversations = await asyncio.to_thread(runner.run_all, parallel=False, profiles_dict=profiles_dict)
         for conv in conversations:
-            if case and hasattr(case, 'complexity_score') and case.complexity_score:
+            if case and hasattr(case, 'complexity_score') and case.complexity_score is not None:
                 conv.complexity_score = case.complexity_score
             if hasattr(conv, 'user_profile') and hasattr(conv.user_profile, 'adversarial_strategy'):
                 conv.adversarial_strategies = list(conv.user_profile.adversarial_strategy)
