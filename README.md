@@ -1,0 +1,2 @@
+# PerformanceComplianceDigitalHumanMulti-RoundDialogueEvaluationSystem
+履约数字人外呼LLM评测系统：15维参数空间驱动画像生成，三层信号增强清单架构（规则+信号+9 Judge并发核查），双路径优化引擎，全流程自动量化评测。
