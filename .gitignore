@@ -27,6 +27,7 @@ data/full_test/
 data/feasibility_output/
 data/e2e_test/
 data/narrative_test/
+data/checklist_evolution/
 
 # Logs
 *.log
